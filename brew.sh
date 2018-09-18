@@ -9,4 +9,5 @@ brew upgrade
 # Install tools
 brew install git
 brew install node
+brew install yarn
 brew install fish
