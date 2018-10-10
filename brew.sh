@@ -11,3 +11,4 @@ brew install git
 brew install node
 brew install yarn
 brew install fish
+brew install rust
