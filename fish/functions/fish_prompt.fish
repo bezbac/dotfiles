@@ -1,8 +1,6 @@
 # Colors:
 # Yellow: ffbf00
 # Aquamarine: 7fffd4
-#
-#
 
 function parse_git_branch -d "Parse current Git branch name"
   command git symbolic-ref --short HEAD ^/dev/null;
