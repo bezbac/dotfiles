@@ -3,6 +3,7 @@ ln -s ~/Documents/Dev/dotfiles/.gitconfig ~/.gitconfig
 
 # Link fish configuration
 ln -s ~/Documents/Dev/dotfiles/fish/functions/fish_prompt.fish ~/.config/fish/functions/fish_prompt.fish
+ln -s ~/Documents/Dev/dotfiles/fish/config.fish ~/.config/fish/config.fish
 
 # Link atom configuration
 ln -s ~/Documents/Dev/dotfiles/.atom/init.coffee ~/.atom/init.coffee
