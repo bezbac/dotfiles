@@ -8,7 +8,13 @@ brew upgrade
 
 # Install tools
 brew install git
+brew install fish
+brew install wget
+brew install htop
+
+# Node environment
 brew install node
 brew install yarn
-brew install fish
+
+# Rust environment
 brew install rust

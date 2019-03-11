@@ -2,8 +2,13 @@
 ln -s ~/Documents/Dev/dotfiles/.gitconfig ~/.gitconfig
 
 # Link fish configuration
-ln -s ~/Documents/Dev/dotfiles/fish/functions/fish_prompt.fish ~/.config/fish/functions/fish_prompt.fish
+ln -s ~/Documents/Dev/dotfiles/fish/functions ~/.config/fish/functions
+ln -s ~/Documents/Dev/dotfiles/fish/completions ~/.config/fish/completions
 ln -s ~/Documents/Dev/dotfiles/fish/config.fish ~/.config/fish/config.fish
+ln -s ~/Documents/Dev/dotfiles/fish/conf.d ~/.config/fish/conf.d
+
+# Link oh my fish config
+ln -s ~/Documents/Dev/dotfiles/omf ~/.config/omf
 
 # Link atom configuration
 ln -s ~/Documents/Dev/dotfiles/.atom/init.coffee ~/.atom/init.coffee
