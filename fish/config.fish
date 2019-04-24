@@ -16,3 +16,6 @@ set -g SPACEFISH_RUST_SHOW false
 set -g SPACEFISH_DOTNET_SHOW false
 set -g SPACEFISH_KUBECONTEXT_SHOW false
 set -g SPACEFISH_BATTERY_SHOW false
+
+# Add flutter to PATH
+set PATH /Users/ben/Library/Caches/flutter/bin $PATH .
