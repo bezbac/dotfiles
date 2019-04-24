@@ -1,4 +1,5 @@
 "*":
+  Hydrogen: {}
   "atom-beautify":
     general:
       _analyticsUserId: "3c89160e-d5c4-4625-88c0-c08008830918"
@@ -9,6 +10,7 @@
   core:
     disabledPackages: [
       "language-gfm"
+      "linter-rust"
     ]
     telemetryConsent: "limited"
     titleBar: "custom"
@@ -18,13 +20,15 @@
     ]
   editor:
     fontFamily: "Fira Code"
-    fontSize: 15
+    fontSize: 16
     preferredLineLength: 120
     softWrap: true
     softWrapAtPreferredLineLength: true
   "exception-reporting":
     userId: "90a71c89-f530-5d37-cba6-a69dfbcbce18"
   "linter-ui-default": {}
+  "markdown-preview":
+    useGitHubStyle: true
   minimap:
     disablePythonDocLinks: true
     plugins:
@@ -48,5 +52,4 @@
     ensureSingleTrailingNewline: false
   zentabs:
     maximumOpenedTabs: 7
-    neverCloseDirty: true
     neverCloseUnsaved: true
