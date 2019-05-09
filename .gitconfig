@@ -6,3 +6,5 @@
 	editor = atom
 [web]
 	browser = google-chrome
+[github]
+	user = ***REMOVED***
