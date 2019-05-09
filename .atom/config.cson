@@ -10,7 +10,9 @@
   core:
     disabledPackages: [
       "language-gfm"
-      "linter-rust"
+      "linter"
+      "linter-ui-default"
+      "linter-flake8"
     ]
     telemetryConsent: "limited"
     titleBar: "custom"
@@ -26,12 +28,15 @@
     softWrapAtPreferredLineLength: true
   "exception-reporting":
     userId: "90a71c89-f530-5d37-cba6-a69dfbcbce18"
-  "linter-ui-default": {}
+  "linter-ui-default":
+    showPanel: true
   "markdown-preview":
     useGitHubStyle: true
   minimap:
     disablePythonDocLinks: true
     plugins:
+      "git-diff": true
+      "git-diffDecorationsZIndex": 0
       "highlight-selected": true
       "highlight-selectedDecorationsZIndex": 0
   "sass-autocompile":
@@ -42,6 +47,7 @@
     gistId: "257e1a9f8caba6436d11bc97ae4e823b"
     personalAccessToken: "dd64ba9c1d790a1da79847419910aa0e789a82be"
   "tool-bar":
+    iconSize: "16px"
     position: "Left"
   "tree-view": {}
   wakatime:

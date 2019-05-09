@@ -12,12 +12,16 @@ brew install fish
 brew install wget
 brew install htop
 
-# Node environment
+# Javascript environment
 brew install node
 brew install yarn
 
 # Rust environment
-brew install rust
+brew install rustup
+
+# Python environment
+brew install python
+python -m pip install 'python-language-server[all]'
 
 # Vim
 brew install neovim

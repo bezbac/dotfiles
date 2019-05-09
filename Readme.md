@@ -1,2 +1,2 @@
 ## List all installed atom packages
-'''apm list --installed --bare'''
+```apm list --installed --bare```

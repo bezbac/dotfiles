@@ -19,3 +19,4 @@ set -g SPACEFISH_BATTERY_SHOW false
 
 # Add flutter to PATH
 set PATH /Users/ben/Library/Caches/flutter/bin $PATH .
+set PATH /Users/ben/.cargo/bin $PATH .
