@@ -22,7 +22,7 @@
     ]
   editor:
     fontFamily: "Fira Code"
-    fontSize: 16
+    fontSize: 15
     preferredLineLength: 120
     softWrap: true
     softWrapAtPreferredLineLength: true
