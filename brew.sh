@@ -11,6 +11,7 @@ brew install git
 brew install fish
 brew install wget
 brew install htop
+brew install telnet
 
 # Javascript environment
 brew install node
