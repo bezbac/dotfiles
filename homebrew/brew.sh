@@ -6,12 +6,15 @@ brew update
 # Upgrade any already-installed formulae
 brew upgrade
 
-# Install tools
+# Install basics
 brew install git
 brew install fish
+brew install tmux
+
+# Install tools
+brew install make
 brew install wget
 brew install htop
-brew install telnet
 
 # Javascript environment
 brew install node
@@ -26,7 +29,3 @@ python -m pip install 'python-language-server[all]'
 
 # Vim
 brew install neovim
-brew install oni
-
-# Flutter
-git clone -b master https://github.com/flutter/flutter.git /Users/ben/Library/Caches/flutter/
