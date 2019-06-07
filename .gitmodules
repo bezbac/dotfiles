@@ -1,0 +1,3 @@
+[submodule ".hyper-plugins/local/hyper-tmux"]
+	path = .hyper-plugins/local/hyper-tmux
+	url = https://github.com/***REMOVED***/hyper-tmux
