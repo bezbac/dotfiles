@@ -126,12 +126,6 @@ module.exports = {
 
     scrollback: 10000,
 
-    hyperline: {
-      plugins: [
-        "tmux"
-      ]
-    },
-
     hyperTabs: {
       tabIcons: false,
       tabIconsColored: true,
