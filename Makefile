@@ -26,9 +26,6 @@ symlink_hyper:
 	ln -s ~/Documents/Dev/dotfiles/.hyper-plugins/local ~/.hyper_plugins/local
 	ln -s ~/Documents/Dev/dotfiles/.hyper.js ~/.hyper.js
 
-symlink_tmux:
-	ln -s ~/Documents/Dev/dotfiles/.tmux.conf ~/.tmux.conf
-
 install_homebrew:
 	./homebrew/brew.sh
 

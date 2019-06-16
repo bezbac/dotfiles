@@ -155,9 +155,7 @@ module.exports = {
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
   // to load it and avoid it bei  ng `npm install`ed
-  localPlugins: [
-    "hyper-tmux"
-  ],
+  localPlugins: [],
 
   keymaps: {
     // Example
