@@ -28,6 +28,9 @@
     softWrapAtPreferredLineLength: true
   "exception-reporting":
     userId: "90a71c89-f530-5d37-cba6-a69dfbcbce18"
+  "isotope-ui":
+    fontFamily: "Roboto"
+    minimalMode: true
   "linter-ui-default":
     showPanel: true
   "markdown-preview":
@@ -46,6 +49,8 @@
     _lastBackupHash: "69e7cd235eba2a423b5365b5fefa24af74df4ee5"
     gistId: "257e1a9f8caba6436d11bc97ae4e823b"
     personalAccessToken: "dd64ba9c1d790a1da79847419910aa0e789a82be"
+  tabs:
+    alwaysShowTabBar: false
   "tool-bar":
     iconSize: "16px"
     position: "Left"

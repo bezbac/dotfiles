@@ -9,12 +9,12 @@ brew upgrade
 # Install basics
 brew install git
 brew install fish
-brew install tmux
 
 # Install tools
 brew install make
 brew install wget
 brew install htop
+brew install hyperfine
 
 # Javascript environment
 brew install node
@@ -29,3 +29,6 @@ python -m pip install 'python-language-server[all]'
 
 # Vim
 brew install neovim
+
+# Install apps
+brew cask install iterm2

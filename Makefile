@@ -19,6 +19,10 @@ symlink_atom:
 	ln -s ~/Documents/Dev/dotfiles/.atom/snippets.json ~/.atom/snippets.json
 	ln -s ~/Documents/Dev/dotfiles/.atom/style.less ~/.atom/style.less
 
+symlink_vscode:
+	ln -s  ~/Documents/Dev/dotfiles/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
+	ln -s  ~/Documents/Dev/dotfiles/vscode/snippets/ ~/Library/Application\ Support/Code/User
+
 symlink_editorconfig:
 	ln -s ~/Documents/Dev/dotfiles/.editorconfig ~/.editorconfig
 

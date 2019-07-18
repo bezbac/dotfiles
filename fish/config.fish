@@ -40,6 +40,11 @@ alias la="ls -a"
 ## Docker
 alias dc="docker-compose"
 
+# Shortcut for exec /bin/bash
+function dbash
+    command docker-compose exec $argv /bin/bash
+end
+
 ## Git
 ### Pretty git history
 alias glog="git log --graph --pretty='format:%C(red)%d%C(reset) %C(yellow)%h%C(reset) %ar %C(green)%aN%C(reset) %s'"
