@@ -1,0 +1,36 @@
+{
+  "editor.fontSize": 14,
+  "editor.fontFamily": "Fira Code",
+  "editor.minimap.renderCharacters": false,
+  "editor.minimap.showSlider": "always",
+  "terminal.external.osxExec": "iTerm2.app",
+  "terminal.integrated.fontSize": 14,
+  "workbench.iconTheme": "file-icons",
+  "window.zoomLevel": 0,
+  // Set terminal shell to fish
+  "terminal.integrated.shell.osx": "/usr/local/bin/fish",
+  "extensions.ignoreRecommendations": true,
+  "workbench.statusBar.feedback.visible": false,
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": false,
+  "editor.formatOnType": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // Fix emmet in react
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "vue-html": "html"
+  },
+  "emmet.syntaxProfiles": {
+    "javascript": "jsx"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.colorTheme": "One Dark Pro"
+}
