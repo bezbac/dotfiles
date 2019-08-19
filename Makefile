@@ -12,12 +12,12 @@ symlink_omf:
 	ln -s ~/Documents/Dev/dotfiles/omf ~/.config/omf
 
 symlink_atom:
-	ln -s ~/Documents/Dev/dotfiles/.atom/init.coffee ~/.atom/init.coffee
-	ln -s ~/Documents/Dev/dotfiles/.atom/keymap.cson ~/.atom/keymap.cson
-	ln -s ~/Documents/Dev/dotfiles/.atom/packages.json ~/.atom/packages.json
-	ln -s ~/Documents/Dev/dotfiles/.atom/settings.json ~/.atom/settings.json
-	ln -s ~/Documents/Dev/dotfiles/.atom/snippets.json ~/.atom/snippets.json
-	ln -s ~/Documents/Dev/dotfiles/.atom/style.less ~/.atom/style.less
+	ln -s ~/Documents/Dev/dotfiles/atom/init.coffee ~/.atom/init.coffee
+	ln -s ~/Documents/Dev/dotfiles/atom/keymap.cson ~/.atom/keymap.cson
+	ln -s ~/Documents/Dev/dotfiles/atom/packages.json ~/.atom/packages.json
+	ln -s ~/Documents/Dev/dotfiles/atom/settings.json ~/.atom/settings.json
+	ln -s ~/Documents/Dev/dotfiles/atom/snippets.json ~/.atom/snippets.json
+	ln -s ~/Documents/Dev/dotfiles/atom/style.less ~/.atom/style.less
 
 symlink_vscode:
 	ln -s  ~/Documents/Dev/dotfiles/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
