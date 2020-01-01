@@ -8,6 +8,7 @@ brew upgrade
 
 # Install basics
 brew install git
+brew install git-lfs
 brew install fish
 
 # Install tools
