@@ -3,7 +3,8 @@
 	email = ***REMOVED***
 	username = ***REMOVED***
 [core]
-	editor = atom
+	editor = vim
+	askpass = git-gui--askpass
 [web]
 	browser = google-chrome
 [github]
