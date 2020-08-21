@@ -26,9 +26,8 @@ symlink_vscode:
 symlink_editorconfig:
 	ln -s ~/Documents/Dev/dotfiles/.editorconfig ~/.editorconfig
 
-symlink_hyper:
-	ln -s ~/Documents/Dev/dotfiles/.hyper-plugins/local ~/.hyper_plugins/local
-	ln -s ~/Documents/Dev/dotfiles/.hyper.js ~/.hyper.js
+symlink_nvim:
+	ln -s ~/Documents/Dev/dotfiles/nvim ~/.config/nvim
 
 install_homebrew:
 	./homebrew/brew.sh
