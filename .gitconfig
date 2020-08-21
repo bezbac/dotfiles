@@ -5,6 +5,7 @@
 [core]
 	editor = vim
 	askpass = git-gui--askpass
+	pager = cat
 [web]
 	browser = google-chrome
 [github]
@@ -13,6 +14,13 @@
 	ignore = update-index --skip-worktree
 	unignore = update-index --no-skip-worktree
 	ignored = !git ls-files -v | grep "^s"
+
+	# Pretty log
+	plog = log --graph --pretty='format:%C(red)%d%C(reset) %C(yellow)%h%C(reset) %ar %C(green)%aN%C(reset) %s'
+
+	# Short diff
+	d = diff --stat
+
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f

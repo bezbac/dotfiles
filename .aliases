@@ -17,7 +17,9 @@ alias vi="nvim"
 alias dc="docker-compose"
 
 ## Git
-### Pretty git history
-alias glog="git log --graph --pretty='format:%C(red)%d%C(reset) %C(yellow)%h%C(reset) %ar %C(green)%aN%C(reset) %s'"
+alias g="git"
 
-alias gd="git diff --stat"
+## Random
+### Get week number
+alias week='date +%V'
+
