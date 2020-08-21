@@ -1,0 +1,26 @@
+prompt_order=[
+    "username",
+    "hostname",
+    "directory",
+
+    "git_branch",
+    "git_commit",
+    "git_state",
+    "git_status",
+
+    "rust",
+
+    "time",
+
+    "line_break",
+    "character",
+]
+
+[character]
+symbol = "➜"
+
+[time]
+disabled = false
+
+[package]
+disabled = true

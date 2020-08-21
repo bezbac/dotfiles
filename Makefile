@@ -1,15 +1,25 @@
 symlink_gitconfig:
 	ln -s ~/Documents/Dev/dotfiles/.gitconfig ~/.gitconfig
 
+symlink_starship:
+	ln -s ~/Documents/Dev/dotfiles/starship.toml ~/.config/starship.toml
+
+symlink_aliases:
+	ln -s ~/Documents/Dev/dotfiles/.aliases ~/.aliases
+
 symlink_fish:
 	ln -s ~/Documents/Dev/dotfiles/fish/functions ~/.config/fish/functions
 	ln -s ~/Documents/Dev/dotfiles/fish/completions ~/.config/fish/completions
 	ln -s ~/Documents/Dev/dotfiles/fish/config.fish ~/.config/fish/config.fish
 	ln -s ~/Documents/Dev/dotfiles/fish/conf.d ~/.config/fish/conf.d
 
-symlink_omf:
-	# Symlink oh my fish
-	ln -s ~/Documents/Dev/dotfiles/omf ~/.config/omf
+symlink_zsh:
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+	git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+	
+	ln -s ~/Documents/Dev/dotfiles/.zshrc ~/.zshrc
 
 symlink_atom:
 	ln -s ~/Documents/Dev/dotfiles/atom/init.coffee ~/.atom/init.coffee

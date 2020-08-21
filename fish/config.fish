@@ -1,52 +1,34 @@
-# Spacefish config
-set -g SPACEFISH_TIME_SHOW true
+# CONFIG
+## Use Starship
+starship init fish | source
 
-set -g SPACEFISH_PACKAGE_SHOW false
-set -g SPACEFISH_NODE_SHOW false
-set -g SPACEFISH_JULIA_SHOW false
-set -g SPACEFISH_DOCKER_SHOW false
-set -g SPACEFISH_RUBY_SHOW false
-set -g SPACEFISH_HASKELL_SHOW false
-set -g SPACEFISH_AWS_SHOW false
-set -g SPACEFISH_CONDA_SHOW false
-set -g SPACEFISH_PYENV_SHOW false
-set -g SPACEFISH_GOLANG_SHOW false
-set -g SPACEFISH_PHP_SHOW false
-set -g SPACEFISH_RUST_SHOW false
-set -g SPACEFISH_DOTNET_SHOW false
-set -g SPACEFISH_KUBECONTEXT_SHOW false
-set -g SPACEFISH_BATTERY_SHOW false
+## Use Thefuck
+eval $(thefuck --alias)
 
 # PATH
-## Add flutter to PATH
-set PATH /Users/ben/Library/Caches/flutter/bin $PATH .
+## Add rust to PATH
 set PATH /Users/ben/.cargo/bin $PATH .
 
 ## Add git to PATH
 set PATH /usr/local/git/bin $PATH .
 set PATH /usr/local/opt/make/libexec/gnubin $PATH .
 
+## Add python modules to PATH
+set PATH /Users/ben/Library/Python/2.7/bin/ $PATH .
+
+## Setup poetry
+set PATH /Users/ben/.poetry/bin $PATH .
+
 # ALIASES
-## Navigation
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
-alias ......="cd ../../../../.."
 
-## List
-alias la="ls -a"
+source /Users/ben/.aliases
 
-## Docker
-alias dc="docker-compose"
-
-# Shortcut for exec /bin/bash
-function dbash
-    command docker-compose exec $argv /bin/bash
+## Time Machine
+function tmignore
+    command find /Users/ben/Documents/Dev -maxdepth 8 -type d -name 'node_modules' | grep -v 'node_modules/' | xargs -n 1 tmutil addexclusion
 end
 
-## Git
-### Pretty git history
-alias glog="git log --graph --pretty='format:%C(red)%d%C(reset) %C(yellow)%h%C(reset) %ar %C(green)%aN%C(reset) %s'"
+function tmshow
+    command mdfind "com_apple_backup_excludeItem = 'com.apple.backupd'"
+end
 
-alias gd="git diff --stat"

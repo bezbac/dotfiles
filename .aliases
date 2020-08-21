@@ -1,0 +1,23 @@
+# ALIASES
+## Navigation
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ......="cd ../../../../.."
+
+## List
+alias la="ls -a"
+
+## Vim
+alias vim="nvim"
+alias vi="nvim"
+
+## Docker
+alias dc="docker-compose"
+
+## Git
+### Pretty git history
+alias glog="git log --graph --pretty='format:%C(red)%d%C(reset) %C(yellow)%h%C(reset) %ar %C(green)%aN%C(reset) %s'"
+
+alias gd="git diff --stat"
