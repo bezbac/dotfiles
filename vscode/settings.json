@@ -5,15 +5,14 @@
   "editor.minimap.showSlider": "always",
   "terminal.external.osxExec": "iTerm2.app",
   "terminal.integrated.fontSize": 14,
-  "workbench.iconTheme": "file-icons",
   "window.zoomLevel": 0,
   // Set terminal shell to fish
   "terminal.integrated.shell.osx": "/usr/local/bin/fish",
   "extensions.ignoreRecommendations": true,
   "workbench.statusBar.feedback.visible": false,
-  "editor.formatOnPaste": false,
-  "editor.formatOnSave": false,
-  "editor.formatOnType": false,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -32,7 +31,18 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.colorTheme": "One Dark Pro",
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "git.confirmSync": false
+  "git.confirmSync": false,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "typescript.updateImportsOnFileMove.enabled": "never",
+  "workbench.iconTheme": "Monokai Pro (Filter Spectrum) Icons",
+  "python.dataScience.askForKernelRestart": false,
+  "todo-tree.tree.showScanModeButton": false,
+  "workbench.colorTheme": "One Dark Pro",
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "rust-client.engine": "rust-analyzer"
 }
