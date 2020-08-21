@@ -39,6 +39,9 @@ symlink_editorconfig:
 symlink_nvim:
 	ln -s ~/Documents/Dev/dotfiles/nvim ~/.config/nvim
 
+symlink_alacritty:
+	ln -s ~/Documents/Dev/dotfiles/alacritty ~/.config/alacritty
+
 install_homebrew:
 	./homebrew/brew.sh
 

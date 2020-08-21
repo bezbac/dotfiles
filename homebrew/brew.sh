@@ -33,3 +33,4 @@ brew install neovim
 
 # Install apps
 brew cask install iterm2
+brew cask install alacritty
