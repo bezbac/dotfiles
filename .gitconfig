@@ -21,6 +21,9 @@
 	# Short diff
 	d = diff --stat
 
+  # Pull without checkout
+  refresh = fetch origin master:master
+
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
