@@ -6,6 +6,9 @@
 
 #!/bin/bash
 
+# Turn off homebrew google analytics
+brew analytics off
+
 # Make sure we’re using the latest Homebrew
 brew update
 
