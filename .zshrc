@@ -115,3 +115,13 @@ eval $(thefuck --alias)
 
 # Aliases
 source /Users/ben/.aliases
+
+## PATHS
+## Add rust to PATH
+export PATH=/Users/ben/.cargo/bin:$PATH
+
+## Add python modules to PATH
+export PATH=/Users/ben/Library/Python/2.7/bin/:$PATH
+
+## Setup poetry
+export PATH=/Users/ben/.poetry/bin:$PATH
