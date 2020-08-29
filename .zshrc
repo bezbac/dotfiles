@@ -72,6 +72,9 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting last-working-dir autoju
 
 source $ZSH/oh-my-zsh.sh
 
+# Override unwanted oh-my-zsh defaults
+unsetopt share_history
+
 # User configuration
 
 export HISTFILE=~/.zsh_history
