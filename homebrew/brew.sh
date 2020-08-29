@@ -26,6 +26,7 @@ brew install thefuck # Correct previous commands
 brew install fzf # Fuzzy finder
 brew install bat # File preview
 brew install ripgrep # Search
+brew install autojump # File system jumping
 
 # Javascript environment
 brew install node
