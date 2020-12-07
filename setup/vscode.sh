@@ -1,5 +1,5 @@
 #!/bin/bash
-require vscode
+require homebrew
 
 if command -v vscode -v &> /dev/null
 then
