@@ -37,12 +37,26 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "typescript.updateImportsOnFileMove.enabled": "never",
-  "workbench.iconTheme": "Monokai Pro (Filter Spectrum) Icons",
-  "python.dataScience.askForKernelRestart": false,
+"workbench.iconTheme": "Monokai Pro (Filter Spectrum) Icons",
   "todo-tree.tree.showScanModeButton": false,
   "workbench.colorTheme": "One Dark Pro",
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "rust-client.engine": "rust-analyzer"
+  "workbench.startupEditor": "welcomePage",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "vscode-neovim.neovimInitVimPaths.darwin": "neovim",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.exclude": {
+    "**/node_modules": true
+},
+"jupyter.askForKernelRestart": false,
+"workbench.editorAssociations": [
+  {
+    "viewType": "jupyter.notebook.ipynb",
+    "filenamePattern": "*.ipynb"
+  }
+]
 }
