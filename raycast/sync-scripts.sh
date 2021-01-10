@@ -18,6 +18,11 @@ array=(
 
     "commands/web-searches/npmjs.sh"
     "commands/web-searches/images/npmjs.png"
+
+    "commands/conversions/hex-to-rgba.sh"
+    "commands/conversions/hex-to-rgb.sh"
+
+    "commands/system/sample-colour.swift"
 )
 for i in "${array[@]}"
 do
@@ -29,6 +34,8 @@ do
         "commands/navigation/"
         "commands/dashboard/"
         "commands/web-searches/"
+        "commands/conversions/"
+        "commands/system/"
     )
 
     for prefix in "${prefixes[@]}"
