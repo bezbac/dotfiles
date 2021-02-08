@@ -39,15 +39,8 @@ eval $(thefuck --alias)
 # Aliases
 source "$HOME/.aliases"
 
-## PATHS
-## Add rust to PATH
-export PATH="$HOME/.cargo/bin:$PATH"
-
-## Add python modules to PATH
-export PATH="$HOME/Library/Python/2.7/bin/:$PATH"
-
-## Setup poetry
-export PATH="$HOME/.poetry/bin:$PATH"
+# Paths
+source "$HOME/.path"
 
 ## Setup pyenv
 eval "$(pyenv init -)"
