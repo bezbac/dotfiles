@@ -25,3 +25,9 @@ ln -s $DOTFILE_ROOT/.zshrc $HOME/.zshrc
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+# Zotero
+echo "Please manually install zotero plugins"
+echo "- https://github.com/mronkko/ZoteroQuickLook"
+echo "- https://github.com/jlegewie/zotfile"
+echo "- https://github.com/argenos/zotero-mdnotes"
