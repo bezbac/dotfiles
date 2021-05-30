@@ -33,9 +33,6 @@ setopt HIST_IGNORE_ALL_DUPS
 # Starship
 eval "$(starship init zsh)"
 
-# Thefuck
-eval $(thefuck --alias)
-
 # Aliases
 source "$HOME/.aliases"
 
