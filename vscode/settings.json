@@ -39,7 +39,7 @@
   "typescript.updateImportsOnFileMove.enabled": "never",
   "workbench.iconTheme": "vs-seti",
   "todo-tree.tree.showScanModeButton": false,
-  "workbench.colorTheme": "One Dark Pro",
+  "workbench.colorTheme": "Concrete",
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -77,5 +77,21 @@
   "tailwindCSS.includeLanguages": {
     "typescript": "javascript",
     "typescriptreact": "javascript"
+  },
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml"
+  },
+  "rust-analyzer.cargo.allFeatures": true,
+  "customizeUI.stylesheet": {
+    "[id='status.host']": "order: -2;",
+    "[id='vscodevim.vim']": "order: -1; margin-left: 2px;",
+    "[id='vscodevim.vim'] a": "color: transparent; position: relative;",
+    "[id='vscodevim.vim'] a::after": "position: absolute; left: 0; text-align: center; width: 100%;",
+    "[id='vscodevim.vim'][aria-label='-- NORMAL --']": "background: #586069;",
+    "[id='vscodevim.vim'][aria-label='-- NORMAL --'] a::after": "content: 'NORMAL'; color: #EEEEEE;",
+    "[id='vscodevim.vim'][aria-label='-- INSERT --']": "background: #85E89D;",
+    "[id='vscodevim.vim'][aria-label='-- INSERT --'] a::after": "content: 'INSERT'; color: #202020;",
+    "[id='vscodevim.vim'][aria-label='-- VISUAL --']": "background: #B392F0;",
+    "[id='vscodevim.vim'][aria-label='-- VISUAL --'] a::after": "content: 'VISUAL'; color: #202020;"
   }
 }
