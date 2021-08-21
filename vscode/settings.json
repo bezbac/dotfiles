@@ -3,23 +3,65 @@
   "editor.fontFamily": "Fira Code",
   "editor.minimap.renderCharacters": false,
   "editor.minimap.showSlider": "always",
-  "terminal.external.osxExec": "iTerm2.app",
-  "terminal.integrated.fontSize": 14,
-  "window.zoomLevel": 0,
-  // Set terminal shell to fish
-  "terminal.integrated.shell.osx": "/usr/local/bin/fish",
-  "extensions.ignoreRecommendations": true,
-  "workbench.statusBar.feedback.visible": false,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
+  "editor.autoClosingQuotes": "always",
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  
+  "terminal.external.osxExec": "iTerm2.app",
+  "terminal.integrated.fontSize": 14,
+
+  "workbench.statusBar.feedback.visible": false,
+  "workbench.editor.untitled.hint": "hidden",
+  "workbench.iconTheme": "vs-seti",
+  "workbench.colorTheme": "Concrete",
+  "workbench.startupEditor": "welcomePage",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
+
+  "window.titleBarStyle": "native",
+
+  "explorer.sortOrderLexicographicOptions": "upper",
+
+  "extensions.ignoreRecommendations": true,
+
+  "diffEditor.ignoreTrimWhitespace": false,
+
+  "git.confirmSync": false,
+
+  "files.exclude": {
+    "**/node_modules": true
+  },
+
+  // Formatting
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "updateImportsOnFileMove.enabled": "always"
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "updateImportsOnFileMove.enabled": "always"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml"
+  },
+  
   // Fix emmet in react
   "emmet.includeLanguages": {
     "javascript": "javascriptreact",
@@ -28,45 +70,13 @@
   "emmet.syntaxProfiles": {
     "javascript": "jsx"
   },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "git.confirmSync": false,
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "typescript.updateImportsOnFileMove.enabled": "never",
-  "workbench.iconTheme": "vs-seti",
-  "todo-tree.tree.showScanModeButton": false,
-  "workbench.colorTheme": "Concrete",
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "workbench.startupEditor": "welcomePage",
-  "diffEditor.ignoreTrimWhitespace": false,
+  
   "vscode-neovim.neovimInitVimPaths.darwin": "neovim",
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "files.exclude": {
-    "**/node_modules": true
-  },
+  
   "jupyter.askForKernelRestart": false,
-  "workbench.editorAssociations": [
-    {
-      "viewType": "jupyter.notebook.ipynb",
-      "filenamePattern": "*.ipynb"
-    }
-  ],
-  "customizeUI.activityBar": "wide",
-  "customizeUI.titleBar": "inline",
-  "window.titleBarStyle": "native",
+
   "scss.validate": false,
-  "editor.quickSuggestions": {
-    "strings": true
-  },
-  "editor.autoClosingQuotes": "always",
+  
   "tailwindCSS.experimental.classRegex": [
     "tw`([^`]*)", // tw`...`
     "tw=\"([^\"]*)", // <div tw="..." />
@@ -78,10 +88,11 @@
     "typescript": "javascript",
     "typescriptreact": "javascript"
   },
-  "[xml]": {
-    "editor.defaultFormatter": "redhat.vscode-xml"
-  },
+  
   "rust-analyzer.cargo.allFeatures": true,
+
+  "customizeUI.activityBar": "wide",
+  "customizeUI.titleBar": "inline",
   "customizeUI.stylesheet": {
     "[id='status.host']": "order: -2;",
     "[id='vscodevim.vim']": "order: -1; margin-left: 2px;",
