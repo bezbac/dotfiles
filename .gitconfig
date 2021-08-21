@@ -2,8 +2,13 @@
 	name = Ben Bachem
 	email = 10088265+bezbac@users.noreply.github.com
 	username = bezbac
+
 [github]
 	user = bezbac
+
+[core]
+	editor = nvim
+
 [alias]
 	ignore = update-index --skip-worktree
 	unignore = update-index --no-skip-worktree
@@ -14,6 +19,12 @@
 
 	# Short diff
 	d = diff --stat
+
+[diff]
+    tool = default-difftool
+
+[difftool "default-difftool"]
+    cmd = code --wait --diff $LOCAL $REMOTE
 
 [filter "lfs"]
 	clean = git-lfs clean -- %f
