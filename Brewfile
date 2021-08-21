@@ -25,6 +25,7 @@ brew 'zsh'
 brew 'ffmpeg'
 brew 'ktlint'
 brew 'mas'
+brew 'sheldon'
 
 # Apps
 cask '1password'

@@ -19,15 +19,5 @@ ln -s $DOTFILE_ROOT/nvim $HOME/.config/nvim
 ln -s $DOTFILE_ROOT/starship.toml  $HOME/.config/starship.toml
 ln -s $DOTFILE_ROOT/vscode/settings.json $HOME/Library/Application\ Support/Code/User/settings.json
 ln -s $DOTFILE_ROOT/vscode/snippets/ $HOME/Library/Application\ Support/Code/User
-ln -s $DOTFILE_ROOT/.zshrc $HOME/.zshrc
-
-# Oh My Zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-
-# Zotero
-echo "Please manually install zotero plugins"
-echo "- https://github.com/mronkko/ZoteroQuickLook"
-echo "- https://github.com/jlegewie/zotfile"
-echo "- https://github.com/argenos/zotero-mdnotes"
+ln -s $DOTFILE_ROOT/zsh/.zshrc $HOME/.zshrc
+ln -s $DOTFILE_ROOT/sheldon/plugins.toml $HOME/.sheldon/plugins.toml
