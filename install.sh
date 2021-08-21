@@ -21,3 +21,4 @@ ln -s $DOTFILE_ROOT/vscode/settings.json $HOME/Library/Application\ Support/Code
 ln -s $DOTFILE_ROOT/vscode/snippets/ $HOME/Library/Application\ Support/Code/User
 ln -s $DOTFILE_ROOT/zsh/.zshrc $HOME/.zshrc
 ln -s $DOTFILE_ROOT/sheldon/plugins.toml $HOME/.sheldon/plugins.toml
+ln -s $DOTFILE_ROOT/bash/.bashrc $HOME/.bashrc
