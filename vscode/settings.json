@@ -71,8 +71,6 @@
     "javascript": "jsx"
   },
   
-  "vscode-neovim.neovimInitVimPaths.darwin": "neovim",
-  
   "jupyter.askForKernelRestart": false,
 
   "scss.validate": false,
@@ -91,18 +89,31 @@
   
   "rust-analyzer.cargo.allFeatures": true,
 
-  "customizeUI.activityBar": "wide",
-  "customizeUI.titleBar": "inline",
-  "customizeUI.stylesheet": {
+  "customizeUI.titleBar": "regular",
+  "customizeUI.stylesheet": { 
     "[id='status.host']": "order: -2;",
+
     "[id='vscodevim.vim']": "order: -1; margin-left: 2px;",
-    "[id='vscodevim.vim'] a": "color: transparent; position: relative;",
+    "[id='vscodevim.vim'] a": "color: transparent; position: relative; font-weight: 700;",
     "[id='vscodevim.vim'] a::after": "position: absolute; left: 0; text-align: center; width: 100%;",
     "[id='vscodevim.vim'][aria-label='-- NORMAL --']": "background: #586069;",
     "[id='vscodevim.vim'][aria-label='-- NORMAL --'] a::after": "content: 'NORMAL'; color: #EEEEEE;",
     "[id='vscodevim.vim'][aria-label='-- INSERT --']": "background: #85E89D;",
     "[id='vscodevim.vim'][aria-label='-- INSERT --'] a::after": "content: 'INSERT'; color: #202020;",
     "[id='vscodevim.vim'][aria-label='-- VISUAL --']": "background: #B392F0;",
-    "[id='vscodevim.vim'][aria-label='-- VISUAL --'] a::after": "content: 'VISUAL'; color: #202020;"
-  }
+    "[id='vscodevim.vim'][aria-label='-- VISUAL --'] a::after": "content: 'VISUAL'; color: #202020;",
+
+    "[id='asvetliakov.vscode-neovim']": "order: -1; margin-left: 2px;",
+    "[id='asvetliakov.vscode-neovim'] a": "color: transparent; position: relative; font-weight: 700; width: 4rem;",
+    "[id='asvetliakov.vscode-neovim'] a::after": "position: absolute; left: 0; text-align: center; width: 100%;",
+    "[id='asvetliakov.vscode-neovim'][aria-label=':']": "background: #586069;",
+    "[id='asvetliakov.vscode-neovim'][aria-label=':'] a::after": "content: 'COMMAND'; color: #EEEEEE;",
+    "[id='asvetliakov.vscode-neovim'][aria-label='-- EINFÜGEN --']": "background: #85E89D;",
+    "[id='asvetliakov.vscode-neovim'][aria-label='-- EINFÜGEN --'] a::after": "content: 'INSERT'; color: #202020;",
+    "[id='asvetliakov.vscode-neovim'][aria-label='-- VISUELL --']": "background: #B392F0;",
+    "[id='asvetliakov.vscode-neovim'][aria-label='-- VISUELL --'] a::after": "content: 'VISUAL'; color: #202020;",
+    "[id='asvetliakov.vscode-neovim'][aria-label='1']": "display: none !important;"
+  },
+  
+  "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim"
 }
