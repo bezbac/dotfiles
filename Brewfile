@@ -70,3 +70,4 @@ cask 'font-inter'
 
 # Mac apps
 mas "Userscripts", id: 1463298887
+mas "Raivo OTP", id: 1498497896
