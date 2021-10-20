@@ -20,6 +20,10 @@ source "$HOME/.path"
 ## Setup pyenv
 eval "$(pyenv init -)"
 
+# Setup substring search
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
 ### Fix slowness of pastes with zsh-syntax-highlighting.zsh
 # Source: https://gist.github.com/magicdude4eva/2d4748f8ef3e6bf7b1591964c201c1ab
 pasteinit() {
