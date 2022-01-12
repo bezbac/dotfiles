@@ -61,6 +61,7 @@ cask 'zotero'
 cask 'eul'
 cask 'privileges'
 cask 'ngrok'
+cask 'transmission'
 
 # Quicklook
 cask 'qlmarkdown'
