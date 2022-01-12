@@ -10,10 +10,8 @@
   "editor.quickSuggestions": {
     "strings": true
   },
-  
   "terminal.external.osxExec": "iTerm2.app",
   "terminal.integrated.fontSize": 14,
-
   "workbench.statusBar.feedback.visible": false,
   "workbench.editor.untitled.hint": "hidden",
   "workbench.iconTheme": "vs-seti",
@@ -22,21 +20,14 @@
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter.notebook.ipynb"
   },
-
   "window.titleBarStyle": "native",
-
   "explorer.sortOrderLexicographicOptions": "upper",
-
   "extensions.ignoreRecommendations": true,
-
   "diffEditor.ignoreTrimWhitespace": false,
-
   "git.confirmSync": false,
-
   "files.exclude": {
     "**/node_modules": true
   },
-
   // Formatting
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -46,7 +37,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -61,7 +52,6 @@
   "[xml]": {
     "editor.defaultFormatter": "redhat.vscode-xml"
   },
-  
   // Fix emmet in react
   "emmet.includeLanguages": {
     "javascript": "javascriptreact",
@@ -70,11 +60,8 @@
   "emmet.syntaxProfiles": {
     "javascript": "jsx"
   },
-  
   "jupyter.askForKernelRestart": false,
-
   "scss.validate": false,
-  
   "tailwindCSS.experimental.classRegex": [
     "tw`([^`]*)", // tw`...`
     "tw=\"([^\"]*)", // <div tw="..." />
@@ -86,13 +73,10 @@
     "typescript": "javascript",
     "typescriptreact": "javascript"
   },
-  
-  "rust-analyzer.cargo.allFeatures": true,
-
+  // "rust-analyzer.cargo.allFeatures": true,
   "customizeUI.titleBar": "regular",
-  "customizeUI.stylesheet": { 
+  "customizeUI.stylesheet": {
     "[id='status.host']": "order: -2;",
-
     "[id='vscodevim.vim']": "order: -1; margin-left: 2px;",
     "[id='vscodevim.vim'] a": "color: transparent; position: relative; font-weight: 700;",
     "[id='vscodevim.vim'] a::after": "position: absolute; left: 0; text-align: center; width: 100%;",
@@ -102,7 +86,6 @@
     "[id='vscodevim.vim'][aria-label='-- INSERT --'] a::after": "content: 'INSERT'; color: #202020;",
     "[id='vscodevim.vim'][aria-label='-- VISUAL --']": "background: #B392F0;",
     "[id='vscodevim.vim'][aria-label='-- VISUAL --'] a::after": "content: 'VISUAL'; color: #202020;",
-
     "[id='asvetliakov.vscode-neovim']": "order: -1; margin-left: 2px;",
     "[id='asvetliakov.vscode-neovim'] a": "color: transparent; position: relative; font-weight: 700; width: 4rem;",
     "[id='asvetliakov.vscode-neovim'] a::after": "position: absolute; left: 0; text-align: center; width: 100%;",
@@ -114,6 +97,5 @@
     "[id='asvetliakov.vscode-neovim'][aria-label='-- VISUELL --'] a::after": "content: 'VISUAL'; color: #202020;",
     "[id='asvetliakov.vscode-neovim'][aria-label='1']": "display: none !important;"
   },
-  
   "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim"
 }
