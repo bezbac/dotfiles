@@ -10,6 +10,9 @@
   "editor.quickSuggestions": {
     "strings": true
   },
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.inlineSuggest.enabled": true,
   "terminal.external.osxExec": "iTerm2.app",
   "terminal.integrated.fontSize": 14,
   "workbench.statusBar.feedback.visible": false,
@@ -31,7 +34,6 @@
   // Formatting
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "updateImportsOnFileMove.enabled": "always"
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -41,16 +43,12 @@
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "updateImportsOnFileMove.enabled": "always"
   },
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[xml]": {
-    "editor.defaultFormatter": "redhat.vscode-xml"
   },
   // Fix emmet in react
   "emmet.includeLanguages": {
