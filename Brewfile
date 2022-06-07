@@ -34,6 +34,7 @@ brew 'telnet'
 brew 'shellcheck'
 brew 'ripgrep'
 brew 'rustup-init'
+brew 'zoxide'
 
 # Apps
 cask '1password'

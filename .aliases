@@ -23,3 +23,5 @@ alias g="git"
 ### Get week number
 alias week='date +%V'
 
+## Zoxide
+alias j="z"

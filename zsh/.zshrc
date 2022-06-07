@@ -11,6 +11,9 @@ eval "$(sheldon source)"
 # Starship
 eval "$(starship init zsh)"
 
+# Zoxide
+eval "$(zoxide init zsh)"
+
 # Aliases
 source "$HOME/.aliases"
 
