@@ -95,5 +95,7 @@
     "[id='asvetliakov.vscode-neovim'][aria-label='-- VISUELL --'] a::after": "content: 'VISUAL'; color: #202020;",
     "[id='asvetliakov.vscode-neovim'][aria-label='1']": "display: none !important;"
   },
-  "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim"
+  "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
+  "githubPullRequests.createOnPublishBranch": "never",
+  "typescript.updateImportsOnFileMove.enabled": "always"
 }
