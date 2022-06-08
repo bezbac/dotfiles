@@ -20,6 +20,9 @@
 	# Short diff
 	d = diff --stat
 
+	# git cob <branch>
+  	smart-switch = "!f() { git fetch > /dev/null 2>&1 && git switch -q --guess $1 2>/dev/null || git switch -q --guess -c $1; }; f"
+
 [diff]
     tool = default-difftool
 

@@ -18,6 +18,7 @@ alias dc="docker-compose"
 
 ## Git
 alias g="git"
+alias c="git smart-switch"
 
 ## Random
 ### Get week number
