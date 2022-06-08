@@ -5,6 +5,10 @@ export HISTSIZE=1000000000
 
 setopt HIST_IGNORE_ALL_DUPS
 
+# Enable completions
+autoload -Uz compinit
+compinit
+
 # Sheldon
 eval "$(sheldon source)"
 
@@ -26,6 +30,11 @@ eval "$(pyenv init -)"
 # Setup substring search
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
+
+# Function to set title
+function title {
+    echo -ne "\033]0;"$*"\007"
+}
 
 ### Fix slowness of pastes with zsh-syntax-highlighting.zsh
 # Source: https://gist.github.com/magicdude4eva/2d4748f8ef3e6bf7b1591964c201c1ab
