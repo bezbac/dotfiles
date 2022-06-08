@@ -9,6 +9,7 @@ fi
 
 brew update
 brew analytics off
+brew bundle install -v
 
 # Symlinks
 ln -s $DOTFILE_ROOT/.aliases $HOME/.aliases
@@ -23,3 +24,11 @@ ln -s $DOTFILE_ROOT/zsh/.zshrc $HOME/.zshrc
 mkdir $HOME/.sheldon && ln -s $DOTFILE_ROOT/sheldon/plugins.toml $HOME/.sheldon/plugins.toml
 ln -s $DOTFILE_ROOT/bash/.bashrc $HOME/.bashrc
 ln -s $DOTFILE_ROOT/scripts $HOME/scripts
+
+# VSCode Extensions
+# extensions.list contains the output from "code --list-extensions"
+while read EXTENSION
+do
+    echo_info "Install VSCode Extension: $EXTENSION"
+    code --install-extension $EXTENSION
+done < $DOTFILE_ROOT/vscode/extensions.list

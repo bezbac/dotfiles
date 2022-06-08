@@ -1,8 +1,8 @@
+bezbac.concrete-vscode
+bradlc.vscode-tailwindcss
+dbaeumer.vscode-eslint
+eamodio.gitlens
+esbenp.prettier-vscode
 file-icons.file-icons
-mgmcdermott.vscode-language-babel
-ms-azuretools.vscode-docker
-ms-python.python
-redhat.vscode-yaml
-rust-lang.rust
-skyapps.fish-vscode
-zhuangtongfa.Material-theme
+formulahendry.auto-close-tag
+mhutchie.git-graph
