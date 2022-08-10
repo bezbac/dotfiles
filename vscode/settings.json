@@ -97,5 +97,5 @@
   },
   "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
   "githubPullRequests.createOnPublishBranch": "never",
-  "typescript.updateImportsOnFileMove.enabled": "always"
+  "redhat.telemetry.enabled": false
 }
