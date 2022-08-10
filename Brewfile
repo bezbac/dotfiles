@@ -3,6 +3,7 @@ tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
+tap 'dbcli/tap'
 
 # Binaries
 brew 'autojump'
@@ -35,6 +36,7 @@ brew 'shellcheck'
 brew 'ripgrep'
 brew 'rustup-init'
 brew 'zoxide'
+brew 'pgcli'
 
 # Apps
 cask '1password'
