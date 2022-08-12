@@ -6,8 +6,7 @@ export HISTSIZE=1000000000
 setopt HIST_IGNORE_ALL_DUPS
 
 # Enable completions
-autoload -Uz compinit
-compinit
+autoload -Uz compinit && compinit -i
 
 # Sheldon
 eval "$(sheldon source)"
@@ -30,6 +29,12 @@ eval "$(pyenv init -)"
 # Setup substring search
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
+
+# Setup mac-OS keyboard navigation (⌥ + ← / → and ⌘ + ← / →)
+bindkey "[D" backward-word
+bindkey "[C" forward-word
+bindkey "^[a" beginning-of-line
+bindkey "^[e" end-of-line
 
 # Function to set title
 function title {
