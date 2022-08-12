@@ -17,7 +17,6 @@
   "terminal.integrated.fontSize": 14,
   "workbench.statusBar.feedback.visible": false,
   "workbench.editor.untitled.hint": "hidden",
-  "workbench.iconTheme": "vs-seti",
   "workbench.colorTheme": "Concrete",
   "workbench.startupEditor": "welcomePage",
   "workbench.editorAssociations": {
@@ -97,5 +96,7 @@
   },
   "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
   "githubPullRequests.createOnPublishBranch": "never",
-  "redhat.telemetry.enabled": false
+  "redhat.telemetry.enabled": false,
+  "git.mergeEditor": false,
+  "githubPullRequests.pullBranch": "never"
 }
