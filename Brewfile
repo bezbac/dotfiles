@@ -59,11 +59,14 @@ cask 'iina'
 cask 'mediahuman-audio-converter'
 cask 'minecraft'
 cask 'monitorcontrol'
-cask 'zotero'
 cask 'eul'
 cask 'privileges'
 cask 'ngrok'
 cask 'transmission'
+cask 'google-chrome'
+cask 'linear-linear'
+cask 'toggl-track'
+cask 'jetbrains-toolbox'
 
 # Quicklook
 cask 'qlmarkdown'
@@ -82,3 +85,4 @@ cask 'font-inter'
 # Mac apps
 mas "Userscripts", id: 1463298887
 mas "Raivo OTP", id: 1498497896
+mas "Tailscale", id: 1475387142
