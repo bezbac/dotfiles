@@ -37,6 +37,7 @@ brew 'ripgrep'
 brew 'rustup-init'
 brew 'zoxide'
 brew 'pgcli'
+brew 'protobuf'
 
 # Apps
 cask '1password'
