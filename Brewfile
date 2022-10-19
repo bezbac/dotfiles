@@ -68,6 +68,7 @@ cask 'google-chrome'
 cask 'linear-linear'
 cask 'toggl-track'
 cask 'jetbrains-toolbox'
+cask 'notion'
 
 # Quicklook
 cask 'qlmarkdown'
