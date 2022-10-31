@@ -27,7 +27,10 @@ mkdir $HOME/.config/sheldon && ln -s $DOTFILE_ROOT/sheldon/plugins.toml $HOME/.c
 ln -s $DOTFILE_ROOT/bash/.bashrc $HOME/.bashrc
 ln -s $DOTFILE_ROOT/scripts $HOME/scripts
 
-# VSCode Extensions
+# Setup macos defaults
+source ./macos/defaults.sh
+
+# Install VSCode Extensions
 # extensions.list contains the output from "code --list-extensions"
 while read EXTENSION
 do
