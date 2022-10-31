@@ -23,7 +23,7 @@ ln -s $DOTFILE_ROOT/nvim $HOME/.config/nvim
 ln -s $DOTFILE_ROOT/starship/starship.toml $HOME/.config/starship.toml
 ln -s $DOTFILE_ROOT/vscode/settings.json $HOME/Library/Application\ Support/Code/User/settings.json
 ln -s $DOTFILE_ROOT/zsh/.zshrc $HOME/.zshrc
-mkdir $HOME/.sheldon && ln -s $DOTFILE_ROOT/sheldon/plugins.toml $HOME/.sheldon/plugins.toml
+mkdir $HOME/.config/sheldon && ln -s $DOTFILE_ROOT/sheldon/plugins.toml $HOME/.config/sheldon/plugins.toml
 ln -s $DOTFILE_ROOT/bash/.bashrc $HOME/.bashrc
 ln -s $DOTFILE_ROOT/scripts $HOME/scripts
 
