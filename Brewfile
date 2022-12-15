@@ -39,6 +39,8 @@ brew 'zoxide'
 brew 'pgcli'
 brew 'protobuf'
 brew 'svn'
+brew 'nvm'
+brew 'pnpm'
 
 # Apps
 cask 'docker'
