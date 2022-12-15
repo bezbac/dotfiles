@@ -41,6 +41,7 @@ brew 'protobuf'
 brew 'svn'
 brew 'nvm'
 brew 'pnpm'
+brew 'fd'
 
 # Apps
 cask 'docker'
