@@ -98,5 +98,12 @@
   "githubPullRequests.createOnPublishBranch": "never",
   "redhat.telemetry.enabled": false,
   "git.mergeEditor": false,
-  "githubPullRequests.pullBranch": "never"
+  "githubPullRequests.pullBranch": "never",
+  "githubPullRequests.defaultMergeMethod": "squash",
+  "githubPullRequests.ignoredPullRequestBranches": [
+    "staging",
+    "master",
+    "dev"
+  ],
+  "javascript.updateImportsOnFileMove.enabled": "never"
 }
