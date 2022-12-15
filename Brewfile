@@ -4,6 +4,7 @@ tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
 tap 'dbcli/tap'
+tap 'ellie/atuin'
 
 # Binaries
 brew 'autojump'
@@ -42,6 +43,7 @@ brew 'svn'
 brew 'nvm'
 brew 'pnpm'
 brew 'fd'
+brew 'atuin'
 
 # Apps
 cask 'docker'

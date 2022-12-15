@@ -17,6 +17,12 @@ eval "$(starship init zsh)"
 # Zoxide
 eval "$(zoxide init zsh)"
 
+# Atuin
+export ATUIN_NOBIND="true"
+eval "$(atuin init zsh)"
+
+bindkey '^r' _atuin_search_widget
+
 # Aliases
 source "$HOME/.aliases"
 
