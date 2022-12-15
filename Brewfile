@@ -67,6 +67,7 @@ cask 'linear-linear'
 cask 'toggl-track'
 cask 'jetbrains-toolbox'
 cask 'notion'
+cask 'netnewswire'
 
 # Quicklook
 cask 'qlmarkdown'
