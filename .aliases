@@ -7,7 +7,8 @@ alias .....="cd ../../../.."
 alias ......="cd ../../../../.."
 
 ## List
-alias la="ls -a"
+alias ls="exa"
+alias la="exa -a"
 
 ## Vim
 alias vim="nvim"

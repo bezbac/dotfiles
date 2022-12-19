@@ -44,6 +44,7 @@ brew 'nvm'
 brew 'pnpm'
 brew 'fd'
 brew 'atuin'
+brew 'exa'
 
 # Apps
 cask 'docker'
