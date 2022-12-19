@@ -4,6 +4,8 @@ export HISTFILESIZE=1000000000
 export HISTSIZE=1000000000
 
 setopt HIST_IGNORE_ALL_DUPS
+setopt inc_append_history
+setopt share_history
 
 # Enable completions
 autoload -Uz compinit && compinit -i
