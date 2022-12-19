@@ -1,0 +1,23 @@
+{
+	"Translation function call (Page)": {
+		"prefix": "tpfunc",
+		"body": [
+			"t(\"${TM_FILEPATH/^.*\\/src\\/(.*)\\..*$/$1/}.$1\",\"$0\")",
+		],
+		"description": "A call to the t() function inside a page"
+	},
+	"Translation function call (Component)": {
+		"prefix": "tcfunc",
+		"body": [
+			"t(\"${TM_FILENAME_BASE}$1\",\"$0\")",
+		],
+		"description": "A call to the t() function inside a component"
+	},
+	"Use translation": {
+		"prefix": "useTranslation",
+		"body": [
+			"const { t } = useTranslation($1)",
+		],
+		"description": "Create the useTranslation hook"
+	}
+}
