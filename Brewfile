@@ -85,6 +85,7 @@ cask 'font-mulish'
 cask 'font-fira-code'
 cask 'font-source-sans-pro'
 cask 'font-inter'
+cask 'font-figtree'
 
 # Mac apps
 mas "Userscripts", id: 1463298887
