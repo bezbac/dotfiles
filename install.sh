@@ -28,6 +28,7 @@ ln -s $DOTFILE_ROOT/zsh/.zshrc $HOME/.zshrc
 mkdir $HOME/.config/sheldon && ln -s $DOTFILE_ROOT/sheldon/plugins.toml $HOME/.config/sheldon/plugins.toml
 ln -s $DOTFILE_ROOT/bash/.bashrc $HOME/.bashrc
 ln -s $DOTFILE_ROOT/scripts $HOME/scripts
+ln -s $DOTFILE_ROOT/helix $HOME/.config/helix
 
 # Setup macos defaults
 source ./macos/defaults.sh
