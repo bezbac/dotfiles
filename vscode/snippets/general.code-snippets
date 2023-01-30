@@ -19,5 +19,17 @@
 			"const { t } = useTranslation($1)",
 		],
 		"description": "Create the useTranslation hook"
+	},
+	"Mock DTO function": {
+		"prefix": "mock",
+		"body": [
+			"import mockObjectGetterGenerator from \"../../internal/generators/mockObjectGetterGenerator\";",
+			"import { ${TM_FILENAME_BASE/get(.*)/$1/} } from \"../../types\";",
+			"",
+			"export const $TM_FILENAME_BASE = mockObjectGetterGenerator<${TM_FILENAME_BASE/get(.*)/$1/}>(() => {",
+			"  const result$0: ${TM_FILENAME_BASE/get(.*)/$1/} = {}",
+			"  return result",
+			"});",
+		]
 	}
 }
