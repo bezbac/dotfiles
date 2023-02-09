@@ -45,6 +45,7 @@ brew 'pnpm'
 brew 'fd'
 brew 'atuin'
 brew 'exa'
+brew 'cmake'
 
 # Apps
 cask 'docker'
