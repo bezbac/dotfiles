@@ -91,3 +91,4 @@ cask 'font-figtree'
 mas "Userscripts", id: 1463298887
 mas "Raivo OTP", id: 1498497896
 mas "Tailscale", id: 1475387142
+mas "Save to Matter", id: 1548677272
