@@ -32,7 +32,7 @@
   },
   // Formatting
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -41,13 +41,16 @@
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[python]": {
+    "editor.formatOnType": true
   },
   // Fix emmet in react
   "emmet.includeLanguages": {
@@ -105,5 +108,5 @@
     "master",
     "dev"
   ],
-  "javascript.updateImportsOnFileMove.enabled": "never"
+  "markdown-preview-github-styles.colorTheme": "light"
 }
