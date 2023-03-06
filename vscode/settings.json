@@ -108,5 +108,10 @@
     "master",
     "dev"
   ],
-  "markdown-preview-github-styles.colorTheme": "light"
+  "markdown-preview-github-styles.colorTheme": "light",
+  "git.openRepositoryInParentFolders": "always",
+  "jupyter.widgetScriptSources": [
+    "jsdelivr.com",
+    "unpkg.com"
+  ]
 }
