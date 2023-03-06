@@ -79,3 +79,6 @@ zstyle :bracketed-paste-magic paste-finish pastefinish
 
 # This loads nvm bash_completion
 [ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm"
+
+# This loads pnpm completions
+[[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
