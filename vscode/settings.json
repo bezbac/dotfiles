@@ -104,8 +104,9 @@
   "githubPullRequests.pullBranch": "never",
   "githubPullRequests.defaultMergeMethod": "squash",
   "githubPullRequests.ignoredPullRequestBranches": [
-    "staging",
+    "main",
     "master",
+    "staging",
     "dev"
   ],
   "markdown-preview-github-styles.colorTheme": "light",
