@@ -5,6 +5,7 @@ tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
 tap 'dbcli/tap'
 tap 'ellie/atuin'
+tap 'hashicorp/tap'
 
 # Binaries
 brew 'autojump'
@@ -46,6 +47,7 @@ brew 'fd'
 brew 'atuin'
 brew 'exa'
 brew 'cmake'
+brew 'hashicorp/tap/nomad'
 
 # Apps
 cask 'docker'
@@ -93,4 +95,6 @@ cask 'font-figtree'
 mas "Userscripts", id: 1463298887
 mas "Raivo OTP", id: 1498497896
 mas "Tailscale", id: 1475387142
-mas "Save to Matter", id: 1548677272
+mas "Save to Raindrop.io", id: 1549370672
+mas "AdGuard for Safari", id: 1440147259
+mas "Mela Recipe Manager", id: 1568924476
