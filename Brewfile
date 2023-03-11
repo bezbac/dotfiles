@@ -72,6 +72,7 @@ cask 'toggl-track'
 cask 'jetbrains-toolbox'
 cask 'notion'
 cask 'netnewswire'
+cask 'hpedrorodrigues/tools/dockutil'
 
 # Quicklook
 cask 'qlmarkdown'

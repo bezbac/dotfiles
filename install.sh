@@ -40,3 +40,6 @@ do
     echo_info "Install VSCode Extension: $EXTENSION"
     code --install-extension $EXTENSION
 done < $DOTFILE_ROOT/vscode/extensions.list
+
+# Setup macos dock
+source ./macos/dock.sh
