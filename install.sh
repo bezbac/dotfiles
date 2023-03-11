@@ -47,3 +47,6 @@ source ./macos/defaults.sh
 
 # Setup macos dock
 source ./macos/dock.sh
+
+# Setup other macos things
+source ./macos/keyremap.sh
