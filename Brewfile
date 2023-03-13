@@ -48,6 +48,7 @@ brew 'atuin'
 brew 'exa'
 brew 'cmake'
 brew 'hashicorp/tap/nomad'
+brew 'nextdns/tap/nextdns'
 
 # Apps
 cask 'docker'
@@ -74,6 +75,7 @@ cask 'jetbrains-toolbox'
 cask 'notion'
 cask 'netnewswire'
 cask 'hpedrorodrigues/tools/dockutil'
+cask 'eddie'
 
 # Quicklook
 cask 'qlmarkdown'
@@ -97,3 +99,5 @@ mas "Tailscale", id: 1475387142
 mas "Save to Raindrop.io", id: 1549370672
 mas "AdGuard for Safari", id: 1440147259
 mas "Mela Recipe Manager", id: 1568924476
+mas "NextDNS", id: 1464122853
+mas "1Password for Safari", id: 1569813296
