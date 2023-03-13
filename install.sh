@@ -38,6 +38,7 @@ ln -sfn $DOTFILE_ROOT/helix $HOME/.config/helix
 # extensions.list contains the output from "code --list-extensions"
 while read EXTENSION
 do
+    [[ "$line" =~ ^#.*$ ]] && continue
     echo "Install VSCode Extension: $EXTENSION"
     code --install-extension $EXTENSION
 done < $DOTFILE_ROOT/vscode/extensions.list
