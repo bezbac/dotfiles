@@ -62,7 +62,6 @@ cask 'obsidian'
 cask 'whatsapp'
 cask 'iterm2'
 cask 'spotify'
-cask 'browserosaurus'
 cask 'cleanmymac'
 cask 'iina'
 cask 'mediahuman-audio-converter'
@@ -102,3 +101,4 @@ mas "AdGuard for Safari", id: 1440147259
 mas "Mela Recipe Manager", id: 1568924476
 mas "NextDNS", id: 1464122853
 mas "1Password for Safari", id: 1569813296
+mas "Velja", id: 1607635845
