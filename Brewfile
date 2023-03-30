@@ -49,6 +49,7 @@ brew 'exa'
 brew 'cmake'
 brew 'hashicorp/tap/nomad'
 brew 'nextdns/tap/nextdns'
+brew 'curl'
 
 # Apps
 cask 'docker'
