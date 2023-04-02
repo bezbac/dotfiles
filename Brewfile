@@ -49,6 +49,7 @@ brew 'exa'
 brew 'cmake'
 brew 'hashicorp/tap/nomad'
 brew 'nextdns/tap/nextdns'
+brew 'samuelmeuli/tap/tmignore'
 
 # Apps
 cask 'docker'
@@ -101,3 +102,4 @@ mas "AdGuard for Safari", id: 1440147259
 mas "Mela Recipe Manager", id: 1568924476
 mas "NextDNS", id: 1464122853
 mas "1Password for Safari", id: 1569813296
+mas "Xcode", id: 497799835

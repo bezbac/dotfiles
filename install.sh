@@ -51,3 +51,6 @@ source ./macos/dock.sh
 
 # Setup other macos things
 source ./macos/keyremap.sh
+
+# Setup tmignore
+brew services start tmignore
