@@ -7,7 +7,7 @@
 	user = bezbac
 
 [core]
-	editor = nvim
+	editor = hx
 
 [alias]
 	ignore = update-index --skip-worktree

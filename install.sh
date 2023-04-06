@@ -43,6 +43,14 @@ do
     code --install-extension $EXTENSION
 done < $DOTFILE_ROOT/vscode/extensions.list
 
+# Install global npm modules
+while read PGK
+do
+    [[ "$line" =~ ^#.*$ ]] && continue
+    echo "Install global pnpm package: $PKG"
+    pnpm add -g $PGK
+done < $DOTFILE_ROOT/npm.list
+
 # Setup macos defaults
 source ./macos/defaults.sh
 
