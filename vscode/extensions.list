@@ -2,6 +2,7 @@
 bezbac.concrete-vscode
 bierner.markdown-preview-github-styles
 bradlc.vscode-tailwindcss
+csstools.postcss
 dbaeumer.vscode-eslint
 eamodio.gitlens
 EditorConfig.EditorConfig
@@ -9,8 +10,9 @@ esbenp.prettier-vscode
 file-icons.file-icons
 formulahendry.auto-close-tag
 GitHub.vscode-pull-request-github
-mhutchie.git-graph
+gregoire.dance
 hashicorp.hcl
+mhutchie.git-graph
 ms-python.isort
 ms-python.python
 ms-python.vscode-pylance
@@ -22,5 +24,8 @@ ms-toolsai.vscode-jupyter-slideshow
 ms-vscode-remote.remote-ssh
 ms-vscode-remote.remote-ssh-edit
 ms-vscode.remote-explorer
+naumovs.color-highlight
 rust-lang.rust-analyzer
+tamasfe.even-better-toml
 wayou.vscode-todo-highlight
+will-stone.in-any-case
