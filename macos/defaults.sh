@@ -34,6 +34,13 @@ defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
 ###############################################################################
+# Keyboard                                                                    #
+###############################################################################
+
+defaults write NSGlobalDomain InitialKeyRepeat -int 15
+defaults write NSGlobalDomain KeyRepeat -int 2
+
+###############################################################################
 # Dock, Dashboard, and Hot Corners                                            #
 ###############################################################################
 
