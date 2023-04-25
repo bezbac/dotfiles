@@ -76,6 +76,7 @@ cask 'notion'
 cask 'netnewswire'
 cask 'hpedrorodrigues/tools/dockutil'
 cask 'eddie'
+cask 'backblaze'
 
 # Quicklook
 cask 'qlmarkdown'
