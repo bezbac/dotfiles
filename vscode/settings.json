@@ -114,5 +114,17 @@
   "jupyter.widgetScriptSources": [
     "jsdelivr.com",
     "unpkg.com"
+  ],
+  "editor.snippetSuggestions": "top",
+  "editor.suggestSelection": "recentlyUsedByPrefix",
+  "githubPullRequests.queries": [
+    {
+      "label": "Waiting For My Review",
+      "query": "is:open review-requested:${user}"
+    },
+    {
+      "label": "Created By Me",
+      "query": "is:open author:${user}"
+    }
   ]
 }
