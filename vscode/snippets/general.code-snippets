@@ -1,4 +1,23 @@
 {
+	"useState()": {
+		"prefix": "us",
+		"body": [
+			"const [${1}, set${1/(.*)/${1:/capitalize}/}] = useState($2);",
+			"$0"
+		],
+		"description": "useState()"
+	},
+	"Functional React Component (Without Imports)": {
+		"prefix": "fcompn",
+		"body": [
+			"type ${1}Props = {${2}};",
+			"",
+			"const ${1}: React.FunctionComponent<${1}Props> = ({${3}}) => {",
+			"  return <div>${0}</div>;",
+			"};",
+		],
+		"description": "Functional React Component (Without Imports)"
+	},
 	"Translation function call (Page)": {
 		"prefix": "tpfunc",
 		"body": [
@@ -12,6 +31,18 @@
 			"t(\"${TM_FILENAME_BASE}$1\",\"$0\")",
 		],
 		"description": "A call to the t() function inside a component"
+	},
+	"Formatting function": {
+		"prefix": "tfmt",
+		"body": [
+			"import { TFunction } from \"i18next\"",
+			"",
+			"export const ${TM_FILENAME_BASE} = (t: TFunction, value: ${TM_FILENAME_BASE/format(.*)/$1/}) => {",
+			"const formatted$0: Record<${TM_FILENAME_BASE/format(.*)/$1/}, string> = {}",
+			"return formatted[value]",
+			"}"
+		],
+		"description": "A exhaustive i18n formatting function"
 	},
 	"Use translation": {
 		"prefix": "useTranslation",
@@ -31,5 +62,5 @@
 			"  return result",
 			"});",
 		]
-	}
+	},
 }
