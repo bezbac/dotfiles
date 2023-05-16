@@ -126,5 +126,11 @@
       "label": "Created By Me",
       "query": "is:open author:${user}"
     }
-  ]
+  ],
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": false,
+    "scminput": false
+  }
 }
