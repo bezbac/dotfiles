@@ -92,6 +92,7 @@ cask 'font-fira-code'
 cask 'font-source-sans-pro'
 cask 'font-inter'
 cask 'font-figtree'
+cask 'font-fira-code-nerd-font'
 
 # Mac apps
 mas "Userscripts", id: 1463298887
