@@ -11,6 +11,9 @@ brew update
 brew analytics off
 brew bundle install -v
 
+# Install node
+nvm install stable
+
 # Set dotfile root to directory of this script
 DOTFILE_ROOT=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
