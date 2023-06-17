@@ -77,6 +77,7 @@ cask 'netnewswire'
 cask 'hpedrorodrigues/tools/dockutil'
 cask 'eddie'
 cask 'backblaze'
+cask '1password/tap/1password-cli'
 
 # Quicklook
 cask 'qlmarkdown'

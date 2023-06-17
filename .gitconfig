@@ -2,6 +2,7 @@
 	name = Ben Bachem
 	email = 10088265+bezbac@users.noreply.github.com
 	username = bezbac
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOYrXX5OLgIHoaYlDdecNWH3i4f4mkhhwl3YMSPaobck
 
 [github]
 	user = bezbac
@@ -43,3 +44,9 @@
 	defaultBranch = main
 [push]
 	autoSetupRemote = true
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[commit]
+	gpgsign = true
