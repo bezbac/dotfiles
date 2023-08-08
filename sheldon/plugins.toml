@@ -12,3 +12,7 @@ use = ["{{ name }}.zsh"]
 [plugins.zsh-yarn-completions]
 github = "chrisands/zsh-yarn-completions"
 use = ["{{ name }}.plugin.zsh"]
+
+[plugins.pnpm-shell-completion]
+github = "g-plane/pnpm-shell-completion"
+use = ["{{ name }}.plugin.zsh"]
