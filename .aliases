@@ -6,6 +6,9 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias ......="cd ../../../../.."
 
+## SSH
+alias ssh="TERM=xterm ssh"
+
 ## List
 alias ls="exa"
 alias la="exa -a"
