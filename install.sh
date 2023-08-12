@@ -37,6 +37,7 @@ ln -sfn $DOTFILE_ROOT/bash/.bashrc $HOME/.bashrc
 ln -sfn $DOTFILE_ROOT/scripts $HOME/scripts
 ln -sfn $DOTFILE_ROOT/helix $HOME/.config/helix
 ln -sfn $DOTFILE_ROOT/zellij $HOME/.config/zellij
+ln -sfn $DOTFILE_ROOT/alacritty $HOME/.config/alacritty
 
 # Install VSCode Extensions
 # extensions.list contains the output from "code --list-extensions"

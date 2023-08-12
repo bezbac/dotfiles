@@ -82,3 +82,11 @@ zstyle :bracketed-paste-magic paste-finish pastefinish
 
 # This loads pnpm completions
 [[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
+
+# Eval trick to allow running command but not exiting afterwards
+# https://superuser.com/a/230090
+if [[ $1 == eval ]]
+then
+    "$@"
+set --
+fi

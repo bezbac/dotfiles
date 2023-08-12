@@ -163,3 +163,10 @@ defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
 # Prevent Photos from opening automatically when devices are plugged in
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
+
+###############################################################################
+# Alacritty                                                                      #
+###############################################################################
+
+# Update font smoothing
+defaults write -g AppleFontSmoothing -int 0

@@ -1,0 +1,41 @@
+import:
+  - ~/.config/alacritty/themes/concrete.yaml
+
+window:
+  padding:
+    x: 3
+    y: 3
+
+  dynamic_padding: true
+
+font:
+  normal:
+    family: FiraCode Nerd Font
+    style: Regular
+  size: 13.0
+
+shell:
+  program: zsh
+  args:
+    - -lis
+    - eval
+    - "zellij attach main -c"
+
+mouse:
+  double_click: { threshold: 300 }
+  triple_click: { threshold: 300 }
+
+  hints:
+    enabled:
+      - regex: "(ipfs:|ipns:|magnet:|mailto:|gemini:|gopher:|https:|http:|news:|file:|git:|ssh:|ftp:)[^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`]+"
+        command: open
+        post_processing: true
+        mouse:
+          enabled: true
+          mods: Command
+
+selection:
+  semantic_escape_chars: ',│`|:"'' ()[]{}<>'
+  save_to_clipboard: false
+
+live_config_reload: true

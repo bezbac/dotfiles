@@ -1,0 +1,25 @@
+colors:
+  primary:
+    background: "0x202020"
+    foreground: "0x959DA5"
+  cursor:
+    text: "0xD1D5DA"
+    cursor: "0x959DA5"
+  normal:
+    black: "0x131313"
+    red: "0xF97583"
+    green: "0x85E89D"
+    yellow: "0xF1993B"
+    blue: "0x4091C9"
+    magenta: "0xB392F0"
+    cyan: "0x9ECBFF"
+    white: "0xD1D5DA"
+  bright:
+    black: "0x202020"
+    red: "0xE54468"
+    green: "0x85E89D"
+    yellow: "0xFFA826"
+    blue: "0x4091C9"
+    magenta: "0xF692CE"
+    cyan: "0x9ECBFF"
+    white: "0xFFFFFF"

@@ -76,6 +76,7 @@ cask 'font-figtree'
 cask 'font-fira-code-nerd-font'
 
 # Apps
+cask 'alacritty'
 cask 'docker'
 cask 'figma'
 cask 'slack'
