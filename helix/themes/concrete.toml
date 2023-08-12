@@ -20,7 +20,7 @@
 "diff.delta" = "#f1993b"
 "diff.minus" = "#d73a49"
 
-"ui.background" = { bg = "#262626" }
+"ui.background" = { bg = "#202020" }
 "ui.background.separator" = "#131313"
 "ui.cursor" = { fg = "#131313", bg = "#959da5" }
 "ui.cursor.insert" = { bg = "#85e89d", fg = "#fff" }
