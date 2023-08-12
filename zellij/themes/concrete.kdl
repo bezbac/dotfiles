@@ -1,0 +1,15 @@
+themes {
+  concrete {
+    black "#202020"
+    bg "#202020"
+    fg "#586069"
+    white "#d1d5da"
+    red "#fff"
+    green "#b392f0"
+    blue "#4091c9"
+    yellow "#F9D849"
+    magenta "#f1993b"
+    orange "#D76496"
+    cyan "#9ecbff"
+  }
+}

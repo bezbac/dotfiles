@@ -19,6 +19,7 @@ brew 'starship'
 brew 'exa'
 brew 'zoxide'
 brew 'ellie/atuin/atuin'
+brew 'zellij'
 
 # Node setup
 brew 'nvm'
