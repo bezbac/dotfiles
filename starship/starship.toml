@@ -6,8 +6,8 @@ $git_branch\
 $git_commit\
 $git_state\
 $git_status\
-$git_metrics\
 $rust\
+$nodejs\
 $time\
 $shell\
 $line_break\
@@ -21,8 +21,3 @@ vicmd_symbol = "[→](bold green)"
 
 [time]
 disabled = false
-
-[git_metrics]
-disabled = false
-added_style = "bold green"
-format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
