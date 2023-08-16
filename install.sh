@@ -26,6 +26,8 @@ ln -sfn $DOTFILE_ROOT/.aliases $HOME/.aliases
 ln -sfn $DOTFILE_ROOT/.path $HOME/.path
 ln -sfn $DOTFILE_ROOT/.editorconfig $HOME/.editorconfig
 ln -sfn $DOTFILE_ROOT/.gitconfig $HOME/.gitconfig
+ln -sfn $DOTFILE_ROOT/ssh/config $HOME/.ssh/config
+ln -sfn $DOTFILE_ROOT/ssh/rc $HOME/.ssh/rc
 ln -sfn $DOTFILE_ROOT/nvim $HOME/.config/nvim
 ln -sfn $DOTFILE_ROOT/starship/starship.toml $HOME/.config/starship.toml
 ln -sfn $DOTFILE_ROOT/vscode/settings.json $HOME/Library/Application\ Support/Code/User/settings.json
