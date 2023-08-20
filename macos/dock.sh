@@ -4,7 +4,7 @@ dockutil --no-restart --remove all
 dockutil --no-restart --add "/Applications/Mail.app"
 dockutil --no-restart --add "/Applications/Notes.app"
 dockutil --no-restart --add "/Applications/Figma.app"
-dockutil --no-restart --add "/Applications/iTerm.app"
+dockutil --no-restart --add "/Applications/Alacritty.app"
 dockutil --no-restart --add "/Applications/Spotify.app"
 dockutil --no-restart --add "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app"
 dockutil --no-restart --add "/Applications/Slack.app"
