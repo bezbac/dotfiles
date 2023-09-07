@@ -16,7 +16,7 @@ brew 'helix'
 # Shell setup
 brew 'sheldon'
 brew 'starship'
-brew 'exa'
+brew 'eza'
 brew 'zoxide'
 brew 'ellie/atuin/atuin'
 brew 'zellij'
@@ -60,7 +60,6 @@ brew 'cmake'
 brew 'make'
 
 # Quicklook
-cask 'qlmarkdown'
 cask 'quicklook-json'
 cask 'quicklook-csv'
 

@@ -10,8 +10,8 @@ alias ......="cd ../../../../.."
 alias ssh="TERM=xterm ssh"
 
 ## List
-alias ls="exa"
-alias la="exa -a"
+alias ls="eza"
+alias la="eza -a"
 
 ## Vim
 alias vim="nvim"
