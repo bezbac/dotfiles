@@ -112,3 +112,4 @@ mas "NextDNS", id: 1464122853
 mas "1Password for Safari", id: 1569813296
 mas "Velja", id: 1607635845
 mas "Anybox", id: 1593408455
+mas "Hush", id: 1544743900
