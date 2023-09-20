@@ -7,12 +7,18 @@ dbaeumer.vscode-eslint
 eamodio.gitlens
 EditorConfig.EditorConfig
 esbenp.prettier-vscode
+fabiospampinato.vscode-open-in-github
 file-icons.file-icons
 formulahendry.auto-close-tag
+GitHub.copilot
+github.vscode-github-actions
 GitHub.vscode-pull-request-github
-gregoire.dance
+Gruntfuggly.todo-tree
 hashicorp.hcl
+kahole.magit
+mathiasfrohlich.Kotlin
 mhutchie.git-graph
+ms-python.black-formatter
 ms-python.isort
 ms-python.python
 ms-python.vscode-pylance
@@ -27,5 +33,4 @@ ms-vscode.remote-explorer
 naumovs.color-highlight
 rust-lang.rust-analyzer
 tamasfe.even-better-toml
-wayou.vscode-todo-highlight
 will-stone.in-any-case
