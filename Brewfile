@@ -86,11 +86,9 @@ cask 'obsidian'
 cask 'whatsapp'
 cask 'iterm2'
 cask 'spotify'
-cask 'cleanmymac'
 cask 'iina'
 cask 'mediahuman-audio-converter'
 cask 'monitorcontrol'
-cask 'ngrok'
 cask 'transmission'
 cask 'google-chrome'
 cask 'linear-linear'
@@ -99,6 +97,8 @@ cask 'notion'
 cask 'netnewswire'
 cask 'eddie'
 cask 'backblaze'
+cask 'onyx'
+cask 'keka'
 cask 'hpedrorodrigues/tools/dockutil'
 cask '1password/tap/1password-cli'
 
@@ -113,3 +113,5 @@ mas "1Password for Safari", id: 1569813296
 mas "Velja", id: 1607635845
 mas "Anybox", id: 1593408455
 mas "Hush", id: 1544743900
+mas "DaisyDisk", id: 411643860
+mas "Amphetamine", id: 937984704
