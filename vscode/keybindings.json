@@ -14,5 +14,13 @@
         "key": "ctrl+[BracketRight]",
         "command": "editor.action.jumpToBracket",
         "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+cmd+c",
+        "command": "workbench.files.action.collapseExplorerFolders"
+    },
+    {
+        "key": "numpad_add",
+        "command": "magit.status"
     }
 ]
