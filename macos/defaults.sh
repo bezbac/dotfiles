@@ -145,12 +145,6 @@ defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 defaults write com.apple.mail SpellCheckingBehavior -string "NoSpellCheckingEnabled"
 
 ###############################################################################
-# Iterm2                                                                      #
-###############################################################################
-
-defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$DOTFILE_ROOT/iterm2"
-
-###############################################################################
 # Time Machine                                                                #
 ###############################################################################
 

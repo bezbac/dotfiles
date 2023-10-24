@@ -13,7 +13,7 @@
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": "active",
   "editor.inlineSuggest.enabled": true,
-  "terminal.external.osxExec": "iTerm2.app",
+  "terminal.external.osxExec": "Alacritty.app",
   "terminal.integrated.fontSize": 14,
   "workbench.statusBar.feedback.visible": false,
   "workbench.editor.untitled.hint": "hidden",

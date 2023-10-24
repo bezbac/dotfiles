@@ -52,13 +52,6 @@ function title {
 # Function to create a dir and cd into it
 function mkcd { mkdir -p "$1" && cd "$1" }
 
-# Automatic iTerm2 tab title
-DISABLE_AUTO_TITLE="true"
-set-tab-title() {
-  echo -ne "\e]1;$(basename $PWD)\a"
-}
-add-zsh-hook precmd set-tab-title
-
 ### Fix slowness of pastes with zsh-syntax-highlighting.zsh
 # Source: https://gist.github.com/magicdude4eva/2d4748f8ef3e6bf7b1591964c201c1ab
 pasteinit() {
