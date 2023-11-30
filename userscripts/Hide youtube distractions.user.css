@@ -1,0 +1,9 @@
+/* ==UserStyle==
+@name        Hide youtube distractions
+@match       *://www.youtube.com/*
+==/UserStyle== */
+
+/* Hide reccomended videos */
+#columns #secondary {
+    display: none !important;
+}
