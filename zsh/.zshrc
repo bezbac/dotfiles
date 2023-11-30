@@ -34,6 +34,9 @@ source "$HOME/.path"
 ## Setup pyenv
 eval "$(pyenv init -)"
 
+# Autosuggestions
+bindkey '^[[Z' autosuggest-accept
+
 # Setup substring search
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
