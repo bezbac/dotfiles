@@ -1,66 +1,87 @@
 {
-  "editor.fontSize": 14,
-  "editor.fontFamily": "Fira Code",
-  "editor.minimap.renderCharacters": false,
-  "editor.minimap.showSlider": "always",
-  "editor.formatOnPaste": true,
-  "editor.formatOnSave": true,
-  "editor.formatOnType": true,
-  "editor.autoClosingQuotes": "always",
-  "editor.quickSuggestions": {
-    "strings": true
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.bracketPairColorization.enabled": true,
-  "editor.guides.bracketPairs": "active",
-  "editor.inlineSuggest.enabled": true,
-  "terminal.external.osxExec": "Alacritty.app",
-  "terminal.integrated.fontSize": 14,
-  "workbench.statusBar.feedback.visible": false,
-  "workbench.editor.untitled.hint": "hidden",
-  "workbench.colorTheme": "Concrete",
-  "workbench.startupEditor": "welcomePage",
-  "workbench.editorAssociations": {
-    "*.ipynb": "jupyter.notebook.ipynb"
-  },
-  "window.titleBarStyle": "native",
-  "explorer.sortOrderLexicographicOptions": "upper",
-  "extensions.ignoreRecommendations": true,
-  "diffEditor.ignoreTrimWhitespace": false,
-  "git.confirmSync": false,
-  "files.exclude": {
-    "**/node_modules": true
-  },
-  // Formatting
-  "[typescript]": {
+  "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[html]": {
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[python]": {
-    "editor.formatOnType": true
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.autoClosingQuotes": "always",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.fontFamily": "Fira Code",
+  "editor.fontSize": 14,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.inlineSuggest.enabled": true,
+  "editor.minimap.renderCharacters": false,
+  "editor.minimap.showSlider": "always",
+  "editor.quickSuggestions": {
+    "strings": true
   },
-  // Fix emmet in react
+  "editor.snippetSuggestions": "top",
+  "editor.suggestSelection": "recentlyUsedByPrefix",
   "emmet.includeLanguages": {
-    "javascript": "javascriptreact",
+    "javascript": "javascriptreact", // Fix emmet in react
     "vue-html": "html"
   },
   "emmet.syntaxProfiles": {
     "javascript": "jsx"
   },
+  "explorer.sortOrderLexicographicOptions": "upper",
+  "extensions.ignoreRecommendations": true,
+  "files.exclude": {
+    "**/node_modules": true
+  },
+  "git.confirmSync": false,
+  "git.mergeEditor": false,
+  "git.openRepositoryInParentFolders": "always",
+  "github.copilot.enable": {
+    "*": true,
+    "markdown": false,
+    "plaintext": true,
+    "scminput": false
+  },
+  // "rust-analyzer.cargo.allFeatures": true,
+  "githubPullRequests.createOnPublishBranch": "never",
+  "githubPullRequests.defaultMergeMethod": "squash",
+  "githubPullRequests.ignoredPullRequestBranches": [
+    "main",
+    "master",
+    "staging",
+    "dev"
+  ],
+  "githubPullRequests.pullBranch": "never",
+  "githubPullRequests.queries": [
+    {
+      "label": "Waiting For My Review",
+      "query": "is:open review-requested:${user}"
+    },
+    {
+      "label": "Created By Me",
+      "query": "is:open author:${user}"
+    }
+  ],
   "jupyter.askForKernelRestart": false,
+  "jupyter.widgetScriptSources": ["jsdelivr.com", "unpkg.com"],
+  "markdown-preview-github-styles.colorTheme": "light",
   "scss.validate": false,
   "tailwindCSS.experimental.classRegex": [
     "tw`([^`]*)", // tw`...`
@@ -73,65 +94,13 @@
     "typescript": "javascript",
     "typescriptreact": "javascript"
   },
-  // "rust-analyzer.cargo.allFeatures": true,
-  "customizeUI.titleBar": "regular",
-  "customizeUI.stylesheet": {
-    "[id='status.host']": "order: -2;",
-    "[id='vscodevim.vim']": "order: -1; margin-left: 2px;",
-    "[id='vscodevim.vim'] a": "color: transparent; position: relative; font-weight: 700;",
-    "[id='vscodevim.vim'] a::after": "position: absolute; left: 0; text-align: center; width: 100%;",
-    "[id='vscodevim.vim'][aria-label='-- NORMAL --']": "background: #586069;",
-    "[id='vscodevim.vim'][aria-label='-- NORMAL --'] a::after": "content: 'NORMAL'; color: #EEEEEE;",
-    "[id='vscodevim.vim'][aria-label='-- INSERT --']": "background: #85E89D;",
-    "[id='vscodevim.vim'][aria-label='-- INSERT --'] a::after": "content: 'INSERT'; color: #202020;",
-    "[id='vscodevim.vim'][aria-label='-- VISUAL --']": "background: #B392F0;",
-    "[id='vscodevim.vim'][aria-label='-- VISUAL --'] a::after": "content: 'VISUAL'; color: #202020;",
-    "[id='asvetliakov.vscode-neovim']": "order: -1; margin-left: 2px;",
-    "[id='asvetliakov.vscode-neovim'] a": "color: transparent; position: relative; font-weight: 700; width: 4rem;",
-    "[id='asvetliakov.vscode-neovim'] a::after": "position: absolute; left: 0; text-align: center; width: 100%;",
-    "[id='asvetliakov.vscode-neovim'][aria-label=':']": "background: #586069;",
-    "[id='asvetliakov.vscode-neovim'][aria-label=':'] a::after": "content: 'COMMAND'; color: #EEEEEE;",
-    "[id='asvetliakov.vscode-neovim'][aria-label='-- EINFÜGEN --']": "background: #85E89D;",
-    "[id='asvetliakov.vscode-neovim'][aria-label='-- EINFÜGEN --'] a::after": "content: 'INSERT'; color: #202020;",
-    "[id='asvetliakov.vscode-neovim'][aria-label='-- VISUELL --']": "background: #B392F0;",
-    "[id='asvetliakov.vscode-neovim'][aria-label='-- VISUELL --'] a::after": "content: 'VISUAL'; color: #202020;",
-    "[id='asvetliakov.vscode-neovim'][aria-label='1']": "display: none !important;"
+  "terminal.external.osxExec": "Alacritty.app",
+  "terminal.integrated.fontSize": 14,
+  "window.titleBarStyle": "native",
+  "workbench.colorTheme": "Concrete",
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
   },
-  "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
-  "githubPullRequests.createOnPublishBranch": "never",
-  "redhat.telemetry.enabled": false,
-  "git.mergeEditor": false,
-  "githubPullRequests.pullBranch": "never",
-  "githubPullRequests.defaultMergeMethod": "squash",
-  "githubPullRequests.ignoredPullRequestBranches": [
-    "main",
-    "master",
-    "staging",
-    "dev"
-  ],
-  "markdown-preview-github-styles.colorTheme": "light",
-  "git.openRepositoryInParentFolders": "always",
-  "jupyter.widgetScriptSources": [
-    "jsdelivr.com",
-    "unpkg.com"
-  ],
-  "editor.snippetSuggestions": "top",
-  "editor.suggestSelection": "recentlyUsedByPrefix",
-  "githubPullRequests.queries": [
-    {
-      "label": "Waiting For My Review",
-      "query": "is:open review-requested:${user}"
-    },
-    {
-      "label": "Created By Me",
-      "query": "is:open author:${user}"
-    }
-  ],
-  "github.copilot.enable": {
-    "*": true,
-    "plaintext": true,
-    "markdown": false,
-    "scminput": false
-  },
-  "workbench.editor.tabSizing": "shrink"
+  "workbench.startupEditor": "welcomePage"
 }

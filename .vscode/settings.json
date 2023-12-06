@@ -1,0 +1,6 @@
+{
+  "files.associations": {
+    "vscode/settings.json": "jsonc",
+    "vscode/keybindings.json": "jsonc"
+  }
+}
