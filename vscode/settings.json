@@ -290,7 +290,10 @@
         "k": { "text": "Show docs for item under cursor", "command": "editor.action.showHover" },
         "r": { "text": "Rename symbol", "command": "editor.action.rename" },
         // "h": { "text": "Select symbol references", "command": "???" },
-        "?": { "text": "Open command palette", "command": "workbench.action.showCommands" }
+        "?": { "text": "Open command palette", "command": "workbench.action.showCommands" },
+
+        // CUSTOM! add magit menu
+        "m": { "text": "Magit", "command": "magit.status" }
       }
     },
     "debug-hx": {
