@@ -32,6 +32,7 @@ ln -sfn $DOTFILE_ROOT/nvim $HOME/.config/nvim
 ln -sfn $DOTFILE_ROOT/starship/starship.toml $HOME/.config/starship.toml
 ln -sfn $DOTFILE_ROOT/vscode/settings.json $HOME/Library/Application\ Support/Code/User/settings.json
 ln -sfn $DOTFILE_ROOT/vscode/keybindings.json $HOME/Library/Application\ Support/Code/User/keybindings.json
+ln -sfn $DOTFILE_ROOT/vscode/custom.css $HOME/Library/Application\ Support/Code/User/custom.css
 ln -sfn $DOTFILE_ROOT/vscode/snippets $HOME/Library/Application\ Support/Code/User/snippets
 ln -sfn $DOTFILE_ROOT/zsh/.zshrc $HOME/.zshrc
 ln -sfn $DOTFILE_ROOT/sheldon/plugins.toml $HOME/.config/sheldon/plugins.toml

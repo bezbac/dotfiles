@@ -1,0 +1,39 @@
+#gregoire\.dance {
+  order: -1;
+  background-color: #959da5;
+  color: black;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-right: 1px solid rgb(19, 19, 19);
+  width: 10ch;
+  display: flex;
+  justify-content: center;
+
+  .codicon {
+    display: none;
+  }
+
+  &:has(*[aria-label="zap  normal, Dance - Set mode"]) {
+    background-color: #6a737d;
+  }
+
+  &:has(*[aria-label="zap  insert, Dance - Set mode"]) {
+    background-color: #85e89d;
+  }
+
+  &:has(*[aria-label="zap  select, Dance - Set mode"]) {
+    background-color: #9ecbff;
+  }
+
+  &:has(*[aria-label="zap  <no active mode>, Dance - Set mode"]) {
+    display: none;
+  }
+}
+
+#workbench\.view\.explorer .monaco-list-row {
+  padding-left: 4px;
+}
+
+#workbench\.view\.explorer .pane.vertical .pane-header {
+  padding-left: 4px;
+}

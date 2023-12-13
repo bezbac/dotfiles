@@ -21,6 +21,14 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "apc.electron": {
+    "titleBarStyle": "hiddenInset",
+    "trafficLightPosition": {
+      "x": 8,
+      "y": 9
+    }
+  },
+  "apc.imports": ["${userHome}/Library/Application Support/Code/User/custom.css"],
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.autoClosingQuotes": "always",
   "editor.bracketPairColorization.enabled": true,
@@ -98,6 +106,7 @@
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter.notebook.ipynb"
   },
+  "workbench.productIconTheme": "macos-modern",
 
   // ------------------------
   // DANCE SETTINGS
