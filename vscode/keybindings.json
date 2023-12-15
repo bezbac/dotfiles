@@ -19,7 +19,7 @@
   { "key": "k", "command": "list.focusUp", "when": "listFocus && !inputFocus" },
 
   // Extension keybindings
-  { "key": "numpad_add", "command": "magit.status" },
+  { "key": "shift+cmd+\\", "command": "magit.status" },
 
   // -------------------------------------------------------------
 
