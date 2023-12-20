@@ -1,0 +1,31 @@
+[colors]
+ansi = [
+    '#D1D5DA',
+    '#F97583',
+    '#85E89D',
+    '#F1993B',
+    '#4091C9',
+    '#B392F0',
+    '#9ECBFF',
+    '#313031',
+]
+background = '#202020'
+brights = [
+    '#586069',
+    '#F97583',
+    '#85E89D',
+    '#F1993B',
+    '#4091C9',
+    '#B392F0',
+    '#9ECBFF',
+    '#4F4E4F',
+]
+compose_cursor = '#586069'
+cursor_bg = '#959DA5'
+cursor_border = '#959DA5'
+cursor_fg = '#131313'
+foreground = '#959DA5'
+scrollbar_thumb = '#586069'
+selection_bg = '#2C3A4A'
+split = '#586069'
+visual_bell = '#262626'

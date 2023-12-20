@@ -30,5 +30,8 @@ config.font = wezterm.font {
   weight = 'Regular',
 }
 
+config.color_scheme_dirs = { '/Users/ben.bachem/Documents/Dev/dotfiles/wezterm/themes' }
+config.color_scheme = 'concrete'
+
 -- and finally, return the configuration to wezterm
 return config
