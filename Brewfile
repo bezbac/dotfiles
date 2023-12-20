@@ -75,6 +75,7 @@ cask 'font-figtree'
 cask 'font-fira-code-nerd-font'
 
 # Apps
+cask 'wezterm'
 cask 'alacritty'
 cask 'orbstack'
 cask 'figma'
