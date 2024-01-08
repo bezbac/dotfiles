@@ -37,8 +37,13 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 # Keyboard                                                                    #
 ###############################################################################
 
-defaults write NSGlobalDomain InitialKeyRepeat -int 15
+# Set keyboard repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 2
+defaults write NSGlobalDomain InitialKeyRepeat -int 15
+
+# Disable smart quotes and dashes as they’re annoying when typing code
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
 ###############################################################################
 # Dock, Dashboard, and Hot Corners                                            #
@@ -58,6 +63,9 @@ defaults write com.apple.dock tilesize -int 64
 
 # Set the icon size of magnified Dock items to 80 pixels
 defaults write com.apple.dock largesize -int 80
+
+# Show indicator lights for open applications in the Dock
+defaults write com.apple.dock show-process-indicators -bool true
 
 # Hot Corners
 # Possible values:
@@ -124,8 +132,17 @@ defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
 # Finder                                                                      #
 ###############################################################################
 
+# Show status bar
+defaults write com.apple.finder ShowStatusBar -bool true
+
+# Show sidebar
+defaults write com.apple.finder ShowSidebar -bool true
+
 # Show path bar
 defaults write com.apple.finder "ShowPathbar" -bool "true"
+
+# When performing a search, search the current folder by default
+defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 
 ###############################################################################
 # TextEdit                                                                    #
@@ -144,6 +161,9 @@ defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 # Disable automatic spell checking
 defaults write com.apple.mail SpellCheckingBehavior -string "NoSpellCheckingEnabled"
 
+# Mark all messages as read when opening a conversation
+defaults write com.apple.mail ConversationViewMarkAllAsRead -bool true
+
 ###############################################################################
 # Time Machine                                                                #
 ###############################################################################
@@ -159,8 +179,43 @@ defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
 ###############################################################################
-# Alacritty                                                                      #
+# Calendar                                                                    #
+###############################################################################
+
+# Show week numbers
+defaults write com.apple.iCal "Show Week Numbers" -bool true
+
+# Week starts on monday
+defaults write com.apple.iCal "first day of week" -int 1
+
+# Show 15 hours in week view
+defaults write com.apple.iCal "number of hours displayed" -int 15
+
+# Day starts at 9:00
+defaults write com.apple.iCal "first minute of work hours" -int 540
+
+# Day ends at 18:00
+defaults write com.apple.iCal "last minute of work hours" -int 1080
+
+###############################################################################
+# Alacritty                                                                   #
 ###############################################################################
 
 # Update font smoothing
 defaults write -g AppleFontSmoothing -int 0
+
+###############################################################################
+# Raycast                                                                     #
+###############################################################################
+
+# Set emoji picker skin tone to default
+defaults write com.raycast.macos "emojiPicker_skinTone" -string "default"
+
+# Set onboarding completed
+defaults write com.raycast.macos onboardingCompleted -bool true
+
+# Hide getting started
+defaults write com.raycast.macos  showGettingStartedLink -bool false
+
+# Set global hotkey to Command-Space
+defaults write com.raycast.macos raycastGlobalHotkey -string "Command-49"
