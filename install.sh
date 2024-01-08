@@ -20,6 +20,7 @@ DOTFILE_ROOT=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd 
 # Create Folders
 mkdir -p $HOME/.config
 mkdir -p $HOME/.config/sheldon
+mkdir -p $HOME/.config/wezterm
 
 # Symlinks
 ln -sfn $DOTFILE_ROOT/.aliases $HOME/.aliases
@@ -43,6 +44,7 @@ ln -sfn $DOTFILE_ROOT/zellij $HOME/.config/zellij
 ln -sfn $DOTFILE_ROOT/alacritty $HOME/.config/alacritty
 ln -sfn $DOTFILE_ROOT/atuin $HOME/.config/atuin
 ln -sfn $DOTFILE_ROOT/wezterm/.wezterm.lua $HOME/.wezterm.lua
+ln -sfn $DOTFILE_ROOT/wezterm/themes $HOME/.config/wezterm/colors
 
 # Install VSCode Extensions
 # extensions.list contains the output from "code --list-extensions"
