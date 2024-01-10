@@ -39,6 +39,7 @@
   "editor.formatOnType": true,
   "editor.guides.bracketPairs": "active",
   "editor.inlineSuggest.enabled": true,
+  "editor.lineNumbers": "relative",
   "editor.minimap.renderCharacters": false,
   "editor.minimap.showSlider": "always",
   "editor.quickSuggestions": {
