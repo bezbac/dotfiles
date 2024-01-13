@@ -1,8 +1,4 @@
 [
-  { "key": "ctrl+n", "command": "explorer.newFile", "when": "explorerViewletFocus" },
-  { "key": "ctrl+shift+n", "command": "explorer.newFolder", "when": "explorerViewletFocus" },
-  { "key": "ctrl+[BracketRight]", "command": "editor.action.jumpToBracket", "when": "editorTextFocus" },
-  { "key": "shift+cmd+c", "command": "workbench.files.action.collapseExplorerFolders" },
   { "key": "shift+alt+g", "command": "editor.action.previousMatchFindAction", "when": "editorFocus" },
   { "key": "shift+cmd+g", "command": "-editor.action.previousMatchFindAction", "when": "editorFocus" },
   { "key": "shift+alt+g", "command": "workbench.action.terminal.findPrevious", "when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported" },
@@ -11,12 +7,31 @@
   { "key": "shift+cmd+g", "command": "-workbench.action.terminal.openDetectedLink", "when": "accessibleViewIsShown && terminalHasBeenCreated && accessibleViewCurrentProviderId == 'terminal'" },
   { "key": "shift+cmd+g", "command": "workbench.view.scm", "when": "workbench.scm.active" },
   { "key": "ctrl+shift+g", "command": "-workbench.view.scm", "when": "workbench.scm.active" },
-  { "key": "shift+cmd+g", "command": "workbench.view.scm", "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'" },
+  { "key": "shift+cmd+g", "command": "workbench.view.scm", "when": "workbench.scm.active && !gitlens:djkkjisabled && config.gitlens.keymap == 'chorded'" },
   { "key": "ctrl+shift+g", "command": "-workbench.view.scm", "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'" },
 
-  // Support using j and k to navigate lists
+  // Improve list navigation (e.g. file explorer)
   { "key": "j", "command": "list.focusDown", "when": "listFocus && !inputFocus" },
   { "key": "k", "command": "list.focusUp", "when": "listFocus && !inputFocus" },
+  { "key": "ctrl+u", "command": "list.focusPageUp", "when": "listFocus && !inputFocus" },
+  { "key": "ctrl+d", "command": "list.focusPageDown", "when": "listFocus && !inputFocus" },
+
+  { "key": "l", "command": "list.expand", "when": "listFocus && treeElementCanExpand && !inputFocus || listFocus && treeElementHasChild && !inputFocus" },
+  { "key": "right", "command": "list.expand", "when": "listFocus && treeElementCanExpand && !inputFocus || listFocus && treeElementHasChild && !inputFocus" },
+
+  { "key": "h", "command": "list.collapse", "when": "listFocus && treeElementCanCollapse && !inputFocus || listFocus && treeElementHasParent && !inputFocus" },
+  { "key": "left", "command": "list.collapse", "when": "listFocus && treeElementCanCollapse && !inputFocus || listFocus && treeElementHasParent && !inputFocus" },
+
+  { "key": "ctrl+h", "command": "list.collapseAll", "when": "listFocus && !inputFocus" },
+  { "key": "ctrl+left", "command": "list.collapseAll", "when": "listFocus && !inputFocus" },
+
+  // Improved explorer keybindings
+  { "key": "ctrl+n", "command": "explorer.newFile", "when": "explorerViewletFocus" },
+  { "key": "ctrl+shift+n", "command": "explorer.newFolder", "when": "explorerViewletFocus" },
+  { "key": "shift+cmd+c", "command": "workbench.files.action.collapseExplorerFolders" },
+
+  // Open file and focus
+  { "key": "shift+space", "command": "explorer.openAndPassFocus", "when": "explorerViewletFocus" },
 
   // Extension keybindings
   { "key": "shift+cmd+\\", "command": "magit.status" },
