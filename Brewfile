@@ -97,7 +97,6 @@ cask 'notion'
 cask 'netnewswire'
 cask 'eddie'
 cask 'backblaze'
-cask 'onyx'
 cask 'keka'
 cask 'hpedrorodrigues/tools/dockutil'
 cask '1password/tap/1password-cli'
@@ -115,4 +114,3 @@ mas "Anybox", id: 1593408455
 mas "Hush", id: 1544743900
 mas "DaisyDisk", id: 411643860
 mas "Amphetamine", id: 937984704
-mas "one sec", id: 1532875441

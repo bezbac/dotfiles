@@ -22,14 +22,9 @@ alias dc="docker-compose"
 
 ## Git
 alias g="git"
-alias c="git smart-switch"
 
 ## Terraform
 alias tf="terraform"
-
-## Random
-### Get week number
-alias week='date +%V'
 
 ## Zoxide
 alias j="z"

@@ -11,24 +11,8 @@
 	editor = hx
 
 [alias]
-	ignore = update-index --skip-worktree
-	unignore = update-index --no-skip-worktree
-	ignored = !git ls-files -v | grep "^s"
-
 	# Pretty log
 	plog = log --graph --pretty='format:%C(red)%d%C(reset) %C(yellow)%h%C(reset) %ar %C(green)%aN%C(reset) %s'
-
-	# Short diff
-	d = diff --stat
-
-	# git cob <branch>
-  	smart-switch = "!f() { git fetch > /dev/null 2>&1 && git switch -q --guess $1 2>/dev/null || git switch -q --guess -c $1; }; f"
-
-[diff]
-    tool = default-difftool
-
-[difftool "default-difftool"]
-    cmd = code --wait --diff $LOCAL $REMOTE
 
 [filter "lfs"]
 	clean = git-lfs clean -- %f
@@ -36,17 +20,23 @@
 	process = git-lfs filter-process
 	required = true
 
-[pull]
-	rebase = true
-[fetch]
-	prune = true
 [init]
 	defaultBranch = main
+
+[fetch]
+	prune = true
+
+[pull]
+	rebase = true
+
 [push]
 	autoSetupRemote = true
+
 [gpg]
 	format = ssh
+
 [gpg "ssh"]
 	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+
 [commit]
 	gpgsign = true
