@@ -41,7 +41,6 @@ ln -sfn $DOTFILE_ROOT/bash/.bashrc $HOME/.bashrc
 ln -sfn $DOTFILE_ROOT/scripts $HOME/scripts
 ln -sfn $DOTFILE_ROOT/helix $HOME/.config/helix
 ln -sfn $DOTFILE_ROOT/zellij $HOME/.config/zellij
-ln -sfn $DOTFILE_ROOT/alacritty $HOME/.config/alacritty
 ln -sfn $DOTFILE_ROOT/atuin $HOME/.config/atuin
 ln -sfn $DOTFILE_ROOT/wezterm/.wezterm.lua $HOME/.wezterm.lua
 ln -sfn $DOTFILE_ROOT/wezterm/themes $HOME/.config/wezterm/colors

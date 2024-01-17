@@ -198,13 +198,6 @@ defaults write com.apple.iCal "first minute of work hours" -int 540
 defaults write com.apple.iCal "last minute of work hours" -int 1080
 
 ###############################################################################
-# Alacritty                                                                   #
-###############################################################################
-
-# Update font smoothing
-defaults write -g AppleFontSmoothing -int 0
-
-###############################################################################
 # Raycast                                                                     #
 ###############################################################################
 

@@ -98,7 +98,7 @@
     "typescript": "javascript",
     "typescriptreact": "javascript"
   },
-  "terminal.external.osxExec": "Alacritty.app",
+  "terminal.external.osxExec": "WezTerm.app",
   "terminal.integrated.fontSize": 14,
   "window.titleBarStyle": "native",
   "workbench.colorTheme": "Concrete",
