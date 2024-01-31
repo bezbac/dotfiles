@@ -83,7 +83,6 @@ cask 'signal'
 cask 'visual-studio-code'
 cask 'raycast'
 cask 'obsidian'
-cask 'whatsapp'
 cask 'spotify'
 cask 'iina'
 cask 'mediahuman-audio-converter'
@@ -113,3 +112,4 @@ mas "Anybox", id: 1593408455
 mas "Hush", id: 1544743900
 mas "DaisyDisk", id: 411643860
 mas "Amphetamine", id: 937984704
+mas "WhatsApp", id: 310633997
