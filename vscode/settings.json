@@ -100,6 +100,7 @@
   },
   "terminal.external.osxExec": "WezTerm.app",
   "terminal.integrated.fontSize": 14,
+  "window.customTitleBarVisibility": "never",
   "window.titleBarStyle": "native",
   "workbench.colorTheme": "Concrete",
   "workbench.editor.empty.hint": "hidden",
