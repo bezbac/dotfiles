@@ -212,3 +212,16 @@ defaults write com.raycast.macos  showGettingStartedLink -bool false
 
 # Set global hotkey to Command-Space
 defaults write com.raycast.macos raycastGlobalHotkey -string "Command-49"
+
+###############################################################################
+# Anybox                                                                      #
+###############################################################################
+
+# Hide menubar icon
+defaults write cc.anybox.Anybox showMenuBarIcon -int 0
+
+# Hide dock icon
+defaults write cc.anybox.Anybox showDockIcon -int 0
+
+# Warn before quitting
+defaults write cc.anybox.Anybox warnBeforeQuiting -int 1
