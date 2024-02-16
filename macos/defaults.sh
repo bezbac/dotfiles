@@ -46,7 +46,7 @@ defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
 ###############################################################################
-# Dock, Dashboard, and Hot Corners                                            #
+# Dock, Dashboard, Hot Corners and Menubar                                    #
 ###############################################################################
 
 # Automatically hide and show the Dock
@@ -84,6 +84,10 @@ defaults write com.apple.dock show-process-indicators -bool true
 # Top right screen corner → Mission Control
 defaults write com.apple.dock wvous-tr-corner -int 2
 defaults write com.apple.dock wvous-tr-modifier -int 0
+
+# Position menubar icons more densely
+defaults -currentHost write -globalDomain NSStatusItemSelectionPadding -int 10
+defaults -currentHost write -globalDomain NSStatusItemSpacing -int 10
 
 ###############################################################################
 # Safari & WebKit                                                             #
