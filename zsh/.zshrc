@@ -33,6 +33,9 @@ bindkey '^[[Z' autosuggest-accept
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
+bindkey '^k' history-substring-search-up
+bindkey '^j' history-substring-search-down
+
 # Setup mac-OS keyboard navigation (⌥ + ← / → and ⌘ + ← / →)
 bindkey "[D" backward-word
 bindkey "[C" forward-word
