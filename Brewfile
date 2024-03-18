@@ -52,6 +52,7 @@ brew 'bat'
 brew 'ffmpeg'
 brew 'fd'
 brew 'dbcli/tap/pgcli'
+brew 'litecli'
 brew 'shellcheck'
 brew 'ripgrep'
 
