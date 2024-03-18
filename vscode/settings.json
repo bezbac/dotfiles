@@ -142,6 +142,9 @@
     "select": {
       "inheritFrom": "normal",
       "onLeaveMode": [[".selections.save", { "register": " ^", "style": { "borderColor": "$editor.selectionBackground", "borderStyle": "solid", "borderWidth": "2px", "borderRadius": "1px" }, "until": [["mode-did-change", { "include": ["normal", "select"] }], ["selections-did-change"]] }]]
+    },
+    "magit": {
+      "inheritFrom": "normal"
     }
   },
   "dance.menus": {
@@ -363,7 +366,7 @@
         "?": { "text": "Open command palette", "command": "workbench.action.showCommands" },
 
         // CUSTOM! add magit menu
-        "m": { "text": "Magit", "command": "magit.status" }
+        "m": { "text": "Magit", "command": "runCommands", "args": { "commands": ["magit.status", { "command": "dance.modes.set", "args": { "mode": "magit" } }] } }
       }
     },
     "debug-hx": {

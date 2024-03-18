@@ -25,6 +25,10 @@
     background-color: #9ecbff;
   }
 
+  &:has(*[aria-label="zap  magit, Dance - Set mode"]) {
+    background-color: #d76496;
+  }
+
   &:has(*[aria-label="zap  <no active mode>, Dance - Set mode"]) {
     display: none;
   }
