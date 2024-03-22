@@ -104,7 +104,6 @@ cask '1password/tap/1password-cli'
 mas "Userscripts", id: 1463298887
 mas "Raivo OTP", id: 1498497896
 mas "Tailscale", id: 1475387142
-mas "AdGuard for Safari", id: 1440147259
 mas "Mela Recipe Manager", id: 1568924476
 mas "NextDNS", id: 1464122853
 mas "1Password for Safari", id: 1569813296
