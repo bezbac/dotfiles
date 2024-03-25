@@ -29,6 +29,7 @@
     }
   },
   "apc.imports": ["${userHome}/Library/Application Support/Code/User/custom.css"],
+  "cSpell.enabled": false,
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.autoClosingQuotes": "always",
   "editor.bracketPairColorization.enabled": true,
