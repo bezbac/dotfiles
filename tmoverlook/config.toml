@@ -1,0 +1,40 @@
+# Ignore download directory
+[[rules]]
+type = "path"
+path = "~/Downloads"
+
+# Ignore raycast 
+[[rules]]
+type = "path"
+path = "/Applications/Raycast.app"
+
+# Ignore vscode 
+[[rules]]
+type = "path"
+path = "~/Library/Application Support/Code"
+
+# Ignore spotify 
+[[rules]]
+type = "path"
+path = "~/Library/Application Support/Spotify"
+
+# Ignore transmission 
+[[rules]]
+type = "path"
+path = "~/Library/Application Support/Transmission"
+
+# Ignore zoxide
+[[rules]]
+type = "path"
+path = "~/Library/Application Support/zoxide"
+
+# Ignore all git repositories
+[[rules]]
+type = "git_repositories"
+search = ["~/Documents"]
+
+# Ignore pnpm store
+[[rules]]
+type = "eval"
+shell = "zsh"
+command = "pnpm store path"

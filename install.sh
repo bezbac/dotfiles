@@ -44,6 +44,7 @@ ln -sfn $DOTFILE_ROOT/zellij $HOME/.config/zellij
 ln -sfn $DOTFILE_ROOT/atuin $HOME/.config/atuin
 ln -sfn $DOTFILE_ROOT/wezterm/.wezterm.lua $HOME/.wezterm.lua
 ln -sfn $DOTFILE_ROOT/wezterm/themes $HOME/.config/wezterm/colors
+ln -sfn $DOTFILE_ROOT/tmoverlook $HOME/.config/tmoverlook
 
 # Install VSCode Extensions
 # extensions.list contains the output from "code --list-extensions"
