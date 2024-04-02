@@ -38,3 +38,8 @@ search = ["~/Documents"]
 type = "eval"
 shell = "zsh"
 command = "pnpm store path"
+
+# Ignore backblaze
+[[rules]]
+type = "path"
+path = "/Library/Backblaze.bzpkg"
