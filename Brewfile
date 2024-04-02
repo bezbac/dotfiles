@@ -3,6 +3,7 @@ tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
+tap 'bezbac/tmoverlook'
 
 # Homebrew extensions
 brew 'mas'
@@ -55,6 +56,7 @@ brew 'dbcli/tap/pgcli'
 brew 'litecli'
 brew 'shellcheck'
 brew 'ripgrep'
+brew 'tmoverlook'
 
 # Other tools
 brew 'cmake'
