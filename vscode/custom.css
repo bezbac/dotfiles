@@ -49,3 +49,7 @@
 #workbench\.view\.explorer .pane.vertical .pane-header {
   padding-left: 4px;
 }
+
+.inline-tabs-placeholder {
+  margin-right: 8px;
+}
