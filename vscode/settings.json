@@ -112,6 +112,7 @@
     "*.ipynb": "jupyter.notebook.ipynb"
   },
   "workbench.productIconTheme": "macos-modern",
+  "workbench.sideBar.location": "right",
 
   // ------------------------
   // DANCE SETTINGS
