@@ -3,6 +3,10 @@
 # Enable completions
 autoload -Uz compinit && compinit -i
 
+# Enable Ctrl-x-e to edit command line
+autoload -Uz edit-command-line
+zle -N edit-command-line
+
 # Paths
 source "$HOME/.path"
 
@@ -44,6 +48,10 @@ bindkey "[D" backward-word
 bindkey "[C" forward-word
 bindkey "^[a" beginning-of-line
 bindkey "^[e" end-of-line
+
+# Enable Ctrl-x-e to edit command line
+bindkey '^xe' edit-command-line
+bindkey '^x^e' edit-command-line
 
 ### Fix slowness of pastes with zsh-syntax-highlighting.zsh
 # Source: https://gist.github.com/magicdude4eva/2d4748f8ef3e6bf7b1591964c201c1ab
