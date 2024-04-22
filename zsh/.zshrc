@@ -6,6 +6,9 @@ autoload -Uz compinit && compinit -i
 # Paths
 source "$HOME/.path"
 
+# Editor
+source "$HOME/.editor"
+
 # Aliases
 source "$HOME/.aliases"
 

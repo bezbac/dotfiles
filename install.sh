@@ -25,6 +25,7 @@ mkdir -p $HOME/.config/wezterm
 # Symlinks
 ln -sfn $DOTFILE_ROOT/.aliases $HOME/.aliases
 ln -sfn $DOTFILE_ROOT/.path $HOME/.path
+ln -sfn $DOTFILE_ROOT/.editor $HOME/.editor
 ln -sfn $DOTFILE_ROOT/.editorconfig $HOME/.editorconfig
 ln -sfn $DOTFILE_ROOT/.gitconfig $HOME/.gitconfig
 ln -sfn $DOTFILE_ROOT/ssh/config $HOME/.ssh/config
