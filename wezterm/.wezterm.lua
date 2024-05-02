@@ -32,12 +32,41 @@ config.font = wezterm.font {
 
 config.color_scheme = 'concrete'
 
+-- Disable all keybindings since window management should be done via zellij
+config.disable_default_key_bindings = true
+
 config.keys = {
+  -- Reenable copy & pasting
+  { key = 'v', mods = 'SUPER', action = wezterm.action.PasteFrom 'Clipboard' },
+  { key = 'V', mods = 'CTRL', action = wezterm.action.PasteFrom 'Clipboard' },
+  { key = 'V', mods = 'SHIFT|CTRL', action = wezterm.action.PasteFrom 'Clipboard' },
+  { key = 'Paste', mods = 'NONE', action = wezterm.action.PasteFrom 'Clipboard' },
+  { key = 'Copy', mods = 'NONE', action = wezterm.action.CopyTo 'Clipboard' },
+  { key = 'c', mods = 'SUPER', action = wezterm.action.CopyTo 'Clipboard' },
+  { key = 'C', mods = 'CTRL', action = wezterm.action.CopyTo 'Clipboard' },
+  { key = 'C', mods = 'SHIFT|CTRL', action = wezterm.action.CopyTo 'Clipboard' },
+
+  -- Font size adjustments
+  { key = '_', mods = 'CTRL', action = wezterm.action.DecreaseFontSize },
+  { key = '_', mods = 'SHIFT|CTRL', action = wezterm.action.DecreaseFontSize },
+  { key = '=', mods = 'CTRL', action = wezterm.action.IncreaseFontSize },
+  { key = '=', mods = 'SHIFT|CTRL', action = wezterm.action.IncreaseFontSize },
+  { key = '=', mods = 'SUPER', action = wezterm.action.IncreaseFontSize },
+  { key = '+', mods = 'CTRL', action = wezterm.action.IncreaseFontSize },
+  { key = '+', mods = 'SHIFT|CTRL', action = wezterm.action.IncreaseFontSize },
+  { key = '-', mods = 'CTRL', action = wezterm.action.DecreaseFontSize },
+  { key = '-', mods = 'SHIFT|CTRL', action = wezterm.action.DecreaseFontSize },
+  { key = '-', mods = 'SUPER', action = wezterm.action.DecreaseFontSize },
+
+  -- Quit the application
+  { key = 'q', mods = 'SHIFT|CTRL', action = wezterm.action.QuitApplication },
+  { key = 'q', mods = 'SUPER', action = wezterm.action.QuitApplication },
+
    -- Make Option-Left equivalent to Alt-b which many line editors interpret as backward-word
-  {key="LeftArrow", mods="OPT", action=wezterm.action{SendString="\x1bb"}},
+  { key="LeftArrow", mods="OPT", action=wezterm.action{SendString="\x1bb"} },
   
   -- Make Option-Right equivalent to Alt-f; forward-word
-  {key="RightArrow", mods="OPT", action=wezterm.action{SendString="\x1bf"}},
+  { key="RightArrow", mods="OPT", action=wezterm.action{SendString="\x1bf"} },
 }
 
 -- and finally, return the configuration to wezterm
