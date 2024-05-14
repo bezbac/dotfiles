@@ -88,6 +88,8 @@
   "jupyter.askForKernelRestart": false,
   "jupyter.widgetScriptSources": ["jsdelivr.com", "unpkg.com"],
   "markdown-preview-github-styles.colorTheme": "light",
+  "projectManager.git.baseFolders": ["~/Documents/Dev"],
+  "projectManager.ignoreProjectsWithinProjects": true,
   "scss.validate": false,
   "tailwindCSS.experimental.classRegex": [
     "tw`([^`]*)", // tw`...`
@@ -373,6 +375,9 @@
         "r": { "text": "Rename symbol", "command": "editor.action.rename" },
         // "h": { "text": "Select symbol references", "command": "???" },
         "?": { "text": "Open command palette", "command": "workbench.action.showCommands" },
+
+        // CUSTOM! add project manager menu
+        ".": { "text": "Switch project", "command": "projectManager.listProjects" },
 
         // CUSTOM! add magit menu
         "m": { "text": "Magit", "command": "runCommands", "args": { "commands": ["magit.status", { "command": "dance.modes.set", "args": { "mode": "magit" } }] } }
