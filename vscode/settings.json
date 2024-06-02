@@ -115,6 +115,7 @@
   },
   "workbench.productIconTheme": "macos-modern",
   "workbench.sideBar.location": "right",
+  "workbench.startupEditor": "none",
 
   // ------------------------
   // DANCE SETTINGS
