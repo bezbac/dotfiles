@@ -294,6 +294,9 @@
   // Custom dance keybindings
   //
 
+  // Open command pallete using ":"
+  { "key": ":", "command": "workbench.action.showCommands", "when": "editorTextFocus && dance.mode == 'normal' || editorTextFocus && dance.mode == 'select'" },
+
   // Support space menu outside of editor
   { "key": "space", "command": "dance.openMenu", "args": { "menu": "leader-hx", "pass": [{ "shift": "jump" }] }, "when": "!editorIsOpen && !inputFocus && !explorerViewletFocus" },
 
