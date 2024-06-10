@@ -307,7 +307,11 @@
 
   { "key": "j", "command": "dance.select.down.jump", "when": "editorTextFocus && editorLangId == 'magit'" },
   { "key": "k", "command": "dance.select.up.jump", "when": "editorTextFocus && editorLangId == 'magit'" },
+
   { "key": "k", "command": "-magit.discard-at-point", "when": "editorTextFocus && editorLangId == 'magit'" },
+  { "key": "ctrl+k", "command": "magit.discard-at-point", "when": "editorTextFocus && editorLangId == 'magit'" },
   { "key": "v", "command": "-magit.reverse-at-point" },
-  { "key": "x", "command": "-magit.reset-mixed" }
+  { "key": "ctrl+v", "command": "magit.reverse-at-point", "when": "editorTextFocus && editorLangId == 'magit'" },
+  { "key": "x", "command": "-magit.reset-mixed" },
+  { "key": "ctrl+x", "command": "magit.reset-mixed", "when": "editorTextFocus && editorLangId == 'magit'" }
 ]
