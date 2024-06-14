@@ -108,6 +108,7 @@
   "terminal.integrated.tabs.enabled": false,
   "window.customTitleBarVisibility": "never",
   "window.titleBarStyle": "native",
+  "workbench.activityBar.location": "bottom",
   "workbench.colorTheme": "Concrete",
   "workbench.editor.empty.hint": "hidden",
   "workbench.editor.tabSizing": "shrink",
