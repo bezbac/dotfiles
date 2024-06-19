@@ -229,3 +229,12 @@ defaults write cc.anybox.Anybox showDockIcon -int 0
 
 # Warn before quitting
 defaults write cc.anybox.Anybox warnBeforeQuiting -int 1
+
+###############################################################################
+# Velja                                                                       #
+###############################################################################
+
+# Hide menubar icon
+defaults write com.sindresorhus.Velja hideMenuBarIcon -int 1
+
+# TODO: Add rules from `defaults read com.sindresorhus.Velja rules`
