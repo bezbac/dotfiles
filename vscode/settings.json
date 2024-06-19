@@ -32,6 +32,7 @@
   "cSpell.enabled": false,
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.accessibilitySupport": "off",
   "editor.autoClosingQuotes": "always",
   "editor.bracketPairColorization.enabled": true,
   "editor.fontFamily": "Fira Code",
