@@ -184,68 +184,9 @@
       "title": "Match",
       "items": {
         "m": { "text": "Goto matching bracket", "command": "dance.run", "args": [{ "code": ["await vscode.commands.executeCommand('dance.seek.enclosing');", "if (Context.current.mode.name !== 'select') {", "await vscode.commands.executeCommand('dance.selections.reduce');", "}"] }] },
-
-        // Surround add, replace and delete were taken from the following github discussion:
-        // https://github.com/71/dance/issues/299#issuecomment-1655509531
-        "s": {
-          "text": "Surround add",
-          "command": "dance.run",
-          // prettier-ignore
-          "args": [{ "code": [
-            "let pairs = ['()', '{}', '[]', '<>'];",
-            "let x = vscode.commands.executeCommand",
-            "let c = await keypress(Context.current);",
-            "let p = pairs.find((p) => p.includes(c));",
-            "await x('dance.selections.save');",
-            "Selections.updateWithFallbackByIndex((i, sel) => new vscode.Selection(sel.anchor, Positions.at(sel.active.line, sel.active.character + (sel.isReversed ? -1 : 1))));",
-            "await x('editor.action.insertSnippet', { 'snippet': (p?.at(0) || c) + '${TM_SELECTED_TEXT}' + (p?.at(1) || c) });",
-            "await x('dance.selections.restore');"
-          ]}]
-        },
-        "r": {
-          "text": "Surround replace",
-          "command": "dance.run",
-          // prettier-ignore
-          "args": [{ "code": [
-            "let pairs = ['()', '{}', '[]', '<>'];", 
-            "let x = vscode.commands.executeCommand", 
-            "let c = await keypress(Context.current);", 
-            "let p = pairs.find((p) => p.includes(c));", 
-            "await x('dance.selections.save');", 
-            "await x('dance.selections.faceBackward');", 
-            "await x('dance.seek.included.extend.backward', { 'input': p?.at(0) || c });", "await x('dance.selections.changeDirection');", 
-            "await x('dance.seek.included.extend', { 'input': p?.at(1) || c });", 
-            "await x('dance.selections.save', { 'register': 'surround' });", 
-            "await x('dance.selections.reduce.edges');", 
-            "c = await keypress(Context.current);", 
-            "p = pairs.find((p) => p.includes(c));", 
-            "await x('dance.edit.delete');", 
-            "await x('dance.selections.restore', { 'register': 'surround' });", 
-            "await x('dance.select.right.extend');", 
-            "await x('editor.action.insertSnippet', { 'snippet': (p?.at(0) || c) + '${TM_SELECTED_TEXT}' + (p?.at(1) || c) });", 
-            "await x('dance.selections.restore');"
-          ]}]
-        },
-        "d": {
-          "text": "Surround delete",
-          "command": "dance.run",
-          // prettier-ignore
-          "args": [{ "code": [
-            "let pairs = ['()', '{}', '[]', '<>'];", 
-            "let x = vscode.commands.executeCommand", 
-            "let c = await keypress(Context.current);", 
-            "let p = pairs.find((p) => p.includes(c));", 
-            "await x('dance.selections.save');", 
-            "await x('dance.selections.faceBackward');", 
-            "await x('dance.seek.included.extend.backward', { 'input': p?.at(0) || c });", 
-            "await x('dance.selections.changeDirection');", 
-            "await x('dance.seek.included.extend', { 'input': p?.at(1) || c });", 
-            "await x('dance.selections.reduce.edges');",
-            "await x('dance.edit.delete');",
-            "await x('dance.selections.restore');"
-          ]}]
-        },
-
+        // "s": { "text": "Surround add", "command": "???" },
+        // "r": { "text": "Surround replace", "command": "???" },
+        // "d": { "text": "Surround delete", "command": "???" },
         "a": { "text": "Select around object", "command": "dance.openMenu", "args": [{ "menu": "object-hx", "title": "Match around" }] },
         "i": { "text": "Select inside object", "command": "dance.openMenu", "args": [{ "menu": "object-hx", "title": "Match inside", "pass": [{ "inner": true }] }] }
       }
