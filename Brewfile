@@ -21,6 +21,9 @@ brew 'zoxide'
 brew 'ellie/atuin/atuin'
 brew 'zellij'
 
+# General language tooling
+brew 'proto'
+
 # Node setup
 brew 'nvm'
 brew 'yarn'
