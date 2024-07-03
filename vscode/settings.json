@@ -188,7 +188,10 @@
         // "r": { "text": "Surround replace", "command": "???" },
         // "d": { "text": "Surround delete", "command": "???" },
         "a": { "text": "Select around object", "command": "dance.openMenu", "args": [{ "menu": "object-hx", "title": "Match around" }] },
-        "i": { "text": "Select inside object", "command": "dance.openMenu", "args": [{ "menu": "object-hx", "title": "Match inside", "pass": [{ "inner": true }] }] }
+        "i": { "text": "Select inside object", "command": "dance.openMenu", "args": [{ "menu": "object-hx", "title": "Match inside", "pass": [{ "inner": true }] }] },
+
+        // CUSTOM! add emmet shortcuts
+        "t": { "text": "Goto matching pair (Emmet)", "command": "editor.emmet.action.matchTag" }
       }
     },
     "object-hx": {
@@ -325,7 +328,10 @@
         ".": { "text": "Switch project", "command": "projectManager.listProjects" },
 
         // CUSTOM! add magit menu
-        "m": { "text": "Magit", "command": "runCommands", "args": { "commands": ["magit.status", { "command": "dance.modes.set", "args": { "mode": "magit" } }] } }
+        "m": { "text": "Magit", "command": "runCommands", "args": { "commands": ["magit.status", { "command": "dance.modes.set", "args": { "mode": "magit" } }] } },
+
+        // CUSTOM! add emmet menu
+        "e": { "text": "Emmet", "command": "dance.openMenu", "args": [{ "menu": "emmet" }] }
       }
     },
     "debug-hx": {
@@ -382,6 +388,24 @@
       "items": {
         "f": { "text": "File path", "command": "copyFilePath" },
         "r": { "text": "Relative file path", "command": "copyRelativeFilePath" }
+      }
+    },
+
+    "emmet": {
+      "title": "Emmet",
+      "items": {
+        "g": { "text": "Goto matching pair", "command": "editor.emmet.action.matchTag" },
+
+        "n": { "text": "Goto next edit point", "command": "editor.emmet.action.nextEditPoint" },
+        "N": { "text": "Goto previous edit point", "command": "editor.emmet.action.prevEditPoint" },
+
+        "w": { "text": "Wrap with abbreviation", "command": "editor.emmet.action.wrapWithAbbreviation" },
+
+        "b": { "text": "Balance (inwards)", "command": "emmet.action.balanceIn" },
+        "B": { "text": "Balance (outwards)", "command": "emmet.action.balanceOut" },
+
+        "d": { "text": "Remove tag", "command": "editor.emmet.action.removeTag" },
+        "s": { "text": "Split/join tag", "command": "editor.emmet.action.splitJoinTag" }
       }
     }
   }
