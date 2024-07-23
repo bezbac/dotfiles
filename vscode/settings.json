@@ -62,6 +62,8 @@
   "files.exclude": {
     "**/node_modules": true
   },
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
   "find-it-faster.general.killTerminalAfterUse": true,
   "git.confirmSync": false,
   "git.mergeEditor": false,
