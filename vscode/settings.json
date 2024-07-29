@@ -30,7 +30,7 @@
   },
   "apc.imports": ["${userHome}/Library/Application Support/Code/User/custom.css"],
   "cSpell.enabled": false,
-  "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.ignoreTrimWhitespace": true,
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.accessibilitySupport": "off",
   "editor.autoClosingQuotes": "always",
