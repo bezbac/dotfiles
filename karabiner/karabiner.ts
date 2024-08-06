@@ -1,0 +1,308 @@
+#!/usr/bin/env -S deno run --allow-write
+
+// Based on https://github.com/mxstbr/karabiner
+
+import {
+  KarabinerRules,
+  KeyCode,
+  Manipulator,
+  To,
+} from "https://raw.githubusercontent.com/mxstbr/karabiner/main/types.ts";
+import * as path from "https://deno.land/std@0.224.0/path/mod.ts";
+
+const __dirname = new URL(".", import.meta.url).pathname;
+
+// ----------------------------------------------------------------------------
+// Main
+// ----------------------------------------------------------------------------
+
+const rules: KarabinerRules[] = [
+  // Define the Hyper key itself
+  {
+    description: "Hyper Key (⌃⌥⇧⌘)",
+    manipulators: [
+      {
+        description: "Caps Lock -> Hyper Key",
+        from: {
+          key_code: "caps_lock",
+          modifiers: {
+            optional: ["any"],
+          },
+        },
+        to: [
+          {
+            set_variable: {
+              name: "hyper",
+              value: 1,
+            },
+          },
+        ],
+        to_after_key_up: [
+          {
+            set_variable: {
+              name: "hyper",
+              value: 0,
+            },
+          },
+        ],
+        to_if_alone: [
+          {
+            key_code: "escape",
+          },
+        ],
+        type: "basic",
+      },
+    ],
+  },
+  ...createHyperSubLayers({
+    // spacebar: {
+    //   // Trigger Homerow.app
+    //   to: [{ key_code: "spacebar", modifiers: ["left_command", "shift"] }],
+    // },
+
+    // TODO: Open search menubar items when pressing Hyper + question mark
+
+    b: open("raycast://extensions/raycast/browser-bookmarks/index"),
+
+    // VIM like navigation
+    h: {
+      to: [{ key_code: "left_arrow" }],
+    },
+    j: {
+      to: [{ key_code: "down_arrow" }],
+    },
+    k: {
+      to: [{ key_code: "up_arrow" }],
+    },
+    l: {
+      to: [{ key_code: "right_arrow" }],
+    },
+
+    o: {
+      x: app("WezTerm"),
+
+      // "b"rowser
+      b: app("Safari"),
+      // "v"scode
+      v: app("Visual Studio Code"),
+      // "f"inder
+      f: app("Finder"),
+      // "s"potify
+      s: app("Spotify"),
+      // "m"essaging
+      m: app("Beeper"),
+      // "c"alendar
+      c: app("Calendar"),
+      // "i"ssue tracker
+      i: app("Linear"),
+      // "d"esign
+      d: app("Figma"),
+      // // "t"eam
+      t: app("Slack"),
+    },
+  }),
+];
+
+await compile(path.join(__dirname, "./karabiner.json"), rules);
+
+// ----------------------------------------------------------------------------
+// Helpers
+// ----------------------------------------------------------------------------
+
+async function compile(path: string, rules: KarabinerRules[]) {
+  const encoder = new TextEncoder();
+  const data = encoder.encode(
+    JSON.stringify(
+      {
+        global: {
+          show_in_menu_bar: false,
+        },
+        profiles: [
+          {
+            name: "Default",
+            complex_modifications: {
+              rules,
+            },
+          },
+        ],
+      },
+      null,
+      2
+    )
+  );
+
+  await Deno.writeFile(path, data);
+}
+
+/**
+ * Custom way to describe a command in a layer
+ */
+export interface LayerCommand {
+  to: To[];
+  description?: string;
+}
+
+type HyperKeySublayer = {
+  // The ? is necessary, otherwise we'd have to define something for _every_ key code
+  [key_code in KeyCode]?: LayerCommand;
+};
+
+/**
+ * Create a Hyper Key sublayer, where every command is prefixed with a key
+ * e.g. Hyper + O ("Open") is the "open applications" layer, I can press
+ * e.g. Hyper + O + G ("Google Chrome") to open Chrome
+ */
+export function createHyperSubLayer(
+  sublayer_key: KeyCode,
+  commands: HyperKeySublayer,
+  allSubLayerVariables: string[]
+): Manipulator[] {
+  const subLayerVariableName = generateSubLayerVariableName(sublayer_key);
+
+  return [
+    // When Hyper + sublayer_key is pressed, set the variable to 1; on key_up, set it to 0 again
+    {
+      description: `Toggle Hyper sublayer ${sublayer_key}`,
+      type: "basic",
+      from: {
+        key_code: sublayer_key,
+        modifiers: {
+          optional: ["any"],
+        },
+      },
+      to_after_key_up: [
+        {
+          set_variable: {
+            name: subLayerVariableName,
+            // The default value of a variable is 0: https://karabiner-elements.pqrs.org/docs/json/complex-modifications-manipulator-definition/conditions/variable/
+            // That means by using 0 and 1 we can filter for "0" in the conditions below and it'll work on startup
+            value: 0,
+          },
+        },
+      ],
+      to: [
+        {
+          set_variable: {
+            name: subLayerVariableName,
+            value: 1,
+          },
+        },
+      ],
+      // This enables us to press other sublayer keys in the current sublayer
+      // (e.g. Hyper + O > M even though Hyper + M is also a sublayer)
+      // basically, only trigger a sublayer if no other sublayer is active
+      conditions: [
+        ...allSubLayerVariables
+          .filter(
+            (subLayerVariable) => subLayerVariable !== subLayerVariableName
+          )
+          .map((subLayerVariable) => ({
+            type: "variable_if" as const,
+            name: subLayerVariable,
+            value: 0,
+          })),
+        {
+          type: "variable_if",
+          name: "hyper",
+          value: 1,
+        },
+      ],
+    },
+    // Define the individual commands that are meant to trigger in the sublayer
+    ...(Object.keys(commands) as (keyof typeof commands)[]).map(
+      (command_key): Manipulator => ({
+        ...commands[command_key],
+        type: "basic" as const,
+        from: {
+          key_code: command_key,
+          modifiers: {
+            optional: ["any"],
+          },
+        },
+        // Only trigger this command if the variable is 1 (i.e., if Hyper + sublayer is held)
+        conditions: [
+          {
+            type: "variable_if",
+            name: subLayerVariableName,
+            value: 1,
+          },
+        ],
+      })
+    ),
+  ];
+}
+
+/**
+ * Create all hyper sublayers. This needs to be a single function, as well need to
+ * have all the hyper variable names in order to filter them and make sure only one
+ * activates at a time
+ */
+export function createHyperSubLayers(subLayers: {
+  [key_code in KeyCode]?: HyperKeySublayer | LayerCommand;
+}): KarabinerRules[] {
+  const allSubLayerVariables = (
+    Object.keys(subLayers) as (keyof typeof subLayers)[]
+  ).map((sublayer_key) => generateSubLayerVariableName(sublayer_key));
+
+  return Object.entries(subLayers).map(([key, value]) =>
+    "to" in value
+      ? {
+          description: `Hyper Key + ${key}`,
+          manipulators: [
+            {
+              ...value,
+              type: "basic" as const,
+              from: {
+                key_code: key as KeyCode,
+                modifiers: {
+                  optional: ["any"],
+                },
+              },
+              conditions: [
+                {
+                  type: "variable_if",
+                  name: "hyper",
+                  value: 1,
+                },
+                ...allSubLayerVariables.map((subLayerVariable) => ({
+                  type: "variable_if" as const,
+                  name: subLayerVariable,
+                  value: 0,
+                })),
+              ],
+            },
+          ],
+        }
+      : {
+          description: `Hyper Key sublayer "${key}"`,
+          manipulators: createHyperSubLayer(
+            key as KeyCode,
+            value,
+            allSubLayerVariables
+          ),
+        }
+  );
+}
+
+function generateSubLayerVariableName(key: KeyCode) {
+  return `hyper_sublayer_${key}`;
+}
+
+/**
+ * Shortcut for "open" shell command
+ */
+export function open(...what: string[]): LayerCommand {
+  return {
+    to: what.map((w) => ({
+      shell_command: `open ${w}`,
+    })),
+    description: `Open ${what.join(" & ")}`,
+  };
+}
+
+/**
+ * Shortcut for "Open an app" command (of which there are a bunch)
+ */
+export function app(name: string): LayerCommand {
+  return open(`-a '${name}.app'`);
+}

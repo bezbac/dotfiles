@@ -33,15 +33,9 @@ bindkey '^r' _atuin_search_widget
 ## Setup pyenv
 eval "$(pyenv init -)"
 
-# Autosuggestions
-bindkey '^[[Z' autosuggest-accept
-
 # Setup substring search
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
-
-bindkey '^k' history-substring-search-up
-bindkey '^j' history-substring-search-down
 
 # Setup mac-OS keyboard navigation (⌥ + ← / → and ⌘ + ← / →)
 bindkey "[D" backward-word
