@@ -116,6 +116,8 @@
   "workbench.editor.empty.hint": "hidden",
   "workbench.editor.tabSizing": "shrink",
   "workbench.editorAssociations": {
+    // Disable interactive rebase editor
+    "git-rebase-todo": "default",
     "*.ipynb": "jupyter.notebook.ipynb"
   },
   "workbench.productIconTheme": "macos-modern",
