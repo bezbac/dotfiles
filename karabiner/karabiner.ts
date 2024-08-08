@@ -55,12 +55,8 @@ const rules: KarabinerRules[] = [
     ],
   },
   ...createHyperSubLayers({
-    // spacebar: {
-    //   // Trigger Homerow.app
-    //   to: [{ key_code: "spacebar", modifiers: ["left_command", "shift"] }],
-    // },
-
-    // TODO: Open search menubar items when pressing Hyper + question mark
+    // Open search menubar items when pressing Hyper + / (Hyper + ?)
+    slash: open("raycast://extensions/raycast/navigation/search-menu-items"),
 
     b: open("raycast://extensions/raycast/browser-bookmarks/index"),
 
