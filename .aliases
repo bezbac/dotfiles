@@ -28,3 +28,6 @@ alias tf="terraform"
 
 ## Zoxide
 alias j="z"
+
+## pnpm
+alias p="pnpm"
