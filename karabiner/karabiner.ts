@@ -59,6 +59,7 @@ const rules: KarabinerRules[] = [
     slash: open("raycast://extensions/raycast/navigation/search-menu-items"),
 
     b: open("raycast://extensions/raycast/browser-bookmarks/index"),
+    w: open("raycast://extensions/raycast/navigation/switch-windows"),
 
     // VIM like navigation
     h: {
