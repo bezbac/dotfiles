@@ -58,9 +58,6 @@ const rules: KarabinerRules[] = [
     // Open search menubar items when pressing Hyper + / (Hyper + ?)
     slash: open("raycast://extensions/raycast/navigation/search-menu-items"),
 
-    b: open("raycast://extensions/raycast/browser-bookmarks/index"),
-    w: open("raycast://extensions/raycast/navigation/switch-windows"),
-
     // VIM like navigation
     h: {
       to: [{ key_code: "left_arrow" }],
@@ -73,6 +70,18 @@ const rules: KarabinerRules[] = [
     },
     l: {
       to: [{ key_code: "right_arrow" }],
+    },
+    w: {
+      to: [{ modifiers: ["alt"], key_code: "right_arrow" }],
+    },
+    b: {
+      to: [{ modifiers: ["alt"], key_code: "left_arrow" }],
+    },
+
+    // Raycast
+    r: {
+      b: open("raycast://extensions/raycast/browser-bookmarks/index"),
+      w: open("raycast://extensions/raycast/navigation/switch-windows"),
     },
 
     o: {
