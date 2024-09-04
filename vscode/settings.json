@@ -110,6 +110,7 @@
   "terminal.external.osxExec": "WezTerm.app",
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.tabs.enabled": false,
+  "typescript.tsserver.experimental.enableProjectDiagnostics": true,
   "window.customTitleBarVisibility": "never",
   "window.titleBarStyle": "native",
   "workbench.activityBar.location": "bottom",
