@@ -1,5 +1,6 @@
 # To obtain this list run `code --list-extensions`
 alefragnani.project-manager
+arturodent.command-alias
 bezbac.concrete-vscode
 bierner.markdown-preview-github-styles
 bradlc.vscode-tailwindcss
