@@ -229,3 +229,14 @@ defaults write cc.anybox.Anybox showDockIcon -int 0
 
 # Warn before quitting
 defaults write cc.anybox.Anybox warnBeforeQuiting -int 1
+
+###############################################################################
+# Ice                                                                         #
+###############################################################################
+
+defaults write com.jordanbaird.Ice AutoRehide -int 1
+defaults write com.jordanbaird.Ice ShowIceIcon -int 1
+defaults write com.jordanbaird.Ice ShowOnClick -int 1
+defaults write com.jordanbaird.Ice ShowOnHover -int 0
+defaults write com.jordanbaird.Ice ShowOnScroll -int 0
+defaults write com.jordanbaird.Ice UseIceBar -int 0
