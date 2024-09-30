@@ -62,6 +62,7 @@ brew 'ripgrep'
 # Other tools
 brew 'cmake'
 brew 'make'
+brew 'jordanbaird-ice'
 
 # Quicklook
 cask 'quicklook-json'
