@@ -97,6 +97,18 @@ const rules: KarabinerRules[] = [
       // // "t"eam
       t: app("Slack"),
     },
+
+    // Improved browser navigation
+    t: {
+      // Move to the previous tab
+      h: {
+        to: [{ key_code: "tab", modifiers: ["left_control", "shift"] }],
+      },
+      // Move to the next tab
+      l: {
+        to: [{ key_code: "tab", modifiers: ["left_control"] }],
+      },
+    },
   }),
 ];
 
