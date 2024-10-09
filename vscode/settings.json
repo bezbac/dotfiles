@@ -65,6 +65,7 @@
   },
   "explorer.sortOrderLexicographicOptions": "upper",
   "extensions.ignoreRecommendations": true,
+  "extensions.autoUpdate": false,
   "files.exclude": {
     "**/node_modules": true
   },
@@ -116,6 +117,7 @@
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.tabs.enabled": false,
   "typescript.tsserver.experimental.enableProjectDiagnostics": true,
+  "update.mode": "manual",
   "window.customTitleBarVisibility": "never",
   "window.titleBarStyle": "native",
   "workbench.activityBar.location": "bottom",
