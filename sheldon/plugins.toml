@@ -1,18 +1,45 @@
-[plugins.zsh-autosuggestions]
-github = "zsh-users/zsh-autosuggestions"
-use = ["{{ name }}.zsh"]
+# Sheldon configuration file
+#
+# See https://sheldon.cli.rs
 
-[plugins.zsh-syntax-highlighting]
-github = "zsh-users/zsh-syntax-highlighting"
+shell = "zsh"
+
+[templates]
+defer = """{{ hooks?.pre | nl }}{% for file in files %}zsh-defer source "{{ file }}"\n{% endfor %}{{ hooks?.post | nl }}"""
+
+# Sourced
+# ----------------
+
+[plugins.zsh-defer]
+github = "romkatv/zsh-defer"
+
+# Deferred plugins
+# ----------------
 
 [plugins.zsh-history-substring-search]
 github = "zsh-users/zsh-history-substring-search"
 use = ["{{ name }}.zsh"]
+apply = ["defer"]
 
-[plugins.zsh-yarn-completions]
-github = "chrisands/zsh-yarn-completions"
-use = ["{{ name }}.plugin.zsh"]
+[plugins.fast-syntax-highlighting]
+github = "zdharma-continuum/fast-syntax-highlighting"
+apply = ["defer"]
 
-[plugins.pnpm-shell-completion]
-github = "g-plane/pnpm-shell-completion"
-use = ["{{ name }}.plugin.zsh"]
+[plugins.zsh-autosuggestions]
+github = "zsh-users/zsh-autosuggestions"
+use = ["{{ name }}.zsh"]
+apply = ["defer"]
+
+[plugins.nvm]
+local = "~/.zsh/plugins"
+apply = ["defer"]
+
+[plugins.zellij]
+local = "~/.zsh/plugins"
+apply = ["defer"]
+
+[plugins.compinit]
+inline = "autoload -Uz compinit && zsh-defer compinit"
+
+[plugins.edit-command-line]
+inline = "autoload -Uz edit-command-line && zle -N edit-command-line"
