@@ -27,6 +27,7 @@ DOTFILE_ROOT=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd 
 mkdir -p $HOME/.config
 mkdir -p $HOME/.config/sheldon
 mkdir -p $HOME/.config/wezterm
+mkdir -p $HOME/.zsh
 
 # Compile karabiner rules
 deno run --allow-write ./karabiner/karabiner.ts
@@ -46,6 +47,7 @@ ln -sfn $DOTFILE_ROOT/vscode/keybindings.json $HOME/Library/Application\ Support
 ln -sfn $DOTFILE_ROOT/vscode/custom.css $HOME/Library/Application\ Support/Code/User/custom.css
 ln -sfn $DOTFILE_ROOT/vscode/snippets $HOME/Library/Application\ Support/Code/User/snippets
 ln -sfn $DOTFILE_ROOT/zsh/.zshrc $HOME/.zshrc
+ln -sfn $DOTFILE_ROOT/zsh/plugins $HOME/.zsh/plugins
 ln -sfn $DOTFILE_ROOT/sheldon/plugins.toml $HOME/.config/sheldon/plugins.toml
 ln -sfn $DOTFILE_ROOT/bash/.bashrc $HOME/.bashrc
 ln -sfn $DOTFILE_ROOT/scripts $HOME/scripts
