@@ -10,18 +10,19 @@ defer = """{{ hooks?.pre | nl }}{% for file in files %}zsh-defer source "{{ file
 # Sourced
 # ----------------
 
-[plugins.zsh-history-substring-search]
-github = "zsh-users/zsh-history-substring-search"
-use = ["{{ name }}.zsh"]
-
 [plugins.zsh-defer]
 github = "romkatv/zsh-defer"
 
 # Deferred plugins
 # ----------------
 
-[plugins.zsh-syntax-highlighting]
-github = "zsh-users/zsh-syntax-highlighting"
+[plugins.zsh-history-substring-search]
+github = "zsh-users/zsh-history-substring-search"
+use = ["{{ name }}.zsh"]
+apply = ["defer"]
+
+[plugins.fast-syntax-highlighting]
+github = "zdharma-continuum/fast-syntax-highlighting"
 apply = ["defer"]
 
 [plugins.zsh-autosuggestions]
@@ -32,3 +33,13 @@ apply = ["defer"]
 [plugins.nvm]
 local = "~/.zsh/plugins"
 apply = ["defer"]
+
+[plugins.zellij]
+local = "~/.zsh/plugins"
+apply = ["defer"]
+
+[plugins.compinit]
+inline = "autoload -Uz compinit && zsh-defer compinit"
+
+[plugins.edit-command-line]
+inline = "autoload -Uz edit-command-line && zle -N edit-command-line"
