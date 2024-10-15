@@ -62,7 +62,6 @@ brew 'ripgrep'
 # Other tools
 brew 'cmake'
 brew 'make'
-brew 'jordanbaird-ice'
 
 # Quicklook
 cask 'quicklook-json'
@@ -89,6 +88,7 @@ cask 'signal'
 cask 'beeper'
 cask 'raycast'
 cask 'obsidian'
+cask 'jordanbaird-ice'
 cask 'spotify'
 cask 'iina'
 cask 'mediahuman-audio-converter'
