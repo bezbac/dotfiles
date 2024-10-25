@@ -30,10 +30,6 @@ github = "zsh-users/zsh-autosuggestions"
 use = ["{{ name }}.zsh"]
 apply = ["defer"]
 
-[plugins.nvm]
-local = "~/.zsh/plugins"
-apply = ["defer"]
-
 [plugins.zellij]
 local = "~/.zsh/plugins"
 apply = ["defer"]
