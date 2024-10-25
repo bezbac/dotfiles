@@ -62,7 +62,9 @@ ln -sfn $DOTFILE_ROOT/karabiner/karabiner.json $HOME/.config/karabiner/karabiner
 # extensions.list contains the output from "code --list-extensions"
 while read EXTENSION
 do
-    [[ "$line" =~ ^#.*$ ]] && continue
+    case $EXTENSION in
+       ''|\#*) continue ;;
+    esac
     echo "Install VSCode Extension: $EXTENSION"
     code --install-extension $EXTENSION
 done < $DOTFILE_ROOT/vscode/extensions.list

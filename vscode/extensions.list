@@ -1,31 +1,38 @@
 # To obtain this list run `code --list-extensions`
-alefragnani.project-manager
-arturodent.command-alias
-bezbac.concrete-vscode
-bierner.markdown-preview-github-styles
-bradlc.vscode-tailwindcss
-charliermarsh.ruff
-csstools.postcss
-davidbwaters.macos-modern-theme
-dbaeumer.vscode-eslint
-drcika.apc-extension
-eamodio.gitlens
-EditorConfig.EditorConfig
-esbenp.prettier-vscode
-fabiospampinato.vscode-open-in-github
-file-icons.file-icons
+
+# Default extensions
 GitHub.copilot
 GitHub.copilot-chat
 github.vscode-github-actions
 GitHub.vscode-pull-request-github
+ms-vscode-remote.remote-ssh
+ms-vscode-remote.remote-ssh-edit
+ms-vscode.remote-explorer
+
+# Essentials
+alefragnani.project-manager
+arturodent.command-alias
+drcika.apc-extension
+EditorConfig.EditorConfig
 gregoire.dance
-Gruntfuggly.todo-tree
-GuodongSun.vscode-git-cruise
-hashicorp.hcl
 kahole.magit
-mathiasfrohlich.Kotlin
+
+# General extensions
+bierner.markdown-preview-github-styles
+eamodio.gitlens
 mhutchie.git-graph
-moonrepo.moon-console
+naumovs.color-highlight
+wayou.vscode-todo-highlight
+
+# Utilities
+richie5um2.vscode-sort-json
+
+# Themes
+bezbac.concrete-vscode
+davidbwaters.macos-modern-theme
+
+# Python specific
+charliermarsh.ruff
 ms-python.isort
 ms-python.python
 ms-python.vscode-pylance
@@ -34,14 +41,22 @@ ms-toolsai.jupyter-keymap
 ms-toolsai.jupyter-renderers
 ms-toolsai.vscode-jupyter-cell-tags
 ms-toolsai.vscode-jupyter-slideshow
-ms-vscode-remote.remote-ssh
-ms-vscode-remote.remote-ssh-edit
-ms-vscode.remote-explorer
-naumovs.color-highlight
-richie5um2.vscode-sort-json
+
+# Webdev specific
+bradlc.vscode-tailwindcss
+csstools.postcss
+dbaeumer.vscode-eslint
+esbenp.prettier-vscode
+moonrepo.moon-console
+
+# Rust specific
 rust-lang.rust-analyzer
-tamasfe.even-better-toml
-tomrijndorp.find-it-faster
+
+# Language Support - MDX
 unifiedjs.vscode-mdx
-wayou.vscode-todo-highlight
-will-stone.in-any-case
+
+# Language Support - TOML
+tamasfe.even-better-toml
+
+# Language Support - HCL
+hashicorp.hcl
