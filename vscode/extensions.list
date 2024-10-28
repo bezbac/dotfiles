@@ -16,6 +16,7 @@ drcika.apc-extension
 EditorConfig.EditorConfig
 gregoire.dance
 kahole.magit
+tomrijndorp.find-it-faster
 
 # General extensions
 bierner.markdown-preview-github-styles
@@ -26,6 +27,7 @@ wayou.vscode-todo-highlight
 
 # Utilities
 richie5um2.vscode-sort-json
+samueltscott.maximizeterminal
 
 # Themes
 bezbac.concrete-vscode
