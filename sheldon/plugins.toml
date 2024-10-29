@@ -13,8 +13,16 @@ defer = """{{ hooks?.pre | nl }}{% for file in files %}zsh-defer source "{{ file
 [plugins.zsh-defer]
 github = "romkatv/zsh-defer"
 
+[plugins.path]
+local = "~/.zsh/plugins"
+apply = ["defer"]
+
 # Deferred plugins
 # ----------------
+
+[plugins.aliases]
+local = "~/.zsh/plugins"
+apply = ["defer"]
 
 [plugins.zsh-history-substring-search]
 github = "zsh-users/zsh-history-substring-search"

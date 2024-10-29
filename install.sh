@@ -33,9 +33,6 @@ mkdir -p $HOME/.zsh
 deno run --allow-write ./karabiner/karabiner.ts
 
 # Symlinks
-ln -sfn $DOTFILE_ROOT/.aliases $HOME/.aliases
-ln -sfn $DOTFILE_ROOT/.path $HOME/.path
-ln -sfn $DOTFILE_ROOT/.editor $HOME/.editor
 ln -sfn $DOTFILE_ROOT/.editorconfig $HOME/.editorconfig
 ln -sfn $DOTFILE_ROOT/.gitconfig $HOME/.gitconfig
 ln -sfn $DOTFILE_ROOT/ssh/config $HOME/.ssh/config
@@ -49,7 +46,6 @@ ln -sfn $DOTFILE_ROOT/vscode/snippets $HOME/Library/Application\ Support/Code/Us
 ln -sfn $DOTFILE_ROOT/zsh/.zshrc $HOME/.zshrc
 ln -sfn $DOTFILE_ROOT/zsh/plugins $HOME/.zsh/plugins
 ln -sfn $DOTFILE_ROOT/sheldon/plugins.toml $HOME/.config/sheldon/plugins.toml
-ln -sfn $DOTFILE_ROOT/bash/.bashrc $HOME/.bashrc
 ln -sfn $DOTFILE_ROOT/scripts $HOME/scripts
 ln -sfn $DOTFILE_ROOT/helix $HOME/.config/helix
 ln -sfn $DOTFILE_ROOT/zellij $HOME/.config/zellij

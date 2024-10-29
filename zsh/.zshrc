@@ -1,17 +1,16 @@
 #!/usr/bin/env zsh
 
 ### ----------------------------
-### Source stuff
+### Defaults
 ### ----------------------------
 
-# Paths
-source "$HOME/.path"
-
 # Editor
-source "$HOME/.editor"
+export VISUAL=hx
+export EDITOR=$VISUAL
 
-# Aliases
-source "$HOME/.aliases"
+### ----------------------------
+### Source stuff
+### ----------------------------
 
 # Sheldon
 eval "$(sheldon source)"
