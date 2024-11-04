@@ -20,7 +20,7 @@ tomrijndorp.find-it-faster
 
 # General extensions
 bierner.markdown-preview-github-styles
-eamodio.gitlens
+mk12.better-git-line-blame
 mhutchie.git-graph
 naumovs.color-highlight
 wayou.vscode-todo-highlight
