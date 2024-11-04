@@ -21,14 +21,6 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "apc.electron": {
-    "titleBarStyle": "hiddenInset",
-    "trafficLightPosition": {
-      "x": 8,
-      "y": 9
-    }
-  },
-  "apc.imports": ["${userHome}/Library/Application Support/Code/User/custom.css"],
   "cSpell.enabled": false,
   "command aliases": {
     "workbench.action.files.saveAll": "wq",
@@ -118,6 +110,7 @@
   "terminal.integrated.tabs.enabled": false,
   "typescript.tsserver.experimental.enableProjectDiagnostics": true,
   "update.mode": "manual",
+  "vscode_custom_css.imports": ["file://${userHome}/Library/Application Support/Code/User/custom.css"],
   "window.customTitleBarVisibility": "never",
   "window.titleBarStyle": "native",
   "workbench.activityBar.location": "bottom",
