@@ -118,3 +118,4 @@ mas "Hush", id: 1544743900
 mas "DaisyDisk", id: 411643860
 mas "Amphetamine", id: 937984704
 mas "WhatsApp", id: 310633997
+mas "GoodLinks", id: 1474335294
