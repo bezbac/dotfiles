@@ -11,12 +11,6 @@ brew update
 brew analytics off
 brew bundle install -v
 
-# Install visual studio code @ 1.93.1
-brew uninstall --cask visual-studio-code
-wget https://raw.githubusercontent.com/Homebrew/homebrew-cask/b8fe6ebdd59af89dde443ff34fdc0fb57c655458/Casks/v/visual-studio-code.rb
-brew install --cask ./visual-studio-code.rb
-rm ./visual-studio-code.rb
-
 # Install node
 nvm install stable
 
