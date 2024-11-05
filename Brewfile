@@ -39,6 +39,9 @@ brew 'rustup-init'
 # Terraform setup
 brew 'terraform'
 
+# JVM setup
+brew 'sdkman/tap/sdkman-cli'
+
 # Git tools
 brew 'git-lfs'
 brew 'git-extras'

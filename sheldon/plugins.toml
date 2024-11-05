@@ -42,6 +42,9 @@ apply = ["defer"]
 local = "~/.zsh/plugins"
 apply = ["defer"]
 
+[plugins.sdkman]
+inline = '''export SDKMAN_DIR=$(brew --prefix sdkman-cli)/libexec; [[ -s "${SDKMAN_DIR}/bin/sdkman-init.sh" ]] && source "${SDKMAN_DIR}/bin/sdkman-init.sh"'''
+
 [plugins.compinit]
 inline = "autoload -Uz compinit && zsh-defer compinit"
 
