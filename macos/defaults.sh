@@ -212,10 +212,13 @@ defaults write com.raycast.macos "emojiPicker_skinTone" -string "default"
 defaults write com.raycast.macos onboardingCompleted -bool true
 
 # Hide getting started
-defaults write com.raycast.macos  showGettingStartedLink -bool false
+defaults write com.raycast.macos showGettingStartedLink -bool false
 
 # Set global hotkey to Command-Space
 defaults write com.raycast.macos raycastGlobalHotkey -string "Command-49"
+
+# Set pop to root timeout to "Immediately"
+defaults write com.raycast.macos popToRootTimeout -int 0
 
 ###############################################################################
 # Anybox                                                                      #
