@@ -29,6 +29,11 @@ github = "zsh-users/zsh-history-substring-search"
 use = ["{{ name }}.zsh"]
 apply = ["defer"]
 
+[plugins.zsh-auto-notify]
+github = "MichaelAquilina/zsh-auto-notify"
+use = ["auto-notify.plugin.zsh"]
+apply = ["defer"]
+
 [plugins.fast-syntax-highlighting]
 github = "zdharma-continuum/fast-syntax-highlighting"
 apply = ["defer"]
