@@ -308,6 +308,9 @@
   { "key": "j", "command": "dance.select.down.jump", "when": "editorTextFocus && editorLangId == 'magit'" },
   { "key": "k", "command": "dance.select.up.jump", "when": "editorTextFocus && editorLangId == 'magit'" },
 
+  { "key": "ctrl+u", "command": "dance.select.vertically", "args": { "direction": -1, "by": "halfPage", "shift": "jump" }, "when": "editorTextFocus && editorLangId == 'magit'" },
+  { "key": "ctrl+d", "command": "dance.select.vertically", "args": { "direction": 1, "by": "halfPage", "shift": "jump" }, "when": "editorTextFocus && editorLangId == 'magit'" },
+
   { "key": "k", "command": "-magit.discard-at-point", "when": "editorTextFocus && editorLangId == 'magit'" },
   { "key": "ctrl+k", "command": "magit.discard-at-point", "when": "editorTextFocus && editorLangId == 'magit'" },
   { "key": "v", "command": "-magit.reverse-at-point" },
