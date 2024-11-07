@@ -58,8 +58,22 @@
   //
 
   { "key": "h", "command": "dance.select.left.jump", "when": "editorTextFocus && dance.mode == 'normal' || editorTextFocus && dance.mode == 'select'" },
-  { "key": "j", "command": "dance.select.down.jump", "when": "editorTextFocus && dance.mode == 'normal' || editorTextFocus && dance.mode == 'select'" },
-  { "key": "k", "command": "dance.select.up.jump", "when": "editorTextFocus && dance.mode == 'normal' || editorTextFocus && dance.mode == 'select'" },
+  {
+    "key": "j",
+    "command": "dance.run",
+    "when": "editorTextFocus && dance.mode == 'normal' && !editorHasSelection && !editorHasMultipleSelections",
+    "args": {
+      "code": ["if (repetitions > 1) {", "  await vscode.commands.executeCommand('dance.select.down.jump', { count: repetitions })", "} else {", "  vscode.commands.executeCommand('cursorDown')", "}"]
+    }
+  },
+  {
+    "key": "k",
+    "command": "dance.run",
+    "when": "editorTextFocus && dance.mode == 'normal' && !editorHasSelection && !editorHasMultipleSelections",
+    "args": {
+      "code": ["if (repetitions > 1) {", "  await vscode.commands.executeCommand('dance.select.up.jump', { count: repetitions })", "} else {", "  vscode.commands.executeCommand('cursorUp')", "}"]
+    }
+  },
   { "key": "l", "command": "dance.run", "args": { "commands": [".selections.reduce", ".select.right.jump"] }, "when": "editorTextFocus && dance.mode == 'normal' || editorTextFocus && dance.mode == 'select'" },
 
   { "key": "t", "command": "dance.seek", "when": "editorTextFocus && dance.mode == 'normal' || editorTextFocus && dance.mode == 'select'" },
@@ -296,6 +310,10 @@
 
   // Open command pallete using ":"
   { "key": ":", "command": "workbench.action.showCommands", "when": "editorTextFocus && dance.mode == 'normal' || editorTextFocus && dance.mode == 'select'" },
+
+  // Fold / unfold code
+  { "key": "ctrl+[", "command": "editor.fold", "when": "editorTextFocus && foldingEnabled && (dance.mode == 'normal' || dance.mode == 'insert')" },
+  { "key": "ctrl+]", "command": "editor.unfold", "when": "editorTextFocus && foldingEnabled && (dance.mode == 'normal' || dance.mode == 'insert')" },
 
   // Support space menu outside of editor
   { "key": "space", "command": "dance.openMenu", "args": { "menu": "leader-hx", "pass": [{ "shift": "jump" }] }, "when": "!editorIsOpen && !inputFocus && !explorerViewletFocus" },
