@@ -5,6 +5,10 @@ plugins {
     compact-bar { path "compact-bar"; }
 }
 
+load_plugins {
+    "https://github.com/bezbac/zellij-tabula/releases/download/v0.1.1/zellij-tabula.wasm"
+}
+
 ui {
     pane_frames {
         rounded_corners true

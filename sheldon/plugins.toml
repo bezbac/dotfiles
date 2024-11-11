@@ -43,8 +43,9 @@ github = "zsh-users/zsh-autosuggestions"
 use = ["{{ name }}.zsh"]
 apply = ["defer"]
 
-[plugins.zellij]
-local = "~/.zsh/plugins"
+[plugins.zellij-tabula]
+github = "bezbac/zellij-tabula"
+use = ["{{ name }}.plugin.zsh"]
 apply = ["defer"]
 
 [plugins.sdkman]
