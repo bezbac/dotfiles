@@ -6,7 +6,10 @@ plugins {
 }
 
 load_plugins {
-    "https://github.com/bezbac/zellij-tabula/releases/download/v0.1.1/zellij-tabula.wasm"
+    // "https://github.com/bezbac/zellij-tabula/releases/download/v0.1.1/zellij-tabula.wasm"
+    "file:/Users/ben.bachem/Documents/Dev/zellij-tablua/zellij/target/wasm32-wasi/release/zellij-tabula.wasm" {
+        home_dir "/Users/ben.bachem/"
+    }
 }
 
 ui {
