@@ -57,6 +57,7 @@
   },
   "explorer.sortOrderLexicographicOptions": "upper",
   "extensions.ignoreRecommendations": true,
+  "extensions.autoCheckUpdates": false,
   "extensions.autoUpdate": false,
   "files.exclude": {
     "**/node_modules": true
