@@ -13,14 +13,24 @@ defer = """{{ hooks?.pre | nl }}{% for file in files %}zsh-defer source "{{ file
 [plugins.zsh-defer]
 github = "romkatv/zsh-defer"
 
-[plugins.path]
-local = "~/.zsh/plugins"
-apply = ["defer"]
+[plugins.edit-command-line]
+inline = "autoload -Uz edit-command-line && zle -N edit-command-line"
+
+[plugins.sdkman]
+inline = '''export SDKMAN_DIR=$(brew --prefix sdkman-cli)/libexec; [[ -s "${SDKMAN_DIR}/bin/sdkman-init.sh" ]] && source "${SDKMAN_DIR}/bin/sdkman-init.sh"'''
 
 # Deferred plugins
 # ----------------
 
+[plugins.path]
+local = "~/.zsh/plugins"
+apply = ["defer"]
+
 [plugins.aliases]
+local = "~/.zsh/plugins"
+apply = ["defer"]
+
+[plugins.compinit]
 local = "~/.zsh/plugins"
 apply = ["defer"]
 
@@ -47,12 +57,3 @@ apply = ["defer"]
 github = "bezbac/zellij-tabula"
 use = ["{{ name }}.plugin.zsh"]
 apply = ["defer"]
-
-[plugins.sdkman]
-inline = '''export SDKMAN_DIR=$(brew --prefix sdkman-cli)/libexec; [[ -s "${SDKMAN_DIR}/bin/sdkman-init.sh" ]] && source "${SDKMAN_DIR}/bin/sdkman-init.sh"'''
-
-[plugins.compinit]
-inline = "autoload -Uz compinit && zsh-defer compinit"
-
-[plugins.edit-command-line]
-inline = "autoload -Uz edit-command-line && zle -N edit-command-line"
