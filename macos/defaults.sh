@@ -33,6 +33,9 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
+# Hide desktop icons
+defaults write com.apple.finder CreateDesktop false
+
 ###############################################################################
 # Keyboard                                                                    #
 ###############################################################################
