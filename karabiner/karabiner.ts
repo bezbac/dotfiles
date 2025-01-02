@@ -17,6 +17,24 @@ const __dirname = new URL(".", import.meta.url).pathname;
 // ----------------------------------------------------------------------------
 
 const rules: KarabinerRules[] = [
+  // Simple keyboard shortcuts
+  {
+    description: "Clipboard History",
+    manipulators: [
+      {
+        type: "basic",
+        from: {
+          key_code: "v",
+          modifiers: {
+            mandatory: ["command", "shift"]
+          }
+        },
+        to: {
+          shell_command: "open raycast://extensions/raycast/clipboard-history/clipboard-history"
+        }
+      },
+    ]
+  },
   // Define the Hyper key itself
   {
     description: "Hyper Key (⌃⌥⇧⌘)",
