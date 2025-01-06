@@ -11,9 +11,6 @@ brew update
 brew analytics off
 brew bundle install -v
 
-# Install local formulas
-brew install --cask ./formulas/homerow.rb
-
 # Install node
 nvm install stable
 

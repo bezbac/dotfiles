@@ -82,6 +82,7 @@ cask 'font-figtree'
 cask 'font-fira-code-nerd-font'
 
 # Apps
+cask 'homerow'
 cask 'visual-studio-code'
 cask 'karabiner-elements'
 cask 'wezterm'
