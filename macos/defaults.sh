@@ -36,14 +36,6 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 # Hide desktop icons
 defaults write com.apple.finder CreateDesktop false
 
-# Use scroll gesture with the cmd modifier key to zoom
-defaults write com.apple.universalaccess closeViewZoomMode -int 1
-defaults write com.apple.universalaccess closeViewScrollWheelToggle -int 1
-defaults write com.apple.universalaccess closeViewScrollWheelModifiersInt -int 1048576
-
-# Follow the keyboard focus while zoomed in
-defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
-
 ###############################################################################
 # Keyboard                                                                    #
 ###############################################################################
