@@ -192,8 +192,8 @@ defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 # Show week numbers
 defaults write com.apple.iCal "Show Week Numbers" -bool true
 
-# Week starts on monday
-defaults write com.apple.iCal "first day of week" -int 1
+# Week starts on Monday
+defaults write com.apple.iCal "first day of week" -int 2
 
 # Show 15 hours in week view
 defaults write com.apple.iCal "number of hours displayed" -int 15
