@@ -320,7 +320,6 @@
 
   // Magit support in dance
   // See: https://github.com/71/dance/wiki/Magit-support
-  { "key": "m", "command": "dance.openMenu", "args": { "input": "magit" }, "when": "editorTextFocus && editorLangId == 'magit'" },
   { "key": "escape", "command": "runCommands", "args": { "commands": [{ "command": "dance.modes.set", "args": { "mode": "magit" } }] }, "when": "editorTextFocus && editorLangId == 'magit'" },
 
   { "key": "j", "command": "dance.select.down.jump", "when": "editorTextFocus && editorLangId == 'magit'" },
