@@ -53,6 +53,11 @@ bindkey '^x^e' edit-command-line
 ### Misc
 ### ----------------------------
 
+# Auto notify ignored commands
+AUTO_NOTIFY_IGNORE+=("pnpm dev")
+AUTO_NOTIFY_IGNORE+=("moon dev")
+AUTO_NOTIFY_IGNORE+=("p dev")
+
 # Eval trick to allow running command but not exiting afterwards
 # https://superuser.com/a/230090
 if [[ $1 == eval ]]
