@@ -72,35 +72,28 @@ config.keys = {
 
 -- Update open uri function to open vscode:// links
 wezterm.on("open-uri", function(window, pane, uri)
-  local start, match_end = uri:find("https://vscode://")
-
-  print(uri)
-  print(start)
-  print(match_end)
+  local start, match_end = uri:find("vscode://")
 
 	if start == 1 then
 		local file_path = uri:sub(match_end + 1)
     local basename = uri:match("^.+/(.+)$")
 
     -- Logs can be found at: $HOME/.local/share/wezterm
-    print(file_path)
-    print(basename)
 
     local search_dir = wezterm.home_dir .. '/Documents/Dev'
 
-    print(search_dir)
+    local success, stdout, stderr = wezterm.run_child_process { '/opt/homebrew/bin/fd', basename, search_dir }
 
-    -- local success, stdout, stderr = wezterm.run_child_process { 'ls', search_dir }
+    if success then
+      local first_line = stdout:match("[^\n]+")
+      if first_line then
+        local absolute_file_path = first_line
 
-    -- print(success)
-    -- print(stdout)
-    -- print(stderr)
-
-    -- local success, stdout, stderr = wezterm.run_child_process { '/opt/homebrew/bin/fd', '"' .. basename .. '"', search_dir }
-
-    -- print(success)
-    -- print(stdout)
-    -- print(stderr)
+        print(absolute_file_path)
+        
+        return false
+      end
+    end
 
 		return true
 	end
@@ -113,7 +106,7 @@ config.hyperlink_rules = wezterm.default_hyperlink_rules()
 
 table.insert(config.hyperlink_rules, {
   regex = "[/.A-Za-z0-9_-]+\\.[A-Za-z0-9]+(:\\d+)*(?=\\s*|$)",
-  format = "https://vscode://$0"
+  format = "vscode://$0"
 })
 
 -- and finally, return the configuration to wezterm
