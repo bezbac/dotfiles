@@ -70,16 +70,15 @@ config.keys = {
   { key="RightArrow", mods="OPT", action=wezterm.action{SendString="\x1bf"} },
 }
 
--- Update open uri function to open vscode:// links
+-- Update open uri function to open find:// links in vscode
 wezterm.on("open-uri", function(window, pane, uri)
-  local start, match_end = uri:find("vscode://")
+  local start, match_end = uri:find("find://")
 
 	if start == 1 then
 		local file_path = uri:sub(match_end + 1)
     local basename = uri:match("^.+/(.+)$")
 
-    -- Logs can be found at: $HOME/.local/share/wezterm
-
+    -- TODO: Narrow the search directory to the current project
     local search_dir = wezterm.home_dir .. '/Documents/Dev'
 
     local success, stdout, stderr = wezterm.run_child_process { '/opt/homebrew/bin/fd', basename, search_dir }
@@ -88,8 +87,9 @@ wezterm.on("open-uri", function(window, pane, uri)
       local first_line = stdout:match("[^\n]+")
       if first_line then
         local absolute_file_path = first_line
+        local vscode_url = "vscode://file" .. absolute_file_path
 
-        print(absolute_file_path)
+        wezterm.open_with(vscode_url)
         
         return false
       end
@@ -106,7 +106,7 @@ config.hyperlink_rules = wezterm.default_hyperlink_rules()
 
 table.insert(config.hyperlink_rules, {
   regex = "[/.A-Za-z0-9_-]+\\.[A-Za-z0-9]+(:\\d+)*(?=\\s*|$)",
-  format = "vscode://$0"
+  format = "find://$0"
 })
 
 -- and finally, return the configuration to wezterm
