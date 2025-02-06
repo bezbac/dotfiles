@@ -72,22 +72,40 @@ config.keys = {
 
 -- Update open uri function to open vscode:// links
 wezterm.on("open-uri", function(window, pane, uri)
-  -- TODO: Use https://wezfurlong.org/wezterm/config/lua/wezterm.procinfo/current_working_dir_for_pid.html instead
-  local success, stdout, stderr = wezterm.run_child_process { 'sh', '-c', 'lsof -a -p $$ -d cwd -Fn | sed -n \'3p\' | sed \'s/^n//\'' }
+  local start, match_end = uri:find("https://vscode://")
 
-  -- Logs can be found at: $HOME/.local/share/wezterm
-  print(stdout)
+  print(uri)
+  print(start)
+  print(match_end)
+
+	if start == 1 then
+		local file_path = uri:sub(match_end + 1)
+    local basename = uri:match("^.+/(.+)$")
+
+    -- Logs can be found at: $HOME/.local/share/wezterm
+    print(file_path)
+    print(basename)
+
+    local search_dir = wezterm.home_dir .. '/Documents/Dev'
+
+    print(search_dir)
+
+    -- local success, stdout, stderr = wezterm.run_child_process { 'ls', search_dir }
+
+    -- print(success)
+    -- print(stdout)
+    -- print(stderr)
+
+    -- local success, stdout, stderr = wezterm.run_child_process { '/opt/homebrew/bin/fd', '"' .. basename .. '"', search_dir }
+
+    -- print(success)
+    -- print(stdout)
+    -- print(stderr)
+
+		return true
+	end
 
   return true
-
-	-- local start, match_end = uri:find("vscode://")
-	-- if start == 1 then
-	-- 	local cwd = pane:get_current_working_dir()
-	-- 	local file_path = cwd .. uri:sub(match_end + 1)
-	-- 	local url = "vscode://file" .. file_path
-	-- 	window.open_with(url)
-	-- 	return false
-	-- end
 end)
 
 -- Use the defaults as a base
