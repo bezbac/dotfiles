@@ -95,6 +95,7 @@
   "projectManager.git.baseFolders": ["~/Documents/Dev"],
   "projectManager.ignoreProjectsWithinProjects": true,
   "scss.validate": false,
+  "security.promptForLocalFileProtocolHandling": false,
   "tailwindCSS.experimental.classRegex": [
     "tw`([^`]*)", // tw`...`
     "tw=\"([^\"]*)", // <div tw="..." />
