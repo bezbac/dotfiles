@@ -74,9 +74,7 @@ const rules: KarabinerRules[] = [
     ],
   },
   ...createHyperSubLayers({
-    spacebar: {
-      x: app("LeaderKey"),
-    },
+    o: app("Leader Key"),
 
     // VIM like navigation
     h: {
