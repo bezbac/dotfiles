@@ -76,12 +76,11 @@ wezterm.on("open-uri", function(window, pane, uri)
 
 	if start == 1 then
 		local file_path = uri:sub(match_end + 1)
-    local basename = uri:match("^.+/(.+)$")
 
     -- TODO: Narrow the search directory to the current project
     local search_dir = wezterm.home_dir .. '/Documents/Dev'
 
-    local success, stdout, stderr = wezterm.run_child_process { '/opt/homebrew/bin/fd', basename, search_dir }
+    local success, stdout, stderr = wezterm.run_child_process { '/opt/homebrew/bin/fd', '-p', file_path, search_dir }
 
     if success then
       local first_line = stdout:match("[^\n]+")
