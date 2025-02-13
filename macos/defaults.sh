@@ -239,3 +239,15 @@ defaults write com.jordanbaird.Ice ShowOnClick -int 1
 defaults write com.jordanbaird.Ice ShowOnHover -int 0
 defaults write com.jordanbaird.Ice ShowOnScroll -int 0
 defaults write com.jordanbaird.Ice UseIceBar -int 0
+
+###############################################################################
+# Leader-Key                                                                  #
+###############################################################################
+
+defaults write com.brnbw.Leader-Key alwaysShowCheatsheet -int 1
+
+# Set config directory
+defaults write com.brnbw.Leader-Key configDir -string "~/Documents/Dev/dotfiles/leader-key"
+
+# Set global hotkey to F12
+defaults write com.brnbw.Leader-Key "KeyboardShortcuts_activate" -string "{\\"carbonKeyCode\\":111,\\"carbonModifiers\\":0}"

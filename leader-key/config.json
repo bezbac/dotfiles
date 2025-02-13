@@ -1,0 +1,70 @@
+{
+  "actions": [
+    {
+      "key": "x",
+      "label": "",
+      "type": "application",
+      "value": "/Applications/WezTerm.app"
+    },
+    {
+      "key": "b",
+      "type": "application",
+      "value": "/Applications/Safari.app",
+      "label": ""
+    },
+    {
+      "key": "v",
+      "value": "/Applications/Visual Studio Code.app",
+      "label": "",
+      "type": "application"
+    },
+    {
+      "key": "f",
+      "label": "",
+      "value": "/Applications/Finder.app",
+      "type": "application"
+    },
+    {
+      "key": "s",
+      "label": "",
+      "value": "/Applications/Spotify.app",
+      "type": "application"
+    },
+    {
+      "key": "m",
+      "label": "",
+      "value": "/Applications/Beeper.app",
+      "type": "application"
+    },
+    {
+      "key": "c",
+      "label": "",
+      "value": "/Applications/Calendar.app",
+      "type": "application"
+    },
+    {
+      "key": "i",
+      "label": "",
+      "value": "/Applications/Linear.app",
+      "type": "application"
+    },
+    {
+      "key": "d",
+      "label": "",
+      "value": "/Applications/Figma.app",
+      "type": "application"
+    },
+    {
+      "key": "t",
+      "label": "",
+      "value": "/Applications/Slack.app",
+      "type": "application"
+    },
+    {
+      "key": "o",
+      "type": "url",
+      "value": "raycast://extensions/raycast/browser-bookmarks/index"
+    }
+  ],
+  "type": "group"
+}
