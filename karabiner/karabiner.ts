@@ -26,14 +26,15 @@ const rules: KarabinerRules[] = [
         from: {
           key_code: "v",
           modifiers: {
-            mandatory: ["command", "shift"]
-          }
+            mandatory: ["command", "shift"],
+          },
         },
         to: {
-          shell_command: "open raycast://extensions/raycast/clipboard-history/clipboard-history"
-        }
+          shell_command:
+            "open raycast://extensions/raycast/clipboard-history/clipboard-history",
+        },
       },
-    ]
+    ],
   },
   // Define the Hyper key itself
   {
@@ -76,8 +77,8 @@ const rules: KarabinerRules[] = [
     // Open search menubar items when pressing Hyper + / (Hyper + ?)
     slash: open("raycast://extensions/raycast/navigation/search-menu-items"),
 
-    b: open("raycast://extensions/raycast/browser-bookmarks/index"),
-    w: open("raycast://extensions/raycast/navigation/switch-windows"),
+    g: open("raycast://extensions/raycast/browser-bookmarks/index"),
+    tab: open("raycast://extensions/raycast/navigation/switch-windows"),
 
     // VIM like navigation
     h: {
@@ -91,6 +92,22 @@ const rules: KarabinerRules[] = [
     },
     l: {
       to: [{ key_code: "right_arrow" }],
+    },
+    w: {
+      to: [
+        {
+          key_code: "right_arrow",
+          modifiers: ["option"],
+        },
+      ],
+    },
+    b: {
+      to: [
+        {
+          key_code: "left_arrow",
+          modifiers: ["option"],
+        },
+      ],
     },
 
     o: {
