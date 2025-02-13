@@ -74,11 +74,9 @@ const rules: KarabinerRules[] = [
     ],
   },
   ...createHyperSubLayers({
-    // Open search menubar items when pressing Hyper + / (Hyper + ?)
-    slash: open("raycast://extensions/raycast/navigation/search-menu-items"),
-
-    g: open("raycast://extensions/raycast/browser-bookmarks/index"),
-    tab: open("raycast://extensions/raycast/navigation/switch-windows"),
+    spacebar: {
+      x: app("LeaderKey"),
+    },
 
     // VIM like navigation
     h: {
@@ -108,29 +106,6 @@ const rules: KarabinerRules[] = [
           modifiers: ["option"],
         },
       ],
-    },
-
-    o: {
-      x: app("WezTerm"),
-
-      // "b"rowser
-      b: app("Safari"),
-      // "v"scode
-      v: app("Visual Studio Code"),
-      // "f"inder
-      f: app("Finder"),
-      // "s"potify
-      s: app("Spotify"),
-      // "m"essaging
-      m: app("Beeper"),
-      // "c"alendar
-      c: app("Calendar"),
-      // "i"ssue tracker
-      i: app("Linear"),
-      // "d"esign
-      d: app("Figma"),
-      // // "t"eam
-      t: app("Slack"),
     },
 
     // Improved browser navigation
