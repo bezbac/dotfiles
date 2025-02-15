@@ -81,6 +81,7 @@ cask 'font-figtree'
 cask 'font-fira-code-nerd-font'
 
 # Apps
+cask 'nikitabobko/tap/aerospace'
 cask 'leader-key'
 cask 'homerow'
 cask 'visual-studio-code'

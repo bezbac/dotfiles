@@ -37,6 +37,10 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 # Hide desktop icons
 defaults write com.apple.finder CreateDesktop false
 
+# Group windows by application in Mission Control
+# Fixes an issue with aerospace (https://github.com/nikitabobko/AeroSpace/blob/97b4f92fc434c53302aaacbdd50bff341c8634c0/docs/guide.adoc#a-note-on-mission-control)
+defaults write com.apple.dock expose-group-apps -bool true
+
 ###############################################################################
 # Keyboard                                                                    #
 ###############################################################################
