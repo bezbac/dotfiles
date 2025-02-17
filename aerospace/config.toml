@@ -209,3 +209,8 @@ alt-shift-l = ['join-with right', 'mode main']
 down = 'volume down'
 up = 'volume up'
 shift-down = ['volume set 0', 'mode main']
+
+
+# Float all windows by default
+[[on-window-detected]]
+run = ['layout floating']
