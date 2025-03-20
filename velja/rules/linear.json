@@ -1,0 +1,15 @@
+{
+  "title": "Linear",
+  "browser": "com.linear",
+  "matchers": [
+    {
+      "id": "CD67656E-2D78-4C89-BAF1-274B6796AC4A",
+      "kind": "hostSuffix",
+      "pattern": "linear.app",
+      "fixture": "https://linear.app/test"
+    }
+  ],
+  "id": "CA2F0A78-834A-43E7-B6FA-D1303700618A",
+  "isEnabled": true,
+  "sourceApps": []
+}

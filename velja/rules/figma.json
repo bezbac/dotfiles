@@ -1,0 +1,21 @@
+{
+  "title": "Figma",
+  "sourceApps": [],
+  "matchers": [
+    {
+      "id": "AE90672A-9699-46A7-839A-79FE52E1A8B8",
+      "fixture": "https://www.figma.com/design/test",
+      "pattern": "figma.com/design/*",
+      "kind": "regularExpression"
+    },
+    {
+      "fixture": "https://www.figma.com/board/test",
+      "kind": "regularExpression",
+      "pattern": "figma.com/board/*",
+      "id": "591AC8AA-7C03-4970-A0F9-86AF67E22B32"
+    }
+  ],
+  "id": "DB1E7745-6DD9-447D-8D71-176921F3359D",
+  "browser": "com.figma.Desktop",
+  "isEnabled": true
+}

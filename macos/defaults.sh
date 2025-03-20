@@ -3,8 +3,9 @@
 # This script is derived from @mathiasbynens
 # ~/.osx — http://mths.be/osx
 
-# Set dotfile root to directory of this script
-DOTFILE_ROOT=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+# Set dotfile root
+SCRIPT_ROOT=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+DOTFILE_ROOT=$(realpath "$SCRIPT_ROOT/../")
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
@@ -251,3 +252,26 @@ defaults write com.brnbw.Leader-Key configDir -string "~/Documents/Dev/dotfiles/
 
 # Set global hotkey to F12
 defaults write com.brnbw.Leader-Key "KeyboardShortcuts_activate" -string "{\\"carbonKeyCode\\":111,\\"carbonModifiers\\":0}"
+
+###############################################################################
+# Velja                                                                       #
+###############################################################################
+
+defaults write com.sindresorhus.Velja showLastOpenedLink -int 0
+defaults write com.sindresorhus.Velja hideMenuBarIcon -int 1
+
+# Set default browser
+defaults write com.sindresorhus.Velja defaultBrowser -string "com.sindresorhus.Velja.promptMarker"
+defaults write com.sindresorhus.Velja alternativeBrowser -string "com.apple.Safari"
+
+# Set apps
+defaults write com.sindresorhus.Velja spotifyApp -string "com.spotify.client"
+defaults write com.sindresorhus.Velja linearApp -string "com.linear"
+defaults write com.sindresorhus.Velja notionApp -string "notion.id"
+defaults write com.sindresorhus.Velja figmaApp -string "com.figma.Desktop"
+
+# Set rules
+defaults write com.sindresorhus.Velja rules -array
+for rule in "$DOTFILE_ROOT/velja/rules/"*.json; do
+    defaults write com.sindresorhus.Velja rules -array-add "$(jq -c < "$rule" | jq -R -s)"
+done
