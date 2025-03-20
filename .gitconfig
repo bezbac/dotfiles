@@ -7,24 +7,24 @@
 [github]
 	user = bezbac
 
-[core]
-	editor = hx
-
-[init]
-	defaultBranch = main
-
 [alias]
 	# Pretty log
 	plog = log --graph --pretty='format:%C(red)%d%C(reset) %C(yellow)%h%C(reset) %ar %C(green)%aN%C(reset) %s'
 
 	s = status
 
+[core]
+	editor = hx
+
+[init]
+	defaultBranch = main
+
 [fetch]
 	prune = true
-
+	pruneTags = true
+	all = true
 [pull]
 	ff = only
-
 [push]
 	autoSetupRemote = true
 
@@ -34,12 +34,17 @@
 
 [rerere]
 	enabled = true
+	autoupdate = true
 
 [branch]
 	sort = -committerdate
 
 [commit]
 	gpgsign = true
+	verbose = true
+
+[tag]
+	sort = version:refname
 
 [gpg]
 	format = ssh
@@ -55,3 +60,11 @@
 
 [help]
 	autocorrect = prompt
+
+[column]
+    ui = auto
+
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	renames = true
