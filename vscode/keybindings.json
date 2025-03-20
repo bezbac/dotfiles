@@ -48,6 +48,13 @@
     }
   },
 
+  // Run hurl with cmd+enter
+  {
+    "key": "cmd+enter",
+    "command": "hurl-runner.runFile",
+    "when": "editorLangId == hurl"
+  },
+
   // -------------------------------------------------------------
 
   // Helix keybindings for dance

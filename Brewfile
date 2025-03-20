@@ -60,6 +60,7 @@ brew 'dbcli/tap/pgcli'
 brew 'litecli'
 brew 'shellcheck'
 brew 'ripgrep'
+brew 'hurl'
 
 # Other tools
 brew 'cmake'

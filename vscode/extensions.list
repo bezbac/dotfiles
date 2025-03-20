@@ -54,6 +54,10 @@ moonrepo.moon-console
 # Rust specific
 rust-lang.rust-analyzer
 
+# Language Support - hurl
+mateuszdrewniak.hurl-runner
+jacobpfeifer.pfeifer-hurl
+
 # Language Support - MDX
 unifiedjs.vscode-mdx
 
