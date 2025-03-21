@@ -58,6 +58,9 @@ rust-lang.rust-analyzer
 mateuszdrewniak.hurl-runner
 jacobpfeifer.pfeifer-hurl
 
+# Language Support - vimrc
+voidei.vscode-vimrc
+
 # Language Support - MDX
 unifiedjs.vscode-mdx
 

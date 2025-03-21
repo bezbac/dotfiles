@@ -41,6 +41,10 @@ defaults write com.apple.finder CreateDesktop false
 # Keyboard                                                                    #
 ###############################################################################
 
+# Make sure keyboard repeat is disabled (required for vim mode in IntelliJ)
+# See: https://stackoverflow.com/a/78219050
+defaults write -g ApplePressAndHoldEnabled -bool false
+
 # Set keyboard repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 2
 defaults write NSGlobalDomain InitialKeyRepeat -int 15

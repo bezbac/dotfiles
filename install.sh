@@ -47,6 +47,7 @@ ln -sfn $DOTFILE_ROOT/atuin $HOME/.config/atuin
 ln -sfn $DOTFILE_ROOT/wezterm/.wezterm.lua $HOME/.wezterm.lua
 ln -sfn $DOTFILE_ROOT/wezterm/themes $HOME/.config/wezterm/colors
 ln -sfn $DOTFILE_ROOT/karabiner/karabiner.json $HOME/.config/karabiner/karabiner.json
+ln -sfn $DOTFILE_ROOT/intellij/.ideavimrc $HOME/.ideavimrc
 
 # Install VSCode Extensions
 # extensions.list contains the output from "code --list-extensions"
