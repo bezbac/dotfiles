@@ -1,0 +1,3 @@
+[submodule "intellij/helix.vim"]
+	path = intellij/helix.vim
+	url = https://github.com/chtenb/helix.vim

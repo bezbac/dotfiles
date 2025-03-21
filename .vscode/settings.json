@@ -1,7 +1,8 @@
 {
   "files.associations": {
     "vscode/settings.json": "jsonc",
-    "vscode/keybindings.json": "jsonc"
+    "vscode/keybindings.json": "jsonc",
+    "**/.ideavimrc": "vimrc"
   },
   "deno.enable": true,
   "deno.enablePaths": ["./karabiner/karabiner.ts"]
