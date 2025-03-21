@@ -1,4 +1,4 @@
-source ~/Documents/Dev/dotfiles/intellij/helix.vim/helix.idea.vim
+source ~/Documents/Dev/dotfiles/intellij/helix.vim/src/helix.idea.vim
 
 " UI
 set relativenumber
