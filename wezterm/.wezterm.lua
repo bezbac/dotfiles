@@ -70,6 +70,22 @@ config.keys = {
   { key="RightArrow", mods="OPT", action=wezterm.action{SendString="\x1bf"} },
 }
 
+local function find_absolute_file_path(relative_path)
+  -- TODO: Narrow the search directory to the current project
+  local search_dir = wezterm.home_dir .. '/Documents/Dev'
+
+  local success, stdout, stderr = wezterm.run_child_process { '/opt/homebrew/bin/fd', '-p', relative_path, search_dir }
+
+  if success then
+    local first_line = stdout:match("[^\n]+")
+    if first_line then      
+      return first_line
+    end
+  end
+
+  return false
+end
+
 -- Update open uri function to open find:// links in vscode
 wezterm.on("open-uri", function(window, pane, uri)
   local start, match_end = uri:find("find://")
@@ -77,21 +93,12 @@ wezterm.on("open-uri", function(window, pane, uri)
 	if start == 1 then
 		local file_path = uri:sub(match_end + 1)
 
-    -- TODO: Narrow the search directory to the current project
-    local search_dir = wezterm.home_dir .. '/Documents/Dev'
+    local absolute_file_path = find_absolute_file_path(file_path)
 
-    local success, stdout, stderr = wezterm.run_child_process { '/opt/homebrew/bin/fd', '-p', file_path, search_dir }
-
-    if success then
-      local first_line = stdout:match("[^\n]+")
-      if first_line then
-        local absolute_file_path = first_line
-        local vscode_url = "vscode://file" .. absolute_file_path
-
-        wezterm.open_with(vscode_url)
-        
-        return false
-      end
+    if absolute_file_path then
+      local vscode_url = "vscode://file" .. absolute_file_path
+      wezterm.open_with(vscode_url)
+      return false
     end
 
 		return true
