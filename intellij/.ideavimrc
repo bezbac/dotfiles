@@ -63,8 +63,8 @@ set matchit " Plug 'chrisbra/matchit' " (https://github.com/adelarsq/vim-matchit
 " " Which key plugin
 " " Install: https://plugins.jetbrains.com/plugin/15976-which-key
 " " Docs: https://github.com/TheBlob42/idea-which-key?tab=readme-ov-file#installation
-" set which-key
-" set timeoutlen=10000
+set which-key
+set timeoutlen=10000
 
 " " Sneak plugin
 " " Install (alternative syntax): Plug 'justinmk/vim-sneak' 
