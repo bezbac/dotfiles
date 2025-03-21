@@ -57,10 +57,16 @@ const rules = [
         map("b").to({ key_code: "left_arrow", modifiers: ["option"] }),
 
         map("t").toVar(HYPER_VAR, "t"),
+
+        // Improved window switching
+        map("s").to({
+          key_code: "grave_accent_and_tilde",
+          modifiers: ["command"],
+        }),
       ].map((x) => x.to(escape))
     ),
 
-    // Improved browser navigation
+    // Improved tab switching
     withCondition(ifVar(HYPER_VAR, "t"))(
       [
         map("h").to({ key_code: "tab", modifiers: ["left_control", "shift"] }),
