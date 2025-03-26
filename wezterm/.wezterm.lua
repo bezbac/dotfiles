@@ -90,19 +90,41 @@ end
 wezterm.on("open-uri", function(window, pane, uri)
   local start, match_end = uri:find("find://")
 
-	if start == 1 then
-		local file_path = uri:sub(match_end + 1)
+  if start == 1 then
+    local file_path = uri:sub(match_end + 1)
+    local line_number = ""
+    local column_number = ""
+
+    local position_start = string.find(file_path, ":")
+    if position_start ~= nil then
+      position = file_path:sub(position_start + 1)
+      file_path = file_path:sub(1, position_start - 1)
+
+      local position_end = string.find(position, ":")
+      if position_end ~= nil then
+        column_number = position:sub(position_end + 1)
+        line_number = position:sub(1, position_end - 1)
+      else
+        line_number = position
+      end
+    end
 
     local absolute_file_path = find_absolute_file_path(file_path)
 
     if absolute_file_path then
       local vscode_url = "vscode://file" .. absolute_file_path
+      if line_number ~= "" and column_number ~= "" then
+        vscode_url = vscode_url .. ":" .. line_number .. ":" .. column_number
+      elseif line_number ~= "" then
+        vscode_url = vscode_url .. ":" .. line_number
+      end
+
       wezterm.open_with(vscode_url)
       return false
     end
 
-		return true
-	end
+    return true
+  end
 
   return true
 end)
@@ -111,8 +133,9 @@ end)
 config.hyperlink_rules = wezterm.default_hyperlink_rules()
 
 table.insert(config.hyperlink_rules, {
-  regex = "[/.A-Za-z0-9_-]+\\.[A-Za-z0-9]+(:\\d+)*(?=\\s*|$)",
-  format = "find://$0"
+  -- This regex can be tested at https://rustexp.lpil.uk/. Make sure to check `fancy-regex`
+  regex = "[/.A-Za-z0-9_-]+\\.[A-Za-z0-9]+(:\\d+)?(:\\d+)?",
+  format = "find://$0",
 })
 
 -- and finally, return the configuration to wezterm
