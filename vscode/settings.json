@@ -68,12 +68,15 @@
   "git.confirmSync": false,
   "git.mergeEditor": false,
   "git.openRepositoryInParentFolders": "always",
+  "github.copilot.chat.codesearch.enabled": true,
+  "github.copilot.chat.languageContext.typescript.enabled": true,
   "github.copilot.enable": {
     "*": true,
     "markdown": false,
     "plaintext": true,
     "scminput": false
   },
+  "github.copilot.nextEditSuggestions.enabled": true,
   // "rust-analyzer.cargo.allFeatures": true,
   "githubPullRequests.createOnPublishBranch": "never",
   "githubPullRequests.defaultMergeMethod": "squash",
