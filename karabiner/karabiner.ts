@@ -40,7 +40,7 @@ const rules = [
 
     withCondition(ifVar(HYPER_VAR, 1))(
       [
-        map("o").toApp("Leader Key"),
+        map("o").to$("open leaderkey://"),
         map("slash").to$(
           "open raycast://extensions/raycast/navigation/search-menu-items"
         ),
