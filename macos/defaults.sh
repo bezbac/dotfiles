@@ -246,6 +246,7 @@ defaults write com.jordanbaird.Ice UseIceBar -int 0
 ###############################################################################
 
 defaults write com.brnbw.Leader-Key alwaysShowCheatsheet -int 1
+defaults write com.brnbw.Leader-Key showInMenubar -int 1
 
 # Set config directory
 defaults write com.brnbw.Leader-Key configDir -string "~/Documents/Dev/dotfiles/leader-key"
