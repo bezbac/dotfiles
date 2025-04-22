@@ -22,6 +22,7 @@ mkdir -p $HOME/.config
 mkdir -p $HOME/.config/sheldon
 mkdir -p $HOME/.config/wezterm
 mkdir -p $HOME/.zsh
+mkdir -p $HOME/.zsh/completions
 
 # Compile karabiner rules
 deno run --allow-write ./karabiner/karabiner.ts

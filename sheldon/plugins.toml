@@ -19,6 +19,10 @@ inline = "autoload -Uz edit-command-line && zle -N edit-command-line"
 [plugins.sdkman]
 inline = '''export SDKMAN_DIR=$(brew --prefix sdkman-cli)/libexec; [[ -s "${SDKMAN_DIR}/bin/sdkman-init.sh" ]] && source "${SDKMAN_DIR}/bin/sdkman-init.sh"'''
 
+[plugins.zsh-autocomplete]
+github = "marlonrichert/zsh-autocomplete"
+use = ["{{ name }}.plugin.zsh"]
+
 # Deferred plugins
 # ----------------
 
@@ -46,11 +50,6 @@ apply = ["defer"]
 
 [plugins.fast-syntax-highlighting]
 github = "zdharma-continuum/fast-syntax-highlighting"
-apply = ["defer"]
-
-[plugins.zsh-autosuggestions]
-github = "zsh-users/zsh-autosuggestions"
-use = ["{{ name }}.zsh"]
 apply = ["defer"]
 
 [plugins.zellij-tabula]

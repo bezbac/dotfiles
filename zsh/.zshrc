@@ -9,6 +9,11 @@ export VISUAL=hx
 export EDITOR=$VISUAL
 
 ### ----------------------------
+### Add completions path
+### ----------------------------
+fpath=(~/.zsh/completions $fpath)
+
+### ----------------------------
 ### Source stuff
 ### ----------------------------
 
