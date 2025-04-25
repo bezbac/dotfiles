@@ -49,12 +49,14 @@ const rules = [
         ),
 
         // Vim-like navigation
-        map("h").to({ key_code: "left_arrow" }),
-        map("j").to({ key_code: "down_arrow" }),
-        map("k").to({ key_code: "up_arrow" }),
-        map("l").to({ key_code: "right_arrow" }),
-        map("w").to({ key_code: "right_arrow", modifiers: ["option"] }),
-        map("b").to({ key_code: "left_arrow", modifiers: ["option"] }),
+        // The "optionalAny" is needed to allow the key to be held down for repeat
+        // See: https://github.com/evan-liu/karabiner.ts/discussions/104
+        map("h", "optionalAny").to({ key_code: "left_arrow" }),
+        map("j", "optionalAny").to({ key_code: "down_arrow" }),
+        map("k", "optionalAny").to({ key_code: "up_arrow" }),
+        map("l", "optionalAny").to({ key_code: "right_arrow" }),
+        map("w", "optionalAny").to({ key_code: "right_arrow", modifiers: ["option"] }),
+        map("b", "optionalAny").to({ key_code: "left_arrow", modifiers: ["option"] }),
 
         map("t").toVar(HYPER_VAR, "t"),
 
