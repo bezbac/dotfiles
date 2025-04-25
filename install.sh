@@ -14,6 +14,9 @@ brew bundle install -v
 # Install node
 nvm install stable
 
+# Install inshellisense
+npm install -g @microsoft/inshellisense
+
 # Set dotfile root to directory of this script
 DOTFILE_ROOT=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 

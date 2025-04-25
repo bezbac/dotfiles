@@ -65,3 +65,13 @@ then
     "$@"
 set --
 fi
+
+# Inshellisense pre block. Keep at the top of this file.
+if [[ -n "${ZELLIJ}" ]]; then
+    export TMUX="true"
+fi
+if [[ -f ~/.inshellisense/zsh/init.zsh ]]; then
+    alias is="/opt/homebrew/bin/is"
+    source ~/.inshellisense/zsh/init.zsh
+fi
+unset TMUX
