@@ -70,8 +70,6 @@ fi
 if [[ -n "${ZELLIJ}" ]]; then
     export TMUX="true"
 fi
-if [[ -f ~/.inshellisense/zsh/init.zsh ]]; then
-    alias is="/opt/homebrew/bin/is"
-    source ~/.inshellisense/zsh/init.zsh
-fi
+alias node="/opt/homebrew/opt/node@20/bin/node"
+[[ -f ~/.inshellisense/zsh/init.zsh ]] && source ~/.inshellisense/zsh/init.zsh
 unset TMUX
