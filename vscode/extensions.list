@@ -21,9 +21,9 @@ tomrijndorp.find-it-faster
 # General extensions
 bierner.markdown-preview-github-styles
 mk12.better-git-line-blame
-mhutchie.git-graph
 naumovs.color-highlight
 wayou.vscode-todo-highlight
+shardulm94.trailing-spaces
 
 # Utilities
 richie5um2.vscode-sort-json
@@ -35,9 +35,11 @@ davidbwaters.macos-modern-theme
 
 # Python specific
 charliermarsh.ruff
+ms-python.debugpy
 ms-python.isort
 ms-python.python
 ms-python.vscode-pylance
+ms-toolsai.datawrangler
 ms-toolsai.jupyter
 ms-toolsai.jupyter-keymap
 ms-toolsai.jupyter-renderers
@@ -50,9 +52,13 @@ csstools.postcss
 dbaeumer.vscode-eslint
 esbenp.prettier-vscode
 moonrepo.moon-console
+biomejs.biome
 
 # Rust specific
 rust-lang.rust-analyzer
+
+# Language Support - Astro
+astro-build.astro-vscode
 
 # Language Support - hurl
 mateuszdrewniak.hurl-runner
@@ -61,8 +67,17 @@ jacobpfeifer.pfeifer-hurl
 # Language Support - MDX
 unifiedjs.vscode-mdx
 
+# Language Support - KDL
+kdl-org.kdl
+
 # Language Support - TOML
 tamasfe.even-better-toml
 
 # Language Support - HCL
 hashicorp.hcl
+
+# Language Support - YAML
+redhat.vscode-yaml
+
+# Language Support - vimrc
+voidei.vscode-vimrc
