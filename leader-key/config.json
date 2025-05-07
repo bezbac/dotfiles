@@ -1,71 +1,60 @@
 {
-  "actions": [
+  "actions" : [
     {
-      "key": "x",
-      "label": "",
-      "type": "application",
-      "value": "/Applications/WezTerm.app"
+      "key" : "x",
+      "type" : "application",
+      "value" : "/Applications/WezTerm.app"
     },
     {
-      "key": "b",
-      "label": "",
-      "type": "application",
-      "value": "/Applications/Safari.app"
+      "key" : "b",
+      "type" : "application",
+      "value" : "/Applications/Safari.app"
     },
     {
-      "key": "v",
-      "label": "",
-      "type": "application",
-      "value": "/Applications/Visual Studio Code.app"
+      "key" : "v",
+      "type" : "application",
+      "value" : "/Applications/Visual Studio Code.app"
     },
     {
-      "key": "f",
-      "label": "",
-      "type": "application",
-      "value": "/System/Library/CoreServices/Finder.app"
+      "key" : "f",
+      "type" : "application",
+      "value" : "/System/Library/CoreServices/Finder.app"
     },
     {
-      "key": "s",
-      "label": "",
-      "type": "application",
-      "value": "/Applications/Spotify.app"
+      "key" : "s",
+      "type" : "application",
+      "value" : "/Applications/Spotify.app"
     },
     {
-      "key": "m",
-      "label": "",
-      "type": "application",
-      "value": "/Applications/Beeper.app"
+      "key" : "m",
+      "type" : "application",
+      "value" : "/Applications/Beeper.app"
     },
     {
-      "key": "c",
-      "label": "",
-      "type": "application",
-      "value": "/System/Applications/Calendar.app"
+      "key" : "c",
+      "type" : "application",
+      "value" : "/System/Applications/Calendar.app"
     },
     {
-      "key": "i",
-      "label": "",
-      "type": "application",
-      "value": "/Applications/Linear.app"
+      "key" : "i",
+      "type" : "application",
+      "value" : "/Applications/Linear.app"
     },
     {
-      "key": "d",
-      "label": "",
-      "type": "application",
-      "value": "/Applications/Figma.app"
+      "key" : "d",
+      "type" : "application",
+      "value" : "/Applications/Figma.app"
     },
     {
-      "key": "t",
-      "label": "",
-      "type": "application",
-      "value": "/Applications/Slack.app"
+      "key" : "t",
+      "type" : "application",
+      "value" : "/Applications/Slack.app"
     },
     {
-      "key": "o",
-      "label": "",
-      "type": "url",
-      "value": "raycast://extensions/raycast/browser-bookmarks/index"
+      "key" : "o",
+      "type" : "url",
+      "value" : "raycast://extensions/raycast/browser-bookmarks/index"
     }
   ],
-  "type": "group"
+  "type" : "group"
 }
