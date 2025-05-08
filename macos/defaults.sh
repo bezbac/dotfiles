@@ -247,9 +247,11 @@ defaults write com.jordanbaird.Ice UseIceBar -int 0
 
 defaults write com.brnbw.Leader-Key alwaysShowCheatsheet -int 1
 defaults write com.brnbw.Leader-Key showInMenubar -int 1
+defaults write com.brnbw.Leader-Key autoOpenCheatsheet -string "always"
+defaults write com.brnbw.Leader-Key theme -string "cheater"
 
 # Set config directory
-defaults write com.brnbw.Leader-Key configDir -string "~/Documents/Dev/dotfiles/leader-key"
+defaults write com.brnbw.Leader-Key configDir -string "$DOTFILE_ROOT/leader-key"
 
 # Set global hotkey to F12
 defaults write com.brnbw.Leader-Key "KeyboardShortcuts_activate" -string "{\\"carbonKeyCode\\":111,\\"carbonModifiers\\":0}"
