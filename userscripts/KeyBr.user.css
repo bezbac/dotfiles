@@ -1,0 +1,13 @@
+/* ==UserStyle==
+@name        KeyBr
+@match       *://www.keybr.com/*
+==/UserStyle== */
+
+/* Hide reccomended videos */
+*[data-google-query-id] {
+    visibility: hidden;
+}
+
+.fs-sticky-footer {
+    display: none !important;
+}
