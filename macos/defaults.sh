@@ -89,6 +89,9 @@ defaults write com.apple.dock show-process-indicators -bool true
 defaults write com.apple.dock wvous-tr-corner -int 2
 defaults write com.apple.dock wvous-tr-modifier -int 0
 
+# Group windows by application in Mission Control
+defaults write com.apple.dock "expose-group-apps" -bool "true" && killall Dock
+
 # Position menubar icons more densely
 defaults -currentHost write -globalDomain NSStatusItemSelectionPadding -int 10
 defaults -currentHost write -globalDomain NSStatusItemSpacing -int 10
