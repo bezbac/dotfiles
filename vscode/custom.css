@@ -13,16 +13,43 @@
     display: none;
   }
 
-  &:has(*[aria-label="zap  normal, Dance - Set mode"]) {
+  &:has(*[aria-label="zap  normal, Dance - Set mode"]),
+  &:has(*[aria-label="zap  helix/normal, Dance - Set mode"]) {
     background-color: #6a737d;
+
+    & a {
+      display: none;
+    }
+
+    &:before {
+      content: "Normal";
+    }
   }
 
-  &:has(*[aria-label="zap  insert, Dance - Set mode"]) {
+  &:has(*[aria-label="zap  insert, Dance - Set mode"]),
+  &:has(*[aria-label="zap  helix/insert, Dance - Set mode"]) {
     background-color: #85e89d;
+
+    & a {
+      display: none;
+    }
+
+    &:before {
+      content: "Insert";
+    }
   }
 
-  &:has(*[aria-label="zap  select, Dance - Set mode"]) {
+  &:has(*[aria-label="zap  select, Dance - Set mode"]),
+  &:has(*[aria-label="zap  helix/select, Dance - Set mode"]) {
     background-color: #9ecbff;
+
+    & a {
+      display: none;
+    }
+
+    &:before {
+      content: "Select";
+    }
   }
 
   &:has(*[aria-label="zap  magit, Dance - Set mode"]) {
@@ -31,14 +58,14 @@
 
   &:has(*[aria-label="zap  <no active mode>, Dance - Set mode"]) {
     background-color: #6a737d;
-  }
 
-  &:has(*[aria-label="zap  <no active mode>, Dance - Set mode"]) a {
-    display: none;
-  }
+    & a {
+      display: none;
+    }
 
-  &:has(*[aria-label="zap  <no active mode>, Dance - Set mode"]):before {
-    content: "None";
+    &:before {
+      content: "None";
+    }
   }
 }
 
