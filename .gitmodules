@@ -1,0 +1,3 @@
+[submodule "vscode/extensions/dance"]
+	path = vscode/extensions/dance
+	url = https://github.com/71/dance
