@@ -115,6 +115,7 @@
   "terminal.external.osxExec": "WezTerm.app",
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.tabs.enabled": false,
+  "trailing-spaces.schemeIgnore": ["output"],
   "trailing-spaces.syntaxIgnore": ["markdown"],
   "typescript.tsserver.experimental.enableProjectDiagnostics": true,
   "update.mode": "manual",
