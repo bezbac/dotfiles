@@ -1,6 +1,5 @@
 // ==UserScript==
-// @name        Redirect YouTube Home to Subscriber Feed
-// @description This is your new file, start writing code
+// @name        youtube
 // @match       https://www.youtube.com/
 // ==/UserScript==
 
