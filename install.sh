@@ -48,16 +48,8 @@ ln -sfn $DOTFILE_ROOT/wezterm/.wezterm.lua $HOME/.wezterm.lua
 ln -sfn $DOTFILE_ROOT/wezterm/themes $HOME/.config/wezterm/colors
 ln -sfn $DOTFILE_ROOT/karabiner/karabiner.json $HOME/.config/karabiner/karabiner.json
 
-# Install VSCode Extensions
-# extensions.list contains the output from "code --list-extensions"
-while read EXTENSION
-do
-    case $EXTENSION in
-       ''|\#*) continue ;;
-    esac
-    echo "Install VSCode Extension: $EXTENSION"
-    code --install-extension $EXTENSION
-done < $DOTFILE_ROOT/vscode/extensions.list
+# Setup vscode
+source ./install_vscode.sh
 
 # Setup macos defaults
 source ./macos/defaults.sh
