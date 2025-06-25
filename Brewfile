@@ -83,6 +83,7 @@ cask 'font-fira-code-nerd-font'
 
 # Apps
 cask 'leader-key'
+cask 'moves'
 cask 'homerow'
 cask 'visual-studio-code'
 cask 'karabiner-elements'
