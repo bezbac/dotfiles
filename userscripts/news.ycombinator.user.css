@@ -1,0 +1,17 @@
+/* ==UserStyle==
+@name        news.ycombinator
+@match       https://news.ycombinator.com/
+==/UserStyle== */
+
+#hnmain {
+    display: none;
+}
+
+center::before {
+    content: "Read this page through NetNewsWire";
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
