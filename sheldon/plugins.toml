@@ -16,9 +16,6 @@ github = "romkatv/zsh-defer"
 [plugins.edit-command-line]
 inline = "autoload -Uz edit-command-line && zle -N edit-command-line"
 
-[plugins.sdkman]
-inline = '''export SDKMAN_DIR=$(brew --prefix sdkman-cli)/libexec; [[ -s "${SDKMAN_DIR}/bin/sdkman-init.sh" ]] && source "${SDKMAN_DIR}/bin/sdkman-init.sh"'''
-
 # Deferred plugins
 # ----------------
 
@@ -57,4 +54,12 @@ apply = ["defer"]
 github = "bezbac/zellij-tabula"
 use = ["{{ name }}.plugin.zsh"]
 tag = "v0.2.0"
+apply = ["defer"]
+
+[plugins.sdkman]
+local = "~/.zsh/plugins"
+apply = ["defer"]
+
+[plugins.pyenv]
+local = "~/.zsh/plugins"
 apply = ["defer"]

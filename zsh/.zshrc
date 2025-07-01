@@ -25,9 +25,6 @@ eval "$(zoxide init zsh)"
 export ATUIN_NOBIND="true"
 eval "$(atuin init zsh)"
 
-## Setup pyenv
-eval "$(pyenv init -)"
-
 ### ----------------------------
 ### Keybindings
 ### ----------------------------
