@@ -60,6 +60,7 @@ brew 'litecli'
 brew 'shellcheck'
 brew 'ripgrep'
 brew 'hurl'
+brew 'yazi'
 
 # Other tools
 brew 'cmake'

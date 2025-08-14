@@ -1,0 +1,5 @@
+[mgr]
+ratio = [1, 1, 2]
+
+[opener]
+edit = [{ run = '$EDITOR "$@"', block = false }]
