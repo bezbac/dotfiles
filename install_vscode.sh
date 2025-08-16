@@ -16,10 +16,12 @@ done < $DOTFILE_ROOT/vscode/extensions.list
 
 # Build Dance from source
 cd $DOTFILE_ROOT/vscode/extensions/dance
-yarn install --frozen-lockfile
-npm run package
+yarn install
+yarn run package
+
 cd $DOTFILE_ROOT/vscode/extensions/dance/extensions/helix
-npm run package
+yarn install
+yarn run package
 
 DANCE_EXTENSION=$(find $DOTFILE_ROOT/vscode/extensions/dance -type f -iname "*.vsix" | head -n 1)
 DANCE_HELIX_EXTENSION=$(find $DOTFILE_ROOT/vscode/extensions/dance/extensions/helix -type f -iname "*.vsix" | head -n 1)

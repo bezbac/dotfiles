@@ -2,6 +2,8 @@
 
 echo "Setting up my mac..."
 
+git pull --recurse-submodules
+
 # Check for Homebrew and install if we don't have it
 if test ! $(which brew); then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
