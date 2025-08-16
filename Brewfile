@@ -10,7 +10,6 @@ brew 'mas'
 # Essentials
 brew 'zsh'
 brew 'git'
-brew 'neovim'
 brew 'helix'
 
 # Shell setup
