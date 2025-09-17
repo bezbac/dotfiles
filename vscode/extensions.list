@@ -52,6 +52,7 @@ dbaeumer.vscode-eslint
 esbenp.prettier-vscode
 moonrepo.moon-console
 biomejs.biome
+nicoespeon.abracadabra
 
 # Rust specific
 rust-lang.rust-analyzer
@@ -75,8 +76,20 @@ tamasfe.even-better-toml
 # Language Support - HCL
 hashicorp.hcl
 
+# Language Support - Terraform
+hashicorp.terraform
+
 # Language Support - YAML
 redhat.vscode-yaml
 
 # Language Support - vimrc
 voidei.vscode-vimrc
+
+# Language Support - json5
+blueglassblock.better-json5
+
+# Language Support - Deno
+denoland.vscode-deno
+
+# Language Support - Kotlin
+mathiasfrohlich.kotlin
