@@ -16,6 +16,10 @@ brew bundle install -v
 # Install node
 nvm install stable
 
+# Install rust
+rustup install stable
+rustup add component rust-analyzer
+
 # Set dotfile root to directory of this script
 DOTFILE_ROOT=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 

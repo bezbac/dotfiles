@@ -2,6 +2,7 @@
 
 # rust
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$(rustc --print sysroot)/bin:$PATH"
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
