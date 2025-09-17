@@ -3,6 +3,22 @@
 @match       *://www.youtube.com/*
 ==/UserStyle== */
 
+/* Block entire site */
+body > ytd-app {
+  display: none !important;
+}
+
+body::before {
+  content: "Blocked via userstyles";
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+}
+
 /* Hide reccomended videos */
 #columns #secondary {
   display: none !important;
@@ -14,10 +30,8 @@
 }
 
 /* Hide home and short tabs */
-tp-yt-app-drawer
-#sections #items > ytd-guide-entry-renderer:nth-child(1),
-tp-yt-app-drawer
-#sections #items > ytd-guide-entry-renderer:nth-child(2){
+tp-yt-app-drawer #sections #items > ytd-guide-entry-renderer:nth-child(1),
+tp-yt-app-drawer #sections #items > ytd-guide-entry-renderer:nth-child(2) {
   display: none !important;
 }
 
@@ -25,7 +39,6 @@ tp-yt-app-drawer
 ytd-rich-item-renderer:has(button[aria-label="Benachrichtigung erhalten"]) {
   display: none !important;
 }
-
 
 /* Hide videos that have been watched */
 ytd-rich-item-renderer:has(#progress[style="width: 80%;"]),
