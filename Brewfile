@@ -35,7 +35,7 @@ brew 'uv'
 brew 'rustup-init'
 
 # Terraform setup
-brew 'terraform'
+brew 'hashicorp/tap/terraform'
 
 # JVM setup
 brew 'sdkman/tap/sdkman-cli'
