@@ -66,7 +66,6 @@
   },
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
-  "find-it-faster.general.killTerminalAfterUse": true,
   "git.confirmSync": false,
   "git.mergeEditor": false,
   "git.openRepositoryInParentFolders": "always",
@@ -217,11 +216,10 @@
         "P": { "text": "Paste clipboard before selections", "command": "dance.edit.insert", "args": [{ "handleNewLine": true, "where": "start" }] },
         "R": { "text": "Replace selections by clipboard content", "command": "dance.edit.insert", "args": [{ "register": "dquote" }] },
 
-        // CUSTOM! use find-it-faster rather than the default search
+        // CUSTOM! use quickTextSearch rather than the default search
         // "/": { "text": "Global search in workspace folder", "command": "search.action.openEditor" },
-        "/": { "text": "Global search in workspace folder", "command": "runCommands", "args": { "commands": ["maximizeterminal.openMaximizedTerminal", "find-it-faster.findWithinFiles"] } },
+        "/": { "text": "Global search in workspace folder", "command": "runCommands", "args": { "commands": ["workbench.action.quickTextSearch"] } },
 
-        // "/": { "text": "Global search in workspace folder", "command": "find-it-faster.findWithinFiles" },
         "k": { "text": "Show docs for item under cursor", "command": "editor.action.showHover" },
         "r": { "text": "Rename symbol", "command": "editor.action.rename" },
         // "h": { "text": "Select symbol references", "command": "???" },
