@@ -88,6 +88,9 @@ end
 
 -- Update open uri function to open find:// links in vscode
 wezterm.on("open-uri", function(window, pane, uri)
+  -- Clean the uri and remove any │ or newline characters (zellij borders)
+  uri = uri:gsub("│", ""):gsub("\n", "")
+
   local start, match_end = uri:find("find://")
 
   if start == 1 then
@@ -134,7 +137,9 @@ config.hyperlink_rules = wezterm.default_hyperlink_rules()
 
 table.insert(config.hyperlink_rules, {
   -- This regex can be tested at https://rustexp.lpil.uk/. Make sure to check `fancy-regex`
-  regex = "[/.A-Za-z0-9_-]+\\.[A-Za-z0-9]+(:\\d+)?(:\\d+)?",
+  -- Make sure to remove the double backslashes when testing
+  -- FIXME: Multi line paths are only being partially matched
+  regex = "[/.A-Za-z0-9_-│\n]+\\.[A-Za-z0-9│\n]+(:\\d+)?(:\\d+)?",
   format = "find://$0",
 })
 
