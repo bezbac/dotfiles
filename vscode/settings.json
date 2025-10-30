@@ -66,6 +66,7 @@
   },
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
+  "git.blame.editorDecoration.enabled": true,
   "git.confirmSync": false,
   "git.mergeEditor": false,
   "git.openRepositoryInParentFolders": "always",
