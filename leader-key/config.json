@@ -1,60 +1,184 @@
 {
-  "actions" : [
+  "actions": [
     {
-      "key" : "x",
-      "type" : "application",
-      "value" : "/Applications/WezTerm.app"
+      "key": "x",
+      "type": "application",
+      "value": "/Applications/WezTerm.app"
     },
     {
-      "key" : "b",
-      "type" : "application",
-      "value" : "/Applications/Safari.app"
+      "key": "b",
+      "type": "application",
+      "value": "/Applications/Safari.app"
     },
     {
-      "key" : "v",
-      "type" : "application",
-      "value" : "/Applications/Visual Studio Code.app"
+      "key": "v",
+      "type": "application",
+      "value": "/Applications/Visual Studio Code.app"
     },
     {
-      "key" : "f",
-      "type" : "application",
-      "value" : "/System/Library/CoreServices/Finder.app"
+      "key": "f",
+      "type": "application",
+      "value": "/System/Library/CoreServices/Finder.app"
     },
     {
-      "key" : "s",
-      "type" : "application",
-      "value" : "/Applications/Spotify.app"
+      "key": "s",
+      "type": "application",
+      "value": "/Applications/Spotify.app"
     },
     {
-      "key" : "m",
-      "type" : "application",
-      "value" : "/Applications/Beeper Desktop.app"
+      "key": "m",
+      "type": "application",
+      "value": "/Applications/Beeper Desktop.app"
     },
     {
-      "key" : "c",
-      "type" : "application",
-      "value" : "/System/Applications/Calendar.app"
+      "key": "c",
+      "type": "application",
+      "value": "/System/Applications/Calendar.app"
     },
     {
-      "key" : "i",
-      "type" : "application",
-      "value" : "/Applications/Linear.app"
+      "key": "i",
+      "type": "application",
+      "value": "/Applications/Linear.app"
     },
     {
-      "key" : "d",
-      "type" : "application",
-      "value" : "/Applications/Figma.app"
+      "key": "d",
+      "type": "application",
+      "value": "/Applications/Figma.app"
     },
     {
-      "key" : "t",
-      "type" : "application",
-      "value" : "/Applications/Slack.app"
+      "key": "t",
+      "type": "application",
+      "value": "/Applications/Slack.app"
     },
     {
-      "key" : "o",
-      "type" : "url",
-      "value" : "raycast://extensions/raycast/browser-bookmarks/index"
+      "key": "o",
+      "type": "url",
+      "value": "raycast://extensions/raycast/browser-bookmarks/index"
+    },
+    {
+      "actions": [
+        {
+          "key": "f",
+          "label": "fullscreen",
+          "type": "command",
+          "value": "/opt/homebrew/bin/aerospace fullscreen"
+        },
+        {
+          "key": "F",
+          "label": "flatten-workspace-tree",
+          "type": "command",
+          "value": "/opt/homebrew/bin/aerospace flatten-workspace-tree"
+        },
+        {
+          "actions": [
+            {
+              "key": "h",
+              "label": "left",
+              "type": "command",
+              "value": "/opt/homebrew/bin/aerospace join-with left"
+            },
+            {
+              "key": "j",
+              "label": "down",
+              "type": "command",
+              "value": "/opt/homebrew/bin/aerospace join-with down"
+            },
+            {
+              "key": "k",
+              "label": "up",
+              "type": "command",
+              "value": "/opt/homebrew/bin/aerospace join-with up"
+            },
+            {
+              "key": "l",
+              "label": "right",
+              "type": "command",
+              "value": "/opt/homebrew/bin/aerospace join-with right"
+            }
+          ],
+          "key": "j",
+          "label": "join-with",
+          "type": "group"
+        },
+        {
+          "actions": [
+            {
+              "key": "a",
+              "label": "accordion",
+              "type": "command",
+              "value": "/opt/homebrew/bin/aerospace layout accordion horizontal vertical"
+            },
+            {
+              "key": "f",
+              "label": "floating",
+              "type": "command",
+              "value": "/opt/homebrew/bin/aerospace layout floating tiling"
+            },
+            {
+              "key": "t",
+              "label": "tiles",
+              "type": "command",
+              "value": "/opt/homebrew/bin/aerospace layout tiles vertical horizontal"
+            }
+          ],
+          "key": "l",
+          "label": "layout",
+          "type": "group"
+        },
+        {
+          "actions": [
+            {
+              "key": "h",
+              "label": "left",
+              "type": "command",
+              "value": "/opt/homebrew/bin/aerospace move left"
+            },
+            {
+              "key": "j",
+              "label": "down",
+              "type": "command",
+              "value": "/opt/homebrew/bin/aerospace move down"
+            },
+            {
+              "key": "k",
+              "label": "up",
+              "type": "command",
+              "value": "/opt/homebrew/bin/aerospace move up"
+            },
+            {
+              "key": "l",
+              "label": "right",
+              "type": "command",
+              "value": "/opt/homebrew/bin/aerospace move right"
+            }
+          ],
+          "key": "m",
+          "label": "move",
+          "type": "group"
+        },
+        {
+          "key": "R",
+          "label": "reload-config",
+          "type": "command",
+          "value": "/opt/homebrew/bin/aerospace reload-config"
+        },
+        {
+          "key": "s",
+          "label": "mode resize",
+          "type": "command",
+          "value": "/opt/homebrew/bin/aerospace mode resize"
+        },
+        {
+          "key": "c",
+          "type": "url",
+          "value": "raycast://extensions/raycast/window-management/center"
+        }
+      ],
+      "iconPath": "rectangle.grid.2x2",
+      "key": "w",
+      "label": "Aerospace",
+      "type": "group"
     }
   ],
-  "type" : "group"
+  "type": "group"
 }
