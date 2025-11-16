@@ -9,6 +9,7 @@ import {
   withCondition,
   ifVar,
   writeToProfile,
+  ifApp,
 } from "https://deno.land/x/karabinerts@1.31.0/deno.ts";
 import * as path from "https://deno.land/std@0.224.0/path/mod.ts";
 
@@ -26,17 +27,43 @@ const rules = [
   ]),
 
   rule("Hyper Key (⌃⌥⇧⌘)").manipulators([
-    map("caps_lock", "", "any")
-      .toVar(HYPER_VAR, 1)
-      .toAfterKeyUp({
-        set_variable: {
-          name: HYPER_VAR,
-          value: 0,
+    // Switch back to previous application when pressing Caps Lock / Escape while in Leader Key app
+    withCondition(ifApp("com.brnbw.Leader-Key"))([
+      map("caps_lock", "", "any").to([
+        {
+          key_code: "escape",
         },
-      })
-      .toIfAlone({
-        key_code: "escape",
-      }),
+        {
+          software_function: {
+            open_application: { frontmost_application_history_index: 1 },
+          },
+        },
+      ]),
+      map("escape").to([
+        {
+          key_code: "escape",
+        },
+        {
+          software_function: {
+            open_application: { frontmost_application_history_index: 1 },
+          },
+        },
+      ]),
+    ]),
+
+    withCondition(ifApp("com.brnbw.Leader-Key").unless())([
+      map("caps_lock", "", "any")
+        .toVar(HYPER_VAR, 1)
+        .toAfterKeyUp({
+          set_variable: {
+            name: HYPER_VAR,
+            value: 0,
+          },
+        })
+        .toIfAlone({
+          key_code: "escape",
+        }),
+    ]),
 
     withCondition(ifVar(HYPER_VAR, 1))(
       [
