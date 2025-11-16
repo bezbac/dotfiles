@@ -59,6 +59,9 @@
   // Custom dance keybindings
   //
 
+  // Remap cmd+f to dance search
+  { "key": "cmd+f", "command": "dance.search", "when": "editorTextFocus && dance.mode == 'helix/normal' || editorTextFocus && dance.mode == 'helix/select'" },
+
   // Left and right bracket menus
   { "key": "[", "command": "dance.openMenu", "args": { "menu": "left-bracket-hx", "pass": [{ "shift": "jump" }] }, "when": "editorTextFocus && dance.mode == 'helix/normal' || editorTextFocus && dance.mode == 'helix/select'" },
   { "key": "]", "command": "dance.openMenu", "args": { "menu": "right-bracket-hx", "pass": [{ "shift": "jump" }] }, "when": "editorTextFocus && dance.mode == 'helix/normal' || editorTextFocus && dance.mode == 'helix/select'" },
