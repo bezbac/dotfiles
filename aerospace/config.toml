@@ -138,3 +138,9 @@ run = 'move-node-to-workspace 8'
 [[on-window-detected]]
 if.app-id = 'com.apple.iCal'
 run = 'move-node-to-workspace 9'
+
+# Float utility windows
+
+[[on-window-detected]]
+if.app-id = 'org.pqrs.Karabiner-Elements.Settings'
+run = ['layout floating']
