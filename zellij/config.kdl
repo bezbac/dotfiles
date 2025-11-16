@@ -20,6 +20,22 @@ ui {
 keybinds {
     // Alt f is used for forward-word
     unbind "Alt f"
+
+    // Rebind pane navigation to Ctrl + h/j/k/l to avoid conflicts with aerospace
+    unbind "Alt j"
+    unbind "Alt k"
+    unbind "Alt h"
+    unbind "Alt l"
+    unbind "Ctrl j"
+    unbind "Ctrl k"
+    unbind "Ctrl h"
+    unbind "Ctrl l"
+    normal {
+        bind "Ctrl j" { MoveFocus "Down"; }
+        bind "Ctrl k" { MoveFocus "Up"; }
+        bind "Ctrl h" { MoveFocusOrTab "Left"; }
+        bind "Ctrl l" { MoveFocusOrTab "Right"; }
+    }
 }
 
 // Choose what to do when zellij receives SIGTERM, SIGINT, SIGQUIT or SIGHUP
