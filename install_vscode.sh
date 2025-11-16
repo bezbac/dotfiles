@@ -28,3 +28,6 @@ DANCE_HELIX_EXTENSION=$(find $DOTFILE_ROOT/vscode/extensions/dance/extensions/he
 
 code --install-extension "$DANCE_EXTENSION"
 code --install-extension "$DANCE_HELIX_EXTENSION"
+
+# Return to dotfile root
+cd $DOTFILE_ROOT
