@@ -19,6 +19,17 @@ const HYPER_VAR = "hyper";
 
 const escape = [toUnsetVar("leader")];
 
+function hyperKeyTrigger() {
+  return map("caps_lock", "", "any")
+    .toVar(HYPER_VAR, 1)
+    .toAfterKeyUp({
+      set_variable: {
+        name: HYPER_VAR,
+        value: 0,
+      },
+    });
+}
+
 const rules = [
   rule("Clipboard History").manipulators([
     map("v", ["command", "shift"]).to$(
@@ -29,7 +40,7 @@ const rules = [
   rule("Hyper Key (⌃⌥⇧⌘)").manipulators([
     // Switch back to previous application when pressing Caps Lock / Escape while in Leader Key app
     withCondition(ifApp("com.brnbw.Leader-Key"))([
-      map("caps_lock", "", "any").to([
+      hyperKeyTrigger().toIfAlone([
         {
           key_code: "escape",
         },
@@ -39,6 +50,7 @@ const rules = [
           },
         },
       ]),
+
       map("escape").to([
         {
           key_code: "escape",
@@ -52,17 +64,9 @@ const rules = [
     ]),
 
     withCondition(ifApp("com.brnbw.Leader-Key").unless())([
-      map("caps_lock", "", "any")
-        .toVar(HYPER_VAR, 1)
-        .toAfterKeyUp({
-          set_variable: {
-            name: HYPER_VAR,
-            value: 0,
-          },
-        })
-        .toIfAlone({
-          key_code: "escape",
-        }),
+      hyperKeyTrigger().toIfAlone({
+        key_code: "escape",
+      }),
     ]),
 
     withCondition(ifVar(HYPER_VAR, 1))(
