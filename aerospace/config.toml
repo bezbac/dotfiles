@@ -71,10 +71,10 @@ outer.right = 4
 # 'main' binding mode must be always presented
 # Fallback value (if you omit the key): mode.main.binding = {}
 [mode.main.binding]
-alt-h = 'focus left'
-alt-l = 'focus right'
-alt-j = 'focus down'
-alt-k = 'focus up'
+alt-h = 'focus left --boundaries all-monitors-outer-frame'
+alt-l = 'focus right --boundaries all-monitors-outer-frame'
+alt-j = 'focus down --boundaries all-monitors-outer-frame'
+alt-k = 'focus up --boundaries all-monitors-outer-frame'
 shift-alt-h = 'workspace prev'
 shift-alt-l = 'workspace next'
 
