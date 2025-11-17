@@ -11,7 +11,7 @@ after-login-command = []
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
 after-startup-command = [
     # Setup JankyBorders
-    'exec-and-forget borders active_color=0xffb392f0 inactive_color=0xff4f4e4f hidpi=on width=6.0',
+    'exec-and-forget borders active_color=0xffb392f0 inactive_color=0xff4f4e4f hidpi=on width=6.0 order=above',
 ]
 
 # Start AeroSpace at login
