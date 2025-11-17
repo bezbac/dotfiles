@@ -59,15 +59,27 @@
       "actions": [
         {
           "key": "f",
-          "label": "fullscreen",
+          "label": "maximize",
           "type": "command",
           "value": "/opt/homebrew/bin/aerospace fullscreen"
         },
         {
           "key": "F",
+          "label": "fullscreen",
+          "type": "command",
+          "value": "/opt/homebrew/bin/aerospace macos-native-fullscreen"
+        },
+        {
+          "key": ".",
           "label": "flatten-workspace-tree",
           "type": "command",
           "value": "/opt/homebrew/bin/aerospace flatten-workspace-tree"
+        },
+        {
+          "key": "n",
+          "label": "assign workspace to next display",
+          "type": "command",
+          "value": "/opt/homebrew/bin/aerospace move-workspace-to-monitor next --wrap-around"
         },
         {
           "actions": [
