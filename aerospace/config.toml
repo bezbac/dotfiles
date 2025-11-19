@@ -120,10 +120,6 @@ ctrl-c = "mode main"
 # run = ['layout floating']
 
 [[on-window-detected]]
-if.app-id = 'com.apple.finder'
-run = ['layout floating']
-
-[[on-window-detected]]
 if.app-id = 'com.microsoft.VSCode'
 run = 'move-node-to-workspace 1'
 
@@ -152,6 +148,14 @@ if.app-id = 'com.apple.iCal'
 run = 'move-node-to-workspace 9'
 
 # Float utility windows
+
+[[on-window-detected]]
+if.app-id = 'com.apple.finder'
+run = ['layout floating']
+
+[[on-window-detected]]
+if.app-id = 'com.apple.Notes'
+run = ['layout floating']
 
 [[on-window-detected]]
 if.app-id = 'org.pqrs.Karabiner-Elements.Settings'
