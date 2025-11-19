@@ -100,12 +100,17 @@ const rules = [
     ),
 
     // Improved tab switching
-    withCondition(ifVar(HYPER_VAR, "t"))(
-      [
-        map("h").to({ key_code: "tab", modifiers: ["left_control", "shift"] }),
-        map("l").to({ key_code: "tab", modifiers: ["left_control"] }),
-      ].map((x) => x.to(escape))
-    ),
+    // Note: Zellij is using Ctrl+Tab for pane switching, so this mapping should be disabled when WezTerm is focused
+    withCondition(ifApp("com.github.wez.wezterm").unless())([
+      map("h", ["control"]).to({
+        key_code: "tab",
+        modifiers: ["left_control", "shift"],
+      }),
+      map("l", ["control"]).to({
+        key_code: "tab",
+        modifiers: ["left_control"],
+      }),
+    ]),
   ]),
 ];
 
