@@ -58,7 +58,7 @@
     {
       "actions": [
         {
-          "key": "f",
+          "key": "M",
           "label": "maximize",
           "type": "command",
           "value": "/opt/homebrew/bin/aerospace fullscreen"
@@ -80,6 +80,12 @@
           "label": "assign workspace to next display",
           "type": "command",
           "value": "/opt/homebrew/bin/aerospace move-workspace-to-monitor next --wrap-around"
+        },
+        {
+          "key": "f",
+          "label": "toggle floating",
+          "type": "command",
+          "value": "/opt/homebrew/bin/aerospace layout floating tiling"
         },
         {
           "actions": [
@@ -119,12 +125,6 @@
               "label": "accordion",
               "type": "command",
               "value": "/opt/homebrew/bin/aerospace layout accordion horizontal vertical"
-            },
-            {
-              "key": "f",
-              "label": "floating",
-              "type": "command",
-              "value": "/opt/homebrew/bin/aerospace layout floating tiling"
             },
             {
               "key": "t",
