@@ -1,0 +1,9 @@
+/* ==UserStyle==
+@name        hide recommended
+@match       *://www.youtube.com/*
+==/UserStyle== */
+
+/* Hide recommended videos */
+#columns #secondary {
+  display: none !important;
+}

@@ -1,0 +1,9 @@
+/* ==UserStyle==
+@name        hide stream announcements
+@match       *://www.youtube.com/*
+==/UserStyle== */
+
+/* Hide stream announcements */
+ytd-rich-item-renderer:has(button[aria-label="Benachrichtigung erhalten"]) {
+  display: none !important;
+}

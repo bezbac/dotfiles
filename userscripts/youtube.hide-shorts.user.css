@@ -1,0 +1,14 @@
+/* ==UserStyle==
+@name        hide shorts
+@match       *://www.youtube.com/*
+==/UserStyle== */
+
+/* Hide short section in content */
+#contents ytd-rich-section-renderer:has(#dismissible) {
+  display: none !important;
+}
+
+/* Hide short tab */
+tp-yt-app-drawer #sections #items > ytd-guide-entry-renderer:nth-child(2) {
+  display: none !important;
+}

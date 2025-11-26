@@ -1,0 +1,9 @@
+/* ==UserStyle==
+@name        hide home
+@match       *://www.youtube.com/*
+==/UserStyle== */
+
+/* Hide home tab */
+tp-yt-app-drawer #sections #items > ytd-guide-entry-renderer:nth-child(1) {
+  display: none !important;
+}
