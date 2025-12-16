@@ -111,6 +111,7 @@ cask 'netnewswire'
 cask 'eddie'
 cask 'backblaze'
 cask 'keka'
+cask 'docker-desktop'
 cask 'hpedrorodrigues/tools/dockutil'
 cask '1password/tap/1password-cli'
 
