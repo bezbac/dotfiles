@@ -169,6 +169,25 @@
           "type": "group"
         },
         {
+          "actions": [
+            {
+              "key": "3",
+              "label": "30/70 split",
+              "type": "command",
+              "value": "if [ $(/opt/homebrew/bin/aerospace list-windows --workspace focused --count) -eq 2 ]; then /opt/homebrew/bin/aerospace layout h_tiles; /opt/homebrew/bin/aerospace resize width -70; /opt/homebrew/bin/aerospace focus dfs-next; /opt/homebrew/bin/aerospace resize width +70; fi"
+            },
+            {
+              "key": "5",
+              "label": "50/50 split",
+              "type": "command",
+              "value": "if [ $(/opt/homebrew/bin/aerospace list-windows --workspace focused --count) -eq 2 ]; then /opt/homebrew/bin/aerospace layout h_tiles; /opt/homebrew/bin/aerospace resize width -50; /opt/homebrew/bin/aerospace focus dfs-next; /opt/homebrew/bin/aerospace resize width +50; fi"
+            }
+          ],
+          "key": "p",
+          "label": "presets",
+          "type": "group"
+        },
+        {
           "key": "R",
           "label": "reload-config",
           "type": "command",
