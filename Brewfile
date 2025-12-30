@@ -117,15 +117,12 @@ cask '1password/tap/1password-cli'
 
 # Mac apps
 mas "Userscripts", id: 1463298887
-mas "Raivo OTP", id: 1498497896
 mas "Tailscale", id: 1475387142
 mas "Mela Recipe Manager", id: 1568924476
 mas "NextDNS", id: 1464122853
-mas "1Password for Safari", id: 1569813296
 mas "Velja", id: 1607635845
 mas "Anybox", id: 1593408455
 mas "Hush", id: 1544743900
 mas "DaisyDisk", id: 411643860
 mas "Amphetamine", id: 937984704
 mas "GoodLinks", id: 1474335294
-mas "PiPifier", id: 1160374471
