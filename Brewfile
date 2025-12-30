@@ -126,3 +126,4 @@ mas "Hush", id: 1544743900
 mas "DaisyDisk", id: 411643860
 mas "Amphetamine", id: 937984704
 mas "GoodLinks", id: 1474335294
+mas "Floating: Picture in Picture", id: 1508833245
