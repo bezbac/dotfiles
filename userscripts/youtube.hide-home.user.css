@@ -7,3 +7,13 @@
 tp-yt-app-drawer #sections #items > ytd-guide-entry-renderer:nth-child(1) {
   display: none !important;
 }
+
+/* Hide home tab in mini-sidebar */
+ytd-mini-guide-renderer #items > ytd-mini-guide-entry-renderer:nth-child(1) {
+  display: none !important;
+}
+
+/* Hide logo */
+a#logo {
+  display: none !important;
+}
