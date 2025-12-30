@@ -27,6 +27,8 @@ DOTFILE_ROOT=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd 
 mkdir -p $HOME/.config
 mkdir -p $HOME/.config/sheldon
 mkdir -p $HOME/.config/wezterm
+mkdir -p $HOME/.config/karabiner
+mkdir -p $HOME/.config/aerospace
 mkdir -p $HOME/.zsh
 
 # Compile karabiner rules
