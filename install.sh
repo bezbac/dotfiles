@@ -2,7 +2,16 @@
 
 echo "Setting up my mac..."
 
-git pull --recurse-submodules
+# Set dotfile root to directory of this script
+DOTFILE_ROOT=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+# Create Folders
+mkdir -p $HOME/.config
+mkdir -p $HOME/.config/sheldon
+mkdir -p $HOME/.config/wezterm
+mkdir -p $HOME/.config/karabiner
+mkdir -p $HOME/.config/aerospace
+mkdir -p $HOME/.zsh
 
 # Check for Homebrew and install if we don't have it
 if test ! $(which brew); then
@@ -20,16 +29,8 @@ nvm install stable
 rustup install stable
 rustup add component rust-analyzer
 
-# Set dotfile root to directory of this script
-DOTFILE_ROOT=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-
-# Create Folders
-mkdir -p $HOME/.config
-mkdir -p $HOME/.config/sheldon
-mkdir -p $HOME/.config/wezterm
-mkdir -p $HOME/.config/karabiner
-mkdir -p $HOME/.config/aerospace
-mkdir -p $HOME/.zsh
+# Update submodules
+git pull --recurse-submodules
 
 # Compile karabiner rules
 deno run --allow-write ./karabiner/karabiner.ts
