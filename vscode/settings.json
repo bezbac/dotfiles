@@ -105,7 +105,7 @@
   "jupyter.askForKernelRestart": false,
   "jupyter.widgetScriptSources": ["jsdelivr.com", "unpkg.com"],
   "markdown-preview-github-styles.colorTheme": "light",
-  "projectManager.git.baseFolders": ["~/Documents/Dev"],
+  "projectManager.git.baseFolders": ["~/dev/repos"],
   "projectManager.ignoreProjectsWithinProjects": true,
   "scss.validate": false,
   "security.promptForLocalFileProtocolHandling": false,

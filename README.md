@@ -2,6 +2,10 @@
 
 Welcome to my personal dotfiles repository! Here you'll find the well-thought-out and tested configurations I use every day to make my development environment more efficient and enjoyable. 🏡
 
+## Notes
+
+Some of the configuration assumes this repository is saved locally under `~/dev/repos/bezbac/dotfiles`. In case you fork the repository, make sure to update the paths.
+
 ## Common things
 
 #### My steps of setting up a new machine
