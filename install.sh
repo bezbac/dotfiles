@@ -29,6 +29,9 @@ nvm install stable
 rustup install stable
 rustup add component rust-analyzer
 
+# Install tools based on cargo
+cargo install --git https://github.com/bezbac/git-grab.git
+
 # Update submodules
 git pull --recurse-submodules
 

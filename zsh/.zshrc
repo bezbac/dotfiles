@@ -8,6 +8,10 @@
 export VISUAL=hx
 export EDITOR=$VISUAL
 
+# Git-grab pattern
+# See: https://github.com/bezbac/git-grab
+export GRAB_PATTERN="~/dev/repos/{owner/}{repo}"
+
 ### ----------------------------
 ### Source stuff
 ### ----------------------------
