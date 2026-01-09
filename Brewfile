@@ -119,7 +119,6 @@ cask '1password/tap/1password-cli'
 mas "Userscripts", id: 1463298887
 mas "Tailscale", id: 1475387142
 mas "Mela Recipe Manager", id: 1568924476
-mas "NextDNS", id: 1464122853
 mas "Velja", id: 1607635845
 mas "Anybox", id: 1593408455
 mas "Hush", id: 1544743900
