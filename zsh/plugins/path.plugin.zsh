@@ -11,7 +11,7 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 # poetry
 export PATH="$HOME/.poetry/bin:$PATH"
 
-# scrips
+# scripts
 export PATH="$HOME/scripts:$PATH"
 
 # pnpm
