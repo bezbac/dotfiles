@@ -63,3 +63,7 @@ apply = ["defer"]
 [plugins.pyenv]
 local = "~/.zsh/plugins"
 apply = ["defer"]
+
+[plugins.nvm]
+local = "~/.zsh/plugins"
+apply = ["defer"]
