@@ -32,6 +32,9 @@ rustup add component rust-analyzer
 # Install tools based on cargo
 cargo install --git https://github.com/bezbac/git-grab.git
 
+# Install tools based on pnpm
+pnpm add -g @github/copilot@0.0.369
+
 # Update submodules
 git pull --recurse-submodules
 
@@ -60,6 +63,11 @@ ln -sfn $DOTFILE_ROOT/wezterm/.wezterm.lua $HOME/.wezterm.lua
 ln -sfn $DOTFILE_ROOT/wezterm/themes $HOME/.config/wezterm/colors
 ln -sfn $DOTFILE_ROOT/karabiner/karabiner.json $HOME/.config/karabiner/karabiner.json
 ln -sfn $DOTFILE_ROOT/aerospace/config.toml $HOME/.config/aerospace/aerospace.toml
+
+# Update copilot cli settings
+if [ -f $HOME/.copilot/config.json ]; then
+  jq '.theme = "light"' $HOME/.copilot/config.json | sponge $HOME/.copilot/config.json
+fi
 
 # Setup vscode
 source ./install_vscode.sh
