@@ -61,6 +61,7 @@
 
   // Remap cmd+f to dance search
   { "key": "cmd+f", "command": "dance.search", "when": "editorTextFocus && dance.mode == 'helix/normal' || editorTextFocus && dance.mode == 'helix/select'" },
+  { "key": "cmd+f", "command": "runCommands", "args": { "commands": [{ "command": "dance.modes.set", "args": { "mode": "normal" } }, { "command": "dance.search" }] }, "when": "editorTextFocus && dance.mode == 'helix/insert'" },
 
   // Left and right bracket menus
   { "key": "[", "command": "dance.openMenu", "args": { "menu": "left-bracket-hx", "pass": [{ "shift": "jump" }] }, "when": "editorTextFocus && dance.mode == 'helix/normal' || editorTextFocus && dance.mode == 'helix/select'" },
