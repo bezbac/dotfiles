@@ -72,7 +72,7 @@ config.keys = {
 
 local function find_absolute_file_path(relative_path)
   -- TODO: Narrow the search directory to the current project
-  local search_dir = wezterm.home_dir .. '/Documents/Dev'
+  local search_dir = wezterm.home_dir .. '/dev/repos'
 
   local success, stdout, stderr = wezterm.run_child_process { '/opt/homebrew/bin/fd', '-p', relative_path, search_dir }
 
@@ -94,7 +94,7 @@ wezterm.on("open-uri", function(window, pane, uri)
   local start, match_end = uri:find("find://")
 
   if start == 1 then
-    local file_path = uri:sub(match_end + 1)
+    file_path = uri:sub(match_end + 1)
     local line_number = ""
     local column_number = ""
 
@@ -135,10 +135,11 @@ end)
 -- Use the defaults as a base
 config.hyperlink_rules = wezterm.default_hyperlink_rules()
 
+-- The regex patterns can be tested at https://rustexp.lpil.uk/.
+-- Make sure to check `fancy-regex`.
+-- Make sure to remove the double backslashes when testing.
+-- FIXME: Multi line paths are only being partially matched
 table.insert(config.hyperlink_rules, {
-  -- This regex can be tested at https://rustexp.lpil.uk/. Make sure to check `fancy-regex`
-  -- Make sure to remove the double backslashes when testing
-  -- FIXME: Multi line paths are only being partially matched
   regex = "[/.A-Za-z0-9_-│\n]+\\.[A-Za-z0-9│\n]+(:\\d+)?(:\\d+)?",
   format = "find://$0",
 })
