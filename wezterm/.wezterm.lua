@@ -65,7 +65,7 @@ config.keys = {
 
    -- Make Option-Left equivalent to Alt-b which many line editors interpret as backward-word
   { key="LeftArrow", mods="OPT", action=wezterm.action{SendString="\x1bb"} },
-  
+
   -- Make Option-Right equivalent to Alt-f; forward-word
   { key="RightArrow", mods="OPT", action=wezterm.action{SendString="\x1bf"} },
 }
@@ -78,7 +78,7 @@ local function find_absolute_file_path(relative_path)
 
   if success then
     local first_line = stdout:match("[^\n]+")
-    if first_line then      
+    if first_line then
       return first_line
     end
   end
