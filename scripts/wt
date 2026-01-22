@@ -1,0 +1,66 @@
+#!/bin/bash
+
+# A script to switch between git worktrees easily.
+
+# Worktree directory: ~/dev/worktrees/{owner name}/{repo name}/{worktree name}
+
+# The script assumes the owner name can be obtained based on the current git pwd
+# Example: ~/dev/repos/user/repo/some/sub/dir
+# Would become: ~/dev/worktrees/user/repo/{worktree name}
+
+# Check if the command is "create" or "list"
+if [ "$1" != "create" ] && [ "$1" != "list" ]; then
+    echo "Usage: $0 create <worktree-name> | list"
+    exit 1
+fi
+
+WORKTREE_BASE_DIR="~/dev/worktrees"
+GIT_ROOT_DIR=$(git rev-parse --show-toplevel 2>/dev/null)
+
+# Check if we're in a git repository
+if [ -z "$GIT_ROOT_DIR" ]; then
+    echo "Error: Not in a git repository"
+    exit 1
+fi
+
+if [ "$1" == "create" ]; then
+    # Get worktree name from second argument
+    WORKTREE_NAME="$2"
+    if [ -z "$WORKTREE_NAME" ]; then
+        echo "Usage: $0 create <worktree-name>"
+        exit 1
+    fi
+
+    # If the worktree name starts with `-` (e.g., `-b`), it's invalid
+    if [[ "$WORKTREE_NAME" == -* ]]; then
+        echo "Error: Worktree name cannot start with '-'"
+        exit 1
+    fi
+
+    # Extract owner and repo name from git root directory
+    REPO_PATH=$(echo "$GIT_ROOT_DIR" | sed 's|.*/repos/||')
+    OWNER_REPO=$(echo "$REPO_PATH" | cut -d'/' -f1-2)
+
+    # Expand tilde in base directory
+    WORKTREE_BASE_DIR="${WORKTREE_BASE_DIR/#\~/$HOME}"
+
+    # Create full worktree path
+    WORKTREE_PATH="$WORKTREE_BASE_DIR/$OWNER_REPO/$WORKTREE_NAME"
+
+    # Check if worktree already exists
+    if [ -d "$WORKTREE_PATH" ]; then
+        echo "Existing worktree: $WORKTREE_PATH"
+    else
+        echo "Creating new worktree: $WORKTREE_PATH"
+        # Create directory structure if it doesn't exist
+        mkdir -p "$(dirname "$WORKTREE_PATH")"
+
+        # Create worktree
+        git worktree add "$WORKTREE_PATH" -b "$WORKTREE_NAME"
+    fi
+fi
+
+if [ "$1" == "list" ]; then
+    # List all existing worktrees
+    git worktree list
+fi
