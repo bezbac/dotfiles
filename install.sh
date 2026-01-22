@@ -72,6 +72,9 @@ fi
 # Setup vscode
 source ./install_vscode.sh
 
+# Setup userscripts
+source ./install_userscripts.sh
+
 # Setup macos defaults
 source ./macos/defaults.sh
 
