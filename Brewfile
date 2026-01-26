@@ -60,6 +60,7 @@ brew 'litecli'
 brew 'shellcheck'
 brew 'ripgrep'
 brew 'hurl'
+brew 'anomalyco/tap/opencode'
 
 # Other tools
 brew 'cmake'

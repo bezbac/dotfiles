@@ -11,6 +11,7 @@ mkdir -p $HOME/.config/sheldon
 mkdir -p $HOME/.config/wezterm
 mkdir -p $HOME/.config/karabiner
 mkdir -p $HOME/.config/aerospace
+mkdir -p $HOME/.config/opencode
 mkdir -p $HOME/.zsh
 
 # Check for Homebrew and install if we don't have it
@@ -63,6 +64,7 @@ ln -sfn $DOTFILE_ROOT/wezterm/.wezterm.lua $HOME/.wezterm.lua
 ln -sfn $DOTFILE_ROOT/wezterm/themes $HOME/.config/wezterm/colors
 ln -sfn $DOTFILE_ROOT/karabiner/karabiner.json $HOME/.config/karabiner/karabiner.json
 ln -sfn $DOTFILE_ROOT/aerospace/config.toml $HOME/.config/aerospace/aerospace.toml
+ln -sfn $DOTFILE_ROOT/opencode/opencode.json $HOME/.config/opencode/opencode.json
 
 # Update copilot cli settings
 if [ -f $HOME/.copilot/config.json ]; then
