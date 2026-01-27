@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# Set dotfile root to directory of this script
+DOTFILE_ROOT=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+# Create folders
+mkdir -p $HOME/.config
+mkdir -p $HOME/.config/sheldon
+mkdir -p $HOME/.config/wezterm
+mkdir -p $HOME/.config/karabiner
+mkdir -p $HOME/.config/aerospace
+mkdir -p $HOME/.config/opencode
+mkdir -p $HOME/.zsh
+
+# Create Symlinks
+ln -sfn $DOTFILE_ROOT/.editorconfig $HOME/.editorconfig
+ln -sfn $DOTFILE_ROOT/.gitconfig $HOME/.gitconfig
+ln -sfn $DOTFILE_ROOT/ssh/config $HOME/.ssh/config
+ln -sfn $DOTFILE_ROOT/ssh/rc $HOME/.ssh/rc
+ln -sfn $DOTFILE_ROOT/nvim $HOME/.config/nvim
+ln -sfn $DOTFILE_ROOT/starship/starship.toml $HOME/.config/starship.toml
+ln -sfn $DOTFILE_ROOT/vscode/settings.json $HOME/Library/Application\ Support/Code/User/settings.json
+ln -sfn $DOTFILE_ROOT/vscode/keybindings.json $HOME/Library/Application\ Support/Code/User/keybindings.json
+ln -sfn $DOTFILE_ROOT/vscode/custom.css $HOME/Library/Application\ Support/Code/User/custom.css
+ln -sfn $DOTFILE_ROOT/vscode/snippets $HOME/Library/Application\ Support/Code/User/snippets
+ln -sfn $DOTFILE_ROOT/zsh/.zshrc $HOME/.zshrc
+ln -sfn $DOTFILE_ROOT/zsh/plugins $HOME/.zsh/plugins
+ln -sfn $DOTFILE_ROOT/sheldon/plugins.toml $HOME/.config/sheldon/plugins.toml
+ln -sfn $DOTFILE_ROOT/scripts $HOME/scripts
+ln -sfn $DOTFILE_ROOT/helix $HOME/.config/helix
+ln -sfn $DOTFILE_ROOT/zellij $HOME/.config/zellij
+ln -sfn $DOTFILE_ROOT/atuin $HOME/.config/atuin
+ln -sfn $DOTFILE_ROOT/wezterm/.wezterm.lua $HOME/.wezterm.lua
+ln -sfn $DOTFILE_ROOT/wezterm/themes $HOME/.config/wezterm/colors
+ln -sfn $DOTFILE_ROOT/karabiner/karabiner.json $HOME/.config/karabiner/karabiner.json
+ln -sfn $DOTFILE_ROOT/aerospace/config.toml $HOME/.config/aerospace/aerospace.toml
+ln -sfn $DOTFILE_ROOT/opencode/opencode.json $HOME/.config/opencode/opencode.json
