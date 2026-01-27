@@ -1,0 +1,55 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+
+  "theme": "system",
+
+  "autoupdate": true,
+
+  "tui": {
+    "scroll_acceleration": {
+      "enabled": true
+    }
+  },
+
+  "permission": {
+    "edit": "allow",
+
+    // .env reads without prompts
+    "read": {
+      ".env": "deny",
+      ".env.*": "deny",
+      ".env-*": "deny"
+    },
+
+    "bash": {
+      "pnpm *": "allow",
+      "npm *": "allow",
+      "yarn *": "allow",
+      "uv *": "allow",
+      "git commit": "deny",
+      "git push": "deny",
+      "git push *": "deny",
+      "sudo *": "deny",
+      "rm -rf /": "deny",
+      "rm -rf /*": "deny",
+      "rm -rf ~": "deny",
+      "rm -rf ~/*": "deny",
+      ":(){:|:&};:": "deny", // fork bomb, just in case,
+      "*": "ask"
+    }
+  },
+
+  "mcp": {
+    // Docs lookup for libraries - https://context7.com
+    "context7": {
+      "type": "remote",
+      "url": "https://mcp.context7.com/mcp"
+    },
+
+    // Web fetching - MCP official server (Python via uvx)
+    "fetch": {
+      "type": "local",
+      "command": ["uvx", "mcp-server-fetch"]
+    }
+  }
+}

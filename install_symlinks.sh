@@ -34,4 +34,5 @@ ln -sfn $DOTFILE_ROOT/wezterm/.wezterm.lua $HOME/.wezterm.lua
 ln -sfn $DOTFILE_ROOT/wezterm/themes $HOME/.config/wezterm/colors
 ln -sfn $DOTFILE_ROOT/karabiner/karabiner.json $HOME/.config/karabiner/karabiner.json
 ln -sfn $DOTFILE_ROOT/aerospace/config.toml $HOME/.config/aerospace/aerospace.toml
-ln -sfn $DOTFILE_ROOT/opencode/opencode.json $HOME/.config/opencode/opencode.json
+ln -sfn $DOTFILE_ROOT/opencode/opencode.jsonc $HOME/.config/opencode/opencode.jsonc
+ln -sfn $DOTFILE_ROOT/opencode/AGENTS.md $HOME/.config/opencode/AGENTS.md
