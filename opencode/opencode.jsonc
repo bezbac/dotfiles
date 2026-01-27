@@ -14,28 +14,58 @@
   "permission": {
     "edit": "allow",
 
-    // .env reads without prompts
+    // Deny reading .env files
     "read": {
       ".env": "deny",
       ".env.*": "deny",
-      ".env-*": "deny"
+      ".env-*": "deny",
+      "*.env.example": "allow"
     },
 
     "bash": {
+      "*": "ask",
+
+      // Basic unix commands
+      "ls *": "allow",
+      "find *": "allow",
+      "grep *": "allow",
+      "awk *": "allow",
+      "head *": "allow",
+      "tail *": "allow",
+      "echo *": "allow",
+      "mkdir *": "allow",
+      "which *": "allow",
+
+      // Common cli tools
       "pnpm *": "allow",
       "npm *": "allow",
       "yarn *": "allow",
       "uv *": "allow",
+      "moon *": "allow",
+      "vitest *": "allow",
+      "pnpx *": "allow",
+
+      // Terraform commands
+      "terraform *": "deny",
+      "terraform init": "allow",
+      "terraform validate": "allow",
+
+      // Git commands
+      "git log *": "allow",
+      "git status *": "allow",
+      "git diff *": "allow",
+      "git show *": "allow",
+      "git branch *": "allow",
       "git commit": "deny",
-      "git push": "deny",
       "git push *": "deny",
+
+      // Dangerous commands
       "sudo *": "deny",
       "rm -rf /": "deny",
       "rm -rf /*": "deny",
       "rm -rf ~": "deny",
       "rm -rf ~/*": "deny",
-      ":(){:|:&};:": "deny", // fork bomb, just in case,
-      "*": "ask"
+      ":(){:|:&};:": "deny" // fork bomb, just in case,
     }
   },
 
