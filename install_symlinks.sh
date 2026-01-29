@@ -10,6 +10,7 @@ mkdir -p $HOME/.config/wezterm
 mkdir -p $HOME/.config/karabiner
 mkdir -p $HOME/.config/aerospace
 mkdir -p $HOME/.config/opencode
+mkdir -p $HOME/.config/worktrunk
 mkdir -p $HOME/.zsh
 
 # Create Symlinks
@@ -36,3 +37,4 @@ ln -sfn $DOTFILE_ROOT/karabiner/karabiner.json $HOME/.config/karabiner/karabiner
 ln -sfn $DOTFILE_ROOT/aerospace/config.toml $HOME/.config/aerospace/aerospace.toml
 ln -sfn $DOTFILE_ROOT/opencode/opencode.jsonc $HOME/.config/opencode/opencode.jsonc
 ln -sfn $DOTFILE_ROOT/opencode/AGENTS.md $HOME/.config/opencode/AGENTS.md
+ln -sfn $DOTFILE_ROOT/worktrunk/config.toml $HOME/.config/worktrunk/config.toml

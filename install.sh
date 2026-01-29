@@ -23,6 +23,7 @@ rustup add component rust-analyzer
 
 # Install tools based on cargo
 cargo install --git https://github.com/bezbac/git-grab.git
+cargo install worktrunk
 
 # Install tools based on pnpm
 pnpm add -g @github/copilot@0.0.369

@@ -67,3 +67,7 @@ apply = ["defer"]
 [plugins.nvm]
 local = "~/.zsh/plugins"
 apply = ["defer"]
+
+[plugins.worktrunk]
+local = "~/.zsh/plugins"
+apply = ["defer"]
