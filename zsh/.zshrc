@@ -58,6 +58,7 @@ bindkey '^x^e' edit-command-line
 AUTO_NOTIFY_IGNORE+=("pnpm dev")
 AUTO_NOTIFY_IGNORE+=("moon dev")
 AUTO_NOTIFY_IGNORE+=("p dev")
+AUTO_NOTIFY_IGNORE+=("opencode")
 
 # Eval trick to allow running command but not exiting afterwards
 # https://superuser.com/a/230090
