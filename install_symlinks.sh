@@ -38,3 +38,4 @@ ln -sfn $DOTFILE_ROOT/aerospace/config.toml $HOME/.config/aerospace/aerospace.to
 ln -sfn $DOTFILE_ROOT/opencode/opencode.jsonc $HOME/.config/opencode/opencode.jsonc
 ln -sfn $DOTFILE_ROOT/opencode/AGENTS.md $HOME/.config/opencode/AGENTS.md
 ln -sfn $DOTFILE_ROOT/worktrunk/config.toml $HOME/.config/worktrunk/config.toml
+ln -sfn $DOTFILE_ROOT/beeper/custom.css $HOME/Library/Application\ Support/BeeperTexts/custom.css
