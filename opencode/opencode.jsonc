@@ -14,12 +14,18 @@
   "permission": {
     "edit": "allow",
 
-    // Deny reading .env files
     "read": {
+      // Deny reading .env files
       ".env": "deny",
       ".env.*": "deny",
       ".env-*": "deny",
-      "*.env.example": "allow"
+      "*.env.example": "allow",
+
+      // Deny reading terraform var and state files
+      ".tfvars": "deny",
+      ".tfvars*": "deny",
+      ".tfstate": "deny",
+      ".tfstate*": "deny"
     },
 
     "bash": {
