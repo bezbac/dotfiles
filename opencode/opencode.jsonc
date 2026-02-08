@@ -5,6 +5,8 @@
 
   "autoupdate": true,
 
+  "plugin": ["@mohak34/opencode-notifier@0.1.15"],
+
   "tui": {
     "scroll_acceleration": {
       "enabled": true
