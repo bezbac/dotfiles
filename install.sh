@@ -27,6 +27,7 @@ cargo install worktrunk
 
 # Install tools based on pnpm
 pnpm add -g @github/copilot@0.0.369
+pnpm add -g @openai/codex@0.98.0
 
 # Update submodules
 git pull --recurse-submodules
