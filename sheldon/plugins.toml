@@ -64,10 +64,17 @@ apply = ["defer"]
 local = "~/.zsh/plugins"
 apply = ["defer"]
 
-[plugins.nvm]
+[plugins.worktrunk]
 local = "~/.zsh/plugins"
 apply = ["defer"]
 
-[plugins.worktrunk]
+[plugins.proto]
+local = "~/.zsh/plugins"
+apply = ["defer"]
+
+# Make sure nvm is loaded after proto
+# This way, the default node version will be managed by nvm
+# While proto will activate node versions per project as needed
+[plugins.nvm]
 local = "~/.zsh/plugins"
 apply = ["defer"]

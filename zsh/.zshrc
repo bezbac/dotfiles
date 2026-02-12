@@ -16,6 +16,9 @@ export GRAB_PATTERN="~/dev/repos/{owner/}{repo}"
 ### Source stuff
 ### ----------------------------
 
+# Add homebrew binaries to path
+export PATH="/opt/homebrew/bin:$PATH"
+
 # Sheldon
 eval "$(sheldon source)"
 

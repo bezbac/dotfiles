@@ -17,7 +17,3 @@ export PATH="$HOME/scripts:$PATH"
 # pnpm
 export PNPM_HOME="$HOME/.pnpm"
 export PATH="$HOME/.pnpm:$PATH"
-
-# proto
-export PROTO_HOME="$HOME/.proto"
-export PATH="$PROTO_HOME/shims:$PROTO_HOME/bin:$PATH"
