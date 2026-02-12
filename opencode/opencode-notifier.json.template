@@ -1,0 +1,11 @@
+{
+  "sound": true,
+  "notification": true,
+  "timeout": 5,
+  "showProjectName": true,
+  "showIcon": true,
+  "sounds": {
+    "permission": "$DOTFILE_ROOT/resources/adjutant_insufficient_minerals.wav",
+    "complete": "$DOTFILE_ROOT/resources/adjutant_research_complete.wav"
+  }
+}

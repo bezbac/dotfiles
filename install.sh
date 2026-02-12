@@ -40,6 +40,9 @@ if [ -f $HOME/.copilot/config.json ]; then
   jq '.theme = "light"' $HOME/.copilot/config.json | sponge $HOME/.copilot/config.json
 fi
 
+# Copy opencode-notifier.json.template to opencode-notifier.json and replace $DOTFILE_ROOT with the actual path
+sed "s|\$DOTFILE_ROOT|$DOTFILE_ROOT|g" $DOTFILE_ROOT/opencode/opencode-notifier.json.template > $DOTFILE_ROOT/opencode/opencode-notifier.json
+
 # Symlinks
 source ./install_symlinks.sh
 
@@ -48,6 +51,9 @@ source ./install_vscode.sh
 
 # Setup userscripts
 source ./install_userscripts.sh
+
+# Setup resources
+source ./install_resources.sh
 
 # Setup macos defaults
 source ./macos/defaults.sh
