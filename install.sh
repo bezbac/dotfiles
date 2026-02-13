@@ -60,3 +60,6 @@ source ./macos/defaults.sh
 
 # Setup macos dock
 source ./macos/dock.sh
+
+# Setup shortcuts
+cherri shortcuts/copy-goodlinks-highlights.cherri

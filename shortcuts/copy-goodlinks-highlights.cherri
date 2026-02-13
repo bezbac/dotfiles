@@ -1,0 +1,9 @@
+#include 'actions/sharing'
+#define color darkblue
+
+const Clipboard = getClipboard()
+rawAction("com.ngocluu.goodlinks.ExportHighlights", {
+	"AppIntentDescriptor": "",
+	"link": "Clipboard"
+})
+setClipboard(ExportHighlights)
