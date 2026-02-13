@@ -25,6 +25,8 @@ ln -sfn $DOTFILE_ROOT/vscode/keybindings.json $HOME/Library/Application\ Support
 ln -sfn $DOTFILE_ROOT/vscode/custom.css $HOME/Library/Application\ Support/Code/User/custom.css
 ln -sfn $DOTFILE_ROOT/vscode/snippets $HOME/Library/Application\ Support/Code/User/snippets
 ln -sfn $DOTFILE_ROOT/zsh/.zshrc $HOME/.zshrc
+ln -sfn $DOTFILE_ROOT/zsh/.zprofile $HOME/.zprofile
+ln -sfn $DOTFILE_ROOT/zsh/.zshenv $HOME/.zshenv
 ln -sfn $DOTFILE_ROOT/zsh/plugins $HOME/.zsh/plugins
 ln -sfn $DOTFILE_ROOT/sheldon/plugins.toml $HOME/.config/sheldon/plugins.toml
 ln -sfn $DOTFILE_ROOT/scripts $HOME/scripts
