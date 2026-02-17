@@ -15,5 +15,5 @@ fi
 # 0:00 - 0:02 ("not enough minerals")
 # 0:18 - 0:20 ("research complete")
 
-ffmpeg -y -i "$DOTFILE_ROOT/resources/adjutant.opus" -ss 00:00:00 -to 00:00:01.900 -c:a pcm_s16le "$DOTFILE_ROOT/resources/adjutant_insufficient_minerals.wav"
-ffmpeg -y -i "$DOTFILE_ROOT/resources/adjutant.opus" -ss 00:00:18.500 -to 00:00:20.100 -c:a pcm_s16le "$DOTFILE_ROOT/resources/adjutant_research_complete.wav"
+ffmpeg -y -i "$DOTFILE_ROOT/resources/adjutant.opus" -ss 00:00:00 -to 00:00:00.550 -c:a pcm_s16le "$DOTFILE_ROOT/resources/starcraft_warning.wav"
+ffmpeg -y -i "$DOTFILE_ROOT/resources/adjutant.opus" -ss 00:00:18.500 -to 00:00:20.100 -c:a pcm_s16le "$DOTFILE_ROOT/resources/starcraft_research_complete.wav"

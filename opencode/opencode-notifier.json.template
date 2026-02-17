@@ -5,7 +5,7 @@
   "showProjectName": true,
   "showIcon": true,
   "sounds": {
-    "permission": "$DOTFILE_ROOT/resources/adjutant_insufficient_minerals.wav",
-    "complete": "$DOTFILE_ROOT/resources/adjutant_research_complete.wav"
+    "permission": "$DOTFILE_ROOT/resources/starcraft_warning.wav",
+    "complete": "$DOTFILE_ROOT/resources/starcraft_research_complete.wav"
   }
 }
