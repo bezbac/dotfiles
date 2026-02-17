@@ -1,3 +1,7 @@
+# Rules
+
+- Never use the /tmp directory, always us directories local to the project.
+
 # Code Philosophy
 
 - Simple over complex. Explicit over implicit.
