@@ -16,24 +16,28 @@ github = "romkatv/zsh-defer"
 [plugins.edit-command-line]
 inline = "autoload -Uz edit-command-line && zle -N edit-command-line"
 
-# Deferred plugins
-# ----------------
-
 [plugins.path]
 local = "~/.zsh/plugins"
-apply = ["defer"]
 
 [plugins.aliases]
 local = "~/.zsh/plugins"
-apply = ["defer"]
 
-[plugins.compinit]
+[plugins.sdkman]
 local = "~/.zsh/plugins"
-apply = ["defer"]
 
 [plugins.zsh-history-substring-search]
 github = "zsh-users/zsh-history-substring-search"
 use = ["{{ name }}.zsh"]
+
+[plugins.zsh-autosuggestions]
+github = "zsh-users/zsh-autosuggestions"
+use = ["{{ name }}.zsh"]
+
+# Deferred plugins
+# ----------------
+
+[plugins.compinit]
+local = "~/.zsh/plugins"
 apply = ["defer"]
 
 [plugins.zsh-auto-notify]
@@ -45,19 +49,10 @@ apply = ["defer"]
 github = "zdharma-continuum/fast-syntax-highlighting"
 apply = ["defer"]
 
-[plugins.zsh-autosuggestions]
-github = "zsh-users/zsh-autosuggestions"
-use = ["{{ name }}.zsh"]
-apply = ["defer"]
-
 [plugins.zellij-tabula]
 github = "bezbac/zellij-tabula"
 use = ["{{ name }}.plugin.zsh"]
 tag = "v0.2.0"
-apply = ["defer"]
-
-[plugins.sdkman]
-local = "~/.zsh/plugins"
 apply = ["defer"]
 
 [plugins.pyenv]
@@ -76,5 +71,7 @@ apply = ["defer"]
 # This way, the default node version will be managed by nvm
 # While proto will activate node versions per project as needed
 [plugins.nvm]
-local = "~/.zsh/plugins"
+github = "lukechilds/zsh-nvm"
+use = ["zsh-nvm.plugin.zsh"]
 apply = ["defer"]
+hooks = { pre = "export NVM_LAZY_LOAD=true" }
