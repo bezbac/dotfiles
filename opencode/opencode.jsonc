@@ -75,6 +75,7 @@
       "git push *": "deny",
 
       // Dangerous commands
+      "op *": "deny", // 1password CLI
       "sudo *": "deny",
       "rm -rf /": "deny",
       "rm -rf /*": "deny",
