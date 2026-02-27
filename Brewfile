@@ -114,7 +114,7 @@ cask 'backblaze'
 cask 'keka'
 cask 'docker-desktop'
 cask 'hpedrorodrigues/tools/dockutil'
-cask '1password/tap/1password-cli'
+cask '1password/tap/1password-cli@beta'
 
 # Mac apps
 mas "Userscripts", id: 1463298887
