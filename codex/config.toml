@@ -4,3 +4,8 @@ model_reasoning_effort = "high"
 # Enable network access for workspace-write sandbox mode
 [sandbox_workspace_write]
 network_access = true
+writable_roots = ["/Users/ben.bachem/.gradle"]
+
+[features]
+multi_agent = true
+
