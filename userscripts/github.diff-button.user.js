@@ -9,7 +9,7 @@
 
   function insertDiffButton() {
     const actionsContainer = document.querySelector(
-      '[data-component="PH_Actions"]',
+      '[data-component="PH_Actions"] > div.d-flex',
     );
 
     if (!actionsContainer || actionsContainer.querySelector(".diff-button")) {
@@ -18,7 +18,7 @@
 
     const button = document.createElement("a");
     button.href = window.location.href + ".diff";
-    button.className = "btn btn-sm mr-1 diff-button";
+    button.className = "btn btn-md diff-button";
     button.textContent = "Diff";
     button.title = "View raw diff";
 
