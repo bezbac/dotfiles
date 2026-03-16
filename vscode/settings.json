@@ -25,9 +25,8 @@
   },
   "cSpell.enabled": false,
   "command aliases": {
-    "workbench.action.files.saveAll": "wq",
     "workbench.action.files.save": "w",
-    "workbench.action.closeActiveEditor": "quit, q"
+    "workbench.action.closeActiveEditor": ["quit", "q", "wq"]
   },
   "diffEditor.ignoreTrimWhitespace": true,
   "editor.acceptSuggestionOnCommitCharacter": false,
