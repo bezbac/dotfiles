@@ -61,6 +61,7 @@ brew 'shellcheck'
 brew 'ripgrep'
 brew 'hurl'
 brew 'anomalyco/tap/opencode'
+brew 'gitu'
 
 # Other tools
 brew 'cmake'
