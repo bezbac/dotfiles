@@ -1,11 +1,18 @@
-model = "gpt-5.3-codex"
+model = "gpt-5.4"
 model_reasoning_effort = "high"
 
 # Enable network access for workspace-write sandbox mode
 [sandbox_workspace_write]
 network_access = true
-writable_roots = ["/Users/ben.bachem/.gradle"]
+writable_roots = [
+    "/Users/ben.bachem/.gradle",
+    "/Users/ben.bachem/.docker",
+    "/Users/ben.bachem/.cargo",
+    "/Users/ben.bachem/.npm",
+]
 
 [features]
 multi_agent = true
 
+[notice.model_migrations]
+"gpt-5.3-codex" = "gpt-5.4"
