@@ -32,3 +32,6 @@ alias j="z"
 
 ## pnpm
 alias p="pnpm"
+
+## moon
+alias m="moon"
