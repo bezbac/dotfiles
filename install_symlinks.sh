@@ -11,6 +11,7 @@ mkdir -p $HOME/.config/karabiner
 mkdir -p $HOME/.config/aerospace
 mkdir -p $HOME/.config/opencode
 mkdir -p $HOME/.config/worktrunk
+mkdir -p $HOME/.config/zed
 mkdir -p $HOME/.zsh
 
 # Create Symlinks
@@ -42,3 +43,4 @@ ln -sfn $DOTFILE_ROOT/opencode/AGENTS.md $HOME/.config/opencode/AGENTS.md
 ln -sfn $DOTFILE_ROOT/opencode/opencode-notifier.json $HOME/.config/opencode/opencode-notifier.json
 ln -sfn $DOTFILE_ROOT/worktrunk/config.toml $HOME/.config/worktrunk/config.toml
 ln -sfn $DOTFILE_ROOT/codex/config.toml $HOME/.codex/config.toml
+ln -sfn $DOTFILE_ROOT/zed/settings.json $HOME/.config/zed/settings.json
