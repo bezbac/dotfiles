@@ -1,0 +1,202 @@
+schemaVersion = 1
+
+[hotkeys.app.activate]
+carbonKeyCode = 49
+carbonModifiers = 256
+
+[[hotkeys.custom]]
+id = '359B31E7-C493-47AD-8861-EB49AE28058F'
+presentation = 'auto'
+
+[hotkeys.custom.command]
+actionIdentifier = 'Tuna.BasicActionsCatalog.Browse'
+subjectIdentifier = 'Tuna.Internal.ClipboardProxyCatalog.Clipboard History'
+
+[hotkeys.custom.shortcut]
+carbonKeyCode = 9
+carbonModifiers = 768
+
+[[hotkeys.custom]]
+id = '47E319CB-8AA9-462A-BBE2-26365A9479D4'
+presentation = 'auto'
+
+[hotkeys.custom.command]
+actionIdentifier = 'Tuna.BasicActionsCatalog.Browse'
+subjectIdentifier = 'TunaEmoji.EmojiSearchCatalog.Emoji'
+
+[[leaderMode.bindings]]
+key = 'x'
+url = 'tuna://run/path.%252FApplications%252FWezTerm.app/Open'
+
+[[leaderMode.bindings]]
+key = 'b'
+url = 'tuna://run/path.%252FApplications%252FSafari.app/Open'
+
+[[leaderMode.bindings]]
+key = 'v'
+url = 'tuna://run/path.%252FApplications%252FVisual%2520Studio%2520Code.app/Open'
+
+[[leaderMode.bindings]]
+key = 'f'
+url = 'tuna://run/path.%252FSystem%252FLibrary%252FCoreServices%252FFinder.app/Open'
+
+[[leaderMode.bindings]]
+key = 's'
+url = 'tuna://run/path.%252FApplications%252FSpotify.app/Open'
+
+[[leaderMode.bindings]]
+key = 'm'
+url = 'tuna://run/path.%252FApplications%252FBeeper%2520Desktop.app/Open'
+
+[[leaderMode.bindings]]
+key = 'c'
+url = 'tuna://run/path.%252FSystem%252FApplications%252FCalendar.app/Open'
+
+[[leaderMode.bindings]]
+key = 'i'
+url = 'tuna://run/path.%252FApplications%252FLinear.app/Open'
+
+[[leaderMode.bindings]]
+key = 'd'
+url = 'tuna://run/path.%252FApplications%252FFigma.app/Open'
+
+[[leaderMode.bindings]]
+key = 't'
+url = 'tuna://run/path.%252FApplications%252FSlack.app/Open'
+
+[[leaderMode.bindings]]
+key = 'o'
+url = 'tuna://run/TunaSafari.SafariBookmarksSearchCatalog.Bookmarks/Tuna.BasicActionsCatalog.Browse'
+
+[[leaderMode.bindings]]
+iconPath = 'rectangle.grid.2x2'
+key = 'w'
+label = 'Aerospace'
+
+[[leaderMode.bindings.children]]
+iconPath = 'arrow.up.backward.and.arrow.down.forward.rectangle'
+key = 'M'
+label = 'maximize'
+url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520fullscreen/Run%20Text%20as%20Shell%20Command'
+
+[[leaderMode.bindings.children]]
+iconPath = 'arrow.down.left.and.arrow.up.right.rectangle.fill'
+key = 'F'
+label = 'fullscreen'
+url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520macos-native-fullscreen/Run%20Text%20as%20Shell%20Command'
+
+[[leaderMode.bindings.children]]
+key = '.'
+label = 'flatten-workspace-tree'
+url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520flatten-workspace-tree/Run%20Text%20as%20Shell%20Command'
+
+[[leaderMode.bindings.children]]
+iconPath = 'desktopcomputer.and.arrow.down'
+key = 'n'
+label = 'assign workspace to next display'
+url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520move-workspace-to-monitor%2520next%2520--wrap-around/Run%20Text%20as%20Shell%20Command'
+
+[[leaderMode.bindings.children]]
+key = 'f'
+label = 'toggle floating'
+url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520layout%2520floating%2520tiling/Run%20Text%20as%20Shell%20Command'
+
+[[leaderMode.bindings.children]]
+iconPath = 'zipper.page'
+key = 'j'
+label = 'join-with'
+
+[[leaderMode.bindings.children.children]]
+iconPath = 'arrowshape.left.fill'
+key = 'h'
+label = 'left'
+url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520join-with%2520left/Run%20Text%20as%20Shell%20Command'
+
+[[leaderMode.bindings.children.children]]
+iconPath = 'arrowshape.down.fill'
+key = 'j'
+label = 'down'
+url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520join-with%2520down/Run%20Text%20as%20Shell%20Command'
+
+[[leaderMode.bindings.children.children]]
+iconPath = 'arrowshape.up.fill'
+key = 'k'
+label = 'up'
+url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520join-with%2520up/Run%20Text%20as%20Shell%20Command'
+
+[[leaderMode.bindings.children.children]]
+iconPath = 'arrowshape.right.fill'
+key = 'l'
+label = 'right'
+url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520join-with%2520right/Run%20Text%20as%20Shell%20Command'
+
+[[leaderMode.bindings.children]]
+iconPath = 'square.stack.fill'
+key = 'l'
+label = 'layout'
+
+[[leaderMode.bindings.children.children]]
+key = 'a'
+label = 'accordion'
+url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520layout%2520accordion%2520horizontal%2520vertical/Run%20Text%20as%20Shell%20Command'
+
+[[leaderMode.bindings.children.children]]
+key = 't'
+label = 'tiles'
+url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520layout%2520tiles%2520vertical%2520horizontal/Run%20Text%20as%20Shell%20Command'
+
+[[leaderMode.bindings.children]]
+iconPath = 'move.3d'
+key = 'm'
+label = 'move'
+
+[[leaderMode.bindings.children.children]]
+iconPath = 'arrowshape.left.fill'
+key = 'h'
+label = 'left'
+url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520move%2520left/Run%20Text%20as%20Shell%20Command'
+
+[[leaderMode.bindings.children.children]]
+iconPath = 'arrowshape.down.fill'
+key = 'j'
+label = 'down'
+url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520move%2520down/Run%20Text%20as%20Shell%20Command'
+
+[[leaderMode.bindings.children.children]]
+iconPath = 'arrowshape.up.fill'
+key = 'k'
+label = 'up'
+url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520move%2520up/Run%20Text%20as%20Shell%20Command'
+
+[[leaderMode.bindings.children.children]]
+iconPath = 'arrowshape.right.fill'
+key = 'l'
+label = 'right'
+url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520move%2520right/Run%20Text%20as%20Shell%20Command'
+
+[[leaderMode.bindings.children]]
+key = 'R'
+label = 'reload-config'
+url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520reload-config/Run%20Text%20as%20Shell%20Command'
+
+[[leaderMode.bindings.children]]
+key = 's'
+label = 'mode resize'
+url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520mode%2520resize/Run%20Text%20as%20Shell%20Command'
+
+[settings]
+clipboardHistoryRetention = 'sevenDays'
+clipboardIgnoredBundleIdentifiers = ['com.1password.1password']
+dictationActivationMode = 'toggle'
+leaderModeCheatsheetBehavior = 'always'
+leaderModeThemeStyle = 'cheatsheet'
+mainWindowAnimationsEnabled = false
+screenPreference = 'activeWindow'
+themeIdentifier = 'com.brnbw.tuna.themes.default'
+typingTimeoutDuration = 1.95
+
+[[catalogSettings]]
+catalogIdentifier = 'com.brnbw.tuna.themes.default'
+
+[catalogSettings.values]
+ThemeTint = 'system'

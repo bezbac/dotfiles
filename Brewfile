@@ -87,7 +87,6 @@ cask 'font-fira-code-nerd-font'
 
 # Apps
 cask 'nikitabobko/tap/aerospace'
-cask 'leader-key'
 cask 'homerow'
 cask 'visual-studio-code'
 cask 'karabiner-elements'
@@ -117,6 +116,7 @@ cask 'docker-desktop'
 cask 'zed'
 cask 'hpedrorodrigues/tools/dockutil'
 cask '1password/tap/1password-cli@beta'
+cask 'mikker/tap/tuna'
 
 # Mac apps
 mas "Userscripts", id: 1463298887

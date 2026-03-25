@@ -31,15 +31,15 @@ function hyperKeyTrigger() {
 }
 
 const rules = [
-  rule("Clipboard History").manipulators([
-    map("v", ["command", "shift"]).to$(
-      "open raycast://extensions/raycast/clipboard-history/clipboard-history"
+  rule("Emoji Search").manipulators([
+    map("spacebar", ["command", "control"]).to$(
+      "open tuna://run/TunaEmoji.EmojiSearchCatalog.Emoji/Tuna.BasicActionsCatalog.Browse",
     ),
   ]),
 
   rule("Hyper Key (⌃⌥⇧⌘)").manipulators([
-    // Switch back to previous application when pressing Caps Lock / Escape while in Leader Key app
-    withCondition(ifApp("com.brnbw.Leader-Key"))([
+    // Switch back to previous application when pressing Caps Lock / Escape while in Tuna menu
+    withCondition(ifApp("com.brnbw.Tuna"))([
       hyperKeyTrigger().toIfAlone([
         {
           key_code: "escape",
@@ -63,7 +63,7 @@ const rules = [
       ]),
     ]),
 
-    withCondition(ifApp("com.brnbw.Leader-Key").unless())([
+    withCondition(ifApp("com.brnbw.Tuna").unless())([
       hyperKeyTrigger().toIfAlone({
         key_code: "escape",
       }),
@@ -71,12 +71,11 @@ const rules = [
 
     withCondition(ifVar(HYPER_VAR, 1))(
       [
-        map("o").to$("open leaderkey://"),
-        map("slash").to$(
-          "open raycast://extensions/raycast/navigation/search-menu-items"
+        map("o").to$(
+          "open tuna://run/Tuna.ModesCatalog.Leader%20Mode/TunaCore.CommonActionsCatalog.Switch",
         ),
         map("slash").to$(
-          "open raycast://extensions/raycast/navigation/switch-windows"
+          "open tuna://run/TunaSystem.MenuItemsCatalog.Menu%20Items/Tuna.BasicActionsCatalog.Browse",
         ),
 
         // Vim-like navigation
@@ -86,8 +85,14 @@ const rules = [
         map("j", "optionalAny").to({ key_code: "down_arrow" }),
         map("k", "optionalAny").to({ key_code: "up_arrow" }),
         map("l", "optionalAny").to({ key_code: "right_arrow" }),
-        map("w", "optionalAny").to({ key_code: "right_arrow", modifiers: ["option"] }),
-        map("b", "optionalAny").to({ key_code: "left_arrow", modifiers: ["option"] }),
+        map("w", "optionalAny").to({
+          key_code: "right_arrow",
+          modifiers: ["option"],
+        }),
+        map("b", "optionalAny").to({
+          key_code: "left_arrow",
+          modifiers: ["option"],
+        }),
 
         map("t").toVar(HYPER_VAR, "t"),
 
@@ -96,7 +101,7 @@ const rules = [
           key_code: "grave_accent_and_tilde",
           modifiers: ["command"],
         }),
-      ].map((x) => x.to(escape))
+      ].map((x) => x.to(escape)),
     ),
 
     // Improved tab switching
@@ -119,5 +124,5 @@ writeToProfile(
     name: "Default",
     karabinerJsonPath: path.join(__dirname, "./karabiner.json"),
   },
-  rules
+  rules,
 );
