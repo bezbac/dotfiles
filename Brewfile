@@ -117,6 +117,7 @@ cask 'zed'
 cask 'hpedrorodrigues/tools/dockutil'
 cask '1password/tap/1password-cli@beta'
 cask 'mikker/tap/tuna'
+cask 'meetingbar'
 
 # Mac apps
 mas "Userscripts", id: 1463298887

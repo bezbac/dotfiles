@@ -285,3 +285,14 @@ defaults write com.sindresorhus.Velja rules -array
 for rule in "$DOTFILE_ROOT/velja/rules/"*.json; do
     defaults write com.sindresorhus.Velja rules -array-add "$(jq -c < "$rule" | jq -R -s)"
 done
+
+###############################################################################
+# MeetingBar                                                                  #
+###############################################################################
+
+defaults write leits.MeetingBar eventTimeFormat -string "\"show\""
+defaults write leits.MeetingBar eventTitleFormat -string "\"dot\""
+defaults write leits.MeetingBar eventTitleIconFormat -string "\"no_online_session\""
+
+defaults write leits.MeetingBar endOfEventNotification -int 0
+defaults write leits.MeetingBar joinEventNotification -int 0
