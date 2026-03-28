@@ -1,9 +1,3 @@
-# Taps
-tap 'homebrew/cask'
-tap 'homebrew/cask-fonts'
-tap 'homebrew/cask-versions'
-tap 'homebrew/bundle'
-
 # Homebrew extensions
 brew 'mas'
 
@@ -17,7 +11,7 @@ brew 'sheldon'
 brew 'starship'
 brew 'eza'
 brew 'zoxide'
-brew 'ellie/atuin/atuin'
+brew 'atuin'
 brew 'zellij'
 
 # General language tooling
@@ -61,6 +55,7 @@ brew 'litecli'
 brew 'shellcheck'
 brew 'ripgrep'
 brew 'hurl'
+brew 'dockutil'
 brew 'anomalyco/tap/opencode'
 brew 'gitu'
 
@@ -77,7 +72,6 @@ cask 'font-open-sans'
 cask 'font-roboto'
 cask 'font-mulish'
 cask 'font-fira-code'
-cask 'font-source-sans-pro'
 cask 'font-inter'
 cask 'font-figtree'
 cask 'font-fira-code-nerd-font'
@@ -110,8 +104,7 @@ cask 'backblaze'
 cask 'keka'
 cask 'docker-desktop'
 cask 'zed'
-cask 'hpedrorodrigues/tools/dockutil'
-cask '1password/tap/1password-cli@beta'
+cask '1password-cli@beta'
 cask 'mikker/tap/tuna'
 cask 'meetingbar'
 
