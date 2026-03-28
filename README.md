@@ -10,9 +10,10 @@ Some of the configuration assumes this repository is saved locally under `~/dev/
 
 #### My steps of setting up a new machine
 
-1. Install 1Password
-2. Setup Apple iCloud
-3. Execute the ./install.sh from this repository
+1. Install Homebrew
+2. Install 1Password & Setup SSH Agent
+3. Clone this repository
+4. Execute the `./install.sh` script
 
 #### Cleaning up the homebrew
 
