@@ -24,12 +24,12 @@ curl $png_url > /tmp/wezterm.png
 
 echo "Converting to icns"
 mkdir -p /tmp/wezterm-icns
-pnpm dlx make-icns /tmp/wezterm.png /tmp/wezterm-icns -n "wezterm"
+sips -s format icns -z 512 512 /tmp/wezterm.png -o /tmp/wezterm-icns/wezterm.icns
 rm /tmp/wezterm.png
 
 echo "Installing new icon"
 mv /tmp/wezterm-icns/wezterm.icns "$icon_path"
-rm -rf /tmp/wezterm-icns
+rm -rf ./tmp/wezterm-icns
 
 touch /Applications/WezTerm.app
 killall Finder
