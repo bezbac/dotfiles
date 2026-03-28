@@ -49,9 +49,6 @@ source ./install_symlinks.sh
 # Setup vscode
 source ./install_vscode.sh
 
-# Setup userscripts
-source ./install_userscripts.sh
-
 # Setup resources
 source ./install_resources.sh
 
