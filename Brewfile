@@ -71,10 +71,6 @@ brew 'make'
 # Aerospace setup
 brew 'FelixKratz/formulae/borders'
 
-# Quicklook
-cask 'quicklook-json'
-cask 'quicklook-csv'
-
 # Fonts
 cask 'font-lato'
 cask 'font-open-sans'
