@@ -15,21 +15,27 @@ brew analytics off
 brew bundle install -v
 
 # Install node
-nvm install stable
+nvm install --lts
 
 # Install rust
+rustup-init -y
 rustup install stable
-rustup add component rust-analyzer
+rustup component add rust-analyzer
 
 # Install tools based on cargo
-cargo install --git https://github.com/bezbac/git-grab.git
-cargo install worktrunk
+if test ! $(which git-grab); then
+  cargo install --git https://github.com/bezbac/git-grab.git
+fi
+if test ! $(which wt); then
+  cargo install worktrunk
+fi
 
 # Install tools based on pnpm
 pnpm add -g @github/copilot@0.0.369
 pnpm add -g @openai/codex@0.98.0
 
-# Update submodules
+# Init & update submodules
+git submodule update --init --recursive
 git pull --recurse-submodules
 
 # Compile karabiner rules
