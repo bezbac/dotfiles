@@ -27,6 +27,7 @@ brew 'proto'
 brew 'nvm'
 brew 'yarn'
 brew 'pnpm'
+brew 'deno'
 
 # Python setup
 brew 'uv'
