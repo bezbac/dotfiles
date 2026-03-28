@@ -22,9 +22,6 @@ local = "~/.zsh/plugins"
 [plugins.aliases]
 local = "~/.zsh/plugins"
 
-[plugins.sdkman]
-local = "~/.zsh/plugins"
-
 [plugins.zsh-history-substring-search]
 github = "zsh-users/zsh-history-substring-search"
 use = ["{{ name }}.zsh"]
