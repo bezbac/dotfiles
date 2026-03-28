@@ -10,7 +10,7 @@ import {
   ifVar,
   writeToProfile,
   ifApp,
-} from "https://deno.land/x/karabinerts@1.31.0/deno.ts";
+} from "https://deno.land/x/karabinerts@1.36.0/deno.ts";
 import * as path from "https://deno.land/std@0.224.0/path/mod.ts";
 
 const __dirname = new URL(".", import.meta.url).pathname;
@@ -119,10 +119,24 @@ const rules = [
   ]),
 ];
 
+const karabinerJsonPath = path.join(__dirname, "./karabiner.json")
+
+const emptyConfig = {
+  profiles: [
+    {
+      name: "Default",
+      complex_modifications: {},
+    },
+  ],
+};
+
+
+await Deno.writeTextFile(karabinerJsonPath, JSON.stringify(emptyConfig));
+
 writeToProfile(
   {
     name: "Default",
-    karabinerJsonPath: path.join(__dirname, "./karabiner.json"),
+    karabinerJsonPath: karabinerJsonPath,
   },
   rules,
 );

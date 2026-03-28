@@ -33,7 +33,7 @@ pnpm add -g @openai/codex@0.98.0
 git pull --recurse-submodules
 
 # Compile karabiner rules
-deno run --allow-write ./karabiner/karabiner.ts
+deno run --allow-env --allow-read --allow-write ./karabiner/karabiner.ts
 
 # Update copilot cli settings
 if [ -f $HOME/.copilot/config.json ]; then
