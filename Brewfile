@@ -18,7 +18,7 @@ brew 'zellij'
 brew 'proto'
 
 # Node setup
-brew 'nvm'
+brew 'node'
 brew 'yarn'
 brew 'pnpm'
 brew 'deno'

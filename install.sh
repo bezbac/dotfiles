@@ -15,7 +15,7 @@ brew analytics off
 brew bundle install -v
 
 # Install node
-nvm install --lts
+pnpm env use --global lts
 
 # Install rust
 rustup-init -y
