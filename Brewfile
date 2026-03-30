@@ -78,7 +78,6 @@ cask 'homerow'
 cask 'visual-studio-code'
 cask 'karabiner-elements'
 cask 'wezterm'
-cask 'orbstack'
 cask 'figma'
 cask 'slack'
 cask 'signal'
@@ -90,7 +89,6 @@ cask 'spotify'
 cask 'iina'
 cask 'mediahuman-audio-converter'
 cask 'monitorcontrol'
-cask 'transmission'
 cask 'google-chrome'
 cask 'linear-linear'
 cask 'notion'
@@ -106,7 +104,6 @@ cask 'meetingbar'
 # Mac apps
 mas "Userscripts", id: 1463298887
 mas "Tailscale", id: 1475387142
-mas "Mela Recipe Manager", id: 1568924476
 mas "Velja", id: 1607635845
 mas "Anybox", id: 1593408455
 mas "Hush", id: 1544743900
