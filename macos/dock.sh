@@ -12,7 +12,6 @@ dockutil --no-restart --add "/Applications/Slack.app"
 dockutil --no-restart --add "/Applications/Visual Studio Code.app"
 dockutil --no-restart --add "/Applications/Linear.app"
 dockutil --no-restart --add "/Applications/Beeper Desktop.app"
-dockutil --no-restart --add "/Applications/Anybox.app"
 dockutil --no-restart --add "/Applications/Calendar.app"
 dockutil --no-restart --add "/Applications/System Settings.app"
 
