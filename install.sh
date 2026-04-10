@@ -32,7 +32,7 @@ fi
 
 # Install tools based on pnpm
 pnpm add -g @github/copilot@0.0.369
-pnpm add -g @openai/codex@0.98.0
+pnpm add -g @openai/codex@0.118.0
 
 # Init & update submodules
 git submodule update --init --recursive
