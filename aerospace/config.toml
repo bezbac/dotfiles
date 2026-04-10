@@ -11,7 +11,7 @@ after-login-command = []
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
 after-startup-command = [
     # Setup JankyBorders
-    'exec-and-forget borders active_color=0xffb392f0 inactive_color=0xff4f4e4f hidpi=on width=6.0 order=above',
+    'exec-and-forget borders active_color=0xffb392f0 inactive_color=0xff4f4e4f hidpi=on width=6.0 order=above blacklist="Loom"',
 ]
 
 # Start AeroSpace at login
@@ -183,4 +183,8 @@ run = ['layout floating']
 
 [[on-window-detected]]
 if.app-id = 'com.pranapps.Floating'
+run = ['layout floating']
+
+[[on-window-detected]]
+if.app-id = 'com.loom.desktop'
 run = ['layout floating']

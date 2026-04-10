@@ -100,6 +100,7 @@ cask 'zed'
 cask '1password-cli@beta'
 cask 'mikker/tap/tuna'
 cask 'meetingbar'
+cask 'loom'
 
 # Mac apps
 mas "Userscripts", id: 1463298887
