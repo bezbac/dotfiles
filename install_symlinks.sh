@@ -13,6 +13,7 @@ mkdir -p $HOME/.config/opencode
 mkdir -p $HOME/.config/worktrunk
 mkdir -p $HOME/.config/zed
 mkdir -p $HOME/.zsh
+mkdir -p $HOME/.agents
 
 # Create Symlinks
 ln -sfn $DOTFILE_ROOT/.editorconfig $HOME/.editorconfig
@@ -42,5 +43,9 @@ ln -sfn $DOTFILE_ROOT/opencode/opencode.jsonc $HOME/.config/opencode/opencode.js
 ln -sfn $DOTFILE_ROOT/opencode/AGENTS.md $HOME/.config/opencode/AGENTS.md
 ln -sfn $DOTFILE_ROOT/opencode/opencode-notifier.json $HOME/.config/opencode/opencode-notifier.json
 ln -sfn $DOTFILE_ROOT/worktrunk/config.toml $HOME/.config/worktrunk/config.toml
-ln -sfn $DOTFILE_ROOT/codex/config.toml $HOME/.codex/config.toml
 ln -sfn $DOTFILE_ROOT/zed/settings.json $HOME/.config/zed/settings.json
+ln -sfn $DOTFILE_ROOT/codex/AGENTS.md $HOME/.codex/AGENTS.md
+ln -sfn $DOTFILE_ROOT/codex/skills $HOME/.agents/skills
+
+# Codex has issues with symlinks, so we copy the file instead of creating a symlink
+cp $DOTFILE_ROOT/codex/config.toml $HOME/.codex/config.toml
