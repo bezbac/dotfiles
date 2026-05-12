@@ -102,6 +102,7 @@ cask 'mikker/tap/tuna'
 cask 'meetingbar'
 cask 'loom'
 cask 'orbstack'
+cask 'session-manager-plugin'
 
 # Mac apps
 mas "Userscripts", id: 1463298887
