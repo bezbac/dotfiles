@@ -58,6 +58,7 @@ brew 'gitu'
 # Other tools
 brew 'cmake'
 brew 'make'
+brew 'awscli'
 
 # Aerospace setup
 brew 'FelixKratz/formulae/borders'
