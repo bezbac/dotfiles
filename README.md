@@ -15,6 +15,14 @@ Some of the configuration assumes this repository is saved locally under `~/dev/
 3. Clone this repository
 4. Execute the `./install.sh` script
 
+#### Disabling default macOS Emoji Picker
+
+System Preferences > Keyboard > Shortcuts > App Shortcuts
+Click the [+] button and in the sheet that appears...
+Set Application: to: All Applications
+Set Menu Title: to: Emoji & Symbols
+Set Keyboard Shortcut to e.g.: CMD + control + space
+
 #### Cleaning up the homebrew
 
 In order to clean up homebrew:
