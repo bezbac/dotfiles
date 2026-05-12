@@ -72,7 +72,7 @@ const rules = [
     withCondition(ifVar(HYPER_VAR, 1))(
       [
         map("o").to$(
-          "open tuna://run/Tuna.ModesCatalog.Leader%20Mode/TunaCore.CommonActionsCatalog.Switch",
+          "open tuna://run/Tuna.ModesCatalog.Combo%20Mode/TunaCore.CommonActionsCatalog.Switch",
         ),
         map("slash").to$(
           "open tuna://run/TunaSystem.MenuItemsCatalog.Menu%20Items/Tuna.BasicActionsCatalog.Browse",
@@ -119,7 +119,7 @@ const rules = [
   ]),
 ];
 
-const karabinerJsonPath = path.join(__dirname, "./karabiner.json")
+const karabinerJsonPath = path.join(__dirname, "./karabiner.json");
 
 const emptyConfig = {
   profiles: [
@@ -129,7 +129,6 @@ const emptyConfig = {
     },
   ],
 };
-
 
 await Deno.writeTextFile(karabinerJsonPath, JSON.stringify(emptyConfig));
 
