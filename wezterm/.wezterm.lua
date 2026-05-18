@@ -68,6 +68,9 @@ config.keys = {
 
   -- Make Option-Right equivalent to Alt-f; forward-word
   { key="RightArrow", mods="OPT", action=wezterm.action{SendString="\x1bf"} },
+
+  -- Make "Shift + Enter" send "Alt + Enter" for newlines in codex
+  { key="Enter", mods="SHIFT", action=wezterm.action{SendString="\x1b\r"} },
 }
 
 local function find_absolute_file_path(relative_path)
