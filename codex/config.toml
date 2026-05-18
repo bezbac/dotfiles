@@ -1,5 +1,6 @@
-model = "gpt-5.4"
-model_reasoning_effort = "high"
+model = "gpt-5.5"
+model_reasoning_effort = "medium"
+personality = "pragmatic"
 
 # Enable network access for workspace-write sandbox mode
 [sandbox_workspace_write]
@@ -14,5 +15,12 @@ writable_roots = [
 [features]
 multi_agent = true
 
+[notice]
+fast_default_opt_out = true
+
 [notice.model_migrations]
 "gpt-5.3-codex" = "gpt-5.4"
+
+[tui.model_availability_nux]
+"gpt-5.5" = 4
+
