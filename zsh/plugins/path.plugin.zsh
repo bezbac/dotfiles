@@ -17,3 +17,6 @@ export PATH="$HOME/scripts:$PATH"
 # pnpm
 export PNPM_HOME="$HOME/.pnpm"
 export PATH="$HOME/.pnpm:$PATH"
+
+# uv
+export PATH="$HOME/.local/bin:$PATH"
