@@ -55,9 +55,6 @@ source ./install_symlinks.sh
 # Setup vscode
 source ./install_vscode.sh
 
-# Setup resources
-source ./install_resources.sh
-
 # Setup macos defaults
 source ./macos/defaults.sh
 
