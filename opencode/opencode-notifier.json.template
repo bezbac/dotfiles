@@ -3,9 +3,5 @@
   "notification": true,
   "timeout": 5,
   "showProjectName": true,
-  "showIcon": true,
-  "sounds": {
-    "permission": "$DOTFILE_ROOT/resources/starcraft_warning.wav",
-    "complete": "$DOTFILE_ROOT/resources/starcraft_research_complete.wav"
-  }
+  "showIcon": true
 }
