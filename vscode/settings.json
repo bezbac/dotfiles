@@ -1,32 +1,32 @@
 {
   "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[python]": {
-    "editor.defaultFormatter": "charliermarsh.ruff"
+    "editor.defaultFormatter": "charliermarsh.ruff",
   },
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[yaml]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "cSpell.enabled": false,
   "command aliases": {
     "workbench.action.files.save": "w",
-    "workbench.action.closeActiveEditor": ["quit", "q", "wq"]
+    "workbench.action.closeActiveEditor": ["quit", "q", "wq"],
   },
   "diffEditor.ignoreTrimWhitespace": true,
   "editor.acceptSuggestionOnCommitCharacter": false,
@@ -45,23 +45,23 @@
   "editor.minimap.renderCharacters": false,
   "editor.minimap.showSlider": "always",
   "editor.quickSuggestions": {
-    "strings": true
+    "strings": true,
   },
   "editor.snippetSuggestions": "top",
   "editor.suggestSelection": "recentlyUsedByPrefix",
   "emmet.includeLanguages": {
     "javascript": "javascriptreact", // Fix emmet in react
-    "vue-html": "html"
+    "vue-html": "html",
   },
   "emmet.syntaxProfiles": {
-    "javascript": "jsx"
+    "javascript": "jsx",
   },
   "explorer.sortOrderLexicographicOptions": "upper",
   "extensions.ignoreRecommendations": true,
   "extensions.autoCheckUpdates": false,
   "extensions.autoUpdate": false,
   "files.exclude": {
-    "**/node_modules": true
+    "**/node_modules": true,
   },
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
@@ -75,31 +75,36 @@
     "*": true,
     "markdown": false,
     "plaintext": true,
-    "scminput": false
+    "scminput": false,
   },
   "github.copilot.nextEditSuggestions.enabled": true,
   // "rust-analyzer.cargo.allFeatures": true,
   "githubPullRequests.createOnPublishBranch": "never",
   "githubPullRequests.defaultMergeMethod": "squash",
-  "githubPullRequests.ignoredPullRequestBranches": ["main", "master", "staging", "dev"],
+  "githubPullRequests.ignoredPullRequestBranches": [
+    "main",
+    "master",
+    "staging",
+    "dev",
+  ],
   "githubPullRequests.pullBranch": "never",
   "githubPullRequests.queries": [
     {
       "label": "Local Pull Request Branches",
-      "query": "default"
+      "query": "default",
     },
     {
       "label": "Waiting For My Review",
-      "query": "repo:${owner}/${repository} is:open review-requested:${user}"
+      "query": "repo:${owner}/${repository} is:open review-requested:${user}",
     },
     {
       "label": "Created By Me",
-      "query": "repo:${owner}/${repository} is:open author:${user}"
+      "query": "repo:${owner}/${repository} is:open author:${user}",
     },
     {
       "label": "All Open",
-      "query": "default"
-    }
+      "query": "default",
+    },
   ],
   "jupyter.askForKernelRestart": false,
   "jupyter.widgetScriptSources": ["jsdelivr.com", "unpkg.com"],
@@ -113,11 +118,11 @@
     "tw=\"([^\"]*)", // <div tw="..." />
     "tw={\"([^\"}]*)", // <div tw={"..."} />
     "tw\\.\\w+`([^`]*)", // tw.xxx`...`
-    "tw\\(.*?\\)`([^`]*)" // tw(Component)`...`
+    "tw\\(.*?\\)`([^`]*)", // tw(Component)`...`
   ],
   "tailwindCSS.includeLanguages": {
     "typescript": "javascript",
-    "typescriptreact": "javascript"
+    "typescriptreact": "javascript",
   },
   "terminal.external.osxExec": "WezTerm.app",
   "terminal.integrated.fontSize": 14,
@@ -126,7 +131,9 @@
   "trailing-spaces.syntaxIgnore": ["markdown"],
   "typescript.tsserver.experimental.enableProjectDiagnostics": true,
   "update.mode": "manual",
-  "vscode_custom_css.imports": ["file://${userHome}/Library/Application Support/Code/User/custom.css"],
+  "vscode_custom_css.imports": [
+    "file://${userHome}/Library/Application Support/Code/User/custom.css",
+  ],
   "window.customTitleBarVisibility": "never",
   "window.titleBarStyle": "native",
   "workbench.activityBar.location": "bottom",
@@ -136,7 +143,7 @@
   "workbench.editorAssociations": {
     // Disable interactive rebase editor
     "git-rebase-todo": "default",
-    "*.ipynb": "jupyter.notebook.ipynb"
+    "*.ipynb": "jupyter.notebook.ipynb",
   },
   "workbench.iconTheme": "charmed-warm",
   "workbench.productIconTheme": "macos-modern",
@@ -154,22 +161,28 @@
       "hiddenSelectionsIndicatorsDecoration": {
         "after": {
           "color": "$list.warningForeground",
-          "fontStyle": "inherit; margin-right: 100vw"
+          "fontStyle": "inherit; margin-right: 100vw",
         },
-        "isWholeLine": false
-      }
+        "isWholeLine": false,
+      },
     },
     "magit": {
-      "inheritFrom": "helix/normal"
-    }
+      "inheritFrom": "helix/normal",
+    },
   },
   "dance.menus": {
     "left-bracket-hx": {
       "title": "Left bracket",
       "items": {
-        "d": { "text": "Goto previous diagnostic", "command": "editor.action.marker.prevInFiles" },
+        "d": {
+          "text": "Goto previous diagnostic",
+          "command": "editor.action.marker.prevInFiles",
+        },
         // "D": { "text": "Goto first diagnostic", "command": "???" },
-        "g": { "text": "Goto previous change", "command": "workbench.action.editor.previousChange" },
+        "g": {
+          "text": "Goto previous change",
+          "command": "workbench.action.editor.previousChange",
+        },
         // "G": { "text": "Goto first change", "command": "???" },
         // "f": { "text": "Goto previous function", "command": "???" },
         // "t": { "text": "Goto previous type definition", "command": "???" },
@@ -177,15 +190,24 @@
         // "c": { "text": "Goto previous comment", "command": "???" },
         // "T": { "text": "Goto previous test", "command": "???" },
         // "p": { "text": "Goto previous paragraph", "command": "???" },
-        " ": { "text": "Add newline above", "command": "dance.edit.newLine.above" }
-      }
+        " ": {
+          "text": "Add newline above",
+          "command": "dance.edit.newLine.above",
+        },
+      },
     },
     "right-bracket-hx": {
       "title": "Right bracket",
       "items": {
-        "d": { "text": "Goto next diagnostic", "command": "editor.action.marker.nextInFiles" },
+        "d": {
+          "text": "Goto next diagnostic",
+          "command": "editor.action.marker.nextInFiles",
+        },
         // "D": { "text": "Goto last diagnostic", "command": "???" },
-        "g": { "text": "Goto next change", "command": "workbench.action.editor.nextChange" },
+        "g": {
+          "text": "Goto next change",
+          "command": "workbench.action.editor.nextChange",
+        },
         // "G": { "text": "Goto last change", "command": "???" },
         // "f": { "text": "Goto next function", "command": "???" },
         // "t": { "text": "Goto next type definition", "command": "???" },
@@ -193,65 +215,175 @@
         // "c": { "text": "Goto next comment", "command": "???" },
         // "T": { "text": "Goto next test", "command": "???" },
         // "p": { "text": "Goto next paragraph", "command": "???" },
-        " ": { "text": "Add newline below", "command": "dance.edit.newLine.below" }
-      }
+        " ": {
+          "text": "Add newline below",
+          "command": "dance.edit.newLine.below",
+        },
+      },
     },
     "leader-hx": {
       "title": "Space",
       "items": {
-        "f": { "text": "Open file picker", "command": "workbench.action.quickOpen" },
+        "f": {
+          "text": "Open file picker",
+          "command": "workbench.action.quickOpen",
+        },
         // "F": { "text": "Open file picker at current working directory", "command": "???" },
-        "b": { "text": "Open buffer picker", "command": "workbench.action.showAllEditors" },
+        "b": {
+          "text": "Open buffer picker",
+          "command": "workbench.action.showAllEditors",
+        },
         // "j": { "text": "Open jumplist picker", "command": "???" },
-        "s": { "text": "Open symbol picker", "command": "workbench.action.gotoSymbol" },
+        "s": {
+          "text": "Open symbol picker",
+          "command": "workbench.action.gotoSymbol",
+        },
         // "S": { "text": "Open workspace symbol picker", "command": "???" },
-        "d": { "text": "Open diagnostic picker", "command": "workbench.actions.view.problems" },
+        "d": {
+          "text": "Open diagnostic picker",
+          "command": "workbench.actions.view.problems",
+        },
         // "D": { "text": "Open workspace diagnostic picker", "command": "???" },
-        "a": { "text": "Perform code action", "command": "editor.action.quickFix" },
+        "a": {
+          "text": "Perform code action",
+          "command": "editor.action.quickFix",
+        },
         // "'": { "text": "Open last picker", "command": "???" },
-        "g": { "text": "Debug", "command": "dance.openMenu", "args": [{ "menu": "debug-hx", "locked": true }] },
-        "w": { "text": "Window", "command": "dance.openMenu", "args": [{ "menu": "window-hx" }] },
-        "y": { "text": "Join and yank selections to clipboard", "command": "dance.run", "args": [{ "commands": [["dance.selections.saveText", { "register": "dquote" }], ".modes.set.normal"] }] },
-        "Y": { "text": "Yank main selection to clipboard", "command": "dance.run", "args": [{ "commands": [["dance.selections.saveText", { "register": "dquote" }], ".modes.set.normal"] }] },
-        "p": { "text": "Paste clipboard after selections", "command": "dance.edit.insert", "args": [{ "handleNewLine": true, "where": "end" }] },
-        "P": { "text": "Paste clipboard before selections", "command": "dance.edit.insert", "args": [{ "handleNewLine": true, "where": "start" }] },
-        "R": { "text": "Replace selections by clipboard content", "command": "dance.edit.insert", "args": [{ "register": "dquote" }] },
+        "g": {
+          "text": "Debug",
+          "command": "dance.openMenu",
+          "args": [{ "menu": "debug-hx", "locked": true }],
+        },
+        "w": {
+          "text": "Window",
+          "command": "dance.openMenu",
+          "args": [{ "menu": "window-hx" }],
+        },
+        "y": {
+          "text": "Join and yank selections to clipboard",
+          "command": "dance.run",
+          "args": [
+            {
+              "commands": [
+                ["dance.selections.saveText", { "register": "dquote" }],
+                ".modes.set.normal",
+              ],
+            },
+          ],
+        },
+        "Y": {
+          "text": "Yank main selection to clipboard",
+          "command": "dance.run",
+          "args": [
+            {
+              "commands": [
+                ["dance.selections.saveText", { "register": "dquote" }],
+                ".modes.set.normal",
+              ],
+            },
+          ],
+        },
+        "p": {
+          "text": "Paste clipboard after selections",
+          "command": "dance.edit.insert",
+          "args": [{ "handleNewLine": true, "where": "end" }],
+        },
+        "P": {
+          "text": "Paste clipboard before selections",
+          "command": "dance.edit.insert",
+          "args": [{ "handleNewLine": true, "where": "start" }],
+        },
+        "R": {
+          "text": "Replace selections by clipboard content",
+          "command": "dance.edit.insert",
+          "args": [{ "register": "dquote" }],
+        },
 
         // CUSTOM! use quickTextSearch rather than the default search
         // "/": { "text": "Global search in workspace folder", "command": "search.action.openEditor" },
-        "/": { "text": "Global search in workspace folder", "command": "runCommands", "args": { "commands": ["workbench.action.quickTextSearch"] } },
+        "/": {
+          "text": "Global search in workspace folder",
+          "command": "runCommands",
+          "args": { "commands": ["workbench.action.quickTextSearch"] },
+        },
 
-        "k": { "text": "Show docs for item under cursor", "command": "editor.action.showHover" },
+        "k": {
+          "text": "Show docs for item under cursor",
+          "command": "editor.action.showHover",
+        },
         "r": { "text": "Rename symbol", "command": "editor.action.rename" },
         // "h": { "text": "Select symbol references", "command": "???" },
-        "?": { "text": "Open command palette", "command": "workbench.action.showCommands" },
+        "?": {
+          "text": "Open command palette",
+          "command": "workbench.action.showCommands",
+        },
 
         // CUSTOM! add project manager menu
-        ".": { "text": "Switch project", "command": "projectManager.listProjects" },
+        ".": {
+          "text": "Switch project",
+          "command": "projectManager.listProjects",
+        },
 
         // CUSTOM! add magit menu
-        "m": { "text": "Magit", "command": "runCommands", "args": { "commands": ["magit.status", { "command": "dance.modes.set", "args": { "mode": "magit" } }] } },
+        "m": {
+          "text": "Magit",
+          "command": "runCommands",
+          "args": {
+            "commands": [
+              "magit.status",
+              { "command": "dance.modes.set", "args": { "mode": "magit" } },
+            ],
+          },
+        },
 
         // CUSTOM! add emmet menu
-        "e": { "text": "Emmet", "command": "dance.openMenu", "args": [{ "menu": "emmet" }] }
-      }
+        "e": {
+          "text": "Emmet",
+          "command": "dance.openMenu",
+          "args": [{ "menu": "emmet" }],
+        },
+      },
     },
     "emmet": {
       "title": "Emmet",
       "items": {
-        "g": { "text": "Goto matching pair", "command": "editor.emmet.action.matchTag" },
+        "g": {
+          "text": "Goto matching pair",
+          "command": "editor.emmet.action.matchTag",
+        },
 
-        "n": { "text": "Goto next edit point", "command": "editor.emmet.action.nextEditPoint" },
-        "N": { "text": "Goto previous edit point", "command": "editor.emmet.action.prevEditPoint" },
+        "n": {
+          "text": "Goto next edit point",
+          "command": "editor.emmet.action.nextEditPoint",
+        },
+        "N": {
+          "text": "Goto previous edit point",
+          "command": "editor.emmet.action.prevEditPoint",
+        },
 
-        "w": { "text": "Wrap with abbreviation", "command": "editor.emmet.action.wrapWithAbbreviation" },
+        "w": {
+          "text": "Wrap with abbreviation",
+          "command": "editor.emmet.action.wrapWithAbbreviation",
+        },
 
-        "b": { "text": "Balance (inwards)", "command": "emmet.action.balanceIn" },
-        "B": { "text": "Balance (outwards)", "command": "emmet.action.balanceOut" },
+        "b": {
+          "text": "Balance (inwards)",
+          "command": "emmet.action.balanceIn",
+        },
+        "B": {
+          "text": "Balance (outwards)",
+          "command": "emmet.action.balanceOut",
+        },
 
-        "d": { "text": "Remove tag", "command": "editor.emmet.action.removeTag" },
-        "s": { "text": "Split/join tag", "command": "editor.emmet.action.splitJoinTag" }
-      }
-    }
-  }
+        "d": {
+          "text": "Remove tag",
+          "command": "editor.emmet.action.removeTag",
+        },
+        "s": {
+          "text": "Split/join tag",
+          "command": "editor.emmet.action.splitJoinTag",
+        },
+      },
+    },
+  },
 }
