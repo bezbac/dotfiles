@@ -29,10 +29,14 @@ fi
 if test ! $(which wt); then
   cargo install worktrunk
 fi
+if test ! $(which tilth); then
+  cargo install tilth
+fi
 
 # Install tools based on pnpm
 pnpm add -g @github/copilot@0.0.369
 pnpm add -g @openai/codex@0.130.0
+pnpm add -g @agentika/grepika@0.3.0
 
 # Init & update submodules
 git submodule update --init --recursive

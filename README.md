@@ -42,3 +42,4 @@ Here are some repos I found helpful on my path:
 - [dotfiles repository](https://github.com/jessfraz/dotfiles) of @jessfraz
 - [dotfiles repository](https://github.com/driesvints/dotfiles) of @driesvints
 - [dotfiles repository](https://github.com/mathiasbynens/dotfiles) of @mathiasbynens
+- [opencode-config-example repository](https://github.com/markerikson/opencode-config-example) of @markerikson
