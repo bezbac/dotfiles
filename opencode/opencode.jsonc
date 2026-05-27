@@ -3,7 +3,10 @@
 
   "autoupdate": true,
 
-  "plugin": ["@mohak34/opencode-notifier@0.1.15"],
+  "plugin": [
+    "@mohak34/opencode-notifier@0.1.15",
+    "@tarquinen/opencode-dcp@latest",
+  ],
 
   "permission": {
     "edit": "allow",
@@ -63,6 +66,7 @@
       "git diff *": "allow",
       "git show *": "allow",
       "git branch *": "allow",
+      "git merge-base *": "allow",
       "git commit": "deny",
       "git push *": "deny",
 
@@ -88,6 +92,24 @@
     "fetch": {
       "type": "local",
       "command": ["uvx", "mcp-server-fetch"],
+    },
+
+    // Code search - Grepika
+    "grepika": {
+      "type": "local",
+      "command": ["grepika", "--mcp"],
+    },
+
+    // Code reading - Tilth
+    "tilth": {
+      "type": "local",
+      "command": ["/Users/ben.bachem/.cargo/bin/tilth", "--mcp"],
+    },
+
+    // GitHub code search - Grep.app
+    "grep.app": {
+      "type": "remote",
+      "url": "https://mcp.grep.app",
     },
   },
 }
