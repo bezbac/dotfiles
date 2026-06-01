@@ -19,5 +19,8 @@ export PNPM_HOME="$HOME/.pnpm"
 export PATH="$HOME/.pnpm:$PATH"
 export PATH="$HOME/.pnpm/bin:$PATH"
 
+# deno
+export PATH="$HOME/.deno/bin:$PATH"
+
 # uv
 export PATH="$HOME/.local/bin:$PATH"
