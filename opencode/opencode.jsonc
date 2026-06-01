@@ -3,6 +3,8 @@
 
   "autoupdate": true,
 
+  "lsp": true,
+
   "plugin": [
     "@mohak34/opencode-notifier@0.1.15",
     "@tarquinen/opencode-dcp@latest",
