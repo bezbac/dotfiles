@@ -1,7 +1,6 @@
 #!/usr/bin/env zsh
 
 # rust
-export PATH="$(rustc --print sysroot)/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # pyenv
