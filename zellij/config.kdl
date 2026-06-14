@@ -11,11 +11,7 @@ load_plugins {
     }
 }
 
-ui {
-    pane_frames {
-        rounded_corners true
-    }
-}
+pane_frames false
 
 keybinds {
     // Alt f is used for forward-word
