@@ -41,7 +41,7 @@
   "editor.guides.bracketPairs": "active",
   "editor.inlineSuggest.enabled": true,
   "editor.lineNumbers": "relative",
-  "editor.minimap.autohide": true,
+  "editor.minimap.autohide": "mouseover",
   "editor.minimap.renderCharacters": false,
   "editor.minimap.showSlider": "always",
   "editor.quickSuggestions": {
