@@ -1,5 +1,31 @@
 schemaVersion = 1
 
+[catalogs]
+sortOrders = []
+
+[[catalogs.globalScopes]]
+catalogIdentifier = 'Tuna.EffectsCatalog'
+mode = 'none'
+selectedItemKeys = []
+
+[[catalogs.globalScopes]]
+catalogIdentifier = 'Tuna.SettingsCatalog'
+mode = 'some'
+selectedItemKeys = [
+    'About & Support',
+    'Action Defaults',
+    'Combo Mode Editor',
+    'Combo Mode Settings',
+    'General',
+    'Sources',
+    'Talk Mode Settings',
+]
+
+[[catalogs.globalScopes]]
+catalogIdentifier = 'TunaEmoji.EmojiCatalog'
+mode = 'none'
+selectedItemKeys = []
+
 [[comboMode.bindings]]
 key = 'x'
 url = 'tuna://run/path.%252FApplications%252FWezTerm.app/Open'
@@ -49,116 +75,116 @@ iconPath = 'rectangle.grid.2x2'
 key = 'w'
 label = 'Aerospace'
 
-    [[comboMode.bindings.children]]
-    iconPath = 'arrow.up.backward.and.arrow.down.forward.rectangle'
-    key = 'M'
-    label = 'maximize'
-    url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520fullscreen/Run%20Text%20as%20Shell%20Command'
+[[comboMode.bindings.children]]
+iconPath = 'arrow.up.backward.and.arrow.down.forward.rectangle'
+key = 'M'
+label = 'maximize'
+url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520fullscreen/Run%20Text%20as%20Shell%20Command'
 
-    [[comboMode.bindings.children]]
-    iconPath = 'arrow.down.left.and.arrow.up.right.rectangle.fill'
-    key = 'F'
-    label = 'fullscreen'
-    url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520macos-native-fullscreen/Run%20Text%20as%20Shell%20Command'
+[[comboMode.bindings.children]]
+iconPath = 'arrow.down.left.and.arrow.up.right.rectangle.fill'
+key = 'F'
+label = 'fullscreen'
+url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520macos-native-fullscreen/Run%20Text%20as%20Shell%20Command'
 
-    [[comboMode.bindings.children]]
-    key = '.'
-    label = 'flatten-workspace-tree'
-    url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520flatten-workspace-tree/Run%20Text%20as%20Shell%20Command'
+[[comboMode.bindings.children]]
+key = '.'
+label = 'flatten-workspace-tree'
+url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520flatten-workspace-tree/Run%20Text%20as%20Shell%20Command'
 
-    [[comboMode.bindings.children]]
-    iconPath = 'desktopcomputer.and.arrow.down'
-    key = 'n'
-    label = 'assign workspace to next display'
-    url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520move-workspace-to-monitor%2520next%2520--wrap-around/Run%20Text%20as%20Shell%20Command'
+[[comboMode.bindings.children]]
+iconPath = 'desktopcomputer.and.arrow.down'
+key = 'n'
+label = 'assign workspace to next display'
+url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520move-workspace-to-monitor%2520next%2520--wrap-around/Run%20Text%20as%20Shell%20Command'
 
-    [[comboMode.bindings.children]]
-    key = 'f'
-    label = 'toggle floating'
-    url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520layout%2520floating%2520tiling/Run%20Text%20as%20Shell%20Command'
+[[comboMode.bindings.children]]
+key = 'f'
+label = 'toggle floating'
+url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520layout%2520floating%2520tiling/Run%20Text%20as%20Shell%20Command'
 
-    [[comboMode.bindings.children]]
-    iconPath = 'zipper.page'
-    key = 'j'
-    label = 'join-with'
+[[comboMode.bindings.children]]
+iconPath = 'zipper.page'
+key = 'j'
+label = 'join-with'
 
-        [[comboMode.bindings.children.children]]
-        iconPath = 'arrowshape.left.fill'
-        key = 'h'
-        label = 'left'
-        url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520join-with%2520left/Run%20Text%20as%20Shell%20Command'
+[[comboMode.bindings.children.children]]
+iconPath = 'arrowshape.left.fill'
+key = 'h'
+label = 'left'
+url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520join-with%2520left/Run%20Text%20as%20Shell%20Command'
 
-        [[comboMode.bindings.children.children]]
-        iconPath = 'arrowshape.down.fill'
-        key = 'j'
-        label = 'down'
-        url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520join-with%2520down/Run%20Text%20as%20Shell%20Command'
+[[comboMode.bindings.children.children]]
+iconPath = 'arrowshape.down.fill'
+key = 'j'
+label = 'down'
+url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520join-with%2520down/Run%20Text%20as%20Shell%20Command'
 
-        [[comboMode.bindings.children.children]]
-        iconPath = 'arrowshape.up.fill'
-        key = 'k'
-        label = 'up'
-        url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520join-with%2520up/Run%20Text%20as%20Shell%20Command'
+[[comboMode.bindings.children.children]]
+iconPath = 'arrowshape.up.fill'
+key = 'k'
+label = 'up'
+url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520join-with%2520up/Run%20Text%20as%20Shell%20Command'
 
-        [[comboMode.bindings.children.children]]
-        iconPath = 'arrowshape.right.fill'
-        key = 'l'
-        label = 'right'
-        url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520join-with%2520right/Run%20Text%20as%20Shell%20Command'
+[[comboMode.bindings.children.children]]
+iconPath = 'arrowshape.right.fill'
+key = 'l'
+label = 'right'
+url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520join-with%2520right/Run%20Text%20as%20Shell%20Command'
 
-    [[comboMode.bindings.children]]
-    iconPath = 'square.stack.fill'
-    key = 'l'
-    label = 'layout'
+[[comboMode.bindings.children]]
+iconPath = 'square.stack.fill'
+key = 'l'
+label = 'layout'
 
-        [[comboMode.bindings.children.children]]
-        key = 'a'
-        label = 'accordion'
-        url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520layout%2520accordion%2520horizontal%2520vertical/Run%20Text%20as%20Shell%20Command'
+[[comboMode.bindings.children.children]]
+key = 'a'
+label = 'accordion'
+url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520layout%2520accordion%2520horizontal%2520vertical/Run%20Text%20as%20Shell%20Command'
 
-        [[comboMode.bindings.children.children]]
-        key = 't'
-        label = 'tiles'
-        url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520layout%2520tiles%2520vertical%2520horizontal/Run%20Text%20as%20Shell%20Command'
+[[comboMode.bindings.children.children]]
+key = 't'
+label = 'tiles'
+url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520layout%2520tiles%2520vertical%2520horizontal/Run%20Text%20as%20Shell%20Command'
 
-    [[comboMode.bindings.children]]
-    iconPath = 'move.3d'
-    key = 'm'
-    label = 'move'
+[[comboMode.bindings.children]]
+iconPath = 'move.3d'
+key = 'm'
+label = 'move'
 
-        [[comboMode.bindings.children.children]]
-        iconPath = 'arrowshape.left.fill'
-        key = 'h'
-        label = 'left'
-        url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520move%2520left/Run%20Text%20as%20Shell%20Command'
+[[comboMode.bindings.children.children]]
+iconPath = 'arrowshape.left.fill'
+key = 'h'
+label = 'left'
+url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520move%2520left/Run%20Text%20as%20Shell%20Command'
 
-        [[comboMode.bindings.children.children]]
-        iconPath = 'arrowshape.down.fill'
-        key = 'j'
-        label = 'down'
-        url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520move%2520down/Run%20Text%20as%20Shell%20Command'
+[[comboMode.bindings.children.children]]
+iconPath = 'arrowshape.down.fill'
+key = 'j'
+label = 'down'
+url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520move%2520down/Run%20Text%20as%20Shell%20Command'
 
-        [[comboMode.bindings.children.children]]
-        iconPath = 'arrowshape.up.fill'
-        key = 'k'
-        label = 'up'
-        url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520move%2520up/Run%20Text%20as%20Shell%20Command'
+[[comboMode.bindings.children.children]]
+iconPath = 'arrowshape.up.fill'
+key = 'k'
+label = 'up'
+url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520move%2520up/Run%20Text%20as%20Shell%20Command'
 
-        [[comboMode.bindings.children.children]]
-        iconPath = 'arrowshape.right.fill'
-        key = 'l'
-        label = 'right'
-        url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520move%2520right/Run%20Text%20as%20Shell%20Command'
+[[comboMode.bindings.children.children]]
+iconPath = 'arrowshape.right.fill'
+key = 'l'
+label = 'right'
+url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520move%2520right/Run%20Text%20as%20Shell%20Command'
 
-    [[comboMode.bindings.children]]
-    key = 'R'
-    label = 'reload-config'
-    url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520reload-config/Run%20Text%20as%20Shell%20Command'
+[[comboMode.bindings.children]]
+key = 'R'
+label = 'reload-config'
+url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520reload-config/Run%20Text%20as%20Shell%20Command'
 
-    [[comboMode.bindings.children]]
-    key = 's'
-    label = 'mode resize'
-    url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520mode%2520resize/Run%20Text%20as%20Shell%20Command'
+[[comboMode.bindings.children]]
+key = 's'
+label = 'mode resize'
+url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520mode%2520resize/Run%20Text%20as%20Shell%20Command'
 
 [hotkeys.app.activate]
 carbonKeyCode = 49
@@ -168,29 +194,29 @@ carbonModifiers = 256
 id = '359B31E7-C493-47AD-8861-EB49AE28058F'
 presentation = 'auto'
 
-    [hotkeys.custom.command]
-    actionIdentifier = 'Tuna.BasicActionsCatalog.Browse'
-    subjectIdentifier = 'Tuna.Internal.ClipboardProxyCatalog.Clipboard History'
+[hotkeys.custom.command]
+actionIdentifier = 'Tuna.BasicActionsCatalog.Browse'
+subjectIdentifier = 'Tuna.Internal.ClipboardProxyCatalog.Clipboard History'
 
-    [hotkeys.custom.shortcut]
-    carbonKeyCode = 9
-    carbonModifiers = 768
+[hotkeys.custom.shortcut]
+carbonKeyCode = 9
+carbonModifiers = 768
 
 [[hotkeys.custom]]
 id = '47E319CB-8AA9-462A-BBE2-26365A9479D4'
 presentation = 'auto'
 
-    [hotkeys.custom.command]
-    actionIdentifier = 'Tuna.BasicActionsCatalog.Browse'
-    subjectIdentifier = 'TunaEmoji.EmojiSearchCatalog.Emoji'
+[hotkeys.custom.command]
+actionIdentifier = 'Tuna.BasicActionsCatalog.Browse'
+subjectIdentifier = 'TunaEmoji.EmojiSearchCatalog.Emoji'
 
-    [hotkeys.custom.shortcut]
-    carbonKeyCode = 49
-    carbonModifiers = 4352
+[hotkeys.custom.shortcut]
+carbonKeyCode = 49
+carbonModifiers = 4352
 
 [settings]
 clipboardHistoryRetention = 'sevenDays'
-clipboardIgnoredBundleIdentifiers = [ 'com.1password.1password' ]
+clipboardIgnoredBundleIdentifiers = ['com.1password.1password']
 comboModeCheatsheetBehavior = 'always'
 comboModeThemeStyle = 'cheatsheet'
 dictationActivationMode = 'toggle'
@@ -202,5 +228,5 @@ typingTimeoutDuration = 1.95
 [[catalogSettings]]
 catalogIdentifier = 'com.brnbw.tuna.themes.default'
 
-    [catalogSettings.values]
-    ThemeTint = 'system'
+[catalogSettings.values]
+ThemeTint = 'system'
