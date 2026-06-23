@@ -5,9 +5,14 @@
 
   "lsp": true,
 
+  "experimental": {
+    "openTelemetry": true,
+  },
+
   "plugin": [
     "@mohak34/opencode-notifier@0.1.15",
     "@tarquinen/opencode-dcp@latest",
+    "@langfuse/opencode-observability-plugin@latest",
   ],
 
   "permission": {

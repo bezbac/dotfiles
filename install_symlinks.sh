@@ -40,7 +40,10 @@ ln -sfn $DOTFILE_ROOT/wezterm/themes $HOME/.config/wezterm/colors
 ln -sfn $DOTFILE_ROOT/karabiner/karabiner.json $HOME/.config/karabiner/karabiner.json
 ln -sfn $DOTFILE_ROOT/aerospace/config.toml $HOME/.config/aerospace/aerospace.toml
 ln -sfn $DOTFILE_ROOT/opencode/opencode.jsonc $HOME/.config/opencode/opencode.jsonc
+ln -sfn $DOTFILE_ROOT/opencode/tui.jsonc $HOME/.config/opencode/tui.jsonc
+ln -sfn $DOTFILE_ROOT/opencode/plugins $HOME/.config/opencode/plugins
 ln -sfn $DOTFILE_ROOT/opencode/opencode-notifier.json $HOME/.config/opencode/opencode-notifier.json
+ln -sfn $DOTFILE_ROOT/opencode/opencode-langfuse.json $HOME/.config/opencode/opencode-langfuse.json
 ln -sfn $DOTFILE_ROOT/worktrunk/config.toml $HOME/.config/worktrunk/config.toml
 ln -sfn $DOTFILE_ROOT/zed/settings.json $HOME/.config/zed/settings.json
 ln -sfn $DOTFILE_ROOT/codex/config.toml $HOME/.codex/config.toml
