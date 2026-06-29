@@ -5,6 +5,8 @@
 
   "lsp": true,
 
+  "default_agent": "plan",
+
   "experimental": {
     "openTelemetry": true,
   },
