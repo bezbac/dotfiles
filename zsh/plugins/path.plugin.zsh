@@ -1,6 +1,7 @@
 #!/usr/bin/env zsh
 
 # rust
+export PATH="$(brew --prefix rustup)/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # pyenv
