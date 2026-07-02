@@ -80,9 +80,13 @@
       "git show *": "allow",
       "git branch *": "allow",
       "git merge-base *": "allow",
+      "git remote -v": "allow",
+      "git grep *": "allow",
       "git commit": "deny",
       "git push *": "deny",
 
+      // GitHub CLI commands
+      "gh pr view *": "allow",
 
       // Crit
       "crit *": "allow",
