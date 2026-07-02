@@ -23,6 +23,12 @@ load_plugins {
     "https://github.com/bezbac/zellij-tabula/releases/download/v0.4.0/zellij-tabula.wasm" {
         home_dir "/Users/ben.bachem"
     }
+
+    "https://github.com/bezbac/zellij-link-extended/releases/download/v0.1.0/zellij-link-extended.wasm" {
+        open_command "open"
+        open_command_args "{url}"
+        url_scheme "vscode://file"
+    }
 }
 
 pane_frames false
