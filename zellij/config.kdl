@@ -14,9 +14,12 @@ plugins {
     plugin-manager location="zellij:plugin-manager"
     about location="zellij:about"
     mobile location="zellij:mobile"
+    zextract location="https://github.com/codingfragments/zellij-zextract/releases/download/v0.4.0/zextract.wasm"
 }
 
 load_plugins {
+    zextract
+
     "https://github.com/bezbac/zellij-tabula/releases/download/v0.4.0/zellij-tabula.wasm" {
         home_dir "/Users/ben.bachem"
     }
@@ -42,6 +45,12 @@ keybinds {
         bind "Ctrl k" { MoveFocus "Up"; }
         bind "Ctrl h" { MoveFocusOrTab "Left"; }
         bind "Ctrl l" { MoveFocusOrTab "Right"; }
+
+        bind "Ctrl f" {
+            LaunchOrFocusPlugin "zextract" {
+                floating true;
+            };
+        }
     }
 }
 
