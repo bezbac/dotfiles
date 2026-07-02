@@ -1,2 +1,7 @@
 .DS_Store
 Brewfile.lock.json
+
+# Crit plugin dowloaded by install_crit.sh
+/opencode/plugins/crit.ts
+/opencode/command/crit.md
+/opencode/skills/crit/SKILL.md
