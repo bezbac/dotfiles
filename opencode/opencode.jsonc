@@ -18,7 +18,7 @@
   "plugin": [
     "@mohak34/opencode-notifier@0.1.15",
     "opencode-acp@1.3.1",
-    "@langfuse/opencode-observability-plugin@latest",
+    "./plugins/crit.ts",
   ],
 
   "permission": {
@@ -82,6 +82,10 @@
       "git merge-base *": "allow",
       "git commit": "deny",
       "git push *": "deny",
+
+
+      // Crit
+      "crit *": "allow",
 
       // Dangerous commands
       "op *": "deny", // 1password CLI

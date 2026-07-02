@@ -56,6 +56,9 @@ fi
 # Copy opencode-notifier.json.template to opencode-notifier.json and replace $DOTFILE_ROOT with the actual path
 sed "s|\$DOTFILE_ROOT|$DOTFILE_ROOT|g" $DOTFILE_ROOT/opencode/opencode-notifier.json.template > $DOTFILE_ROOT/opencode/opencode-notifier.json
 
+# Install crit
+source ./install_crit.sh
+
 # Symlinks
 source ./install_symlinks.sh
 
