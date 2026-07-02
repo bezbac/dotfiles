@@ -15,16 +15,18 @@ plugins {
     about location="zellij:about"
     mobile location="zellij:mobile"
     zextract location="https://github.com/codingfragments/zellij-zextract/releases/download/v0.4.0/zextract.wasm"
+    zellij-tabula location="https://github.com/bezbac/zellij-tabula/releases/download/v0.4.0/zellij-tabula.wasm"
+    zellij-link-extended location="https://github.com/bezbac/zellij-link-extended/releases/download/v0.1.0/zellij-link-extended.wasm"
 }
 
 load_plugins {
     zextract
 
-    "https://github.com/bezbac/zellij-tabula/releases/download/v0.4.0/zellij-tabula.wasm" {
+    zellij-tabula {
         home_dir "/Users/ben.bachem"
     }
 
-    "https://github.com/bezbac/zellij-link-extended/releases/download/v0.1.0/zellij-link-extended.wasm" {
+    zellij-link-extended {
         open_command "open"
         open_command_args "{url}"
         url_scheme "vscode://file"
