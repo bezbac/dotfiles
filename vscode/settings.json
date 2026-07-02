@@ -59,7 +59,7 @@
   "explorer.sortOrderLexicographicOptions": "upper",
   "extensions.ignoreRecommendations": true,
   "extensions.autoCheckUpdates": false,
-  "extensions.autoUpdate": false,
+  "extensions.autoUpdate": "off",
   "files.exclude": {
     "**/node_modules": true,
   },
