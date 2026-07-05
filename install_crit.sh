@@ -7,6 +7,7 @@ CRIT_BIN_URL="https://github.com/tomasz-tomczyk/crit/releases/download/$CRIT_VER
 CRIT_BIN_PATH="$HOME/.local/bin/crit"
 
 # Download and install crit binary
+mkdir -p $HOME/.local/bin
 curl -L $CRIT_BIN_URL -o $CRIT_BIN_PATH
 chmod +x $CRIT_BIN_PATH
 
