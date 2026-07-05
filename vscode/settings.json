@@ -147,6 +147,7 @@
   },
   "workbench.iconTheme": "charmed-warm",
   "workbench.productIconTheme": "macos-modern",
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
 
