@@ -2,7 +2,7 @@
 DOTFILE_ROOT=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 # Bash installation script for crit
-CRIT_VERSION="v0.16.5"
+CRIT_VERSION="v0.18.0"
 CRIT_BIN_URL="https://github.com/tomasz-tomczyk/crit/releases/download/$CRIT_VERSION/crit-darwin-arm64"
 CRIT_BIN_PATH="$HOME/.local/bin/crit"
 
@@ -10,6 +10,9 @@ CRIT_BIN_PATH="$HOME/.local/bin/crit"
 mkdir -p $HOME/.local/bin
 curl -L $CRIT_BIN_URL -o $CRIT_BIN_PATH
 chmod +x $CRIT_BIN_PATH
+
+# Skip quarantine for crit
+xattr -d com.apple.quarantine $CRIT_BIN_PATH
 
 # Copy crit skill & command
 # This is explicitly not copying the crit plugin, as this only handles sharing currently and I'm not interested in that.

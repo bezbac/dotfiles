@@ -52,6 +52,7 @@ ln -sfn $DOTFILE_ROOT/worktrunk/config.toml $HOME/.config/worktrunk/config.toml
 ln -sfn $DOTFILE_ROOT/zed/settings.json $HOME/.config/zed/settings.json
 ln -sfn $DOTFILE_ROOT/codex/config.toml $HOME/.codex/config.toml
 ln -sfn $DOTFILE_ROOT/crit/config.json $HOME/.crit.config.json
+ln -sfn $DOTFILE_ROOT/crit/hooks $HOME/.crit/hooks
 
 ln -sfn $DOTFILE_ROOT/.agents/AGENTS.md $HOME/.config/opencode/AGENTS.md
 ln -sfn $DOTFILE_ROOT/.agents/AGENTS.md $HOME/.codex/AGENTS.md
