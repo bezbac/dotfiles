@@ -46,12 +46,6 @@ apply = ["defer"]
 github = "zdharma-continuum/fast-syntax-highlighting"
 apply = ["defer"]
 
-[plugins.zellij-tabula]
-github = "bezbac/zellij-tabula"
-use = ["{{ name }}.plugin.zsh"]
-tag = "v0.4.0"
-apply = ["defer"]
-
 [plugins.pyenv]
 local = "~/.zsh/plugins"
 apply = ["defer"]
