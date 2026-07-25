@@ -15,7 +15,7 @@ plugins {
     about location="zellij:about"
     mobile location="zellij:mobile"
     zextract location="https://github.com/codingfragments/zellij-zextract/releases/download/v0.4.0/zextract.wasm"
-    zellij-tabula location="https://github.com/bezbac/zellij-tabula/releases/download/v0.4.0/zellij-tabula.wasm"
+    zellij-tabula location="https://github.com/bezbac/zellij-tabula/releases/download/v0.5.0/zellij-tabula.wasm"
     zellij-link-extended location="https://github.com/bezbac/zellij-link-extended/releases/download/v0.1.0/zellij-link-extended.wasm"
 }
 
@@ -24,6 +24,8 @@ load_plugins {
 
     zellij-tabula {
         home_dir "/Users/ben.bachem"
+        worktree_name_display "repo_and_worktree"
+        worktree_name_preview_length "10"
     }
 
     zellij-link-extended {
