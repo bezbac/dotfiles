@@ -1,3 +1,6 @@
+command_timeout = 100
+scan_timeout = 10
+
 format = """
 $username\
 $hostname\
@@ -13,6 +16,9 @@ $shell\
 $line_break\
 $character
 """
+
+# Disable the right-aligned prompt.
+right_format = ""
 
 [character]
 success_symbol = "[→](bold green)"
