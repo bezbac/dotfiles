@@ -33,13 +33,13 @@ function hyperKeyTrigger() {
 const rules = [
   rule("Emoji Search").manipulators([
     map("spacebar", ["command", "control"]).to$(
-      "open tuna://run/TunaEmoji.EmojiSearchCatalog.Emoji/Tuna.BasicActionsCatalog.Browse",
+      "open raycast-x://extensions/raycast/clipboard-history/clipboard-history",
     ),
   ]),
 
   rule("Hyper Key (⌃⌥⇧⌘)").manipulators([
-    // Switch back to previous application when pressing Caps Lock / Escape while in Tuna menu
-    withCondition(ifApp("com.brnbw.Tuna"))([
+    // Switch back to previous application when pressing Caps Lock / Escape while in raycast menu
+    withCondition(ifApp("com.raycast-x.macos"))([
       hyperKeyTrigger().toIfAlone([
         {
           key_code: "escape",
@@ -63,7 +63,7 @@ const rules = [
       ]),
     ]),
 
-    withCondition(ifApp("com.brnbw.Tuna").unless())([
+    withCondition(ifApp("com.raycast-x.macos").unless())([
       hyperKeyTrigger().toIfAlone({
         key_code: "escape",
       }),
@@ -72,10 +72,10 @@ const rules = [
     withCondition(ifVar(HYPER_VAR, 1))(
       [
         map("o").to$(
-          "open tuna://run/Tuna.ModesCatalog.Combo%20Mode/TunaCore.CommonActionsCatalog.Switch",
+          "open raycast-x://extensions/akshay_k/vim-leader-key/leader-key",
         ),
         map("slash").to$(
-          "open tuna://run/TunaSystem.MenuItemsCatalog.Menu%20Items/Tuna.BasicActionsCatalog.Browse",
+          "open raycast-x://extensions/raycast/navigation/search-menu-items",
         ),
 
         // Vim-like navigation

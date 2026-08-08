@@ -1,0 +1,89 @@
+# Raycast configuration
+# =====================
+# Run ./compile.sh to convert this into config.json (the settings JSON) and
+# config.rayconfig (the Raycast import file).
+#
+# To apply: open Raycast, run "Import Settings & Data", pick config.rayconfig.
+#
+# The structure mirrors Raycast's export format (top-level "settings").
+# See README.md for setup, import and update instructions.
+
+[settings]
+# Schema version of the settings block (from Raycast exports).
+schemaVersion = 1
+
+[settings.general]
+
+# Launch Raycast automatically when you log in.
+openAtLogin = true
+
+# Show the Raycast icon in the macOS menu bar.
+showInMenuBar = false
+
+# Appearance: "system", "light", or "dark".
+appearance = "system"
+
+# Theme applied in dark/light mode.
+themeDarkId = "bundled-raycast-dark"
+themeLightId = "bundled-raycast-light"
+
+# Launcher window mode: "compact" or "default".
+windowMode = "compact"
+
+# Which screen the window appears on: "active-screen", "primary", "cursor".
+windowPresentationMode = "active-screen"
+
+# What happens to the window when it loses focus:
+# "move-to-active-space" or "stay-on-active-space".
+windowActivationBehavior = "move-to-active-space"
+
+# Seconds before the launcher returns to root after the last keypress (0 = never).
+popToRootTimeout = 0
+
+# Behavior of the Escape key: "pop-back-or-close", "close", "ignore".
+escapeKeyBehavior = "pop-back-or-close"
+
+# Escape also closes the window.
+escapeKeyClosesWindow = true
+
+# Hide the Raycast menu bar icon (additional to showInMenuBar).
+tidyMenuBar = true
+
+# Allow Spotlight's gesture to trigger Raycast.
+useSpotlightGesture = false
+
+# UI zoom factor (1.0 = 100%).
+uiZoom = 1
+
+# Preset for built-in hotkeys: "improved", "classic", "custom".
+builtinHotkeysPreset = "improved"
+
+# Navigation key bindings: "emacs" or "vim".
+navigationBindings = "emacs"
+
+# Page navigation keys: "square-brackets" or "tab".
+pageNavigationKeys = "square-brackets"
+
+# Root search sensitivity: "low", "medium", "high", "very-high".
+rootSearchSensitivity = "low"
+
+# Show favorites in compact window mode.
+showFavoritesInCompactMode = true
+
+# Global hotkey that opens Raycast.
+# Mirrors the export format:
+#   - locality: "Global"
+#   - modifier "Meta" = Cmd
+#   - code 49 = Space (layout-independent keycode)
+[settings.general.globalHotkey]
+locality = "Global"
+
+[settings.general.globalHotkey.kind]
+type = "SingleStep"
+
+[settings.general.globalHotkey.kind.shortcut.key]
+type = "LayoutIndependent"
+code = 49
+
+[[settings.general.globalHotkey.kind.shortcut.modifiers]]
+modifier = "Meta"
