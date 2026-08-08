@@ -1,0 +1,5 @@
+*
+!.gitignore
+!compile.sh
+!README.md
+!config.toml
