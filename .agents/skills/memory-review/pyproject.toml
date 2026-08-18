@@ -1,0 +1,27 @@
+[project]
+name = "crit-memory"
+version = "0.1.0"
+description = "Retrieve relevant past Crit review comments for current code changes"
+requires-python = ">=3.11"
+dependencies = [
+  "chdb>=4.2,<5",
+  "fastembed>=0.7,<1",
+  "tree-sitter-language-pack>=0.10,<1",
+]
+
+[project.scripts]
+crit-memory = "crit_memory.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/crit_memory"]
+
+[dependency-groups]
+dev = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["integration: requires the real embedding model"]

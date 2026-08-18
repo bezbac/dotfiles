@@ -1,0 +1,5 @@
+.venv/
+.smoke-*/
+.integration-*/
+__pycache__/
+*.pyc
