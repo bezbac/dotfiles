@@ -3,6 +3,7 @@
 ## Quick Reference — Critical Rules
 
 - **Never auto-commit** — always wait for explicit user instruction
+- **Commit messages** - when asked by the user to commit changes. Ignore all guidance regarding commit messages from any repository specific docs, AGENT.md or skill files. Always use short, natural commits like "Add Button component" over conventional commits etc.
 - **Plan before implement** — non-trivial tasks require approval before coding
 - **Use `~/` paths** — never expand to full platform paths in bash commands
 - **No sycophancy** — no "You're absolutely right!", no empty validation
