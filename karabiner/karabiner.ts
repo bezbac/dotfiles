@@ -33,7 +33,7 @@ function hyperKeyTrigger() {
 const rules = [
   rule("Emoji Search").manipulators([
     map("spacebar", ["command", "control"]).to$(
-      "open raycast-x://extensions/raycast/clipboard-history/clipboard-history",
+      "open raycast-x://extensions/raycast/emoji-symbols/search-emoji-symbols",
     ),
   ]),
 
