@@ -143,3 +143,25 @@ enabled = false
 [[settings.internalExtensions]]
 id = "e:r:window-management"
 enabled = false
+
+
+# Command overrides are also merged into the exported settings by id.
+[[settings.commands]]
+id = "c:r:clipboard-history::-::history"
+
+[settings.commands.macosHotkey]
+locality = "Global"
+
+[settings.commands.macosHotkey.kind]
+type = "SingleStep"
+
+[settings.commands.macosHotkey.kind.shortcut.key]
+type = "LayoutIndependent"
+# macOS layout-independent keycode for V.
+code = 9
+
+[[settings.commands.macosHotkey.kind.shortcut.modifiers]]
+modifier = "Shift"
+
+[[settings.commands.macosHotkey.kind.shortcut.modifiers]]
+modifier = "Meta"
