@@ -15,4 +15,3 @@ Settings are managed via the commented `config.toml`.
 1. Install https://www.raycast.com/akshay_k/vim-leader-key from the Store
 2. Run `open raycast-x://extensions/akshay_k/vim-leader-key/import-config` to import LeaderKey config
 3. Import config from https://github.com/bezbac/dotfiles/blob/b92194925793a18859266e70f2c112aec40b03b3/leader-key/config.json 
-4. Configure CMD+Shift+V as a Shortcut for "Clipboard History"
