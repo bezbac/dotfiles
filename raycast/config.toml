@@ -145,7 +145,40 @@ id = "e:r:window-management"
 enabled = false
 
 
+# Vim Leader Key is restored as part of the generated Raycast import. Its
+# localStorage is generated from leader-key.json by compile.sh.
+[[settings.nodeExtensions]]
+# Raycast's internal Store ID for akshay_k/vim-leader-key, derived from an
+# export; Raycast does not document it as a stable public API.
+id = "e:n:7eaf27c8-43af-40f1-a8d7-a7c3e76c8df0"
+enabled = true
+
+[[settings.nodeExtensions.preferenceTypes]]
+name = "enableTimeout"
+type = "checkbox"
+
+[[settings.nodeExtensions.preferenceTypes]]
+name = "timeoutSeconds"
+type = "textfield"
+
+[[settings.nodeExtensions.preferenceTypes]]
+name = "openUrlsInActiveBrowser"
+type = "checkbox"
+
+
 # Command overrides are also merged into the exported settings by id.
+[[settings.commands]]
+id = "c:n:7eaf27c8-43af-40f1-a8d7-a7c3e76c8df0::-::import-config"
+extensionId = "e:n:7eaf27c8-43af-40f1-a8d7-a7c3e76c8df0"
+enabled = true
+assumedViewKind = "Form"
+
+[[settings.commands]]
+id = "c:n:7eaf27c8-43af-40f1-a8d7-a7c3e76c8df0::-::leader-key"
+extensionId = "e:n:7eaf27c8-43af-40f1-a8d7-a7c3e76c8df0"
+enabled = true
+assumedViewKind = "List"
+
 [[settings.commands]]
 id = "c:r:clipboard-history::-::history"
 

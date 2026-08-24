@@ -1,0 +1,195 @@
+{
+  "type": "group",
+  "actions": [
+    {
+      "key": "x",
+      "type": "application",
+      "value": "/Applications/WezTerm.app"
+    },
+    {
+      "key": "b",
+      "type": "application",
+      "value": "/Applications/Safari.app"
+    },
+    {
+      "key": "v",
+      "type": "application",
+      "value": "/Applications/Visual Studio Code.app"
+    },
+    {
+      "key": "f",
+      "type": "application",
+      "value": "/System/Library/CoreServices/Finder.app"
+    },
+    {
+      "key": "s",
+      "type": "application",
+      "value": "/Applications/Spotify.app"
+    },
+    {
+      "key": "m",
+      "type": "application",
+      "value": "/Applications/Beeper Desktop.app"
+    },
+    {
+      "key": "c",
+      "type": "application",
+      "value": "/System/Applications/Calendar.app"
+    },
+    {
+      "key": "i",
+      "type": "application",
+      "value": "/Applications/Linear.app"
+    },
+    {
+      "key": "d",
+      "type": "application",
+      "value": "/Applications/Figma.app"
+    },
+    {
+      "key": "t",
+      "type": "application",
+      "value": "/Applications/Slack.app"
+    },
+    {
+      "key": "o",
+      "type": "url",
+      "value": "raycast://extensions/raycast/browser-bookmarks/index"
+    },
+    {
+      "key": "w",
+      "type": "group",
+      "label": "Aerospace",
+      "actions": [
+        {
+          "key": "M",
+          "type": "command",
+          "label": "maximize",
+          "value": "/opt/homebrew/bin/aerospace fullscreen"
+        },
+        {
+          "key": "F",
+          "type": "command",
+          "label": "fullscreen",
+          "value": "/opt/homebrew/bin/aerospace macos-native-fullscreen"
+        },
+        {
+          "key": ".",
+          "type": "command",
+          "label": "flatten-workspace-tree",
+          "value": "/opt/homebrew/bin/aerospace flatten-workspace-tree"
+        },
+        {
+          "key": "n",
+          "type": "command",
+          "label": "assign workspace to next display",
+          "value": "/opt/homebrew/bin/aerospace move-workspace-to-monitor next --wrap-around"
+        },
+        {
+          "key": "f",
+          "type": "command",
+          "label": "toggle floating",
+          "value": "/opt/homebrew/bin/aerospace layout floating tiling"
+        },
+        {
+          "key": "j",
+          "type": "group",
+          "label": "join-with",
+          "actions": [
+            {
+              "key": "h",
+              "type": "command",
+              "label": "left",
+              "value": "/opt/homebrew/bin/aerospace join-with left"
+            },
+            {
+              "key": "j",
+              "type": "command",
+              "label": "down",
+              "value": "/opt/homebrew/bin/aerospace join-with down"
+            },
+            {
+              "key": "k",
+              "type": "command",
+              "label": "up",
+              "value": "/opt/homebrew/bin/aerospace join-with up"
+            },
+            {
+              "key": "l",
+              "type": "command",
+              "label": "right",
+              "value": "/opt/homebrew/bin/aerospace join-with right"
+            }
+          ]
+        },
+        {
+          "key": "l",
+          "type": "group",
+          "label": "layout",
+          "actions": [
+            {
+              "key": "a",
+              "type": "command",
+              "label": "accordion",
+              "value": "/opt/homebrew/bin/aerospace layout accordion horizontal vertical"
+            },
+            {
+              "key": "t",
+              "type": "command",
+              "label": "tiles",
+              "value": "/opt/homebrew/bin/aerospace layout tiles vertical horizontal"
+            }
+          ]
+        },
+        {
+          "key": "m",
+          "type": "group",
+          "label": "move",
+          "actions": [
+            {
+              "key": "h",
+              "type": "command",
+              "label": "left",
+              "value": "/opt/homebrew/bin/aerospace move left"
+            },
+            {
+              "key": "j",
+              "type": "command",
+              "label": "down",
+              "value": "/opt/homebrew/bin/aerospace move down"
+            },
+            {
+              "key": "k",
+              "type": "command",
+              "label": "up",
+              "value": "/opt/homebrew/bin/aerospace move up"
+            },
+            {
+              "key": "l",
+              "type": "command",
+              "label": "right",
+              "value": "/opt/homebrew/bin/aerospace move right"
+            }
+          ]
+        },
+        {
+          "key": "R",
+          "type": "command",
+          "label": "reload-config",
+          "value": "/opt/homebrew/bin/aerospace reload-config"
+        },
+        {
+          "key": "s",
+          "type": "command",
+          "label": "mode resize",
+          "value": "/opt/homebrew/bin/aerospace mode resize"
+        },
+        {
+          "key": "c",
+          "type": "url",
+          "value": "raycast://extensions/raycast/window-management/center"
+        }
+      ]
+    }
+  ]
+}

@@ -3,6 +3,7 @@ set -euo pipefail
 
 root="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 toml="$root/config.toml"
+leader_key="$root/leader-key.json"
 base="$root/base.json"
 export_file="$root/export.rayconfig"
 json="$root/config.json"
@@ -83,6 +84,8 @@ fi
 python3 -c '
 import json, sys, tomllib
 
+LEADER_KEY_EXTENSION_ID = "e:n:7eaf27c8-43af-40f1-a8d7-a7c3e76c8df0"
+
 def deep_merge(base, overrides):
     for k, v in overrides.items():
         if isinstance(v, dict) and isinstance(base.get(k), dict):
@@ -106,12 +109,76 @@ def deep_merge(base, overrides):
             base[k] = v
     return base
 
+# Vim Leader Key stores imported configs with generated item ids inside a
+# versioned wrapper. Keep the editable source in leader-key.json and reproduce
+# that storage shape here. Schema reference (pinned to the inspected version):
+# https://github.com/raycast/extensions/blob/f77874eacd6326b223483590c91bd61cd64fc977/extensions/vim-leader-key/src/storage.ts
+def convert_leader_key_item(item, path):
+    if not isinstance(item, dict):
+        raise ValueError(f"Leader Key item at {path} must be an object")
+
+    item_type = item.get("type")
+    common_keys = {"key", "type", "label", "browser"}
+    if item_type == "group":
+        allowed_keys = common_keys | {"actions"}
+    elif item_type in {"application", "url", "command", "folder"}:
+        allowed_keys = common_keys | {"value"}
+    else:
+        raise ValueError(f"Unsupported Leader Key item type at {path}: {item_type!r}")
+
+    unknown_keys = item.keys() - allowed_keys
+    if unknown_keys:
+        raise ValueError(f"Unsupported Leader Key keys at {path}: {sorted(unknown_keys)}")
+    if not isinstance(item.get("key"), str):
+        raise ValueError(f"Leader Key item at {path} must have a string key")
+
+    converted = {"id": "rayconfig-" + "-".join(map(str, path))}
+    converted.update({k: v for k, v in item.items() if k != "actions"})
+    if item_type == "group":
+        actions = item.get("actions")
+        if not isinstance(actions, list):
+            raise ValueError(f"Leader Key group at {path} must have an actions array")
+        converted["actions"] = [
+            convert_leader_key_item(child, (*path, index))
+            for index, child in enumerate(actions)
+        ]
+    elif not isinstance(item.get("value"), str):
+        raise ValueError(f"Leader Key action at {path} must have a string value")
+    return converted
+
 with open(sys.argv[1], "rb") as f:
     overrides = tomllib.load(f)
 with open(sys.argv[2]) as f:
     payload = {"settings": json.load(f)}
-json.dump(deep_merge(payload, overrides), open(sys.argv[3], "w"), indent=2)
-' "$toml" "$base" "$json"
+with open(sys.argv[3]) as f:
+    leader_key_config = json.load(f)
+
+if leader_key_config.get("type") != "group" or not isinstance(leader_key_config.get("actions"), list):
+    raise ValueError("leader-key.json must contain a root group with an actions array")
+
+payload = deep_merge(payload, overrides)
+leader_key_extension = next(
+    extension
+    for extension in payload["settings"]["nodeExtensions"]
+    if extension["id"] == LEADER_KEY_EXTENSION_ID
+)
+leader_key_extension["localStorage"] = {
+    "leader-key-config": json.dumps(
+        {
+            "root": {
+                "type": "group",
+                "actions": [
+                    convert_leader_key_item(item, (index,))
+                    for index, item in enumerate(leader_key_config["actions"])
+                ],
+            },
+            "version": 1,
+        },
+        separators=(",", ":"),
+    )
+}
+json.dump(payload, open(sys.argv[4], "w"), indent=2)
+' "$toml" "$base" "$leader_key" "$json"
 
 os_name="$(sw_vers -productName 2>/dev/null || echo "macOS")"
 os_version="$(sw_vers -productVersion 2>/dev/null || echo "unknown")"
