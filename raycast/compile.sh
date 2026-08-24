@@ -34,25 +34,37 @@ if [ "$needs_update" = true ]; then
   echo
 
   PASSWORD="$password" "$venv/bin/python3" - "$export_file" "$base" <<'PYEOF'
-import gzip, json, os, sys
+import gzip, json, os, struct, sys
 from cryptography.hazmat.primitives.ciphers.aead import AESGCM
 from cryptography.hazmat.primitives.kdf.scrypt import Scrypt
 
 export_file, base_file = sys.argv[1], sys.argv[2]
 
-with gzip.open(export_file, "rt") as f:
-    wrapper = json.load(f)
+with open(export_file, "rb") as f:
+    raw_export = f.read()
+
+if raw_export.startswith(b"RAYCFG3\n"):
+    metadata_length = struct.unpack("<I", raw_export[8:12])[0]
+    metadata_end = 12 + metadata_length
+    wrapper = json.loads(gzip.decompress(raw_export[12:metadata_end]))
+    encrypted_data = raw_export[metadata_end:]
+else:
+    wrapper = json.loads(gzip.decompress(raw_export))
+    encrypted_data = None
 
 if "encryption" in wrapper:
     enc = wrapper["encryption"]
     key = Scrypt(salt=bytes.fromhex(enc["salt"]), length=32, n=16384, r=8, p=1).derive(
         os.environ["PASSWORD"].encode()
     )
-    plaintext = AESGCM(key).decrypt(
-        bytes.fromhex(enc["iv"]),
-        bytes.fromhex(wrapper["data"]) + bytes.fromhex(enc["authTag"]),
-        None,
-    )
+    if encrypted_data is not None:
+        plaintext = AESGCM(key).decrypt(bytes.fromhex(enc["iv"]), encrypted_data, None)
+    else:
+        plaintext = AESGCM(key).decrypt(
+            bytes.fromhex(enc["iv"]),
+            bytes.fromhex(wrapper["data"]) + bytes.fromhex(enc["authTag"]),
+            None,
+        )
 else:
     plaintext = bytes.fromhex(wrapper["data"])
 
@@ -75,6 +87,21 @@ def deep_merge(base, overrides):
     for k, v in overrides.items():
         if isinstance(v, dict) and isinstance(base.get(k), dict):
             deep_merge(base[k], v)
+        # TOML arrays of tables with ids are sparse overrides. Merge matching
+        # entries by id so config.toml can change one extension without
+        # discarding other exported extensions or their metadata.
+        elif (
+            isinstance(v, list)
+            and isinstance(base.get(k), list)
+            and all(isinstance(item, dict) and "id" in item for item in v)
+            and all(isinstance(item, dict) and "id" in item for item in base[k])
+        ):
+            base_by_id = {item["id"]: item for item in base[k]}
+            for item in v:
+                if item["id"] in base_by_id:
+                    deep_merge(base_by_id[item["id"]], item)
+                else:
+                    base[k].append(item)
         else:
             base[k] = v
     return base
