@@ -87,3 +87,59 @@ code = 49
 
 [[settings.general.globalHotkey.kind.shortcut.modifiers]]
 modifier = "Meta"
+
+
+# Internal extensions are merged into the exported settings by id.
+# Entries not listed here retain their exported state and metadata;
+# see deep_merge in compile.sh.
+[[settings.internalExtensions]]
+id = "e:r:ai"
+enabled = false
+
+[[settings.internalExtensions]]
+id = "e:r:browser"
+enabled = false
+
+[[settings.internalExtensions]]
+id = "e:r:contacts"
+enabled = false
+
+[[settings.internalExtensions]]
+id = "e:r:developer"
+enabled = false
+
+[[settings.internalExtensions]]
+id = "e:r:mcp"
+enabled = false
+
+[[settings.internalExtensions]]
+id = "e:r:notes"
+enabled = false
+
+[[settings.internalExtensions]]
+id = "e:r:organizations"
+enabled = false
+
+[[settings.internalExtensions]]
+id = "e:r:quicklinks"
+enabled = false
+
+[[settings.internalExtensions]]
+id = "e:r:raycast-focus"
+enabled = false
+
+[[settings.internalExtensions]]
+id = "e:r:screen-awareness"
+enabled = false
+
+[[settings.internalExtensions]]
+id = "e:r:script-commands"
+enabled = false
+
+[[settings.internalExtensions]]
+id = "e:r:snippets"
+enabled = false
+
+[[settings.internalExtensions]]
+id = "e:r:window-management"
+enabled = false
