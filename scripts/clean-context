@@ -1,0 +1,202 @@
+#!/usr/bin/env -S deno run --allow-run=git --allow-read --allow-write
+
+const decoder = new TextDecoder();
+
+const runGit = async (args: string[]) => {
+  return await new Deno.Command("git", {
+    args,
+    stdout: "piped",
+    stderr: "piped",
+  }).output();
+};
+
+const gitOutput = async (args: string[]) => {
+  const output = await runGit(args);
+  if (!output.success) {
+    throw new Error(decoder.decode(output.stderr).trim());
+  }
+  return decoder.decode(output.stdout);
+};
+
+const isGitClean = async (args: string[]) => {
+  const output = await runGit(args);
+  if (output.code > 1) {
+    throw new Error(decoder.decode(output.stderr).trim());
+  }
+  return output.success;
+};
+
+const exists = async (path: string) => {
+  try {
+    return await Deno.lstat(path);
+  } catch (error) {
+    if (error instanceof Deno.errors.NotFound) return undefined;
+    throw error;
+  }
+};
+
+const getIndexState = async (path: string) => {
+  const state = await gitOutput(["ls-files", "-v", "-z", "--", path]);
+  return state.at(0);
+};
+
+const hasSafeIndexState = async (path: string) => {
+  return (await getIndexState(path)) === "H";
+};
+
+const hasConflict = async (path: string) => {
+  return (
+    (await gitOutput(["ls-files", "--unmerged", "-z", "--", path])).length > 0
+  );
+};
+
+const worktree = await runGit(["rev-parse", "--is-inside-work-tree"]);
+if (!worktree.success) {
+  console.error("Not inside a Git worktree");
+  Deno.exit(1);
+}
+
+const trackedPaths = (
+  await gitOutput(["ls-files", "-z", "--cached", "--", "."])
+)
+  .split("\0")
+  .filter(Boolean);
+const contextFiles: string[] = [];
+const agentsDirs = new Set<string>();
+
+for (const path of trackedPaths) {
+  const parts = path.split("/");
+  const agentsIndex = parts.indexOf(".agents");
+
+  if (agentsIndex >= 0 && agentsIndex < parts.length - 1) {
+    agentsDirs.add(parts.slice(0, agentsIndex + 1).join("/"));
+    continue;
+  }
+
+  const name = parts.at(-1);
+  if (name === "AGENTS.md" || name === "CLAUDE.md" || name === ".mcp.json") {
+    contextFiles.push(path);
+  }
+}
+
+let deleted = 0;
+let skipped = 0;
+
+for (const path of contextFiles) {
+  if (!(await exists(path))) {
+    console.log(`Skipping missing file: ${path}`);
+    skipped++;
+    continue;
+  }
+
+  if (!(await hasSafeIndexState(path))) {
+    console.log(`Skipping file with special index state: ${path}`);
+    skipped++;
+    continue;
+  }
+
+  if (await hasConflict(path)) {
+    console.log(`Skipping conflicted file: ${path}`);
+    skipped++;
+    continue;
+  }
+
+  if (!(await isGitClean(["diff", "--quiet", "--", path]))) {
+    console.log(`Skipping file with unstaged changes: ${path}`);
+    skipped++;
+    continue;
+  }
+
+  if (!(await isGitClean(["diff", "--cached", "--quiet", "--", path]))) {
+    console.log(`Skipping file with staged changes: ${path}`);
+    skipped++;
+    continue;
+  }
+
+  await Deno.remove(path);
+  await gitOutput(["update-index", "--skip-worktree", "--", path]);
+  console.log(`Deleted: ${path}`);
+  deleted++;
+}
+
+for (const dir of agentsDirs) {
+  const info = await exists(dir);
+  if (!info?.isDirectory || info.isSymlink) {
+    console.log(`Skipping missing or non-directory path: ${dir}`);
+    skipped++;
+    continue;
+  }
+
+  const untracked = await gitOutput([
+    "ls-files",
+    "--others",
+    "--exclude-standard",
+    "-z",
+    "--",
+    dir,
+  ]);
+  const ignored = await gitOutput([
+    "ls-files",
+    "--others",
+    "--ignored",
+    "--exclude-standard",
+    "-z",
+    "--",
+    dir,
+  ]);
+  if (untracked.length > 0 || ignored.length > 0) {
+    console.log(`Skipping directory with untracked or ignored files: ${dir}`);
+    skipped++;
+    continue;
+  }
+
+  const dirFiles = trackedPaths.filter((path) => path.startsWith(`${dir}/`));
+  let unsafe = dirFiles.length === 0;
+  const temporarilyUnskipped: string[] = [];
+
+  for (const path of dirFiles) {
+    const indexState = await getIndexState(path);
+    const info = await exists(path);
+
+    if (indexState === "S" && info) {
+      await gitOutput(["update-index", "--no-skip-worktree", "--", path]);
+      temporarilyUnskipped.push(path);
+    } else if (indexState === "H" && !info) {
+      unsafe = true;
+      break;
+    } else if (indexState !== "H" && indexState !== "S") {
+      unsafe = true;
+      break;
+    }
+
+    if (
+      (await hasConflict(path)) ||
+      (info && !(await isGitClean(["diff", "--quiet", "--", path]))) ||
+      !(await isGitClean(["diff", "--cached", "--quiet", "--", path]))
+    ) {
+      unsafe = true;
+      break;
+    }
+  }
+
+  if (unsafe) {
+    if (temporarilyUnskipped.length > 0) {
+      await gitOutput([
+        "update-index",
+        "--skip-worktree",
+        "--",
+        ...temporarilyUnskipped,
+      ]);
+    }
+    console.log(`Skipping directory with changed or unsafe files: ${dir}`);
+    skipped++;
+    continue;
+  }
+
+  await Deno.remove(dir, { recursive: true });
+  await gitOutput(["update-index", "--skip-worktree", "--", ...dirFiles]);
+  console.log(`Deleted directory: ${dir}`);
+  deleted++;
+}
+
+console.log(`Deleted ${deleted} item(s); skipped ${skipped} item(s)`);
