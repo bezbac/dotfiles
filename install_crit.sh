@@ -2,7 +2,7 @@
 DOTFILE_ROOT=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 # Bash installation script for crit
-CRIT_VERSION="v0.18.0"
+CRIT_VERSION="v0.20.1"
 CRIT_BIN_URL="https://github.com/tomasz-tomczyk/crit/releases/download/$CRIT_VERSION/crit-darwin-arm64"
 CRIT_BIN_PATH="$HOME/.local/bin/crit"
 
