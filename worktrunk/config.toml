@@ -3,4 +3,4 @@
 worktree-path = "../../../worktrees/{{ repo }}/{{ branch | sanitize }}"
 
 [projects."github.com/langfuse/langfuse"]
-pre-start.setup = "bash scripts/codex/setup.sh"
+pre-start.setup = '"$HOME/scripts/clean-context" && zsh "./scripts/agents/setup.sh"'
