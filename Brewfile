@@ -27,7 +27,7 @@ brew 'deno'
 brew 'uv'
 
 # Rust setup
-brew 'rustup-init'
+brew 'rustup'
 
 # Terraform setup
 brew 'hashicorp/tap/terraform'
@@ -91,7 +91,7 @@ cask 'iina'
 cask 'mediahuman-audio-converter'
 cask 'monitorcontrol'
 cask 'google-chrome'
-cask 'linear-linear'
+cask 'linear'
 cask 'notion'
 cask 'netnewswire'
 cask 'backblaze'

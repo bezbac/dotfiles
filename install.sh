@@ -12,13 +12,12 @@ fi
 
 brew update
 brew analytics off
-brew bundle install -v
+HOMEBREW_NO_REQUIRE_TAP_TRUST=1 brew bundle install -v
 
 # Install node
 pnpm env use --global lts
 
 # Install rust
-rustup-init -y
 rustup install stable
 rustup component add rust-analyzer
 
