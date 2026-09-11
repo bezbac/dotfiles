@@ -37,9 +37,6 @@ pnpm add -g @github/copilot@0.0.369
 pnpm add -g @openai/codex@0.130.0
 pnpm add -g @agentika/grepika@0.3.0
 
-# Install tools based on deno
-deno install --global --force --reload --allow-read --allow-write --allow-env --allow-net jsr:@valtown/vt
-
 # Init & update submodules
 git submodule update --init --recursive
 git pull --recurse-submodules
