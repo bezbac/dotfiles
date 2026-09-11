@@ -101,7 +101,6 @@ cask '1password-cli@beta'
 cask 'loom'
 cask 'orbstack'
 cask 'session-manager-plugin'
-cask 'superset'
 
 # Mac apps
 mas "Userscripts", id: 1463298887
