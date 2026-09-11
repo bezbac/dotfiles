@@ -7,16 +7,38 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "git_panel": {
+    "tree_view": true,
+    "group_by": "staging"
+  },
+  "agent_servers": {
+    "opencode": {
+      "default_config_options": {
+        "mode": "build",
+        "effort": "low",
+        "model": "openai/gpt-5.6-sol"
+      },
+      "type": "registry"
+    }
+  },
+  "collaboration_panel": {
+    "button": false
+  },
+  "cli_default_open_behavior": "existing_window",
+  "minimap": {
+    "show": "auto"
+  },
   "session": {
     "restore_unsaved_buffers": true
   },
   "restore_on_startup": "launchpad",
-  "icon_theme": "Material Icon Theme",
+  "icon_theme": "Base Charmed Icons",
   "vim": {
     "default_mode": "insert",
     "toggle_relative_line_numbers": true,
   },
   "which_key": {
+    "delay_ms": 0,
     "enabled": true,
   },
   "helix_mode": true,
