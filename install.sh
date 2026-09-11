@@ -70,3 +70,6 @@ source ./macos/defaults.sh
 
 # Setup macos dock
 source ./macos/dock.sh
+
+# Clone knowledge repository
+git grab git@github.com:bezbac/knowledge.git
