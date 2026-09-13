@@ -1,0 +1,58 @@
+{
+  "filesystem": {
+    "denyRead": [
+      "~/.ssh",
+      "~/.gnupg",
+      "~/.aws/credentials",
+      "~/.config/gh",
+      "~/.docker/config.json",
+      "~/.npmrc",
+      "~/.netrc",
+      "~/.cargo/credentials",
+      "**/*.env*",
+      "**/*.tfvars*",
+      "**/*.tfstate*"
+    ],
+    "allowRead": [
+      "~/.ssh/known_hosts",
+      "~/.ssh/config",
+      "**/*.env.example"
+    ],
+    "allowWrite": [
+      ".",
+      "/private/tmp",
+      "~/.npm",
+      "~/.pnpm/store/v10",
+      "~/.cache/uv",
+      "~/.cargo/registry",
+      "~/.cargo/bin",
+      "~/.rustup"
+    ],
+    "denyWrite": []
+  },
+  "network": {
+    "allowedDomains": [
+      "registry.npmjs.org",
+      "*.npmjs.org",
+      "registry.yarnpkg.com",
+      "pypi.org",
+      "*.pypi.org",
+      "crates.io",
+      "*.crates.io",
+      "github.com",
+      "*.github.com",
+      "gitlab.com",
+      "*.gitlab.com",
+      "bitbucket.org",
+      "*.bitbucket.org",
+      "api.openai.com",
+      "api.anthropic.com",
+      "generativelanguage.googleapis.com",
+      "*.googleapis.com"
+    ],
+    "deniedDomains": [],
+    "allowUnixSockets": [
+      "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+    ]
+  }
+}

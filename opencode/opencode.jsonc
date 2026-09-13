@@ -32,7 +32,7 @@
     },
   },
 
-  "plugin": ["@mohak34/opencode-notifier@0.1.15", "./plugins/zellij-tabula.ts"],
+  "plugin": ["opencode-sandbox", "@mohak34/opencode-notifier@0.1.15", "./plugins/zellij-tabula.ts"],
 
   "permission": {
     "external_directory": {
@@ -74,8 +74,10 @@
       "timeout *": "allow",
 
       // Common cli tools
+      "node *": "allow",
       "pnpm *": "allow",
       "npm *": "allow",
+      "npx *": "allow",
       "yarn *": "allow",
       "uv *": "allow",
       "moon *": "allow",
@@ -91,7 +93,12 @@
       "terraform init": "allow",
       "terraform validate": "allow",
 
-      // Git commands
+      // Git commands. Everything except push is auto-approved: it only mutates the
+      // local repo (contained by the sandbox) or does read-only network fetch/pull.
+      // Push is the one action that publishes work, so it ALWAYS prompts for manual
+      // approval — these "ask" rules are listed first so they win over the allows.
+      "git push *": "ask",
+      "git push": "ask",
       "git log *": "allow",
       "git status *": "allow",
       "git diff *": "allow",
@@ -103,8 +110,26 @@
       "git ls-files *": "allow",
       "git remote -v": "allow",
       "git grep *": "allow",
-      "git commit": "deny",
-      "git push *": "deny",
+      "git commit": "allow",
+      "git commit *": "allow",
+      "git add *": "allow",
+      "git rm *": "allow",
+      "git mv *": "allow",
+      "git restore *": "allow",
+      "git reset *": "allow",
+      "git checkout *": "allow",
+      "git switch *": "allow",
+      "git stash *": "allow",
+      "git tag *": "allow",
+      "git merge *": "allow",
+      "git rebase *": "allow",
+      "git cherry-pick *": "allow",
+      "git revert *": "allow",
+      "git clean *": "allow",
+      "git fetch *": "allow",
+      "git pull *": "allow",
+      "git submodule *": "allow",
+      "git worktree *": "allow",
 
       // GitHub CLI commands
       "gh pr view *": "allow",
