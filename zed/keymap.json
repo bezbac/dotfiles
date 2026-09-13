@@ -1,0 +1,14 @@
+[
+  {
+    "context": "helix_mode",
+    "bindings": {
+      "space m": ["task::Spawn", { "task_name": "gitu", "reveal_target": "center" }]
+    }
+  },
+  {
+    "context": "EmptyPane || SharedScreen",
+    "bindings": {
+      "space m": ["task::Spawn", { "task_name": "gitu", "reveal_target": "center" }]
+    }
+  }
+]
