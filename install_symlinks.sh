@@ -50,6 +50,8 @@ ln -sfn $DOTFILE_ROOT/opencode/opencode-langfuse.json $HOME/.config/opencode/ope
 ln -sfn $DOTFILE_ROOT/opencode/acp.jsonc $HOME/.config/opencode/acp.jsonc
 ln -sfn $DOTFILE_ROOT/worktrunk/config.toml $HOME/.config/worktrunk/config.toml
 ln -sfn $DOTFILE_ROOT/zed/settings.json $HOME/.config/zed/settings.json
+ln -sfn $DOTFILE_ROOT/zed/keymap.json $HOME/.config/zed/keymap.json
+ln -sfn $DOTFILE_ROOT/zed/tasks.json $HOME/.config/zed/tasks.json
 ln -sfn $DOTFILE_ROOT/codex/config.toml $HOME/.codex/config.toml
 ln -sfn $DOTFILE_ROOT/crit/config.json $HOME/.crit.config.json
 ln -sfn $DOTFILE_ROOT/crit/hooks $HOME/.crit/hooks
