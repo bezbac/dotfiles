@@ -46,4 +46,8 @@
   "theme": "Concrete",
   "ui_font_size": 16,
   "buffer_font_size": 14,
+  "auto_install_extensions": {
+    "astro": true,
+    "charmed-icons": true
+  }
 }
