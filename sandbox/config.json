@@ -1,0 +1,77 @@
+{
+  "filesystem": {
+    "denyRead": [
+      "~/dev/repos/**",
+      "~/.ssh",
+      "~/.gnupg",
+      "~/.aws/credentials",
+      "~/.config/gh",
+      "~/.npmrc",
+      "~/.netrc",
+      "~/.cargo/credentials",
+      "**/*.env*",
+      "**/*.tfvars*",
+      "**/*.tfstate*"
+    ],
+    "allowRead": [
+      ".",
+      "~/dev/repos/**/.git/**/*",
+      "~/dev/repos/bezbac/dotfiles/.gitconfig",
+      "~/dev/repos/bezbac/knowledge/**",
+      "~/.gitconfig",
+      "~/.ssh/known_hosts",
+      "~/.ssh/config",
+      "~/.docker",
+      "~/.crit",
+      "~/.crit.config.json",
+      "~/dev/repos/bezbac/dotfiles/crit/config.json",
+      "**/*.env*.example"
+    ],
+    "allowWrite": [
+      ".",
+      "~/dev/repos/**/.git/**/*",
+      "~/dev/repos/**/.turbo/cache/**/*",
+      "/private/tmp",
+      "~/.npm",
+      "~/.pnpm/store/v10",
+      "~/.cache/uv",
+      "~/.cargo/registry",
+      "~/.cargo/bin",
+      "~/.rustup",
+      "~/.docker",
+      "~/.crit"
+    ],
+    "denyWrite": []
+  },
+  "network": {
+    "allowedDomains": [
+      "registry.npmjs.org",
+      "*.npmjs.org",
+      "registry.yarnpkg.com",
+      "pypi.org",
+      "*.pypi.org",
+      "crates.io",
+      "*.crates.io",
+      "github.com",
+      "*.github.com",
+      "gitlab.com",
+      "*.gitlab.com",
+      "bitbucket.org",
+      "*.bitbucket.org",
+      "api.openai.com",
+      "api.anthropic.com",
+      "generativelanguage.googleapis.com",
+      "*.googleapis.com",
+      "docker.io",
+      "*.docker.io"
+    ],
+    "deniedDomains": [],
+    "allowUnixSockets": [
+      "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock",
+      "/var/run/docker.sock",
+      "~/.orbstack/run/docker.sock"
+    ],
+    "allowLocalBinding": true
+  },
+  "enableWeakerNetworkIsolation": true
+}
