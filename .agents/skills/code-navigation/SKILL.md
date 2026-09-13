@@ -1,3 +1,8 @@
+---
+name: code-navigation
+description: General guidance for navigating codebases
+---
+
 # Code Navigation & File Reading
 
 Full tool reference for navigating codebases. The AGENTS.md quick-reference table covers tool selection; this skill provides detailed usage patterns, workflows, and edge cases.
