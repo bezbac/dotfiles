@@ -5,6 +5,8 @@
 
   "lsp": true,
 
+  "shell": "/Users/ben.bachem/dev/repos/bezbac/dotfiles/sandbox/zsh",
+
   "default_agent": "plan",
 
   "experimental": {
@@ -32,7 +34,7 @@
     },
   },
 
-  "plugin": ["opencode-sandbox", "@mohak34/opencode-notifier@0.1.15", "./plugins/zellij-tabula.ts"],
+  "plugin": ["@mohak34/opencode-notifier@0.1.15", "./plugins/zellij-tabula.ts"],
 
   "permission": {
     "external_directory": {
@@ -46,7 +48,7 @@
       ".env": "deny",
       ".env.*": "deny",
       ".env-*": "deny",
-      "*.env.example": "allow",
+      "*.env*.example": "allow",
 
       // Deny reading terraform var and state files
       ".tfvars": "deny",
@@ -56,7 +58,7 @@
     },
 
     "bash": {
-      "*": "ask",
+      // "*": "ask",
 
       // Basic unix commands
       "ls *": "allow",
@@ -95,10 +97,6 @@
 
       // Git commands. Everything except push is auto-approved: it only mutates the
       // local repo (contained by the sandbox) or does read-only network fetch/pull.
-      // Push is the one action that publishes work, so it ALWAYS prompts for manual
-      // approval — these "ask" rules are listed first so they win over the allows.
-      "git push *": "ask",
-      "git push": "ask",
       "git log *": "allow",
       "git status *": "allow",
       "git diff *": "allow",
@@ -146,6 +144,10 @@
       "rm -rf ~": "deny",
       "rm -rf ~/*": "deny",
       ":(){:|:&};:": "deny", // fork bomb, just in case,
+
+      // Permission matching uses the last matching rule. Keep publishing actions last.
+      "git push": "ask",
+      "git push *": "ask",
     },
   },
 

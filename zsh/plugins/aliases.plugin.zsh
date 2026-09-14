@@ -35,3 +35,19 @@ alias p="pnpm"
 
 ## moon
 alias m="moon"
+
+## OpenCode
+# Keep agents from inheriting credentials that could bypass push approval.
+opencode() {
+  env \
+    -u GH_TOKEN \
+    -u GITHUB_TOKEN \
+    -u GH_ENTERPRISE_TOKEN \
+    -u GITHUB_ENTERPRISE_TOKEN \
+    -u GH_CONFIG_DIR \
+    -u GIT_ASKPASS \
+    -u SSH_ASKPASS \
+    -u GIT_CONFIG_PARAMETERS \
+    -u GIT_CONFIG_COUNT \
+    opencode "$@"
+}

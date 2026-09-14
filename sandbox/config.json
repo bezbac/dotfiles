@@ -1,6 +1,7 @@
 {
   "filesystem": {
     "denyRead": [
+      "~/dev/repos/**",
       "~/.ssh",
       "~/.gnupg",
       "~/.aws/credentials",
@@ -13,14 +14,18 @@
       "**/*.tfstate*"
     ],
     "allowRead": [
+      ".",
+      "~/dev/repos/bezbac/knowledge/**",
       "~/.ssh/known_hosts",
       "~/.ssh/config",
       "~/.docker",
       "~/.crit",
-      "**/*.env.example"
+      "**/*.env*.example"
     ],
     "allowWrite": [
       ".",
+      "~/dev/repos/**/.git/**/*",
+      "~/dev/repos/**/.turbo/cache/**/*",
       "/private/tmp",
       "~/.npm",
       "~/.pnpm/store/v10",
