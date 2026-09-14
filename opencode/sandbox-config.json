@@ -16,6 +16,7 @@
       "~/.ssh/known_hosts",
       "~/.ssh/config",
       "~/.docker",
+      "~/.crit",
       "**/*.env.example"
     ],
     "allowWrite": [
@@ -27,7 +28,8 @@
       "~/.cargo/registry",
       "~/.cargo/bin",
       "~/.rustup",
-      "~/.docker"
+      "~/.docker",
+      "~/.crit"
     ],
     "denyWrite": []
   },
@@ -58,6 +60,7 @@
       "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock",
       "/var/run/docker.sock",
       "~/.orbstack/run/docker.sock"
-    ]
+    ],
+    "allowLocalBinding": true
   }
 }
