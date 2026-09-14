@@ -51,7 +51,7 @@ When completing code changes:
 Only commit when user explicitly says "commit this" or includes a commit step in instructions.
 
 ## Testing
-Always try to run just the relevant test file. Only run all tests when checking full suite passes.
+Always try to run just the relevant test file. Only run all tests when checking full suite passes. Do not bypass tasks runners such as Turbo or Moonrepo, they may provide required generation and dependency-build steps.
 
 ## MCP Servers
 - **grepika**: Searching across a codebase
