@@ -15,6 +15,8 @@
     ],
     "allowRead": [
       ".",
+      "~/dev/repos/**/.git/**/*",
+      "~/dev/repos/bezbac/dotfiles/.gitconfig",
       "~/dev/repos/bezbac/knowledge/**",
       "~/.ssh/known_hosts",
       "~/.ssh/config",
