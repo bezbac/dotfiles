@@ -18,10 +18,13 @@
       "~/dev/repos/**/.git/**/*",
       "~/dev/repos/bezbac/dotfiles/.gitconfig",
       "~/dev/repos/bezbac/knowledge/**",
+      "~/.gitconfig",
       "~/.ssh/known_hosts",
       "~/.ssh/config",
       "~/.docker",
       "~/.crit",
+      "~/.crit.config.json",
+      "~/dev/repos/bezbac/dotfiles/crit/config.json",
       "**/*.env*.example"
     ],
     "allowWrite": [
@@ -69,5 +72,6 @@
       "~/.orbstack/run/docker.sock"
     ],
     "allowLocalBinding": true
-  }
+  },
+  "enableWeakerNetworkIsolation": true
 }

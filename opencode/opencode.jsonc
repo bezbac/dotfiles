@@ -39,6 +39,8 @@
   "permission": {
     "external_directory": {
       "~/dev/repos/bezbac/knowledge**": "allow",
+      "~/.gitconfig": "allow",
+      "~/dev/repos/**/.git/**/*": "allow",
     },
 
     "edit": "allow",
@@ -55,6 +57,9 @@
       ".tfvars*": "deny",
       ".tfstate": "deny",
       ".tfstate*": "deny",
+
+      "~/.gitconfig": "allow",
+      "~/dev/repos/**/.git/**/*": "allow",
     },
 
     "bash": {
