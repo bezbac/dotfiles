@@ -34,7 +34,11 @@
     },
   },
 
-  "plugin": ["@mohak34/opencode-notifier@0.1.15", "./plugins/zellij-tabula.ts"],
+  "plugin": [
+    "@mohak34/opencode-notifier@0.1.15",
+    "./plugins/zellij-tabula.ts",
+    "./plugins/post-edit-hooks.ts",
+  ],
 
   "permission": {
     "external_directory": {
