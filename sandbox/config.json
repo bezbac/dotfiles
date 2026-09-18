@@ -25,7 +25,8 @@
       "~/.crit",
       "~/.crit.config.json",
       "~/dev/repos/bezbac/dotfiles/crit/config.json",
-      "**/*.env*.example"
+      "**/*.env*.example",
+      "~/.local/share/opencode/log/opencode.log"
     ],
     "allowWrite": [
       ".",

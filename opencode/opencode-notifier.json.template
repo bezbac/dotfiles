@@ -1,7 +1,0 @@
-{
-  "sound": true,
-  "notification": true,
-  "timeout": 5,
-  "showProjectName": true,
-  "showIcon": true
-}

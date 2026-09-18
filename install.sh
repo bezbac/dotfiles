@@ -36,6 +36,7 @@ fi
 pnpm add -g @github/copilot@0.0.369
 pnpm add -g @openai/codex@0.130.0
 pnpm add -g @agentika/grepika@0.3.0
+pnpm add -g --allow-build=@opencode/cli @opencode/cli@2.0.4
 pnpm add -g @anthropic-ai/sandbox-runtime@0.0.75
 
 # Init & update submodules
