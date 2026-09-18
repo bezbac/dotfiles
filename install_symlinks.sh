@@ -14,7 +14,7 @@ mkdir -p $HOME/.config/worktrunk
 mkdir -p $HOME/.config/zed
 mkdir -p $HOME/.zsh
 mkdir -p $HOME/.agents
-mkdir -p $HOME/.config/opencode/command
+mkdir -p $HOME/.config/opencode/commands
 
 # Create Symlinks
 ln -sfn $DOTFILE_ROOT/.editorconfig $HOME/.editorconfig
@@ -41,9 +41,9 @@ ln -sfn $DOTFILE_ROOT/wezterm/themes $HOME/.config/wezterm/colors
 ln -sfn $DOTFILE_ROOT/karabiner/karabiner.json $HOME/.config/karabiner/karabiner.json
 ln -sfn $DOTFILE_ROOT/aerospace/config.toml $HOME/.config/aerospace/aerospace.toml
 ln -sfn $DOTFILE_ROOT/opencode/opencode.jsonc $HOME/.config/opencode/opencode.jsonc
-ln -sfn $DOTFILE_ROOT/opencode/tui.jsonc $HOME/.config/opencode/tui.jsonc
+ln -sfn $DOTFILE_ROOT/opencode/cli.jsonc $HOME/.config/opencode/cli.jsonc
 ln -sfn $DOTFILE_ROOT/opencode/plugins $HOME/.config/opencode/plugins
-ln -sfn $DOTFILE_ROOT/opencode/command $HOME/.config/opencode/command
+ln -sfn $DOTFILE_ROOT/opencode/commands $HOME/.config/opencode/commands
 ln -sfn $DOTFILE_ROOT/opencode/skills $HOME/.config/opencode/skills
 ln -sfn $DOTFILE_ROOT/opencode/opencode-notifier.json $HOME/.config/opencode/opencode-notifier.json
 ln -sfn $DOTFILE_ROOT/sandbox/config.json $HOME/.srt-settings.json

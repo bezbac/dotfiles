@@ -52,7 +52,6 @@ brew 'shellcheck'
 brew 'ripgrep'
 brew 'hurl'
 brew 'dockutil'
-brew 'anomalyco/tap/opencode'
 brew 'gitu'
 
 # Other tools
