@@ -197,3 +197,4 @@ copy_on_select false
 // theme_dir "/path/to/my/theme_dir"
 
 stacked_pane_list false
+mouse_scroll_resize false
