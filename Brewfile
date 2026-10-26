@@ -53,6 +53,7 @@ brew 'ripgrep'
 brew 'hurl'
 brew 'dockutil'
 brew 'gitu'
+brew 'crit'
 
 # Other tools
 brew 'cmake'
