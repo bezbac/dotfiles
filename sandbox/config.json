@@ -26,7 +26,9 @@
       "~/.crit.config.json",
       "~/dev/repos/bezbac/dotfiles/crit/config.json",
       "**/*.env*.example",
-      "~/.local/share/opencode/log/opencode.log"
+      "~/.local/share/opencode/log/opencode.log",
+      "~/.local/state/pnpm/**/*",
+      "~/Library/Caches/pnpm"
     ],
     "allowWrite": [
       ".",
@@ -40,7 +42,9 @@
       "~/.cargo/bin",
       "~/.rustup",
       "~/.docker",
-      "~/.crit"
+      "~/.crit",
+      "~/.local/state/pnpm/**/*",
+      "~/Library/Caches/pnpm"
     ],
     "denyWrite": []
   },
