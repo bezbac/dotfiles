@@ -2,12 +2,14 @@
   {
     "context": "helix_mode",
     "bindings": {
+      "space .": "projects::OpenRecent",
       "space m": ["task::Spawn", { "task_name": "gitu", "reveal_target": "center" }]
     }
   },
   {
     "context": "EmptyPane || SharedScreen",
     "bindings": {
+      "space .": "projects::OpenRecent",
       "space m": ["task::Spawn", { "task_name": "gitu", "reveal_target": "center" }]
     }
   }
