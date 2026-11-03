@@ -45,9 +45,6 @@ git pull --recurse-submodules
 # Compile karabiner rules
 deno run --allow-env --allow-read --allow-write ./karabiner/karabiner.ts
 
-# Copy opencode-notifier.json.template to opencode-notifier.json and replace $DOTFILE_ROOT with the actual path
-sed "s|\$DOTFILE_ROOT|$DOTFILE_ROOT|g" $DOTFILE_ROOT/opencode/opencode-notifier.json.template > $DOTFILE_ROOT/opencode/opencode-notifier.json
-
 
 # Symlinks
 source ./install_symlinks.sh
