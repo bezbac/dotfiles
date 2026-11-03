@@ -8,9 +8,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 
-# poetry
-export PATH="$HOME/.poetry/bin:$PATH"
-
 # scripts
 export PATH="$HOME/scripts:$PATH"
 

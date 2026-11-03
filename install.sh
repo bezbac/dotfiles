@@ -33,7 +33,6 @@ if test ! $(which tilth); then
 fi
 
 # Install tools based on pnpm
-pnpm add -g @github/copilot@0.0.369
 pnpm add -g @openai/codex@0.130.0
 pnpm add -g @agentika/grepika@0.3.0
 pnpm add -g --allow-build=@opencode/cli @opencode/cli@2.0.4
@@ -45,11 +44,6 @@ git pull --recurse-submodules
 
 # Compile karabiner rules
 deno run --allow-env --allow-read --allow-write ./karabiner/karabiner.ts
-
-# Update copilot cli settings
-if [ -f $HOME/.copilot/config.json ]; then
-  jq '.theme = "light"' $HOME/.copilot/config.json | sponge $HOME/.copilot/config.json
-fi
 
 # Copy opencode-notifier.json.template to opencode-notifier.json and replace $DOTFILE_ROOT with the actual path
 sed "s|\$DOTFILE_ROOT|$DOTFILE_ROOT|g" $DOTFILE_ROOT/opencode/opencode-notifier.json.template > $DOTFILE_ROOT/opencode/opencode-notifier.json

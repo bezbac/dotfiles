@@ -47,7 +47,6 @@ brew 'curl'
 brew 'bat'
 brew 'ffmpeg'
 brew 'fd'
-brew 'dbcli/tap/pgcli'
 brew 'shellcheck'
 brew 'ripgrep'
 brew 'hurl'
@@ -57,6 +56,7 @@ brew 'crit'
 
 # Other tools
 brew 'cmake'
+brew 'golang-migrate'
 brew 'make'
 brew 'awscli'
 
@@ -74,6 +74,12 @@ cask 'font-figtree'
 cask 'font-fira-code-nerd-font'
 
 # Apps
+cask 'chatgpt'
+cask 'cursor'
+cask 'cyberduck'
+cask 'handy'
+cask 'postman'
+cask 'tableplus'
 cask 'nikitabobko/tap/aerospace'
 cask 'homerow'
 cask 'visual-studio-code'
@@ -81,7 +87,6 @@ cask 'karabiner-elements'
 cask 'wezterm'
 cask 'figma'
 cask 'slack'
-cask 'signal'
 cask 'beeper'
 cask 'raycast'
 cask 'obsidian'
@@ -94,15 +99,14 @@ cask 'google-chrome'
 cask 'linear'
 cask 'notion'
 cask 'netnewswire'
-cask 'backblaze'
 cask 'keka'
 cask 'zed'
 cask '1password-cli@beta'
-cask 'loom'
 cask 'orbstack'
 cask 'session-manager-plugin'
 
 # Mac apps
+mas "Mela", id: 1568924476
 mas "Userscripts", id: 1463298887
 mas "Tailscale", id: 1475387142
 mas "Velja", id: 1607635845
