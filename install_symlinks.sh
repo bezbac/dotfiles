@@ -46,7 +46,6 @@ ln -sfn $DOTFILE_ROOT/opencode/plugins $HOME/.config/opencode/plugins
 ln -sfn $DOTFILE_ROOT/opencode/commands $HOME/.config/opencode/commands
 ln -sfn $DOTFILE_ROOT/opencode/skills $HOME/.config/opencode/skills
 ln -sfn $DOTFILE_ROOT/sandbox/config.json $HOME/.srt-settings.json
-ln -sfn $DOTFILE_ROOT/opencode/opencode-langfuse.json $HOME/.config/opencode/opencode-langfuse.json
 ln -sfn $DOTFILE_ROOT/opencode/acp.jsonc $HOME/.config/opencode/acp.jsonc
 ln -sfn $DOTFILE_ROOT/worktrunk/config.toml $HOME/.config/worktrunk/config.toml
 ln -sfn $DOTFILE_ROOT/zed/settings.json $HOME/.config/zed/settings.json

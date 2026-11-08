@@ -1,7 +1,0 @@
-{
-  "publicKey": "Test",
-  "secretKey": "Test",
-  "baseUrl": "https://cloud.langfuse.com",
-  "environment": "development",
-  "userId": "Test",
-}

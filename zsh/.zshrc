@@ -63,6 +63,35 @@ AUTO_NOTIFY_IGNORE+=("moon dev")
 AUTO_NOTIFY_IGNORE+=("p dev")
 AUTO_NOTIFY_IGNORE+=("opencode")
 
+# Run opencode with required langfuse credentials
+oc() {
+  LANGFUSE_GATEWAY_KEY='op://mbspv5eykwvgtp5ohlcjkjfxv4/oeiaw3mjvvqpraft7szbwvshei/password' \
+  LANGFUSE_USER_ID='op://mbspv5eykwvgtp5ohlcjkjfxv4/oeiaw3mjvvqpraft7szbwvshei/userid' \
+  LANGFUSE_PUBLIC_KEY='op://mbspv5eykwvgtp5ohlcjkjfxv4/ahhudhblsqwsqcsho2xo3vveuq/public-key' \
+  LANGFUSE_SECRET_KEY='op://mbspv5eykwvgtp5ohlcjkjfxv4/ahhudhblsqwsqcsho2xo3vveuq/secret-key' \
+    op run --no-masking -- bash -c '
+      set +x
+      set -e
+      : "${LANGFUSE_GATEWAY_KEY:?Missing gateway key}"
+      : "${LANGFUSE_USER_ID:?Missing user ID}"
+      : "${LANGFUSE_PUBLIC_KEY:?Missing Langfuse public key}"
+      : "${LANGFUSE_SECRET_KEY:?Missing Langfuse secret key}"
+
+      # Gateway
+      opencode service set env LANGFUSE_GATEWAY_KEY "$LANGFUSE_GATEWAY_KEY"
+      opencode service set env LF_USER_ID "$LANGFUSE_USER_ID"
+
+      # Plugin
+      opencode service set env LANGFUSE_USER_ID "$LANGFUSE_USER_ID"
+      opencode service set env LANGFUSE_PUBLIC_KEY "$LANGFUSE_PUBLIC_KEY"
+      opencode service set env LANGFUSE_SECRET_KEY "$LANGFUSE_SECRET_KEY"
+      opencode service start
+
+      exec opencode "$@"
+    ' oc "$@"
+}
+
+
 # Eval trick to allow running command but not exiting afterwards
 # https://superuser.com/a/230090
 if [[ $1 == eval ]]

@@ -18,9 +18,27 @@
   },
 
   "providers": {
-    "openai": {
+    "langfuse": {
+      "name": "Langfuse",
+      "canonical": "openai",
+      "package": "@opencode/ai/providers/openai",
+      "settings": {
+        "baseURL": "https://gateway.cloud.langfuse.com/openai/v1",
+        "apiKey": "{env:LANGFUSE_GATEWAY_KEY}",
+      },
+      "headers": {
+        "langfuse-user-id": "{env:LF_USER_ID}",
+        "langfuse-environment": "local",
+      },
       "models": {
         "gpt-5.6-sol": {
+          "limit": {
+            "context": 1050000,
+            "input": 128000,
+            "output": 128000,
+          },
+        },
+        "gpt-6.1-sol": {
           "limit": {
             "context": 1050000,
             "input": 128000,
