@@ -28,7 +28,8 @@
       "**/*.env*.example",
       "~/.local/share/opencode/log/opencode.log",
       "~/.local/state/pnpm/**/*",
-      "~/Library/Caches/pnpm"
+      "~/Library/Caches/pnpm",
+      "~/.proto"
     ],
     "allowWrite": [
       ".",
@@ -44,7 +45,8 @@
       "~/.docker",
       "~/.crit",
       "~/.local/state/pnpm/**/*",
-      "~/Library/Caches/pnpm"
+      "~/Library/Caches/pnpm",
+      "~/.proto"
     ],
     "denyWrite": []
   },
