@@ -1,9 +1,8 @@
 # Raycast configuration
 # =====================
-# Run ./compile.sh to convert this into config.json (the settings JSON) and
-# config.rayconfig (the Raycast import file).
+# Run ./compile.sh to build reviewed.rayconfig from these settings only.
 #
-# To apply: open Raycast, run "Import Settings & Data", pick config.rayconfig.
+# To apply: open Raycast, run "Import Settings & Data", pick reviewed.rayconfig.
 #
 # The structure mirrors Raycast's export format (top-level "settings").
 # See README.md for setup, import and update instructions.
@@ -89,9 +88,7 @@ code = 49
 modifier = "Meta"
 
 
-# Internal extensions are merged into the exported settings by id.
-# Entries not listed here retain their exported state and metadata;
-# see deep_merge in compile.sh.
+# Only explicitly listed settings are included; no exported state is merged.
 [[settings.internalExtensions]]
 id = "e:r:ai"
 enabled = false
@@ -145,7 +142,7 @@ id = "e:r:window-management"
 enabled = false
 
 
-# Command overrides are also merged into the exported settings by id.
+# Explicit command settings.
 [[settings.commands]]
 id = "c:r:clipboard-history::-::history"
 

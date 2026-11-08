@@ -6,10 +6,10 @@ personality = "pragmatic"
 [sandbox_workspace_write]
 network_access = true
 writable_roots = [
-    "/Users/ben.bachem/.gradle",
-    "/Users/ben.bachem/.docker",
-    "/Users/ben.bachem/.cargo",
-    "/Users/ben.bachem/.npm",
+    "~/.gradle",
+    "~/.docker",
+    "~/.cargo",
+    "~/.npm",
 ]
 
 [features]

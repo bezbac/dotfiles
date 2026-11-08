@@ -6,6 +6,12 @@ Welcome to my personal dotfiles repository! Here you'll find the well-thought-ou
 
 Some of the configuration assumes this repository is saved locally under `~/dev/repos/bezbac/dotfiles`. In case you fork the repository, make sure to update the paths.
 
+## Secrets and privacy
+
+- No repository workflow may require or generate secret-bearing files in the checkout, including ignored files, encrypted exports, `.env` files, private keys, or rendered credential configs. Never rely on gitignore as a security boundary.
+- Resolve credentials at runtime through 1Password and pass them through process environments; use the 1Password SSH agent for private keys.
+- Minimize identifying metadata by means such as preferring home-relative paths or executable lookup
+
 ## Common things
 
 #### My steps of setting up a new machine
