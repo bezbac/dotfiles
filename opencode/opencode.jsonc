@@ -50,7 +50,6 @@
   },
 
   "plugins": [
-    "./plugins/zellij-tabula.ts",
     "./plugins/post-edit-hooks.ts",
     "@langfuse/opencode-observability-plugin@0.5.1"
   ],
